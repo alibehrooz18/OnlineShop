@@ -3,36 +3,7 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="assets\css\bootstrap.rtl.min.css">
-
-    <link rel="stylesheet" href="assets\css\owl.theme.default.min.css">
-
-    <link rel="stylesheet" href="assets\css\owl.carousel.min.css">
-
-    <link rel="stylesheet" href="assets\css\magnific-popup.min.css">
-
-    <link rel="stylesheet" href="assets\css\animate.min.css">
-
-    <link rel="stylesheet" href="assets\css\boxicons.min.css">
-
-    <link rel="stylesheet" href="assets\css\flaticon.css">
-
-    <link rel="stylesheet" href="assets\css\meanmenu.min.css">
-
-    <link rel="stylesheet" href="assets\css\nice-select.min.css">
-
-    <link rel="stylesheet" href="assets\css\odometer.min.css">
-
-    <link rel="stylesheet" href="assets\css\style.css">
-
-    <link rel="stylesheet" href="assets\css\dark.css">
-
-    <link rel="stylesheet" href="assets\css\responsive.css">
-
-    <link rel="icon" type="image/png" href="assets\img\favicon.png">
+    <?php include "./assets/includes/header.php" ?>
 
     <title>Eduon - Online Courses & Training HTML Template</title>
 </head>
@@ -96,7 +67,7 @@
     <div class="navbar-area navbar-area-two">
 
         <div class="mobile-nav">
-            <a href="index.html" class="logo">
+            <a href="index.php" class="logo">
                 <img src="assets\img\logo.png" class="main-logo" alt="Logo">
                 <img src="assets\img\logo-2.png" class="white-logo" alt="Logo">
             </a>
@@ -105,7 +76,7 @@
         <div class="main-nav">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="index.php">
                         <img src="assets\img\logo.png" class="main-logo" alt="Logo">
                         <img src="assets\img\logo-2.png" class="white-logo" alt="Logo">
                     </a>
@@ -118,13 +89,13 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="index.html" class="nav-link">Home One</a>
+                                        <a href="index.php" class="nav-link">Home One</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="index-2.html" class="nav-link">Home Two</a>
+                                        <a href="index-2.php" class="nav-link">Home Two</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="index-3.html" class="nav-link active">Home Three</a>
+                                        <a href="index-3.php" class="nav-link active">Home Three</a>
                                     </li>
                                 </ul>
                             </li>
@@ -135,10 +106,10 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="courses.html" class="nav-link">Courses</a>
+                                        <a href="courses.php" class="nav-link">Courses</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="single-course.html" class="nav-link">Single Course</a>
+                                        <a href="single-course.php" class="nav-link">Single Course</a>
                                     </li>
                                 </ul>
                             </li>
@@ -149,10 +120,10 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="about.html" class="nav-link">About</a>
+                                        <a href="about.php" class="nav-link">About</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="feedback.html" class="nav-link">Feedback</a>
+                                        <a href="feedback.php" class="nav-link">Feedback</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">
@@ -161,15 +132,15 @@
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li class="nav-item">
-                                                <a href="events.html" class="nav-link">Events</a>
+                                                <a href="events.php" class="nav-link">Events</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="single-event.html" class="nav-link">Single Event</a>
+                                                <a href="single-event.php" class="nav-link">Single Event</a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="instructors.html" class="nav-link">Instructors</a>
+                                        <a href="instructors.php" class="nav-link">Instructors</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">
@@ -178,36 +149,36 @@
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li class="nav-item">
-                                                <a href="my-account.html" class="nav-link">My Account</a>
+                                                <a href="my-account.php" class="nav-link">My Account</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="log-in.html" class="nav-link">Log In</a>
+                                                <a href="log-in.php" class="nav-link">Log In</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="registration.html" class="nav-link">Registration</a>
+                                                <a href="registration.php" class="nav-link">Registration</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="recover-password.html" class="nav-link">Recover Password</a>
+                                                <a href="recover-password.php" class="nav-link">Recover Password</a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="gallery.html" class="nav-link">Gallery</a>
+                                        <a href="gallery.php" class="nav-link">Gallery</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="faq.html" class="nav-link">FAQ</a>
+                                        <a href="faq.php" class="nav-link">FAQ</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+                                        <a href="privacy-policy.php" class="nav-link">Privacy Policy</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="terms-conditions.html" class="nav-link">Terms & Conditions</a>
+                                        <a href="terms-conditions.php" class="nav-link">Terms & Conditions</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="coming-soon.html" class="nav-link">Coming Soon</a>
+                                        <a href="coming-soon.php" class="nav-link">Coming Soon</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="404.html" class="nav-link">404 Error Page</a>
+                                        <a href="404.php" class="nav-link">404 Error Page</a>
                                     </li>
                                 </ul>
                             </li>
@@ -218,19 +189,19 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="shop.html" class="nav-link">Shop</a>
+                                        <a href="shop.php" class="nav-link">Shop</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="cart.html" class="nav-link">Cart</a>
+                                        <a href="cart.php" class="nav-link">Cart</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="checkout.html" class="nav-link">Checkout</a>
+                                        <a href="checkout.php" class="nav-link">Checkout</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="single-product.html" class="nav-link">Single Product</a>
+                                        <a href="single-product.php" class="nav-link">Single Product</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="wishlist.html" class="nav-link">Wishlist</a>
+                                        <a href="wishlist.php" class="nav-link">Wishlist</a>
                                     </li>
                                 </ul>
                             </li>
@@ -241,24 +212,24 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="blog-column-one.html" class="nav-link">Blog Column One</a>
+                                        <a href="blog-column-one.php" class="nav-link">Blog Column One</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="blog-column-two.html" class="nav-link">Blog Column Two</a>
+                                        <a href="blog-column-two.php" class="nav-link">Blog Column Two</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="blog-column-three.html" class="nav-link">Blog Column Three</a>
+                                        <a href="blog-column-three.php" class="nav-link">Blog Column Three</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="blog-left-sidebar.html" class="nav-link">Blog Left Sidebar</a>
+                                        <a href="blog-left-sidebar.php" class="nav-link">Blog Left Sidebar</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="single-blog.html" class="nav-link">Single Blog</a>
+                                        <a href="single-blog.php" class="nav-link">Single Blog</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.html" class="nav-link">Contact</a>
+                                <a href="contact.php" class="nav-link">Contact</a>
                             </li>
                         </ul>
 
@@ -277,13 +248,13 @@
                                 </div>
                             </div>
                             <div class="cart-icon">
-                                <a href="cart.html">
+                                <a href="cart.php">
                                     <i class="flaticon-shopping-cart"></i>
                                     <span>0</span>
                                 </a>
                             </div>
                             <div class="register">
-                                <a href="my-account.html" class="default-btn">
+                                <a href="my-account.php" class="default-btn">
                                     Login / Register
                                 </a>
                             </div>
@@ -320,13 +291,13 @@
                                 </div>
                             </div>
                             <div class="cart-icon">
-                                <a href="cart.html">
+                                <a href="cart.php">
                                     <i class="flaticon-shopping-cart"></i>
                                     <span>0</span>
                                 </a>
                             </div>
                             <div class="register">
-                                <a href="my-account.html" class="default-btn">
+                                <a href="my-account.php" class="default-btn">
                                     Login / Register
                                 </a>
                             </div>
@@ -351,7 +322,7 @@
                                 <p class="wow animate__animated animate__fadeInLeft" data-wow-delay="0.6s">Lorem ipsum
                                     dolor sit amet consectetur adipisicing elit. Voluptas architecto doloremque fugiat!
                                     Tempora, molestias minus mollitia optio laboriosam nulla</p>
-                                <a href="courses.html" class="default-btn wow animate__animated animate__fadeInLeft"
+                                <a href="courses.php" class="default-btn wow animate__animated animate__fadeInLeft"
                                     data-wow-delay="0.9s">
                                     View Courses
                                 </a>
@@ -409,7 +380,7 @@
                         <img src="assets\img\categories-img\categories-img-1.jpg" alt="Image">
                         <div class="categories-content-wrap">
                             <div class="categories-content">
-                                <a href="courses.html">
+                                <a href="courses.php">
                                     <h3>Design</h3>
                                 </a>
                                 <span>Over 200+ courses</span>
@@ -422,7 +393,7 @@
                         <img src="assets\img\categories-img\categories-img-2.jpg" alt="Image">
                         <div class="categories-content-wrap">
                             <div class="categories-content">
-                                <a href="courses.html">
+                                <a href="courses.php">
                                     <h3>Development</h3>
                                 </a>
                                 <span>Over 300 courses</span>
@@ -435,7 +406,7 @@
                         <img src="assets\img\categories-img\categories-img-3.jpg" alt="Image">
                         <div class="categories-content-wrap">
                             <div class="categories-content">
-                                <a href="courses.html">
+                                <a href="courses.php">
                                     <h3>Business</h3>
                                 </a>
                                 <span>Over 150 courses</span>
@@ -448,7 +419,7 @@
                         <img src="assets\img\categories-img\categories-img-4.jpg" alt="Image">
                         <div class="categories-content-wrap">
                             <div class="categories-content">
-                                <a href="courses.html">
+                                <a href="courses.php">
                                     <h3>Marketing</h3>
                                 </a>
                                 <span>Over 200+ courses</span>
@@ -461,7 +432,7 @@
                         <img src="assets\img\categories-img\categories-img-5.jpg" alt="Image">
                         <div class="categories-content-wrap">
                             <div class="categories-content">
-                                <a href="courses.html">
+                                <a href="courses.php">
                                     <h3>IT & Software</h3>
                                 </a>
                                 <span>Over 250 courses</span>
@@ -474,7 +445,7 @@
                         <img src="assets\img\categories-img\categories-img-6.jpg" alt="Image">
                         <div class="categories-content-wrap">
                             <div class="categories-content">
-                                <a href="courses.html">
+                                <a href="courses.php">
                                     <h3>Data Science</h3>
                                 </a>
                                 <span>Over 50 courses</span>
@@ -487,7 +458,7 @@
                         <img src="assets\img\categories-img\categories-img-7.jpg" alt="Image">
                         <div class="categories-content-wrap">
                             <div class="categories-content">
-                                <a href="courses.html">
+                                <a href="courses.php">
                                     <h3>Photography</h3>
                                 </a>
                                 <span>Over 700 courses</span>
@@ -500,7 +471,7 @@
                         <img src="assets\img\categories-img\categories-img-8.jpg" alt="Image">
                         <div class="categories-content-wrap">
                             <div class="categories-content">
-                                <a href="courses.html">
+                                <a href="courses.php">
                                     <h3>Music</h3>
                                 </a>
                                 <span>Over 150 courses</span>
@@ -510,7 +481,7 @@
                 </div>
                 <div class="col-12">
                     <div class="text-center">
-                        <a href="courses.html" class="default-btn">All Catagories</a>
+                        <a href="courses.php" class="default-btn">All Catagories</a>
                     </div>
                 </div>
             </div>
@@ -596,7 +567,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <a href="courses.html" class="default-btn">
+                        <a href="courses.php" class="default-btn">
                             View All Courses
                         </a>
                     </div>
@@ -633,13 +604,13 @@
             </div>
             <div class="courses-slider-three owl-theme owl-carousel">
                 <div class="single-course">
-                    <a href="single-course.html">
+                    <a href="single-course.php">
                         <img src="assets\img\course-img\course-img-1.jpg" alt="Image">
                     </a>
                     <div class="course-content">
                         <span class="price">$35</span>
                         <span class="tag">Education</span>
-                        <a href="single-course.html">
+                        <a href="single-course.php">
                             <h3>Programming foundations: real-world examples</h3>
                         </a>
                         <ul class="rating">
@@ -666,13 +637,13 @@
                     </div>
                 </div>
                 <div class="single-course">
-                    <a href="single-course.html">
+                    <a href="single-course.php">
                         <img src="assets\img\course-img\course-img-2.jpg" alt="Image">
                     </a>
                     <div class="course-content">
                         <span class="price">$39</span>
                         <span class="tag">School</span>
-                        <a href="single-course.html">
+                        <a href="single-course.php">
                             <h3>Teaching assistant certificate in learning in schools</h3>
                         </a>
                         <ul class="rating">
@@ -699,13 +670,13 @@
                     </div>
                 </div>
                 <div class="single-course">
-                    <a href="single-course.html">
+                    <a href="single-course.php">
                         <img src="assets\img\course-img\course-img-3.jpg" alt="Image">
                     </a>
                     <div class="course-content">
                         <span class="price">$29</span>
                         <span class="tag">Language</span>
-                        <a href="single-course.html">
+                        <a href="single-course.php">
                             <h3>English: spelling, punctuation and grammar</h3>
                         </a>
                         <ul class="rating">
@@ -732,13 +703,13 @@
                     </div>
                 </div>
                 <div class="single-course">
-                    <a href="single-course.html">
+                    <a href="single-course.php">
                         <img src="assets\img\course-img\course-img-4.jpg" alt="Image">
                     </a>
                     <div class="course-content">
                         <span class="price">$49</span>
                         <span class="tag">Teaching</span>
-                        <a href="single-course.html">
+                        <a href="single-course.php">
                             <h3>Introduction to cybersecurity for teachers</h3>
                         </a>
                         <ul class="rating">
@@ -765,13 +736,13 @@
                     </div>
                 </div>
                 <div class="single-course">
-                    <a href="single-course.html">
+                    <a href="single-course.php">
                         <img src="assets\img\course-img\course-img-5.jpg" alt="Image">
                     </a>
                     <div class="course-content">
                         <span class="price">$39</span>
                         <span class="tag">Teaching</span>
-                        <a href="single-course.html">
+                        <a href="single-course.php">
                             <h3>Learning Implementing Formative Assessment</h3>
                         </a>
                         <ul class="rating">
@@ -798,13 +769,13 @@
                     </div>
                 </div>
                 <div class="single-course">
-                    <a href="single-course.html">
+                    <a href="single-course.php">
                         <img src="assets\img\course-img\course-img-1.jpg" alt="Image">
                     </a>
                     <div class="course-content">
                         <span class="price">$59</span>
                         <span class="tag">Education</span>
-                        <a href="single-course.html">
+                        <a href="single-course.php">
                             <h3>Teaching languages in primary schools: putting research</h3>
                         </a>
                         <ul class="rating">
@@ -983,7 +954,7 @@
                         </div>
                         <div class="col-lg-12 col-sm-6">
                             <div class="single-event">
-                                <a href="single-event.html">
+                                <a href="single-event.php">
                                     <img src="assets\img\event-img\event-img-1.png" alt="Image">
                                 </a>
                                 <div class="event-content">
@@ -997,7 +968,7 @@
                                             Monday 3:00AM - 5:00PM
                                         </li>
                                     </ul>
-                                    <a href="single-event.html">
+                                    <a href="single-event.php">
                                         <h3>Comprehensive literacy and reading recovery conference</h3>
                                     </a>
                                     <span>
@@ -1009,7 +980,7 @@
                         </div>
                         <div class="col-lg-12 col-sm-6">
                             <div class="single-event mb-0">
-                                <a href="single-event.html">
+                                <a href="single-event.php">
                                     <img src="assets\img\event-img\event-img-2.png" alt="Image">
                                 </a>
                                 <div class="event-content">
@@ -1023,7 +994,7 @@
                                             Monday 4:00AM - 6:00PM
                                         </li>
                                     </ul>
-                                    <a href="single-event.html">
+                                    <a href="single-event.php">
                                         <h3>Future of higher education: an invitation to lead</h3>
                                     </a>
                                     <span>
@@ -1106,16 +1077,16 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="single-news">
-                        <a href="single-blog.html">
+                        <a href="single-blog.php">
                             <img src="assets\img\news-img\news-img-5.jpg" alt="Image">
                         </a>
                         <div class="news-content">
                             <span class="tag">Career Advice</span>
-                            <a href="single-blog.html">
+                            <a href="single-blog.php">
                                 <h3>Leading the way with lifelong learning</h3>
                             </a>
                             <ul class="lessons">
-                                <li>By: <a href="single-blog.html">Admin</a></li>
+                                <li>By: <a href="single-blog.php">Admin</a></li>
                                 <li class="float">Posted aon 13/07/2020</li>
                             </ul>
                         </div>
@@ -1123,16 +1094,16 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-news">
-                        <a href="single-blog.html">
+                        <a href="single-blog.php">
                             <img src="assets\img\news-img\news-img-6.jpg" alt="Image">
                         </a>
                         <div class="news-content">
                             <span class="tag">Market Trends</span>
-                            <a href="single-blog.html">
+                            <a href="single-blog.php">
                                 <h3>All Aspire Students are Now Student Card Eligible!</h3>
                             </a>
                             <ul class="lessons">
-                                <li>By: <a href="single-blog.html">Admin</a></li>
+                                <li>By: <a href="single-blog.php">Admin</a></li>
                                 <li class="float">Posted aon 12/07/2020</li>
                             </ul>
                         </div>
@@ -1140,16 +1111,16 @@
                 </div>
                 <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
                     <div class="single-news">
-                        <a href="single-blog.html">
+                        <a href="single-blog.php">
                             <img src="assets\img\news-img\news-img-7.jpg" alt="Image">
                         </a>
                         <div class="news-content">
                             <span class="tag">Research</span>
-                            <a href="single-blog.html">
+                            <a href="single-blog.php">
                                 <h3>Determining the true goal of a good education is difficult.</h3>
                             </a>
                             <ul class="lessons">
-                                <li>By: <a href="single-blog.html">Admin</a></li>
+                                <li>By: <a href="single-blog.php">Admin</a></li>
                                 <li class="float">Posted aon 11/07/2020</li>
                             </ul>
                         </div>
@@ -1164,27 +1135,27 @@
         <div class="container">
             <div class="partner-wrap owl-theme owl-carousel">
                 <div class="partner-item">
-                    <a href="about.html">
+                    <a href="about.php">
                         <img src="assets\img\partner-logo\partner-logo-1.png" alt="Image">
                     </a>
                 </div>
                 <div class="partner-item">
-                    <a href="about.html">
+                    <a href="about.php">
                         <img src="assets\img\partner-logo\partner-logo-2.png" alt="Image">
                     </a>
                 </div>
                 <div class="partner-item">
-                    <a href="about.html">
+                    <a href="about.php">
                         <img src="assets\img\partner-logo\partner-logo-3.png" alt="Image">
                     </a>
                 </div>
                 <div class="partner-item">
-                    <a href="about.html">
+                    <a href="about.php">
                         <img src="assets\img\partner-logo\partner-logo-4.png" alt="Image">
                     </a>
                 </div>
                 <div class="partner-item">
-                    <a href="about.html">
+                    <a href="about.php">
                         <img src="assets\img\partner-logo\partner-logo-5.png" alt="Image">
                     </a>
                 </div>
@@ -1226,19 +1197,19 @@
                         <h3>Useful links</h3>
                         <ul class="link">
                             <li>
-                                <a href="courses.html">All Courses</a>
+                                <a href="courses.php">All Courses</a>
                             </li>
                             <li>
-                                <a href="about.html">About us</a>
+                                <a href="about.php">About us</a>
                             </li>
                             <li>
-                                <a href="faq.html">Help (FAQ)</a>
+                                <a href="faq.php">Help (FAQ)</a>
                             </li>
                             <li>
-                                <a href="terms-conditions.html">Terms & Conditions</a>
+                                <a href="terms-conditions.php">Terms & Conditions</a>
                             </li>
                             <li>
-                                <a href="privacy-policy.html">Privacy Policy</a>
+                                <a href="privacy-policy.php">Privacy Policy</a>
                             </li>
                         </ul>
                     </div>
@@ -1248,19 +1219,19 @@
                         <h3>Top online courses</h3>
                         <ul class="link">
                             <li>
-                                <a href="courses.html">AI for everyone</a>
+                                <a href="courses.php">AI for everyone</a>
                             </li>
                             <li>
-                                <a href="courses.html">Networks and deep learning</a>
+                                <a href="courses.php">Networks and deep learning</a>
                             </li>
                             <li>
-                                <a href="courses.html">Learning with python</a>
+                                <a href="courses.php">Learning with python</a>
                             </li>
                             <li>
-                                <a href="courses.html">Financial markets</a>
+                                <a href="courses.php">Financial markets</a>
                             </li>
                             <li>
-                                <a href="courses.html">Speak English professionally</a>
+                                <a href="courses.php">Speak English professionally</a>
                             </li>
                         </ul>
                     </div>
@@ -1270,19 +1241,19 @@
                         <h3>Popular subjects</h3>
                         <ul class="link">
                             <li>
-                                <a href="courses.html">Data science</a>
+                                <a href="courses.php">Data science</a>
                             </li>
                             <li>
-                                <a href="courses.html">Computer science</a>
+                                <a href="courses.php">Computer science</a>
                             </li>
                             <li>
-                                <a href="courses.html">Business and Management</a>
+                                <a href="courses.php">Business and Management</a>
                             </li>
                             <li>
-                                <a href="courses.html">Business and Management</a>
+                                <a href="courses.php">Business and Management</a>
                             </li>
                             <li>
-                                <a href="courses.html">Nature & Environment</a>
+                                <a href="courses.php">Nature & Environment</a>
                             </li>
                         </ul>
                     </div>
@@ -1307,34 +1278,7 @@
     </div>
 
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="assets\js\jquery.min.js"></script>
-
-    <script src="assets\js\bootstrap.bundle.min.js"></script>
-
-    <script src="assets\js\meanmenu.min.js"></script>
-
-    <script src="assets\js\owl.carousel.min.js"></script>
-
-    <script src="assets\js\wow.min.js"></script>
-
-    <script src="assets\js\nice-select.min.js"></script>
-
-    <script src="assets\js\magnific-popup.min.js"></script>
-
-    <script src="assets\js\jarallax.min.js"></script>
-
-    <script src="assets\js\appear.min.js"></script>
-
-    <script src="assets\js\odometer.min.js"></script>
-
-    <script src="assets\js\form-validator.min.js"></script>
-
-    <script src="assets\js\contact-form-script.js"></script>
-
-    <script src="assets\js\ajaxchimp.min.js"></script>
-
-    <script src="assets\js\custom.js"></script>
+    <?php include "assets/includes/footer.php" ?>
 </body>
 
 </html>
