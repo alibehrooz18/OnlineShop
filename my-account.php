@@ -5,7 +5,7 @@
 
     <?php include "./assets/includes/header.php" ?>
 
-    <title>Eduon - Online Courses & Training HTML Template</title>
+    <title>Eduon - My account</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
         </div>
     </div>
 
-
+    <!-- Navbar start -->
     <div class="navbar-area">
 
         <div class="mobile-nav">
@@ -266,8 +266,9 @@
         </div>
 
     </div>
+    <!-- Navbar end -->
 
-
+    <!-- Page title start -->
     <div class="page-title-area bg-7">
         <div class="container">
             <div class="page-title-content">
@@ -283,8 +284,9 @@
             </div>
         </div>
     </div>
+    <!-- Page title end -->
 
-
+    <!-- Login & register area start -->
     <section class="user-area-style ptb-100">
         <div class="container">
             <div class="row">
@@ -384,122 +386,10 @@
             </div>
         </div>
     </section>
+    <!-- Login & register area start -->
+    
 
-
-    <footer class="footer-top-area pt-100 pb-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="footer-widget">
-                        <h3>Find Us</h3>
-                        <ul class="address">
-                            <li class="location">
-                                <i class="bx bxs-location-plus"></i>
-                                6890 Blvd, The Bronx, NY 1058 New York, USA
-                            </li>
-                            <li>
-                                <i class="bx bxs-envelope"></i>
-                                <a href="/cdn-cgi/l/email-protection#f29a979e9e9db29796879d9cdc919d9f"><span
-                                        class="__cf_email__"
-                                        data-cfemail="88e0ede4e4e7c8edecfde7e6a6ebe7e5">[email&#160;protected]</span></a>
-                                <a href="/cdn-cgi/l/email-protection#fb8b8e99979298bb9e9f8e9495d5989496"><span
-                                        class="__cf_email__"
-                                        data-cfemail="6e1e1b0c02070d2e0b0a1b0100400d0103">[email&#160;protected]</span></a>
-                            </li>
-                            <li>
-                                <i class="bx bxs-phone-call"></i>
-                                <a href="tel:+1(514)312-5678">+1 (514) 312-5678</a>
-                                <a href="tel:+1(514)312-6688">+1 (514) 312-6688</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="footer-widget">
-                        <h3>Useful links</h3>
-                        <ul class="link">
-                            <li>
-                                <a href="courses.php">All Courses</a>
-                            </li>
-                            <li>
-                                <a href="about.php">About us</a>
-                            </li>
-                            <li>
-                                <a href="faq.php">Help (FAQ)</a>
-                            </li>
-                            <li>
-                                <a href="terms-conditions.php">Terms & Conditions</a>
-                            </li>
-                            <li>
-                                <a href="privacy-policy.php">Privacy Policy</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="footer-widget">
-                        <h3>Top online courses</h3>
-                        <ul class="link">
-                            <li>
-                                <a href="courses.php">AI for everyone</a>
-                            </li>
-                            <li>
-                                <a href="courses.php">Networks and deep learning</a>
-                            </li>
-                            <li>
-                                <a href="courses.php">Learning with python</a>
-                            </li>
-                            <li>
-                                <a href="courses.php">Financial markets</a>
-                            </li>
-                            <li>
-                                <a href="courses.php">Speak English professionally</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="footer-widget">
-                        <h3>Popular subjects</h3>
-                        <ul class="link">
-                            <li>
-                                <a href="courses.php">Data science</a>
-                            </li>
-                            <li>
-                                <a href="courses.php">Computer science</a>
-                            </li>
-                            <li>
-                                <a href="courses.php">Business and Management</a>
-                            </li>
-                            <li>
-                                <a href="courses.php">Business and Management</a>
-                            </li>
-                            <li>
-                                <a href="courses.php">Nature & Environment</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-
-    <footer class="footer-bottom-area">
-        <div class="container">
-            <div class="copyright-wrap">
-                <p>© Eduon is Proudly Owned by <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a></p>
-            </div>
-        </div>
-    </footer>
-
-
-    <div class="go-top">
-        <i class="bx bx-chevrons-up"></i>
-        <i class="bx bx-chevrons-up"></i>
-    </div>
-
-
+    <!-- Footer -->
     <?php include "assets/includes/footer.php" ?>
 </body>
 
