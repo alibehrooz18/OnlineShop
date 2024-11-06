@@ -22,8 +22,8 @@
     </div>
 
 
+    <!-- Navbar start -->
     <div class="navbar-area">
-
         <div class="mobile-nav">
             <a href="index.php" class="logo">
                 <img src="assets\img\logo.png" class="main-logo" alt="Logo">
@@ -266,8 +266,9 @@
         </div>
 
     </div>
+    <!-- Navbar end -->
 
-
+    <!-- Page title -->
     <div class="page-title-area bg-8">
         <div class="container">
             <div class="page-title-content">
@@ -284,8 +285,9 @@
         </div>
     </div>
 
+    <!-- Login start -->
 
-    <section class="user-area-style ptb-100">
+    <section class="user-area-style ptb-100" dir="ltr">
         <div class="container">
             <div class="log-in-area">
                 <div class="section-title">
@@ -297,7 +299,7 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label>Email or Phone</label>
-                                    <input class="form-control" type="text" name="name">
+                                    <input class="form-control" type="text" name="username">
                                 </div>
                             </div>
                             <div class="col-12">
@@ -323,7 +325,7 @@
                                 </button>
                             </div>
                             <div class="col-12">
-                                <p>Have an account? <a href="registration.php">Registration Now!</a></p>
+                                <p>Have an account? <a href="registration.php">Registration Now</a></p>
                             </div>
                         </div>
                     </form>
@@ -331,6 +333,7 @@
             </div>
         </div>
     </section>
+    <!-- Login end -->
 
     <!-- Footer -->
     <?php include "assets/includes/footer.php" ?>

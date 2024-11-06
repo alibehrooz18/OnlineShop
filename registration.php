@@ -1,4 +1,39 @@
-﻿<!DOCTYPE html>
+﻿<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+<?php include_once "./assets/includes/db.php"; ?>
+
+<?php
+// Functions
+function email_exists($email)
+{
+    global $connection;
+
+    $query = "SELECT user_email FROM users WHERE user_email = '$email'";
+    $result = mysqli_query($connection, $query);
+    if (mysqli_num_rows($result) > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function mobile_exists($number)
+{
+    global $connection;
+    $query = "SELECT user_num FROM users WHERE user_num = '$number'";
+    $result = mysqli_query($connection, $query);
+    if (mysqli_num_rows($result) > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+?>
+
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
@@ -21,7 +56,7 @@
         </div>
     </div>
 
-
+    <!-- Navbar start -->
     <div class="navbar-area">
 
         <div class="mobile-nav">
@@ -266,8 +301,9 @@
         </div>
 
     </div>
+    <!-- Navbar end -->
 
-
+    <!-- Page title -->
     <div class="page-title-area bg-10">
         <div class="container">
             <div class="page-title-content">
@@ -284,8 +320,37 @@
         </div>
     </div>
 
+    <!-- Register start -->
+    <?php
+    if (isset($_POST['register'])) {
+        $fullname = mysqli_escape_string($connection, $_POST['fullname']);
+        $email = mysqli_escape_string($connection, $_POST['email']);
+        $number = mysqli_escape_string($connection, $_POST['number']);
+        $password = mysqli_escape_string($connection, $_POST['password']);
 
-    <section class="user-area-style ptb-100">
+        if (email_exists($email)) {
+            echo $message = "Email exists!";
+        } elseif (mobile_exists($number)) {
+            echo $message = "Mobile number exists!";
+        } elseif (!empty($fullname) && !empty($email) && !empty($number) && !empty($password)) {
+            $hash_password = password_hash($password, PASSWORD_DEFAULT);
+
+            $query = "INSERT INTO users (user_fullname, user_email, user_num, password, user_role) ";
+            $query .= "VALUES ('{$fullname}', '{$email}', '{$number}', '{$hash_password}', 'subscriber')";
+            $register_query = mysqli_query($connection, $query);
+
+            if (!$register_query) {
+                die("QUERY FAILED" . mysqli_error($connection));
+            }
+            echo $message = "Your registration has been submitted";
+        } else {
+            echo $message = "Fields cannot be empty";
+        }
+    } else {
+        echo $message = "";
+    }
+    ?>
+    <section class="user-area-style ptb-100" dir="ltr">
         <div class="container">
             <div class="registration-area">
                 <div class="section-title">
@@ -297,7 +362,7 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label>Full name</label>
-                                    <input class="form-control" type="text" name="name">
+                                    <input class="form-control" type="text" name="fullname">
                                 </div>
                             </div>
                             <div class="col-12">
@@ -308,20 +373,20 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label>Mobile no.</label>
-                                    <input class="form-control" type="email" name="email">
+                                    <label>Mobile no</label>
+                                    <input class="form-control" type="tel" pattern="[0-9]{4}[0-9]{3}[0-9]{4}" name="number">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
                                     <label>Password</label>
-                                    <input class="form-control" type="text" name="password">
+                                    <input class="form-control" type="password" name="password">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="row align-items-center">
                                     <div class="col-lg-6">
-                                        <button class="default-btn register" type="submit">
+                                        <button class="default-btn register" type="submit" name="register">
                                             Register Now
                                         </button>
                                     </div>
@@ -332,7 +397,7 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <p>Have an account? <a href="log-in.php">Login Now!</a></p>
+                                <p>Have an account? <a href="log-in.php">Login Now</a></p>
                             </div>
                         </div>
                     </form>
@@ -340,6 +405,7 @@
             </div>
         </div>
     </section>
+    <!-- Register end -->
 
 
     <!-- Footer -->
