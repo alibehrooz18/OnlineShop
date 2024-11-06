@@ -399,7 +399,7 @@ function mobile_exists($number){
                                 </div>
                                 <div class="col-12">
                                     <div class="login-action">
-                                        <span class="log-rem">
+                                        <span class="log-rem mx-3">
                                             <input id="remember" type="checkbox" name="remember" value="1">
                                             <label for="remember">Remember me!</label>
                                         </span>
