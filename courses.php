@@ -1,4 +1,17 @@
-﻿<!DOCTYPE html>
+﻿<?php include "./assets/includes/db.php"; ?>
+<?php
+// Function
+function confirmQuery($result)
+{
+    global $connection;
+    if (!$result) {
+        die("QUERY FAILD" . mysqli_error($connection));
+    }
+}
+?>
+
+
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
@@ -22,6 +35,7 @@
     </div>
 
 
+    <!-- Navbar start -->
     <div class="navbar-area">
 
         <div class="mobile-nav">
@@ -266,8 +280,10 @@
         </div>
 
     </div>
+    <!-- Navbar end -->
 
 
+    <!-- Banner start -->
     <div class="page-title-area bg-4">
         <div class="container">
             <div class="page-title-content">
@@ -283,8 +299,10 @@
             </div>
         </div>
     </div>
+    <!-- Banner end -->
 
 
+    <!-- Course section start -->
     <section class="courses-area-style ptb-100">
         <div class="container">
             <div class="showing-result">
@@ -295,19 +313,110 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4">
+                        <!-- Category section -->
                         <div class="showing-top-bar-ordering">
-                            <select>
-                                <option value="1">Default sorting</option>
-                                <option value="2">Education</option>
-                                <option value="0">Accounting</option>
-                                <option value="3">Language</option>
-                                <option value="4">Teaching</option>
-                                <option value="5">Research</option>
-                                <option value="5">Assessment</option>
-                            </select>
+                            <form action="courses.php" method="GET">
+                                <select name="category" onchange="this.form.submit()">
+                                    <option value="">Default sorting</option>
+                                    <?php
+                                    $query = "SELECT * FROM categories";
+                                    $select_cat_query = mysqli_query($connection, $query);
+                                    confirmQuery($select_cat_query);
+
+                                    while ($row = mysqli_fetch_assoc($select_cat_query)) {
+                                        $cat_id = $row['cat_id'];
+                                        $cat_title = $row['cat_title'];
+                                        echo "<option value='{$cat_id}'>{$cat_title}</option>";
+                                    }
+                                    ?>
+                                </select>
+                            </form>
                         </div>
+                        <!-- Show course by categorie -->
+
                     </div>
+
                     <div class="col-lg-3 col-md-4">
+                        <!-- Search section -->
+                        <?php
+                        if (isset($_GET['c_id'])) {
+                            $the_course_id = mysqli_real_escape_string($connection, $_GET['c_id']);
+                        }
+                        if (isset($_POST['submit'])) {
+                            $search = $_POST['search'];
+                            $query = "SELECT * FROM courses WHERE course_tags LIKE '%$search%'";
+                            $search_query = mysqli_query($connection, $query);
+                            confirmQuery($search_query);
+
+                            $count = mysqli_fetch_row($search_query);
+                            if ($count == 0) {
+                                echo "<h5>Not Finde!</h5>";
+                            } else {
+                                $query = "SELECT * FROM courses WHERE course_id = $the_course_id";
+                                $all_course_query = mysqli_query($connection, $query);
+                                confirmQuery($all_course_query);
+                                if (mysqli_num_rows($all_course_query) > 0) {
+                                    while ($row = mysqli_fetch_assoc($all_course_query)) {
+                                        $course_image = $row['course_image'];
+                                        $course_price = $row['course_price'];
+                                        $course_tags = $row['course_tags'];
+                                        $course_title = $row['course_title'];
+                                        $course_rate = $row['course_rate'];
+                                        $course_content = $row['course_content'];
+                                        $course_lesson = $row['course_lesson'];
+                                        $course_student = $row['course_student'];
+
+                        ?>
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="single-course">
+                                                <!-- Single course -->
+                                                <a href="single-course.php">
+                                                    <img src="assets/img/course-img/<?php echo $course_image ?>" alt="Image">
+                                                </a>
+                                                <div class="course-content">
+                                                    <span class="price">$<?php echo $course_price ?></span>
+                                                    <span class="tag"><?php echo $course_tags ?></span>
+                                                    <a href="single-course.php?c_id=<?php echo $the_course_id ?>">
+                                                        <h3><?php echo $course_title ?></h3>
+                                                    </a>
+                                                    <ul class="rating">
+                                                        <li>
+                                                            <i class="bx bxs-star"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="bx bxs-star"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="bx bxs-star"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="bx bxs-star"></i>
+                                                        </li>
+                                                        <li>
+                                                            <i class="bx bxs-star"></i>
+                                                        </li>
+                                                        <li>
+                                                            <span>0.5</span>
+                                                            <a href="single-course.php">(1 rating)</a>
+                                                        </li>
+                                                    </ul>
+                                                    <p><?php echo $course_content ?></p>
+                                                    <ul class="lessons">
+                                                        <li><?php echo $course_lesson ?> Lessons</li>
+                                                        <li class="float"><?php echo $course_student ?> Students</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                        <?php
+                                    }
+                                } else {
+                                    echo "<p>No course found.</p>";
+                                }
+                            }
+                        }
+                        ?>
+
                         <form class="search-form">
                             <input class="form-control" name="search" placeholder="Search our courses" type="text">
                             <button class="search-btn" type="submit">
@@ -317,253 +426,73 @@
                     </div>
                 </div>
             </div>
+            <!-- All course -->
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-course">
-                        <a href="single-course.php">
-                            <img src="assets\img\course-img\course-img-1.jpg" alt="Image">
-                        </a>
-                        <div class="course-content">
-                            <span class="price">$39</span>
-                            <span class="tag">Education</span>
-                            <a href="single-course.php">
-                                <h3>Developing strategies for online teaching and learning</h3>
-                            </a>
-                            <ul class="rating">
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <span>0.5</span>
-                                    <a href="single-course.php">(1 rating)</a>
-                                </li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. </p>
-                            <ul class="lessons">
-                                <li>0 Lessons</li>
-                                <li class="float">44 Students</li>
-                            </ul>
+                <?php
+                $query = "SELECT * FROM courses";
+                $all_course_query = mysqli_query($connection, $query);
+                confirmQuery($all_course_query);
+                if (mysqli_num_rows($all_course_query) > 0) {
+                    while ($row = mysqli_fetch_assoc($all_course_query)) {
+                        $course_image = $row['course_image'];
+                        $course_price = $row['course_price'];
+                        $course_tags = $row['course_tags'];
+                        $course_title = $row['course_title'];
+                        $course_rate = $row['course_rate'];
+                        $course_content = $row['course_content'];
+                        $course_lesson = $row['course_lesson'];
+                        $course_student = $row['course_student'];
+
+                ?>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-course">
+                                <!-- Single course -->
+                                <a href="single-course.php">
+                                    <img src="assets/img/course-img/<?php echo $course_image ?>" alt="Image">
+                                </a>
+                                <div class="course-content">
+                                    <span class="price">$<?php echo $course_price ?></span>
+                                    <span class="tag"><?php echo $course_tags ?></span>
+                                    <a href="single-course.php?c_id=<?php echo $the_course_id ?>">
+                                        <h3><?php echo $course_title ?></h3>
+                                    </a>
+                                    <ul class="rating">
+                                        <li>
+                                            <i class="bx bxs-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="bx bxs-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="bx bxs-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="bx bxs-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="bx bxs-star"></i>
+                                        </li>
+                                        <li>
+                                            <span>0.5</span>
+                                            <a href="single-course.php">(1 rating)</a>
+                                        </li>
+                                    </ul>
+                                    <p><?php echo $course_content ?></p>
+                                    <ul class="lessons">
+                                        <li><?php echo $course_lesson ?> Lessons</li>
+                                        <li class="float"><?php echo $course_student ?> Students</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-course">
-                        <a href="single-course.php">
-                            <img src="assets\img\course-img\course-img-2.jpg" alt="Image">
-                        </a>
-                        <div class="course-content">
-                            <span class="price">$59</span>
-                            <span class="tag">Accounting</span>
-                            <a href="single-course.php">
-                                <h3>Introduction to cybersecurity for teachers</h3>
-                            </a>
-                            <ul class="rating">
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <span>0.5</span>
-                                    <a href="single-course.php">(3 rating)</a>
-                                </li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. </p>
-                            <ul class="lessons">
-                                <li>0 Lessons</li>
-                                <li class="float">24 Students</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-course">
-                        <a href="single-course.php">
-                            <img src="assets\img\course-img\course-img-3.jpg" alt="Image">
-                        </a>
-                        <div class="course-content">
-                            <span class="price">$29</span>
-                            <span class="tag">Language</span>
-                            <a href="single-course.php">
-                                <h3>English: spelling, punctuation, and grammar</h3>
-                            </a>
-                            <ul class="rating">
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <span>0.5</span>
-                                    <a href="single-course.php">(5 rating)</a>
-                                </li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. </p>
-                            <ul class="lessons">
-                                <li>0 Lessons</li>
-                                <li class="float">39 Students</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-course">
-                        <a href="single-course.php">
-                            <img src="assets\img\course-img\course-img-4.jpg" alt="Image">
-                        </a>
-                        <div class="course-content">
-                            <span class="price">$49</span>
-                            <span class="tag">Teaching</span>
-                            <a href="single-courses.php">
-                                <h3>Introduction to cybersecurity for teachers</h3>
-                            </a>
-                            <ul class="rating">
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <span>0.5</span>
-                                    <a href="single-course.php">(2 rating)</a>
-                                </li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. </p>
-                            <ul class="lessons">
-                                <li>0 Lessons</li>
-                                <li class="float">50 Students</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-course">
-                        <a href="single-course.php">
-                            <img src="assets\img\course-img\course-img-5.jpg" alt="Image">
-                        </a>
-                        <div class="course-content">
-                            <span class="price">$39</span>
-                            <span class="tag">Teaching</span>
-                            <a href="single-course.php">
-                                <h3>Learning implementing formative assessment</h3>
-                            </a>
-                            <ul class="rating">
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <span>0.5</span>
-                                    <a href="single-course.php">(1 rating)</a>
-                                </li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. </p>
-                            <ul class="lessons">
-                                <li>0 Lessons</li>
-                                <li class="float">44 Students</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-course">
-                        <a href="single-course.php">
-                            <img src="assets\img\course-img\course-img-6.jpg" alt="Image">
-                        </a>
-                        <div class="course-content">
-                            <span class="price">$59</span>
-                            <span class="tag">Education</span>
-                            <a href="single-course.php">
-                                <h3>Teaching languages in primary schools: putting research</h3>
-                            </a>
-                            <ul class="rating">
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <i class="bx bxs-star"></i>
-                                </li>
-                                <li>
-                                    <span>0.5</span>
-                                    <a href="single-course.php">(3 rating)</a>
-                                </li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. </p>
-                            <ul class="lessons">
-                                <li>0 Lessons</li>
-                                <li class="float">44 Students</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    }
+                } else {
+                    echo "<p>No course found.</p>";
+                }
+                ?>
+
+                <!-- Pagination -->
                 <div class="col-lg-12 col-md-12">
                     <div class="pagination-area">
 
@@ -577,8 +506,10 @@
                     </div>
                 </div>
             </div>
+            <!-- All course end -->
         </div>
     </section>
+    <!-- Course section end -->
 
 
     <!-- Footer -->
