@@ -63,7 +63,7 @@
         </div>
     </div>
 
-
+    <!-- Navbar start -->
     <div class="navbar-area">
 
         <div class="mobile-nav">
@@ -308,8 +308,10 @@
         </div>
 
     </div>
+    <!-- Navbar end -->
 
 
+    <!-- Home banner start -->
     <section class="banner-area f5f6fa-bg-color">
         <div class="container-fluid social">
             <div class="row align-items-center">
@@ -361,8 +363,10 @@
 
         </div>
     </section>
+    <!-- Home banner end -->
 
 
+    <!-- Partner start -->
     <div class="partner-area f5f6fa-bg-color ptb-100">
         <div class="container">
             <div class="partner-wrap owl-theme owl-carousel">
@@ -394,8 +398,10 @@
             </div>
         </div>
     </div>
+    <!-- Partner end -->
 
 
+    <!-- Benefits start -->
     <section class="achieve-area f5f6fa-bg-color pt-100 pb-70">
         <div class="container">
             <div class="section-title">
@@ -450,8 +456,10 @@
             </div>
         </div>
     </section>
+    <!-- Benefits end -->
 
 
+    <!-- Seconde banner start -->
     <section class="education-area ebeef5-bg-color">
         <div class="container-fluid p-0">
             <div class="row">
@@ -498,8 +506,10 @@
             </div>
         </div>
     </section>
+    <!-- Seconde banner end -->
 
 
+    <!-- Best course start -->
     <section class="courses-area pt-100 pb-70">
         <div class="container">
             <div class="section-title">
@@ -756,9 +766,17 @@
             </div>
         </div>
     </section>
+    <!-- Best course end -->
 
 
-    <section class="counter-area ebeef5-bg-color pt-100 pb-70">
+    <!-- Counter start -->
+    <?php
+    // Functions
+    
+
+
+    ?>
+    <section class="counter-area ebeef5-bg-color pt-100 pb-70" dir="ltr">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
@@ -809,6 +827,7 @@
             </div>
         </div>
     </section>
+    <!-- Counter end -->
 
 
     <section class="enroll-area ptb-100">
