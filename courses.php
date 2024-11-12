@@ -18,7 +18,7 @@ function confirmQuery($result)
 
     <?php include "./assets/includes/header.php" ?>
 
-    <title>Eduon - Online Courses & Training HTML Template</title>
+    <title>Eduon - Online Courses</title>
 </head>
 
 <body>

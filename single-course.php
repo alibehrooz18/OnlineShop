@@ -1,11 +1,24 @@
-﻿<!DOCTYPE html>
+﻿<?php include "./assets/includes/db.php"; ?>
+<?php
+// Function
+function confirmQuery($result)
+{
+    global $connection;
+    if (!$result) {
+        die("QUERY FAILD" . mysqli_error($connection));
+    }
+}
+?>
+
+
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
 
     <?php include "./assets/includes/header.php" ?>
 
-    <title>Eduon - Online Courses & Training HTML Template</title>
+    <title>Eduon - Online Course</title>
 </head>
 
 <body>
@@ -22,8 +35,10 @@
     </div>
 
 
+    <!-- Navbar start -->
     <div class="navbar-area">
 
+        <!-- Mobile -->
         <div class="mobile-nav">
             <a href="index.php" class="logo">
                 <img src="assets\img\logo.png" class="main-logo" alt="Logo">
@@ -31,6 +46,7 @@
             </a>
         </div>
 
+        <!-- Main -->
         <div class="main-nav">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md">
@@ -266,8 +282,9 @@
         </div>
 
     </div>
+    <!-- Navbar end -->
 
-
+    <!-- Banner -->
     <div class="page-title-area bg-25">
         <div class="container">
             <div class="page-title-content">
@@ -284,25 +301,44 @@
         </div>
     </div>
 
-
-    <section class="single-course-area ptb-100">
+    <!-- Main course -->
+    <section class="single-course-area ptb-100" dir="ltr">
         <div class="container">
             <div class="row">
+                <?php
+                if (isset($_GET['c_id'])) {
+                    $course_id = (int)$_GET['c_id'];
+                }
+                $query = "SELECT * FROM courses WHERE course_id = $course_id";
+                $course_query = mysqli_query($connection, $query);
+                confirmQuery($course_query);
+
+                $row = mysqli_fetch_assoc($course_query);
+                $course_author = $row['course_author'];
+                $author_image = $row['author_image'];
+                $course_image = $row['course_image'];
+                $course_price = $row['course_price'];
+                $course_tags = $row['course_tags'];
+                $course_title = $row['course_title'];
+                $course_content = $row['course_content'];
+                $course_lesson = $row['course_lesson'];
+                $course_student = $row['course_student'];
+                ?>
                 <div class="col-lg-8">
                     <div class="single-course-content">
-                        <h3>Leading the way with lifelong learning</h3>
+                        <h3><?php echo $course_title ?></h3>
                         <div class="row align-items-center">
                             <div class="col-lg-4 col-sm-4">
                                 <div class="course-rating">
-                                    <img src="assets\img\single-course\rating-img-1.jpg" alt="Image">
+                                    <img src="assets/img/single-course/<?php echo $author_image ?>" alt="Image">
                                     <h4><a href="instructors.php">Instructor:</a></h4>
-                                    <span>Jeremy Cioara</span>
+                                    <span><?php echo $course_author ?></span>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-4">
                                 <div class="course-rating pl-0 text-center">
                                     <h4>Categories:</h4>
-                                    <span>Career Advice</span>
+                                    <span><?php echo $course_tags ?></span>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-4">
@@ -321,8 +357,9 @@
                                 </div>
                             </div>
                         </div>
-                        <img src="assets\img\single-course\single-course.jpg" alt="Image">
+                        <img src="assets/img/course-img/<?php echo $course_image ?>" alt="Image" width="100%">
                     </div>
+                    <!-- Course content -->
                     <div class="tab single-course-tab">
                         <ul class="tabs">
                             <li>
@@ -338,6 +375,7 @@
                                 <a href="javascript:;">Reviews</a>
                             </li>
                         </ul>
+                        <!-- Review and content -->
                         <div class="tab_content">
                             <div class="tabs_item">
                                 <h3>Course Description</h3>
@@ -376,6 +414,7 @@
                                     gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis sit amet,
                                     consectetur adipiscing elit, sed do eiusmod tempor.</p>
                             </div>
+                            <!-- Video section -->
                             <div class="tabs_item">
                                 <div class="curriculum-content">
                                     <h3>Education introduction</h3>
@@ -520,7 +559,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tabs_item">
+                            <!-- Course rate -->
+                            <div class="tabs_item" dir="rtl">
                                 <div class="review-content">
                                     <h3>Course rating</h3>
                                     <ul class="rating-star">
@@ -591,11 +631,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+
+                <div class="col-lg-4" dir="rtl">
                     <div class="account-wrap">
                         <ul>
                             <li>
-                                Price <span class="bold">$29.00</span>
+                                Price <span class="bold">$<?php echo $course_price ?></span>
                             </li>
                             <li>
                                 Start <span>Sep 01, 2020</span>
@@ -604,7 +645,7 @@
                                 End <span>Sep 02, 2020</span>
                             </li>
                             <li>
-                                Event Category <span>Education</span>
+                                Event Category <span><?php echo $course_tags ?></span>
                             </li>
                             <li>
                                 Total Slot: <span>100</span>
@@ -647,18 +688,75 @@
                         </div>
                     </div>
                 </div>
+                <?php
+
+
+                ?>
             </div>
         </div>
     </section>
+    <!-- Main course end -->
 
 
+    <!-- Suggest course -->
     <section class="courses-area-style pb-70">
         <div class="container">
             <div class="section-title">
                 <h2>Related Courses</h2>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6">
+            <?php
+
+                $query = "SELECT * FROM courses LIMIT 3";
+                $course_query = mysqli_query($connection, $query);
+                confirmQuery($course_query);
+
+                if (mysqli_num_rows($course_query) > 0) {
+                    while ($row = mysqli_fetch_assoc($course_query)) {
+                        $course_id = $row['course_id'];
+                        $course_image = $row['course_image'];
+                        $course_price = $row['course_price'];
+                        $course_tags = $row['course_tags'];
+                        $course_title = $row['course_title'];
+                        $course_content = $row['course_content'];
+                        $course_lesson = $row['course_lesson'];
+                        $course_student = $row['course_student'];
+                ?>
+                        <!-- Single course item -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-course">
+                                <a href="single-course.php?c_id=<?php echo $course_id; ?>">
+                                    <img src="assets/img/course-img/<?php echo $course_image ?>" alt="Image">
+                                </a>
+                                <div class="course-content">
+                                    <span class="price">$<?php echo $course_price ?></span>
+                                    <span class="tag"><?php echo $course_tags ?></span>
+                                    <a href="single-course.php?c_id=<?php echo $course_id ?>">
+                                        <h3><?php echo $course_title ?></h3>
+                                    </a>
+                                    <ul class="rating">
+                                        <li><i class="bx bxs-star"></i></li>
+                                        <li><i class="bx bxs-star"></i></li>
+                                        <li><i class="bx bxs-star"></i></li>
+                                        <li><i class="bx bxs-star"></i></li>
+                                        <li><i class="bx bxs-star"></i></li>
+                                        <li><span>0.5</span><a href="single-course.php">(1 rating)</a></li>
+                                    </ul>
+                                    <p><?php echo $course_content ?></p>
+                                    <ul class="lessons">
+                                        <li><?php echo $course_lesson ?> Lessons</li>
+                                        <li class="float"><?php echo $course_student ?> Students</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                <?php
+                    }
+                } else {
+                    echo "<p>No courses found.</p>";
+                }
+                ?>
+                <!-- <div class="col-lg-4 col-md-6">
                     <div class="single-course">
                         <a href="single-course.php">
                             <img src="assets\img\course-img\course-img-1.jpg" alt="Image">
@@ -780,7 +878,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
