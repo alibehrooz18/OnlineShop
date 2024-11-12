@@ -313,12 +313,13 @@ function confirmQuery($result)
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4">
-                        <!-- Category section -->
+                        <!-- Category selection dropdown -->
                         <div class="showing-top-bar-ordering">
-                            <form action="courses.php" method="GET">
+                            <form method="GET">
                                 <select name="category" onchange="this.form.submit()">
                                     <option value="">Default sorting</option>
                                     <?php
+                                    $selected_category = isset($_GET['category']) ? $_GET['category'] : '';
                                     $query = "SELECT * FROM categories";
                                     $select_cat_query = mysqli_query($connection, $query);
                                     confirmQuery($select_cat_query);
@@ -326,98 +327,18 @@ function confirmQuery($result)
                                     while ($row = mysqli_fetch_assoc($select_cat_query)) {
                                         $cat_id = $row['cat_id'];
                                         $cat_title = $row['cat_title'];
-                                        echo "<option value='{$cat_id}'>{$cat_title}</option>";
+                                        $selected_attr = ($cat_id == $selected_category) ? 'selected' : '';
+                                        echo "<option value='{$cat_id}' {$selected_attr}>{$cat_title}</option>";
                                     }
                                     ?>
                                 </select>
                             </form>
                         </div>
-                        <!-- Show course by categorie -->
-
                     </div>
 
                     <div class="col-lg-3 col-md-4">
-                        <!-- Search section -->
-                        <?php
-                        if (isset($_GET['c_id'])) {
-                            $the_course_id = mysqli_real_escape_string($connection, $_GET['c_id']);
-                        }
-                        if (isset($_POST['submit'])) {
-                            $search = $_POST['search'];
-                            $query = "SELECT * FROM courses WHERE course_tags LIKE '%$search%'";
-                            $search_query = mysqli_query($connection, $query);
-                            confirmQuery($search_query);
-
-                            $count = mysqli_fetch_row($search_query);
-                            if ($count == 0) {
-                                echo "<h5>Not Finde!</h5>";
-                            } else {
-                                $query = "SELECT * FROM courses WHERE course_id = $the_course_id";
-                                $all_course_query = mysqli_query($connection, $query);
-                                confirmQuery($all_course_query);
-                                if (mysqli_num_rows($all_course_query) > 0) {
-                                    while ($row = mysqli_fetch_assoc($all_course_query)) {
-                                        $course_image = $row['course_image'];
-                                        $course_price = $row['course_price'];
-                                        $course_tags = $row['course_tags'];
-                                        $course_title = $row['course_title'];
-                                        $course_rate = $row['course_rate'];
-                                        $course_content = $row['course_content'];
-                                        $course_lesson = $row['course_lesson'];
-                                        $course_student = $row['course_student'];
-
-                        ?>
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="single-course">
-                                                <!-- Single course -->
-                                                <a href="single-course.php">
-                                                    <img src="assets/img/course-img/<?php echo $course_image ?>" alt="Image">
-                                                </a>
-                                                <div class="course-content">
-                                                    <span class="price">$<?php echo $course_price ?></span>
-                                                    <span class="tag"><?php echo $course_tags ?></span>
-                                                    <a href="single-course.php?c_id=<?php echo $the_course_id ?>">
-                                                        <h3><?php echo $course_title ?></h3>
-                                                    </a>
-                                                    <ul class="rating">
-                                                        <li>
-                                                            <i class="bx bxs-star"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i class="bx bxs-star"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i class="bx bxs-star"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i class="bx bxs-star"></i>
-                                                        </li>
-                                                        <li>
-                                                            <i class="bx bxs-star"></i>
-                                                        </li>
-                                                        <li>
-                                                            <span>0.5</span>
-                                                            <a href="single-course.php">(1 rating)</a>
-                                                        </li>
-                                                    </ul>
-                                                    <p><?php echo $course_content ?></p>
-                                                    <ul class="lessons">
-                                                        <li><?php echo $course_lesson ?> Lessons</li>
-                                                        <li class="float"><?php echo $course_student ?> Students</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                        <?php
-                                    }
-                                } else {
-                                    echo "<p>No course found.</p>";
-                                }
-                            }
-                        }
-                        ?>
-
-                        <form class="search-form">
+                        <!-- Search form -->
+                        <form class="search-form" action="courses.php" method="GET">
                             <input class="form-control" name="search" placeholder="Search our courses" type="text">
                             <button class="search-btn" type="submit">
                                 <i class="bx bx-search"></i>
@@ -426,56 +347,65 @@ function confirmQuery($result)
                     </div>
                 </div>
             </div>
-            <!-- All course -->
+
+            <!-- Display filtered courses -->
             <div class="row">
                 <?php
-                $query = "SELECT * FROM courses";
-                $all_course_query = mysqli_query($connection, $query);
-                confirmQuery($all_course_query);
-                if (mysqli_num_rows($all_course_query) > 0) {
-                    while ($row = mysqli_fetch_assoc($all_course_query)) {
+                // Pagination logic 
+                $courses_per_page = 6;
+                $query = "SELECT COUNT(*) AS total_courses FROM courses";
+                $course_query = mysqli_query($connection, $query);
+                confirmQuery($course_query);
+                $row = mysqli_fetch_assoc($course_query);
+                $total_courses = $row['total_courses'];
+                $total_pages = ceil($total_courses / $courses_per_page);
+                $current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+                $current_page = max(1, min($current_page, $total_pages));
+                $offset = ($current_page - 1) * $courses_per_page;
+
+                // Search 
+                $search_query = '';
+                if (isset($_GET['search']) && $_GET['search'] !== '') {
+                    $search_query = " WHERE course_tags LIKE '%" . mysqli_real_escape_string($connection, $_GET['search']) . "%'";
+                } elseif (isset($_GET['category']) && $_GET['category'] !== '') {
+                    $category_id = mysqli_real_escape_string($connection, $_GET['category']);
+                    $search_query = " WHERE course_category_id = '{$category_id}'";
+                }
+
+                $query = "SELECT * FROM courses" . $search_query. " LIMIT $courses_per_page OFFSET $offset";
+                $course_query = mysqli_query($connection, $query);
+                confirmQuery($course_query);
+
+                if (mysqli_num_rows($course_query) > 0) {
+                    while ($row = mysqli_fetch_assoc($course_query)) {
+                        $course_id = $row['course_id'];
                         $course_image = $row['course_image'];
                         $course_price = $row['course_price'];
                         $course_tags = $row['course_tags'];
                         $course_title = $row['course_title'];
-                        $course_rate = $row['course_rate'];
                         $course_content = $row['course_content'];
                         $course_lesson = $row['course_lesson'];
                         $course_student = $row['course_student'];
-
                 ?>
+                        <!-- Single course item -->
                         <div class="col-lg-4 col-md-6">
                             <div class="single-course">
-                                <!-- Single course -->
-                                <a href="single-course.php">
+                                <a href="single-course.php?c_id=<?php echo $course_id; ?>">
                                     <img src="assets/img/course-img/<?php echo $course_image ?>" alt="Image">
                                 </a>
                                 <div class="course-content">
                                     <span class="price">$<?php echo $course_price ?></span>
                                     <span class="tag"><?php echo $course_tags ?></span>
-                                    <a href="single-course.php?c_id=<?php echo $the_course_id ?>">
+                                    <a href="single-course.php?c_id=<?php echo $course_id ?>">
                                         <h3><?php echo $course_title ?></h3>
                                     </a>
                                     <ul class="rating">
-                                        <li>
-                                            <i class="bx bxs-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="bx bxs-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="bx bxs-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="bx bxs-star"></i>
-                                        </li>
-                                        <li>
-                                            <i class="bx bxs-star"></i>
-                                        </li>
-                                        <li>
-                                            <span>0.5</span>
-                                            <a href="single-course.php">(1 rating)</a>
-                                        </li>
+                                        <li><i class="bx bxs-star"></i></li>
+                                        <li><i class="bx bxs-star"></i></li>
+                                        <li><i class="bx bxs-star"></i></li>
+                                        <li><i class="bx bxs-star"></i></li>
+                                        <li><i class="bx bxs-star"></i></li>
+                                        <li><span>0.5</span><a href="single-course.php">(1 rating)</a></li>
                                     </ul>
                                     <p><?php echo $course_content ?></p>
                                     <ul class="lessons">
@@ -488,28 +418,41 @@ function confirmQuery($result)
                 <?php
                     }
                 } else {
-                    echo "<p>No course found.</p>";
+                    echo "<p>No courses found.</p>";
                 }
                 ?>
+            </div>
 
-                <!-- Pagination -->
-                <div class="col-lg-12 col-md-12">
-                    <div class="pagination-area">
+            <!-- Pagination -->
+            <div class="col-lg-12 col-md-12">
+                <div class="pagination-area">
+                <?php
 
-                        <span class="page-numbers current" aria-current="page">1</span>
-                        <a href="courses.php" class="page-numbers">2</a>
-                        <a href="courses.php" class="page-numbers">3</a>
-                        <a href="courses.php" class="page-numbers">4</a>
-                        <a href="courses.php" class="next page-numbers">
-                            <i class="bx bx-chevron-right"></i>
-                        </a>
-                    </div>
+                if ($current_page > 1) {
+                    echo '<a href="courses.php?page=' . ($current_page - 1) . '" class="prev page-numbers">';
+                    echo '<i class="bx bx-chevron-left"></i>';
+                    echo '</a>';
+                }
+                for ($i = 1; $i <= $total_pages; $i++) {
+                    if ($i == $current_page) {
+                        echo '<span class="page-numbers current" aria-current="page">' . $i . '</span>';
+                    } else {
+                        echo '<a href="courses.php?page=' . $i . '" class="page-numbers">' . $i . '</a>';
+                    }
+                }
+                if ($current_page < $total_pages) {
+                    echo '<a href="courses.php?page=' . ($current_page + 1) . '" class="next page-numbers">';
+                    echo '<i class="bx bx-chevron-right"></i>';
+                    echo '</a>';
+                }
+
+                ?>
                 </div>
             </div>
-            <!-- All course end -->
         </div>
     </section>
     <!-- Course section end -->
+
 
 
     <!-- Footer -->
