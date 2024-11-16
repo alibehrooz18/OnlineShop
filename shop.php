@@ -1,11 +1,25 @@
-﻿<!DOCTYPE html>
+﻿<?php include "./assets/includes/db.php"; ?>
+<?php
+// Function
+function confirmQuery($result)
+{
+    global $connection;
+    if (!$result) {
+        die("QUERY FAILD" . mysqli_error($connection));
+    }
+}
+?>
+
+
+
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
 
     <?php include "./assets/includes/header.php" ?>
 
-    <title>Eduon - Online Courses & Training HTML Template</title>
+    <title>Eduon - Shop</title>
 </head>
 
 <body>
@@ -21,9 +35,9 @@
         </div>
     </div>
 
-
+    <!-- Navbar start -->
     <div class="navbar-area">
-
+        <!-- Mobile navbar -->
         <div class="mobile-nav">
             <a href="index.php" class="logo">
                 <img src="assets\img\logo.png" class="main-logo" alt="Logo">
@@ -31,6 +45,7 @@
             </a>
         </div>
 
+        <!-- Main navbar -->
         <div class="main-nav">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md">
@@ -266,6 +281,7 @@
         </div>
 
     </div>
+    <!-- Navbar end -->
 
 
     <div class="page-title-area bg-19">
@@ -285,6 +301,7 @@
     </div>
 
 
+    <!-- Shop start -->
     <div class="shop-area ptb-100">
         <div class="container">
             <div class="row">
@@ -298,257 +315,143 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-sm-6">
+                                    <!-- Category selection dropdown -->
                                     <div class="showing-top-bar-ordering">
-                                        <select>
-                                            <option value="1">Default sorting</option>
-                                            <option value="2">Education</option>
-                                            <option value="0">Accounting</option>
-                                            <option value="3">Language</option>
-                                            <option value="4">Teaching</option>
-                                            <option value="5">Research</option>
-                                            <option value="5">Assessment</option>
-                                        </select>
+                                        <form method="GET">
+                                            <select name="category" onchange="this.form.submit()">
+                                                <option value="">Default sorting</option>
+                                                <?php
+                                                $selected_category = isset($_GET['category']) ? $_GET['category'] : '';
+                                                $query = "SELECT * FROM categories";
+                                                $select_cat_query = mysqli_query($connection, $query);
+                                                confirmQuery($select_cat_query);
+
+                                                while ($row = mysqli_fetch_assoc($select_cat_query)) {
+                                                    $cat_id = $row['cat_id'];
+                                                    $cat_title = $row['cat_title'];
+                                                    $selected_attr = ($cat_id == $selected_category) ? 'selected' : '';
+                                                    echo "<option value='{$cat_id}' {$selected_attr}>{$cat_title}</option>";
+                                                }
+                                                ?>
+                                            </select>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-shop">
-                                    <div class="shop-img">
-                                        <img src="assets\img\shop\shop-img-1.jpg" alt="Image">
-                                        <ul>
-                                            <li>
-                                                <a href="#product-view-one" data-bs-toggle="modal">
-                                                    <i class="bx bx-show-alt"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="cart.php">
-                                                    <i class="bx bx-heart"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
+                            <?php
+                            // Pagination logic 
+                            $items_per_page = 9;
+                            $query = "SELECT COUNT(*) AS total_item FROM shop";
+                            $item_query = mysqli_query($connection, $query);
+                            confirmQuery($item_query);
+                            $row = mysqli_fetch_assoc($item_query);
+                            $total_items = $row['total_item'];
+                            $total_pages = ceil($total_items / $items_per_page);
+                            $current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+                            $current_page = max(1, min($current_page, $total_pages));
+                            $offset = ($current_page - 1) * $items_per_page;
+
+                            // Search 
+                            $search_query = '';
+                            if (isset($_GET['search']) && $_GET['search'] !== '') {
+                                $search_query = " WHERE item_title LIKE '%" . mysqli_real_escape_string($connection, $_GET['search']) . "%'";
+                            } elseif (isset($_GET['category']) && $_GET['category'] !== '') {
+                                $category_id = mysqli_real_escape_string($connection, $_GET['category']);
+                                $search_query = " WHERE item_category_id = '{$category_id}'";
+                            }
+
+                            $query = "SELECT * FROM shop" . $search_query . " LIMIT $items_per_page OFFSET $offset";
+                            $item_query = mysqli_query($connection, $query);
+                            confirmQuery($item_query);
+
+                            if (mysqli_num_rows($item_query) > 0) {
+                                while ($row = mysqli_fetch_assoc($item_query)) {
+                                    $item_id = $row['item_id'];
+                                    $item_image = $row['item_image'];
+                                    $item_title = $row['item_title'];
+                                    $item_price = $row['item_price'];
+                                    $item_discount = $row['item_discount'];
+
+                                    $dis_price = $item_price - ($item_price * ($item_discount / 100));
+                                    $dis_price = floor($dis_price);
+                            ?>
+                                    <div class="col-lg-4 col-sm-6">
+                                        <div class="single-shop">
+                                            <div class="shop-img">
+                                                <img src="assets/img/shop/<?php echo $item_image; ?>" alt="Image">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#product-view-one" data-bs-toggle="modal">
+                                                            <i class="bx bx-show-alt"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="cart.php">
+                                                            <i class="bx bx-heart"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <h3><?php echo $item_title; ?></h3>
+                                            <span>
+                                                <?php if ($item_discount) { ?>
+                                                    <del>$<?php echo $item_price; ?>.00</del>
+                                                    $<?php echo $dis_price; ?>.00
+                                                <?php } else { ?>
+                                                    $<?php echo $item_price; ?>.00
+                                                <?php } ?>
+                                            </span>
+                                            <a href="cart.php?p_id=<?php echo $item_id; ?>" class="default-btn">
+                                                Add to cart
+                                            </a>
+                                        </div>
                                     </div>
-                                    <h3>Der liege augustine</h3>
-                                    <span> <del>$49.00</del> $39.00</span>
-                                    <a href="cart.php" class="default-btn">
-                                        Add to cart
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-shop">
-                                    <div class="shop-img">
-                                        <img src="assets\img\shop\shop-img-2.jpg" alt="Image">
-                                        <ul>
-                                            <li>
-                                                <a href="#product-view-one" data-bs-toggle="modal">
-                                                    <i class="bx bx-show-alt"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="cart.php">
-                                                    <i class="bx bx-heart"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h3>EGO ias the enemy</h3>
-                                    <span> <del>$79.00</del> $59.00</span>
-                                    <a href="cart.php" class="default-btn">
-                                        Add to cart
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-shop">
-                                    <div class="shop-img">
-                                        <img src="assets\img\shop\shop-img-3.jpg" alt="Image">
-                                        <ul>
-                                            <li>
-                                                <a href="#product-view-one" data-bs-toggle="modal">
-                                                    <i class="bx bx-show-alt"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="cart.php">
-                                                    <i class="bx bx-heart"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h3>Der liege augustine</h3>
-                                    <span>$59.00</span>
-                                    <a href="cart.php" class="default-btn">
-                                        Add to cart
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-shop">
-                                    <div class="shop-img">
-                                        <img src="assets\img\shop\shop-img-4.jpg" alt="Image">
-                                        <ul>
-                                            <li>
-                                                <a href="#product-view-one" data-bs-toggle="modal">
-                                                    <i class="bx bx-show-alt"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="cart.php">
-                                                    <i class="bx bx-heart"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h3>Failed IT!</h3>
-                                    <span> <del>$49.00</del> $39.00</span>
-                                    <a href="cart.php" class="default-btn">
-                                        Add to cart
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-shop">
-                                    <div class="shop-img">
-                                        <img src="assets\img\shop\shop-img-5.jpg" alt="Image">
-                                        <ul>
-                                            <li>
-                                                <a href="#product-view-one" data-bs-toggle="modal">
-                                                    <i class="bx bx-show-alt"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="cart.php">
-                                                    <i class="bx bx-heart"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h3>E.A.POE</h3>
-                                    <span>$49.00</span>
-                                    <a href="cart.php" class="default-btn">
-                                        Add to cart
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-shop">
-                                    <div class="shop-img">
-                                        <img src="assets\img\shop\shop-img-6.jpg" alt="Image">
-                                        <ul>
-                                            <li>
-                                                <a href="#product-view-one" data-bs-toggle="modal">
-                                                    <i class="bx bx-show-alt"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="cart.php">
-                                                    <i class="bx bx-heart"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h3>Dior</h3>
-                                    <span>$59.00</span>
-                                    <a href="cart.php" class="default-btn">
-                                        Add to cart
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-shop">
-                                    <div class="shop-img">
-                                        <img src="assets\img\shop\shop-img-7.jpg" alt="Image">
-                                        <ul>
-                                            <li>
-                                                <a href="#product-view-one" data-bs-toggle="modal">
-                                                    <i class="bx bx-show-alt"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="cart.php">
-                                                    <i class="bx bx-heart"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h3>Your a heart</h3>
-                                    <span> <del>$49.00</del> $39.00</span>
-                                    <a href="cart.php" class="default-btn">
-                                        Add to cart
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-shop">
-                                    <div class="shop-img">
-                                        <img src="assets\img\shop\shop-img-8.jpg" alt="Image">
-                                        <ul>
-                                            <li>
-                                                <a href="#product-view-one" data-bs-toggle="modal">
-                                                    <i class="bx bx-show-alt"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="cart.php">
-                                                    <i class="bx bx-heart"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h3>Hand cover amockup</h3>
-                                    <span>$49.00</span>
-                                    <a href="cart.php" class="default-btn">
-                                        Add to cart
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0">
-                                <div class="single-shop">
-                                    <div class="shop-img">
-                                        <img src="assets\img\shop\shop-img-9.jpg" alt="Image">
-                                        <ul>
-                                            <li>
-                                                <a href="#product-view-one" data-bs-toggle="modal">
-                                                    <i class="bx bx-show-alt"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="cart.php">
-                                                    <i class="bx bx-heart"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h3>Book cover mockup</h3>
-                                    <span>$29.00</span>
-                                    <a href="cart.php" class="default-btn">
-                                        Add to cart
-                                    </a>
-                                </div>
-                            </div>
+                            <?php
+                                }
+                            } else {
+                                echo "<p>No courses found.</p>";
+                            }
+                            ?>
+
+
+                            <!-- Pagination -->
                             <div class="col-lg-12 col-md-12">
                                 <div class="pagination-area">
+                                    <?php
 
-                                    <span class="page-numbers current" aria-current="page">1</span>
-                                    <a href="shop.php" class="page-numbers">2</a>
-                                    <a href="shop.php" class="page-numbers">3</a>
-                                    <a href="shop.php" class="page-numbers">4</a>
-                                    <a href="shop.php" class="next page-numbers">
-                                        <i class="bx bx-chevron-right"></i>
-                                    </a>
+                                    if ($current_page > 1) {
+                                        echo '<a href="courses.php?page=' . ($current_page - 1) . '" class="prev page-numbers">';
+                                        echo '<i class="bx bx-chevron-left"></i>';
+                                        echo '</a>';
+                                    }
+                                    for ($i = 1; $i <= $total_pages; $i++) {
+                                        if ($i == $current_page) {
+                                            echo '<span class="page-numbers current" aria-current="page">' . $i . '</span>';
+                                        } else {
+                                            echo '<a href="courses.php?page=' . $i . '" class="page-numbers">' . $i . '</a>';
+                                        }
+                                    }
+                                    if ($current_page < $total_pages) {
+                                        echo '<a href="courses.php?page=' . ($current_page + 1) . '" class="next page-numbers">';
+                                        echo '<i class="bx bx-chevron-right"></i>';
+                                        echo '</a>';
+                                    }
+
+                                    ?>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Sidebar -->
                 <div class="col-lg-4">
                     <div class="widget-sidebar">
                         <div class="sidebar-widget search">
-                            <form class="search-form">
-                                <input class="form-control" name="search" placeholder="Search here" type="text">
+                            <!-- Search form -->
+                            <form class="search-form" action="shop.php" method="GET">
+                                <input class="form-control" name="search" placeholder="Search our courses" type="text">
                                 <button class="search-button" type="submit">
                                     <i class="bx bx-search"></i>
                                 </button>
@@ -653,6 +556,7 @@
             </div>
         </div>
     </div>
+    <!-- Shop end -->
 
 
     <div class="modal fade product-view-one" id="product-view-one">
@@ -804,7 +708,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- Footer -->
     <?php include "assets/includes/footer.php" ?>
