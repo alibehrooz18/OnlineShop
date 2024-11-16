@@ -1,4 +1,17 @@
-﻿<!DOCTYPE html>
+﻿<?php include "./assets/includes/db.php"; ?>
+<?php
+// Function
+function confirmQuery($result)
+{
+    global $connection;
+    if (!$result) {
+        die("QUERY FAILD" . mysqli_error($connection));
+    }
+}
+?>
+
+
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
@@ -21,16 +34,16 @@
         </div>
     </div>
 
-
+    <!-- Navbar -->
     <div class="navbar-area">
-
+        <!-- Mobile navbar -->
         <div class="mobile-nav">
             <a href="index.php" class="logo">
                 <img src="assets\img\logo.png" class="main-logo" alt="Logo">
                 <img src="assets\img\logo-2.png" class="white-logo" alt="Logo">
             </a>
         </div>
-
+        <!-- Main navbar -->
         <div class="main-nav">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md">
@@ -266,8 +279,10 @@
         </div>
 
     </div>
+    <!-- Navbar end -->
 
 
+    <!-- Banner -->
     <div class="page-title-area bg-6">
         <div class="container">
             <div class="page-title-content">
@@ -285,101 +300,75 @@
     </div>
 
 
+    <!-- Gallery start -->
     <div class="gallery-area gallery-popup ptb-100">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-gallery">
-                        <a href="assets\img\gallery\gallery-img-1.jpg">
-                            <img src="assets\img\gallery\gallery-img-1.jpg" alt="Image">
-                            <i class="bx bx-show-alt"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-gallery">
-                        <a href="assets\img\gallery\gallery-img-2.jpg">
-                            <img src="assets\img\gallery\gallery-img-2.jpg" alt="Image">
-                            <i class="bx bx-show-alt"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-gallery">
-                        <a href="assets\img\gallery\gallery-img-3.jpg">
-                            <img src="assets\img\gallery\gallery-img-3.jpg" alt="Image">
-                            <i class="bx bx-show-alt"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-gallery">
-                        <a href="assets\img\gallery\gallery-img-4.jpg">
-                            <img src="assets\img\gallery\gallery-img-4.jpg" alt="Image">
-                            <i class="bx bx-show-alt"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-gallery">
-                        <a href="assets\img\gallery\gallery-img-5.jpg">
-                            <img src="assets\img\gallery\gallery-img-5.jpg" alt="Image">
-                            <i class="bx bx-show-alt"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-gallery">
-                        <a href="assets\img\gallery\gallery-img-6.jpg">
-                            <img src="assets\img\gallery\gallery-img-6.jpg" alt="Image">
-                            <i class="bx bx-show-alt"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-gallery">
-                        <a href="assets\img\gallery\gallery-img-7.jpg">
-                            <img src="assets\img\gallery\gallery-img-7.jpg" alt="Image">
-                            <i class="bx bx-show-alt"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single-gallery">
-                        <a href="assets\img\gallery\gallery-img-8.jpg">
-                            <img src="assets\img\gallery\gallery-img-8.jpg" alt="Image">
-                            <i class="bx bx-show-alt"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0">
-                    <div class="single-gallery">
-                        <a href="assets\img\gallery\gallery-img-9.jpg">
-                            <img src="assets\img\gallery\gallery-img-9.jpg" alt="Image">
-                            <i class="bx bx-show-alt"></i>
-                        </a>
-                    </div>
-                </div>
+            <div class="row" id="gallery-container">
+                <?php
+                // Pagination logic 
+                $image_per_page = 9;
+
+                $query = "SELECT * FROM gallery LIMIT $image_per_page";
+                $gallery_query = mysqli_query($connection, $query);
+                confirmQuery($gallery_query);
+
+                if (mysqli_num_rows($gallery_query) > 0) {
+                    while ($row = mysqli_fetch_assoc($gallery_query)) {
+                        $image = $row['image'];
+                ?>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-gallery">
+                                <a href="assets/img/gallery/<?php echo $image ?>">
+                                    <img src="assets/img/gallery/<?php echo $image ?>" alt="Image">
+                                    <i class="bx bx-show-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                <?php
+                    }
+                } else {
+                    echo "<p>No image found.</p>";
+                }
+                ?>
+                <!-- LoadMore butten -->
                 <div class="col-12 text-center mt-3">
-                    <a href="gallery.php" class="default-btn">Load More</a>
+                    <?php
+
+                    $query = "SELECT COUNT(*) AS total_images FROM gallery";
+                    $gallery_query = mysqli_query($connection, $query);
+                    confirmQuery($gallery_query);
+                    $row = mysqli_fetch_assoc($gallery_query);
+                    
+                    ?>
+                    <button id="load-more-btn" class="default-btn" data-offset="9">Load More</button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Gallery end -->
 
 
+    <!-- Newsletter area -->
     <section class="subscribe-area ebeef5-bg-color ptb-100">
         <div class="container">
+            <?php
+            if (isset($_POST['subscribe'])) {
+                $news_email = mysqli_real_escape_string($connection, $_POST['EMAIL']);
+                $query = "INSERT INTO newsletter (news_email) VALUES ('$news_email')";
+                $sub_query = mysqli_query($connection, $query);
+                if ($sub_query) {
+                    echo "<p>Thank you for subscribing!</p>";
+                } else {
+                    echo "<p>Subscription failed: " . mysqli_error($connection) . "</p>";
+                }
+            }
+            ?>
             <div class="subscribe-wrap">
                 <h2>Subscribe</h2>
                 <p>Subscribe to our newsletter & stay updated</p>
-                <form class="newsletter-form" data-toggle="validator">
-                    <input type="email" class="form-control" placeholder="Your email address" name="EMAIL" required=""
-                        autocomplete="off">
-                    <button class="default-btn" type="submit">
-                        Subscribe Now
-                    </button>
-                    <div id="validator-newsletter" class="form-result"></div>
+                <form class="newsletter-form" method="POST">
+                    <input type="email" class="form-control" placeholder="Your email address" name="EMAIL" required="" autocomplete="off">
+                    <input type="submit" name="subscribe" class="default-btn" value="Subscribe Now">
                 </form>
                 <div class="subscribe-img">
                     <img src="assets\img\subscribe-img.png" alt="Image">
