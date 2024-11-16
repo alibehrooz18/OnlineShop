@@ -23,7 +23,7 @@ function confirmQuery($result)
 
 <body>
 
-    <div class="loader-wrapper">
+    <!-- <div class="loader-wrapper">
         <div class="loader">
             <div class="dot-wrap">
                 <span class="dot"></span>
@@ -32,7 +32,7 @@ function confirmQuery($result)
                 <span class="dot"></span>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- Navbar start -->
@@ -309,7 +309,29 @@ function confirmQuery($result)
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-4">
                         <div class="showing-result-count">
-                            <p>Showing 1-8 of 14 results</p>
+                            <?php
+                            $courses_per_page = 6;
+
+                            $query = "SELECT COUNT(*) AS total_items FROM courses";
+                            $item_query = mysqli_query($connection, $query);
+                            confirmQuery($item_query);
+
+                            $row = mysqli_fetch_assoc($item_query);
+                            $total_items = $row['total_items'];
+
+                            $current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+                            $current_page = max(1, $current_page);
+
+                            // Calculate start and end range
+                            $start_item = ($current_page - 1) * $courses_per_page + 1;
+                            $end_item = min($start_item + $courses_per_page - 1, $total_items);
+
+                            if ($total_items > 0) {
+                                echo "<p>Showing $start_item-$end_item of $total_items results</p>";
+                            } else {
+                                echo "<p>No results found.</p>";
+                            }
+                            ?>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4">
@@ -354,7 +376,6 @@ function confirmQuery($result)
             <div class="row">
                 <?php
                 // Pagination logic 
-                $courses_per_page = 6;
                 $query = "SELECT COUNT(*) AS total_courses FROM courses";
                 $course_query = mysqli_query($connection, $query);
                 confirmQuery($course_query);
