@@ -411,7 +411,7 @@ function confirmQuery($result)
                             <?php
                                 }
                             } else {
-                                echo "<p>No courses found.</p>";
+                                echo "<p>No item found.</p>";
                             }
                             ?>
 
@@ -422,7 +422,7 @@ function confirmQuery($result)
                                     <?php
 
                                     if ($current_page > 1) {
-                                        echo '<a href="courses.php?page=' . ($current_page - 1) . '" class="prev page-numbers">';
+                                        echo '<a href="shop.php?page=' . ($current_page - 1) . '" class="prev page-numbers">';
                                         echo '<i class="bx bx-chevron-left"></i>';
                                         echo '</a>';
                                     }
@@ -430,11 +430,11 @@ function confirmQuery($result)
                                         if ($i == $current_page) {
                                             echo '<span class="page-numbers current" aria-current="page">' . $i . '</span>';
                                         } else {
-                                            echo '<a href="courses.php?page=' . $i . '" class="page-numbers">' . $i . '</a>';
+                                            echo '<a href="shop.php?page=' . $i . '" class="page-numbers">' . $i . '</a>';
                                         }
                                     }
                                     if ($current_page < $total_pages) {
-                                        echo '<a href="courses.php?page=' . ($current_page + 1) . '" class="next page-numbers">';
+                                        echo '<a href="shop.php?page=' . ($current_page + 1) . '" class="next page-numbers">';
                                         echo '<i class="bx bx-chevron-right"></i>';
                                         echo '</a>';
                                     }
