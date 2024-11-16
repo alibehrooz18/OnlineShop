@@ -2089,8 +2089,8 @@ textarea.form-control {
 
 .feedback-area.feedback-area-three.feedback-area-style .feedback-item {
     max-width: 600px;
-    margin-right: 0;
-    margin-left: auto
+    margin-right: auto;
+    margin-left: 0;
 }
 
 .feedback-area.feedback-area-three.feedback-area-style .feedback-item i {
