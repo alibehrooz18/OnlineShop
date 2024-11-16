@@ -338,12 +338,14 @@ function confirmQuery($result)
 
                     <div class="col-lg-3 col-md-4">
                         <!-- Search form -->
-                        <form class="search-form" action="courses.php" method="GET">
-                            <input class="form-control" name="search" placeholder="Search our courses" type="text">
-                            <button class="search-btn" type="submit">
-                                <i class="bx bx-search"></i>
-                            </button>
-                        </form>
+                        <div class="sidebar-widget search">
+                            <form class="search-form" action="sourses.php" method="GET">
+                                <input class="form-control" name="search" placeholder="Search our courses" type="text">
+                                <button class="search-button" type="submit">
+                                    <i class="bx bx-search"></i>
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -372,7 +374,7 @@ function confirmQuery($result)
                     $search_query = " WHERE course_category_id = '{$category_id}'";
                 }
 
-                $query = "SELECT * FROM courses" . $search_query. " LIMIT $courses_per_page OFFSET $offset";
+                $query = "SELECT * FROM courses" . $search_query . " LIMIT $courses_per_page OFFSET $offset";
                 $course_query = mysqli_query($connection, $query);
                 confirmQuery($course_query);
 
@@ -426,27 +428,27 @@ function confirmQuery($result)
             <!-- Pagination -->
             <div class="col-lg-12 col-md-12">
                 <div class="pagination-area">
-                <?php
+                    <?php
 
-                if ($current_page > 1) {
-                    echo '<a href="courses.php?page=' . ($current_page - 1) . '" class="prev page-numbers">';
-                    echo '<i class="bx bx-chevron-left"></i>';
-                    echo '</a>';
-                }
-                for ($i = 1; $i <= $total_pages; $i++) {
-                    if ($i == $current_page) {
-                        echo '<span class="page-numbers current" aria-current="page">' . $i . '</span>';
-                    } else {
-                        echo '<a href="courses.php?page=' . $i . '" class="page-numbers">' . $i . '</a>';
+                    if ($current_page > 1) {
+                        echo '<a href="courses.php?page=' . ($current_page - 1) . '" class="prev page-numbers">';
+                        echo '<i class="bx bx-chevron-left"></i>';
+                        echo '</a>';
                     }
-                }
-                if ($current_page < $total_pages) {
-                    echo '<a href="courses.php?page=' . ($current_page + 1) . '" class="next page-numbers">';
-                    echo '<i class="bx bx-chevron-right"></i>';
-                    echo '</a>';
-                }
+                    for ($i = 1; $i <= $total_pages; $i++) {
+                        if ($i == $current_page) {
+                            echo '<span class="page-numbers current" aria-current="page">' . $i . '</span>';
+                        } else {
+                            echo '<a href="courses.php?page=' . $i . '" class="page-numbers">' . $i . '</a>';
+                        }
+                    }
+                    if ($current_page < $total_pages) {
+                        echo '<a href="courses.php?page=' . ($current_page + 1) . '" class="next page-numbers">';
+                        echo '<i class="bx bx-chevron-right"></i>';
+                        echo '</a>';
+                    }
 
-                ?>
+                    ?>
                 </div>
             </div>
         </div>
