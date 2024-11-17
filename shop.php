@@ -482,30 +482,45 @@ function confirmQuery($result)
                         <div class="sidebar-widget categories">
                             <h3>Categories</h3>
                             <ul>
-                                <li>
-                                    <a href="courses.php">Education</a>
+                                <?php
+                                echo
+                                "<li>
+                                    <a href='shop.php?category=2'>Education</a>
                                 </li>
                                 <li>
-                                    <a href="courses.php">Health coaching</a>
+                                    <a href='shop.php?category=3'>Health coaching</a>
                                 </li>
                                 <li>
-                                    <a href="courses.php">Learning</a>
+                                    <a href='shop.php?category=4'>Learning</a>
                                 </li>
                                 <li>
-                                    <a href="courses.php">Online</a>
+                                    <a href='shop.php?category=5'>Online</a>
                                 </li>
                                 <li>
-                                    <a href="courses.php">Academics</a>
+                                    <a href='shop.php?category=6'>Academics</a>
                                 </li>
                                 <li>
-                                    <a href="courses.php">Admission</a>
+                                    <a href='shop.php?category=7'>Admission</a>
                                 </li>
                                 <li>
-                                    <a href="courses.php">Student</a>
+                                    <a href='shop.php?category=4'>Student</a>
                                 </li>
                                 <li>
-                                    <a href="courses.php">Graduation</a>
-                                </li>
+                                    <a href='shop.php?category=6'>Graduation</a>
+                                </li>";
+
+                                $query = "SELECT cat_id, cat_title FROM categories";
+                                $result = mysqli_query($connection, $query);
+                                confirmQuery($result);
+
+                                $category_filter = '';
+
+                                if (isset($_GET['category']) && $_GET['category'] !== '') {
+                                    $cat_id = mysqli_escape_string($connection, $_GET['category']);
+                                    $category_filter = " WHERE item_category_id = $cat_id";
+                                }
+
+                                ?>
                             </ul>
                         </div>
                         <div class="sidebar-widget popular-post">
