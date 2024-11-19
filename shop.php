@@ -409,7 +409,7 @@ function confirmQuery($result)
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="cart.php">
+                                                        <a href="wishlist.php">
                                                             <i class="bx bx-heart"></i>
                                                         </a>
                                                     </li>
@@ -650,12 +650,50 @@ function confirmQuery($result)
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
-                        <div class="product-content">
+                        <div class="product-content" dir="ltr">
+                            <?php
+
+                            if (isset($_GET['item_id'])) {
+                                $item_id = mysqli_real_escape_string($connection, $_GET['item_id']);
+                                $query = "SELECT * FROM shop WHERE item_id = $item_id";
+                                $result = mysqli_query($connection, $query);
+                                confirmQuery($result);
+
+                                if ($result) {
+                                    $row = mysqli_fetch_assoc($result);
+                                    $item_id = $row['item_id'];
+                                    $item_image = $row['item_image'];
+                                    $item_title = $row['item_title'];
+                                    $item_price = $row['item_price'];
+                                    $item_discount = $row['item_discount'];
+
+                                    $dis_price = $item_price - ($item_price * ($item_discount / 100));
+                                    $dis_price = floor($dis_price);
+
+                                    echo json_encode([
+                                        'item_title' => $row['item_title'],
+                                        'item_price' => $item_price,
+                                        'item_discount' => $item_discount,
+                                        'discounted_price' => $discounted_price,
+                                        'item_image' => $row['item_image']
+                                    ]);
+                                } else {
+                                    echo json_encode(['error' => 'Item not found.']);
+                                }
+                            } else {
+                                echo json_encode(['error' => 'Invalid request.']);
+                            }
+                            ?>
                             <h3>
-                                <a href="single-product.php">EGO ias the enemy</a>
+                                <a href="single-product.php"><?php echo $item_title; ?></a>
                             </h3>
                             <div class="price">
-                                <del>$59.00</del> <span class="new-price">$39.00</span>
+                                <?php if ($item_discount) { ?>
+                                    <del>$<?php echo $item_price; ?>.00</del>
+                                    $<?php echo $dis_price; ?>.00
+                                <?php } else { ?>
+                                    $<?php echo $item_price; ?>.00
+                                <?php } ?>
                             </div>
                             <div class="product-review">
                                 <div class="rating">
@@ -679,26 +717,7 @@ function confirmQuery($result)
                                     <span>Product Type:</span> <a href="shop.php">Book</a>
                                 </li>
                             </ul>
-                            <div class="product-color-switch">
-                                <h4>Color:</h4>
-                                <ul>
-                                    <li>
-                                        <a href="javascript:;" title="Black" class="color-black"></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;" title="White" class="color-white"></a>
-                                    </li>
-                                    <li class="active">
-                                        <a href="javascript:;" title="Green" class="color-green"></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;" title="Yellow Green" class="color-yellowgreen"></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;" title="Teal" class="color-teal"></a>
-                                    </li>
-                                </ul>
-                            </div>
+                            <br>
                             <div class="product-add-to-cart">
                                 <div class="input-counter">
                                     <span class="minus-btn">
