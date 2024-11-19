@@ -1,16 +1,30 @@
-﻿<!DOCTYPE html>
+﻿<?php include "./assets/includes/db.php"; ?>
+<?php
+// Function
+function confirmQuery($result)
+{
+    global $connection;
+    if (!$result) {
+        die("QUERY FAILD" . mysqli_error($connection));
+    }
+}
+?>
+
+
+
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
 
     <?php include "./assets/includes/header.php" ?>
 
-    <title>Eduon - Online Courses & Training HTML Template</title>
+    <title>Eduon - Checkout</title>
 </head>
 
 <body>
 
-    <div class="loader-wrapper">
+    <!-- <div class="loader-wrapper">
         <div class="loader">
             <div class="dot-wrap">
                 <span class="dot"></span>
@@ -19,11 +33,13 @@
                 <span class="dot"></span>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
+    <!-- Navbar start -->
     <div class="navbar-area">
 
+        <!-- Mobile section -->
         <div class="mobile-nav">
             <a href="index.php" class="logo">
                 <img src="assets\img\logo.png" class="main-logo" alt="Logo">
@@ -31,6 +47,7 @@
             </a>
         </div>
 
+        <!-- Main section -->
         <div class="main-nav">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md">
@@ -268,6 +285,7 @@
     </div>
 
 
+    <!-- Banner section -->
     <div class="page-title-area bg-21">
         <div class="container">
             <div class="page-title-content">
@@ -285,10 +303,11 @@
     </div>
 
 
+    <!-- Main form start -->
     <section class="checkout-area ptb-100">
         <div class="container">
-            <form>
-                <div class="row">
+            <form action="checkout.php" method="POST">
+                <div class="row" dir="ltr">
                     <div class="col-lg-8 col-md-12">
                         <div class="billing-details">
                             <h3 class="title">Billing details</h3>
@@ -296,39 +315,39 @@
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
                                         <label>First name <span class="required">*</span></label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" name="firstname">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
                                         <label>Last name <span class="required">*</span></label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" name="lastname">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
                                         <label>Company name (Optional)
                                         </label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" name="company">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
                                         <label>Email <span class="required">*</span></label>
-                                        <input type="email" class="form-control">
+                                        <input type="email" class="form-control" name="email">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
                                         <label>Phone <span class="required">*</span></label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" name="phone">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <label>Country <span class="required">*</span></label>
+                                    <div class="form-group" dir="rtl">
+                                        <label dir="ltr">Country <span class="required">*</span></label>
                                         <div class="select-box">
-                                            <select class="form-control">
+                                            <select class="form-control" name="country">
                                                 <option value="5">United Kingdom</option>
                                                 <option value="1">China</option>
                                                 <option value="2">United Arab Emirates</option>
@@ -342,30 +361,30 @@
                                 <div class="col-lg-12 col-md-6">
                                     <div class="form-group">
                                         <label>Street address <span class="required">*</span></label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" name="street">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-6">
                                     <div class="form-group">
                                         <label>Town / City <span class="required">*</span></label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" name="town">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
                                         <label>State<span class="required">*</span></label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" name="state">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
                                         <label>Zip <span class="required">*</span></label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" name="zip">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="ship-different-address">
+                                        <input type="checkbox" class="form-check-input" id="ship-different-address" name="shipToDiffAdr">
                                         <label class="form-check-label" for="ship-different-address">Ship to a different
                                             address?</label>
                                     </div>
@@ -451,9 +470,7 @@
                                         </div>
                                     </li>
                                     <li class="place-order">
-                                        <a href="checkout.php" class="default-btn two">
-                                            Place order
-                                        </a>
+                                        <button type="submit" class="default-btn two" name="order">Place order</button>
                                     </li>
                                 </ul>
                             </div>
@@ -463,7 +480,67 @@
             </form>
         </div>
     </section>
+    <!-- Main form end -->
 
+    <!-- Submit information to database -->
+    <?php
+    if(isset($_POST['order'])) {
+        $info_firstname = $_POST['firstname'];
+        $info_lastname = $_POST['lastname'];
+        $info_company = $_POST['company'];
+        $info_email = $_POST['email'];
+        $info_phone = $_POST['phone'];
+        $info_country = $_POST['country'];
+        $info_street = $_POST['street'];
+        $info_town = $_POST['town'];
+        $info_state = $_POST['state'];
+        $info_zip = $_POST['zip'];
+        $info_notes = $_POST['notes'];
+
+        $errors = [];
+
+        // Define fields
+        $fields = [
+            'firstname' => true,
+            'lastname' => true,
+            'company' => false,
+            'email' => true,
+            'phone' => true,
+            'country' => true,
+            'street' => true,
+            'town' => true,
+            'state' => true,
+            'zip' => true,
+            'notes' => false,
+        ];
+        $data = [];
+        
+
+        foreach ($fields as $field => $isRequired) {
+            if(!empty($_POST[$field])) {
+                $data[$field] = $_POST[$field];
+            } elseif ($isRequired) {
+                $errors[] = ucfirst(str_replace('_', ' ', $field)) . " is required.";
+            } else {
+                $data[$field] = null;
+            }
+        }
+
+        if (!empty($errors)) {
+            foreach ($errors as $error) {
+                echo $error . "<br>";
+            }
+            exit;
+        }
+
+        $query = "INSERT INTO information (info_firstname, info_lastname, info_company, info_email, info_phone, info_country, info_street, info_town, info_state, info_zip, info_note)";
+        $query .= " VALUES('$info_firstname', '$info_lastname', '$info_company', '$info_email', '$info_phone', '$info_country', '$info_street', '$info_town', '$info_state', '$info_zip', '$info_notes')";
+
+        $result = mysqli_query($connection, $query);
+        confirmQuery($result);
+
+    }
+    ?>
 
     <!-- Footer -->
     <?php include "assets/includes/footer.php" ?>
