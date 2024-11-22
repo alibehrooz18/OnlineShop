@@ -334,11 +334,11 @@ function confirmQuery($result)
                                             $check_exist = mysqli_query($connection, $query);
                                             confirmQuery($check_exist);
 
-                                            if(!$check_exist){
+                                            if (mysqli_num_rows($check_exist) === 0) {
 
-                                            $query = "INSERT INTO cart (cart_shop_id) VALUES ('$shop_id')";
-                                            $result = mysqli_query($connection, $query);
-                                            confirmQuery($result);
+                                                $query = "INSERT INTO cart (cart_shop_id) VALUES ('$shop_id')";
+                                                $result = mysqli_query($connection, $query);
+                                                confirmQuery($result);
                                             } else {
                                                 echo "<h3 class='mb-5' style='color: red;'>your selected item exist in cart list</h3>";
                                             }
@@ -350,6 +350,7 @@ function confirmQuery($result)
                                         while ($cart_row = mysqli_fetch_assoc($result)) {
                                             $cart_id = $cart_row['cart_id'];
                                             $shop_id = $cart_row['cart_shop_id'];
+                                            $cart_quantity = $cart_row['cart_quantity'];
 
                                             // Get information from shop for cart
                                             $query = "SELECT * FROM shop WHERE item_id = $shop_id";
@@ -365,6 +366,7 @@ function confirmQuery($result)
                                                 $dis_price = $cart_price - ($cart_price * ($cart_dis / 100));
                                                 $dis_price = floor($dis_price);
 
+                                                $total_price = $dis_price * $cart_quantity;
 
                                         ?>
                                                 <tr>
@@ -384,20 +386,32 @@ function confirmQuery($result)
                                                             <span class="minus-btn">
                                                                 <i class="bx bx-minus"></i>
                                                             </span>
-                                                            <input type="text" value="1" min="1" class="quantity-input" data-price="<?php echo $dis_price; ?>">
+                                                            <input type="text" value="<?php echo $cart_quantity; ?>" min="1" class="quantity-input" name="quantity">
                                                             <span class="plus-btn">
                                                                 <i class="bx bx-plus"></i>
                                                             </span>
                                                         </div>
                                                     </td>
                                                     <td class="product-subtotal">
-                                                        <span class="subtotal-amount" id="subtotal">$<?php echo $dis_price; ?>.00</span>
+                                                        <span class="subtotal-amount" id="subtotal">$<?php echo $total_price; ?>.00</span>
                                                         <a href="cart.php?remove=<?php echo $cart_id; ?>" class="remove">
                                                             <i class="bx bx-x"></i>
                                                         </a>
                                                         <?php
+                                                        if (isset($_GET['update'])) {
+                                                            
+                                                            $quantity = intval($_GET['quantity']);
+                                                            
+                                                            $query = "UPDATE cart SET cart_quantity = $quantity WHERE cart_shop_id = $shop_id";
+                                                            $update_quantity = mysqli_query($connection, $query);
+                                                            confirmQuery($update_quantity);
+
+                                                            header("Location: cart.php");
+                                                        }
+
+
                                                         if (isset($_GET['remove'])) {
-                                                            $remove = $_GET['remove'];
+                                                            $remove = intval($_GET['remove']);
 
                                                             $remove = mysqli_real_escape_string($connection, $remove);
 
@@ -430,9 +444,7 @@ function confirmQuery($result)
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-sm-5 text-right">
-                                        <a href="cart.php" class="default-btn update">
-                                            Update cart
-                                        </a>
+                                        <button class="default-btn update" name="update">Update cart</button>
                                     </div>
                                 </div>
                             </div>
