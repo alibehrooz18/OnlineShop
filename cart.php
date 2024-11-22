@@ -327,6 +327,7 @@ function confirmQuery($result)
                                     </thead>
                                     <tbody>
                                         <?php
+                                        $subtotal = 0;
                                         // Get product id and send to cart
                                         if (isset($_GET['p_id'])) {
                                             $shop_id = $_GET['p_id'];
@@ -367,7 +368,7 @@ function confirmQuery($result)
                                                 $dis_price = floor($dis_price);
 
                                                 $total_price = $dis_price * $cart_quantity;
-
+                                                $subtotal += $total_price;
                                         ?>
                                                 <tr>
                                                     <td class="product-thumbnail">
@@ -399,10 +400,10 @@ function confirmQuery($result)
                                                         </a>
                                                         <?php
                                                         if (isset($_GET['update'])) {
-                                                            
+
                                                             $quantity = intval($_GET['quantity']);
-                                                            
-                                                            $query = "UPDATE cart SET cart_quantity = $quantity WHERE cart_shop_id = $shop_id";
+
+                                                            $query = "UPDATE cart SET cart_quantity = $quantity WHERE cart_id = $cart_id";
                                                             $update_quantity = mysqli_query($connection, $query);
                                                             confirmQuery($update_quantity);
 
@@ -455,10 +456,10 @@ function confirmQuery($result)
                     <h3 class="cart-checkout-title">Checkout summary</h3>
                     <div class="cart-totals">
                         <ul>
-                            <li>Subtotal <span>$123.00</span></li>
-                            <li>Shipping <span>$00.00</span></li>
-                            <li>Total <span>$123.00</span></li>
-                            <li><b>Payable Total</b> <span><b>$123.00</b></span></li>
+                            <li>Subtotal <span>$<?php echo number_format($subtotal, 2); ?></span></li>
+                            <li>Shipping <span>$0.00</span></li>
+                            <li>Total <span>$<?php echo number_format($subtotal, 2); ?></span></li>
+                            <li><b>Payable Total</b> <span><b>$<?php echo number_format($subtotal, 2); ?></b></span></li>
                         </ul>
                         <a href="checkout.php" class="default-btn two">
                             Buy now
