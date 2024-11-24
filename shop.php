@@ -404,7 +404,7 @@ function confirmQuery($result)
                                                 <img src="assets/img/shop/<?php echo $item_image; ?>" alt="Image">
                                                 <ul>
                                                     <li>
-                                                        <a href="#product-view-one" data-bs-toggle="modal">
+                                                        <a href="single-product.php?s_pro=<?php echo $item_id;?>">
                                                             <i class="bx bx-show-alt"></i>
                                                         </a>
                                                     </li>
