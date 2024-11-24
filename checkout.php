@@ -401,14 +401,22 @@ function confirmQuery($result)
                     </div>
                     <div class="col-lg-4 col-md-12">
                         <div class="order-details">
+                            <!-- Checkout -->
                             <div class="cart-totals">
+                                <?php
+                                if (isset($_GET['p_total'])) {
+                                    $payable_total = $_GET['p_total'];
+                                    $subtotal = $_GET['subtotal'];
+                                    $shiping = $_GET['shiping'];
+                                    $coupon = $_GET['coupon'];
+                                }
+                                ?>
                                 <h3>Checkout summary</h3>
                                 <ul>
-                                    <li>Subtotal <span>$170.00</span></li>
-                                    <li>Shipping <span>$170.00</span></li>
-                                    <li>Coupon <span>$20.00</span></li>
-                                    <li>Total <span>$150.00</span></li>
-                                    <li><b>Payable Total</b> <span><b>$150.00</b></span></li>
+                                    <li>Subtotal <span>$<?php echo number_format($subtotal, 2); ?></span></li>
+                                    <li>Shipping <span>$<?php echo number_format($shiping, 2); ?></span></li>
+                                    <li>Coupon <span>$<?php echo number_format($coupon, 2); ?></span></li>
+                                    <li><b>Payable Total</b> <span><b>$<?php echo number_format($payable_total, 2); ?></b></span></li>
                                 </ul>
                             </div>
                             <div class="faq-accordion">
@@ -484,7 +492,7 @@ function confirmQuery($result)
 
     <!-- Submit information to database -->
     <?php
-    if(isset($_POST['order'])) {
+    if (isset($_POST['order'])) {
         $info_firstname = $_POST['firstname'];
         $info_lastname = $_POST['lastname'];
         $info_company = $_POST['company'];
@@ -514,10 +522,10 @@ function confirmQuery($result)
             'notes' => false,
         ];
         $data = [];
-        
+
 
         foreach ($fields as $field => $isRequired) {
-            if(!empty($_POST[$field])) {
+            if (!empty($_POST[$field])) {
                 $data[$field] = $_POST[$field];
             } elseif ($isRequired) {
                 $errors[] = ucfirst(str_replace('_', ' ', $field)) . " is required.";
@@ -538,7 +546,6 @@ function confirmQuery($result)
 
         $result = mysqli_query($connection, $query);
         confirmQuery($result);
-
     }
     ?>
 
