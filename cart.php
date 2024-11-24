@@ -455,13 +455,19 @@ function confirmQuery($result)
                 <div class="col-lg-4">
                     <h3 class="cart-checkout-title">Checkout summary</h3>
                     <div class="cart-totals">
+                        <?php
+                        $shiping = 50;
+                        $coupon = 00;
+                        $payable_total = $subtotal + $shiping - $coupon;
+                        ?>
                         <ul>
                             <li>Subtotal <span>$<?php echo number_format($subtotal, 2); ?></span></li>
-                            <li>Shipping <span>$0.00</span></li>
-                            <li>Total <span>$<?php echo number_format($subtotal, 2); ?></span></li>
-                            <li><b>Payable Total</b> <span><b>$<?php echo number_format($subtotal, 2); ?></b></span></li>
+                            <li>Shipping <span>$<?php echo number_format($shiping, 2); ?></span></li>
+                            <li>Coupon <span>$<?php echo number_format($coupon, 2); ?></span></li>
+                            <li><b>Payable Total</b> <span><b>$<?php echo number_format($payable_total, 2); ?></b></span></li>
                         </ul>
-                        <a href="checkout.php" class="default-btn two">
+                        <a href="checkout.php?p_total=<?php echo $payable_total;?>&subtotal=<?php echo $subtotal;?>&shiping=<?php echo $shiping;?>&coupon=<?php echo $coupon;?>"
+                         class="default-btn two">
                             Buy now
                         </a>
                     </div>
