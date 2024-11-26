@@ -28,7 +28,7 @@ function confirmQuery($result)
 
 <body>
 
-    <!-- <div class="loader-wrapper">
+    <div class="loader-wrapper">
         <div class="loader">
             <div class="dot-wrap">
                 <span class="dot"></span>
@@ -37,7 +37,7 @@ function confirmQuery($result)
                 <span class="dot"></span>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
     <!-- Navbar area -->
@@ -327,14 +327,14 @@ function confirmQuery($result)
                             <tbody>
                                 <?php
                                 $subtotal = 0;
-                                $quantity = 1;
-                                // Get product id and send to cart
+                                // Get product id and send to wishlist
                                 if (isset($_GET['wishlist'])) {
                                     $shop_id = mysqli_real_escape_string($connection, $_GET['wishlist']);
                                     $query = "SELECT * FROM wishlists WHERE wish_shop_id = $shop_id";
                                     $check_exist = mysqli_query($connection, $query);
                                     confirmQuery($check_exist);
 
+                                    // Check if not find create on wishlist
                                     if (mysqli_num_rows($check_exist) === 0) {
 
                                         $query = "INSERT INTO wishlists (wish_shop_id) VALUES ('$shop_id')";
@@ -351,7 +351,7 @@ function confirmQuery($result)
                                 while ($wish_row = mysqli_fetch_assoc($result)) {
                                     $wish_id = $wish_row['wish_id'];
                                     $shop_id = $wish_row['wish_shop_id'];
-                                    $wish_quantity = $wish_row['wish_quantity'];
+                                    $quantity = $wish_row['wish_quantity'];
 
                                     // Get information from shop for wishlist
                                     $query = "SELECT * FROM shop WHERE item_id = $shop_id";
@@ -367,7 +367,7 @@ function confirmQuery($result)
                                         $dis_price = $wish_price - ($wish_price * ($wish_dis / 100));
                                         $dis_price = floor($dis_price);
 
-                                        $total_price = $dis_price * $wish_quantity;
+                                        $total_price = $dis_price * $quantity;
                                         $subtotal += $total_price;
                                 ?>
                                         <tr>
@@ -384,42 +384,43 @@ function confirmQuery($result)
                                             </td>
                                             <td class="product-quantity">
                                                 <div class="input-counter">
-                                                    <span class="minus-btn">
+                                                    <button class="minus-btn" name="minus-<?php echo $wish_id; ?>" value="<?php echo $wish_id; ?>">
                                                         <i class="bx bx-minus"></i>
-                                                    </span>
-                                                    <input type="text" value="1" min="0" class="quantity-input" name="quantity_<?php echo $wish_id; ?>">
-                                                    <span class="plus-btn">
+                                                    </button>
+                                                    <input type="text" value="<?php echo $quantity; ?>" min="0" class="quantity-input" name="quantity_<?php echo $wish_id; ?>">
+                                                    <button class="plus-btn" name="plus-<?php echo $wish_id; ?>" value="<?php echo $wish_id; ?>">
                                                         <i class="bx bx-plus"></i>
-                                                    </span>
+                                                    </button>
                                                 </div>
+                                                <?php
+                                                // Change value of quantity
+                                                if (isset($_GET['minus-' . $wish_id])) {
+                                                    $minus = $_GET['minus-' . $wish_id];
+                                                    $minus_quantity = $quantity - 1;
+                                                    $query = "UPDATE wishlists SET wish_quantity = $minus_quantity WHERE wish_id = $minus";
+                                                    $update_quantity = mysqli_query($connection, $query);
+                                                    confirmQuery($update_quantity);
+
+                                                    header("Location: wishlist.php");
+                                                }
+                                                if (isset($_GET['plus-' . $wish_id])) {
+                                                    $plus = $_GET['plus-' . $wish_id];
+                                                    $plus_quantity = $quantity + 1;
+                                                    $query = "UPDATE wishlists SET wish_quantity = $plus_quantity WHERE wish_id = $plus";
+                                                    $update_quantity = mysqli_query($connection, $query);
+                                                    confirmQuery($update_quantity);
+
+                                                    header("Location: wishlist.php");
+                                                }
+                                                ?>
                                             </td>
                                             <td class="product-subtotal">
                                                 <span class="subtotal-amount" id="subtotal">$<?php echo number_format($total_price, 2); ?></span>
                                             </td>
                                             <td class="product-subtotal">
-                                                <a href="cart.php?p_id=<?php echo $shop_id;?>&quantity=<?php echo $quantity;?>" class="default-btn">
+                                                <a href="cart.php?p_id=<?php echo $shop_id; ?>&quantity=<?php echo $quantity; ?>" class="default-btn">
                                                     Add to cart
                                                 </a>
-                                                <!-- <button type="submit" class="default-btn" name="addToCart">Add to cart</button> -->
-                                                <?php
-
-                                                // $quantity = intval($_GET['quantity_' . $wish_id]);
-
-                                                $query = "UPDATE wishlists SET wish_quantity = $quantity WHERE wish_id = $wish_id";
-                                                $update_quantity = mysqli_query($connection, $query);
-                                                confirmQuery($update_quantity);
-
-                                                if (isset($_GET['addToCart'])) {
-
-                                                    // $quantity = intval($_GET['quantity_' . $wish_id]);
-
-                                                    // $query = "UPDATE wishlists SET wish_quantity = $quantity WHERE wish_id = $wish_id";
-                                                    // $update_quantity = mysqli_query($connection, $query);
-                                                    // confirmQuery($update_quantity);
-
-                                                    header("Location: cart.php");
-                                                }
-                                                ?>
                                             </td>
                                     <?php
                                     }
