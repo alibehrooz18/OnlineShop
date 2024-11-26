@@ -409,7 +409,7 @@ function confirmQuery($result)
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="wishlist.php">
+                                                        <a href="wishlist.php?wishlist=<?php echo $item_id;?>">
                                                             <i class="bx bx-heart"></i>
                                                         </a>
                                                     </li>
