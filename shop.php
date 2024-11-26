@@ -11,7 +11,6 @@ function confirmQuery($result)
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
