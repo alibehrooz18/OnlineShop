@@ -1,16 +1,34 @@
-﻿<!DOCTYPE html>
+﻿<?php include "./assets/includes/db.php"; ?>
+<?php
+ob_start();
+session_start();
+?>
+<?php
+// Function
+function confirmQuery($result)
+{
+    global $connection;
+    if (!$result) {
+        die("QUERY FAILD" . mysqli_error($connection));
+    }
+}
+?>
+
+
+
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
 
     <?php include "./assets/includes/header.php" ?>
 
-    <title>Eduon - Online Courses & Training HTML Template</title>
+    <title>Eduon - Wishlist</title>
 </head>
 
 <body>
 
-    <div class="loader-wrapper">
+    <!-- <div class="loader-wrapper">
         <div class="loader">
             <div class="dot-wrap">
                 <span class="dot"></span>
@@ -19,11 +37,13 @@
                 <span class="dot"></span>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
+    <!-- Navbar area -->
     <div class="navbar-area">
 
+        <!-- Mobile section -->
         <div class="mobile-nav">
             <a href="index.php" class="logo">
                 <img src="assets\img\logo.png" class="main-logo" alt="Logo">
@@ -31,6 +51,7 @@
             </a>
         </div>
 
+        <!-- Main section -->
         <div class="main-nav">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md">
@@ -268,6 +289,7 @@
     </div>
 
 
+    <!-- Banner section -->
     <div class="page-title-area bg-22">
         <div class="container">
             <div class="page-title-content">
@@ -285,6 +307,7 @@
     </div>
 
 
+    <!-- Main area -->
     <div class="cart-area ptb-100">
         <div class="container">
             <form>
@@ -302,134 +325,106 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td class="product-thumbnail">
-                                        <a href="single-product.php">
-                                            <img src="assets\img\cart\cart-img-1.jpg" alt="Image">
-                                        </a>
-                                    </td>
-                                    <td class="product-name">
-                                        <a href="single-product.php">Book cover mockup</a>
-                                    </td>
-                                    <td class="product-price">
-                                        <span class="unit-amount">$29.00</span>
-                                    </td>
-                                    <td class="product-quantity">
-                                        <div class="input-counter">
-                                            <span class="minus-btn">
-                                                <i class="bx bx-minus"></i>
-                                            </span>
-                                            <input type="text" value="1">
-                                            <span class="plus-btn">
-                                                <i class="bx bx-plus"></i>
-                                            </span>
-                                        </div>
-                                    </td>
-                                    <td class="product-subtotal">
-                                        <span class="subtotal-amount">$29.00</span>
-                                    </td>
-                                    <td class="product-subtotal">
-                                        <a href="cart.php" class="default-btn">
-                                            Add to cart
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="product-thumbnail">
-                                        <a href="single-product.php">
-                                            <img src="assets\img\cart\cart-img-2.jpg" alt="Image">
-                                        </a>
-                                    </td>
-                                    <td class="product-name">
-                                        <a href="single-product.php">Your heart is the sea</a>
-                                    </td>
-                                    <td class="product-price">
-                                        <span class="unit-amount">$20.00</span>
-                                    </td>
-                                    <td class="product-quantity">
-                                        <div class="input-counter">
-                                            <span class="minus-btn">
-                                                <i class="bx bx-minus"></i>
-                                            </span>
-                                            <input type="text" value="1">
-                                            <span class="plus-btn">
-                                                <i class="bx bx-plus"></i>
-                                            </span>
-                                        </div>
-                                    </td>
-                                    <td class="product-subtotal">
-                                        <span class="subtotal-amount">$20.50</span>
-                                    </td>
-                                    <td class="product-subtotal">
-                                        <a href="cart.php" class="default-btn">
-                                            Add to cart
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="product-thumbnail">
-                                        <a href="single-product.php">
-                                            <img src="assets\img\cart\cart-img-3.jpg" alt="Image">
-                                        </a>
-                                    </td>
-                                    <td class="product-name">
-                                        <a href="single-product.php">Hardcober mockup</a>
-                                    </td>
-                                    <td class="product-price">
-                                        <span class="unit-amount">$15.00</span>
-                                    </td>
-                                    <td class="product-quantity">
-                                        <div class="input-counter">
-                                            <span class="minus-btn">
-                                                <i class="bx bx-minus"></i>
-                                            </span>
-                                            <input type="text" value="1">
-                                            <span class="plus-btn">
-                                                <i class="bx bx-plus"></i>
-                                            </span>
-                                        </div>
-                                    </td>
-                                    <td class="product-subtotal">
-                                        <span class="subtotal-amount">$15.00</span>
-                                    </td>
-                                    <td class="product-subtotal">
-                                        <a href="cart.php" class="default-btn">
-                                            Add to cart
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="product-thumbnail">
-                                        <a href="single-product.php">
-                                            <img src="assets\img\cart\cart-img-4.jpg" alt="Image">
-                                        </a>
-                                    </td>
-                                    <td class="product-name">
-                                        <a href="single-product.php">Dior</a>
-                                    </td>
-                                    <td class="product-price">
-                                        <span class="unit-amount">$59.50</span>
-                                    </td>
-                                    <td class="product-quantity">
-                                        <div class="input-counter">
-                                            <span class="minus-btn">
-                                                <i class="bx bx-minus"></i>
-                                            </span>
-                                            <input type="text" value="1">
-                                            <span class="plus-btn">
-                                                <i class="bx bx-plus"></i>
-                                            </span>
-                                        </div>
-                                    </td>
-                                    <td class="product-subtotal">
-                                        <span class="subtotal-amount">$59.50</span>
-                                    </td>
-                                    <td class="product-subtotal">
-                                        <a href="cart.php" class="default-btn">
-                                            Add to cart
-                                        </a>
-                                    </td>
-                                </tr>
+                                <?php
+                                $subtotal = 0;
+                                $quantity = 1;
+                                // Get product id and send to cart
+                                if (isset($_GET['wishlist'])) {
+                                    $shop_id = mysqli_real_escape_string($connection, $_GET['wishlist']);
+                                    $query = "SELECT * FROM wishlists WHERE wish_shop_id = $shop_id";
+                                    $check_exist = mysqli_query($connection, $query);
+                                    confirmQuery($check_exist);
+
+                                    if (mysqli_num_rows($check_exist) === 0) {
+
+                                        $query = "INSERT INTO wishlists (wish_shop_id) VALUES ('$shop_id')";
+                                        $result = mysqli_query($connection, $query);
+                                        confirmQuery($result);
+                                    } else {
+                                        echo "<h3 class='mb-5' style='color: red;'>your selected item exist in wishlist</h3>";
+                                    }
+                                }
+                                $query = "SELECT * FROM wishlists";
+                                $result = mysqli_query($connection, $query);
+                                confirmQuery($result);
+
+                                while ($wish_row = mysqli_fetch_assoc($result)) {
+                                    $wish_id = $wish_row['wish_id'];
+                                    $shop_id = $wish_row['wish_shop_id'];
+                                    $wish_quantity = $wish_row['wish_quantity'];
+
+                                    // Get information from shop for wishlist
+                                    $query = "SELECT * FROM shop WHERE item_id = $shop_id";
+                                    $get_wish = mysqli_query($connection, $query);
+                                    confirmQuery($get_wish);
+
+                                    if ($row = mysqli_fetch_assoc($get_wish)) {
+                                        $wish_image = $row['item_image'];
+                                        $wish_title = $row['item_title'];
+                                        $wish_price = $row['item_price'];
+                                        $wish_dis = $row['item_discount'];
+
+                                        $dis_price = $wish_price - ($wish_price * ($wish_dis / 100));
+                                        $dis_price = floor($dis_price);
+
+                                        $total_price = $dis_price * $wish_quantity;
+                                        $subtotal += $total_price;
+                                ?>
+                                        <tr>
+                                            <td class="product-thumbnail">
+                                                <a href="single-product.php">
+                                                    <img src="assets/img/shop/<?php echo $wish_image; ?>" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td class="product-name">
+                                                <a href="single-product.php"><?php echo $wish_title; ?></a>
+                                            </td>
+                                            <td class="product-price">
+                                                <span class="unit-amount">$<?php echo number_format($dis_price, 2); ?></span>
+                                            </td>
+                                            <td class="product-quantity">
+                                                <div class="input-counter">
+                                                    <span class="minus-btn">
+                                                        <i class="bx bx-minus"></i>
+                                                    </span>
+                                                    <input type="text" value="1" min="0" class="quantity-input" name="quantity_<?php echo $wish_id; ?>">
+                                                    <span class="plus-btn">
+                                                        <i class="bx bx-plus"></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td class="product-subtotal">
+                                                <span class="subtotal-amount" id="subtotal">$<?php echo number_format($total_price, 2); ?></span>
+                                            </td>
+                                            <td class="product-subtotal">
+                                                <a href="cart.php?p_id=<?php echo $shop_id;?>&quantity=<?php echo $quantity;?>" class="default-btn">
+                                                    Add to cart
+                                                </a>
+                                                <!-- <button type="submit" class="default-btn" name="addToCart">Add to cart</button> -->
+                                                <?php
+
+                                                // $quantity = intval($_GET['quantity_' . $wish_id]);
+
+                                                $query = "UPDATE wishlists SET wish_quantity = $quantity WHERE wish_id = $wish_id";
+                                                $update_quantity = mysqli_query($connection, $query);
+                                                confirmQuery($update_quantity);
+
+                                                if (isset($_GET['addToCart'])) {
+
+                                                    // $quantity = intval($_GET['quantity_' . $wish_id]);
+
+                                                    // $query = "UPDATE wishlists SET wish_quantity = $quantity WHERE wish_id = $wish_id";
+                                                    // $update_quantity = mysqli_query($connection, $query);
+                                                    // confirmQuery($update_quantity);
+
+                                                    header("Location: cart.php");
+                                                }
+                                                ?>
+                                            </td>
+                                    <?php
+                                    }
+                                }
+                                    ?>
                             </tbody>
                         </table>
                     </div>
