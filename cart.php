@@ -335,9 +335,10 @@ function confirmQuery($result)
                                             $check_exist = mysqli_query($connection, $query);
                                             confirmQuery($check_exist);
 
-                                            if (mysqli_num_rows($check_exist) === 0) {
+                                            if (mysqli_num_rows($check_exist) === 0 && isset($_GET['quantity'])) {
+                                                $quantity = $_GET['quantity'];
 
-                                                $query = "INSERT INTO cart (cart_shop_id) VALUES ('$shop_id')";
+                                                $query = "INSERT INTO cart (cart_shop_id, cart_quantity) VALUES ('$shop_id', '$quantity')";
                                                 $result = mysqli_query($connection, $query);
                                                 confirmQuery($result);
                                             } else {
@@ -380,28 +381,28 @@ function confirmQuery($result)
                                                         <a href="single-product.php"><?php echo $cart_title; ?></a>
                                                     </td>
                                                     <td class="product-price">
-                                                        <span class="unit-amount">$<?php echo $dis_price; ?>.00</span>
+                                                        <span class="unit-amount">$<?php echo number_format($dis_price,2 ); ?></span>
                                                     </td>
                                                     <td class="product-quantity">
                                                         <div class="input-counter">
                                                             <span class="minus-btn">
                                                                 <i class="bx bx-minus"></i>
                                                             </span>
-                                                            <input type="text" value="<?php echo $cart_quantity; ?>" min="1" class="quantity-input" name="quantity">
+                                                            <input type="text" value="<?php echo $cart_quantity; ?>" min="1" class="quantity-input" name="quantity_<?php echo $cart_id;?>">
                                                             <span class="plus-btn">
                                                                 <i class="bx bx-plus"></i>
                                                             </span>
                                                         </div>
                                                     </td>
                                                     <td class="product-subtotal">
-                                                        <span class="subtotal-amount" id="subtotal">$<?php echo $total_price; ?>.00</span>
+                                                        <span class="subtotal-amount" id="subtotal">$<?php echo number_format($total_price, 2); ?></span>
                                                         <a href="cart.php?remove=<?php echo $cart_id; ?>" class="remove">
                                                             <i class="bx bx-x"></i>
                                                         </a>
                                                         <?php
                                                         if (isset($_GET['update'])) {
 
-                                                            $quantity = intval($_GET['quantity']);
+                                                            $quantity = intval($_GET['quantity_'.$cart_id]);
 
                                                             $query = "UPDATE cart SET cart_quantity = $quantity WHERE cart_id = $cart_id";
                                                             $update_quantity = mysqli_query($connection, $query);
