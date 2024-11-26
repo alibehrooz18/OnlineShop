@@ -1,16 +1,30 @@
-﻿<!DOCTYPE html>
+﻿<?php include "./assets/includes/db.php"; ?>
+<?php
+// Function
+function confirmQuery($result)
+{
+    global $connection;
+    if (!$result) {
+        die("QUERY FAILD" . mysqli_error($connection));
+    }
+}
+?>
+
+
+
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
 
     <?php include "./assets/includes/header.php" ?>
 
-    <title>Eduon - Online Courses & Training HTML Template</title>
+    <title>Eduon - Single Product</title>
 </head>
 
 <body>
 
-    <div class="loader-wrapper">
+    <!-- <div class="loader-wrapper">
         <div class="loader">
             <div class="dot-wrap">
                 <span class="dot"></span>
@@ -19,11 +33,13 @@
                 <span class="dot"></span>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
+    <!-- Navbar -->
     <div class="navbar-area">
 
+        <!-- Mobile navbar -->
         <div class="mobile-nav">
             <a href="index.php" class="logo">
                 <img src="assets\img\logo.png" class="main-logo" alt="Logo">
@@ -31,6 +47,7 @@
             </a>
         </div>
 
+        <!-- Main navbar -->
         <div class="main-nav">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md">
@@ -268,6 +285,7 @@
     </div>
 
 
+    <!-- Banner area -->
     <div class="page-title-area bg-23">
         <div class="container">
             <div class="page-title-content">
@@ -285,19 +303,56 @@
     </div>
 
 
-    <section class="product-details-area ptb-100">
+    <!-- Main area -->
+    <section class="product-details-area ptb-100" dir="ltr">
         <div class="container">
             <div class="row align-items-center">
+                <?php
+                if (isset($_GET['s_pro'])) {
+                    $item_id = $_GET['s_pro'];
+                }
+                $query = "SELECT * FROM shop WHERE item_id = $item_id";
+                $get_data = mysqli_query($connection, $query);
+                confirmQuery($get_data);
+
+                $row = mysqli_fetch_assoc($get_data);
+                $item_image = $row['item_image'];
+                $item_title = $row['item_title'];
+                $item_price = $row['item_price'];
+                $item_category = $row['item_category_id'];
+                $item_discount = $row['item_discount'];
+
+                $dis_price = $item_price - ($item_price * ($item_discount / 100));
+                $dis_price = floor($dis_price);
+
+
+                $query = "SELECT * FROM categories WHERE cat_id = $item_category";
+                $get_category = mysqli_query($connection, $query);
+                confirmQuery($get_category);
+
+                $cat_row = mysqli_fetch_assoc($get_category);
+                $cat_id = $cat_row['cat_id'];
+                $category = $cat_row['cat_title'];
+
+
+                ?>
                 <div class="col-lg-6 col-md-12">
                     <div class="product-details-image">
-                        <img src="assets\img\single-product\single-product-1.jpg" alt="Image">
+                        <img src="assets/img/shop/<?php echo $item_image; ?>" alt="Image" style="height: 800px;">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="product-details-desc">
-                        <h3>Book cover mockup</h3>
+                        <h3><?php echo $item_title; ?></h3>
                         <div class="price">
-                            <span class="new-price">$29.00</span>
+                            <span class="new-price">
+                                <?php if ($item_discount) { ?>
+                                    <del>$<?php echo $item_price; ?>.00</del>
+                                    $<?php echo $dis_price; ?>.00
+                                <?php } else { ?>
+                                    $<?php echo $item_price; ?>.00
+                                <?php } ?>
+                            </span>
                         </div>
                         <div class="product-review">
                             <div class="rating">
@@ -307,16 +362,16 @@
                                 <i class="bx bxs-star"></i>
                                 <i class="bx bxs-star-half"></i>
                             </div>
-                            <a href="single-product.php" class="rating-count">(5 reviews)</a>
+                            <a href="single-product.php?s_pro=<?php echo $item_id; ?>" class="rating-count">(5 reviews)</a>
                         </div>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                             invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
                             et justo duo dolores et ea rebum. Stet clita kasd gubergren at vero eos et accusam amet,
                             consetetur sadipscing elitr.</p>
                         <ul class="product-summery">
-                            <li>SUK <span>:132</span></li>
-                            <li>Category <span>:Book cover</span></li>
-                            <li>Tags <span>:Book</span></li>
+                            <li>SUK: <span>132</span></li>
+                            <li>Category: <span><?php echo $category; ?></span></li>
+                            <li>Tags: <span>Book</span></li>
                             <li>10 in stock</li>
                         </ul>
                         <ul class="social-wrap">
@@ -339,21 +394,22 @@
                                 </a>
                             </li>
                         </ul>
-                        <div class="product-add-to-cart">
+                        <!-- <div class="product-add-to-cart">
                             <h3>Quantities:</h3>
                             <div class="input-counter">
                                 <span class="minus-btn">
                                     <i class="bx bx-minus"></i>
                                 </span>
-                                <input type="text" value="1">
+                                <input type="text" value="1" min="1" class="quantity-input" name="quantity">
                                 <span class="plus-btn">
                                     <i class="bx bx-plus"></i>
                                 </span>
                             </div>
-                        </div>
-                        <button type="submit" class="default-btn">
-                            Add to Cart
-                        </button>
+                        </div> -->
+                        <br>
+                        <a href="cart.php?p_id=<?php echo $item_id; ?>" class="default-btn">
+                            Add to cart
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-12 col-md-12">
@@ -496,37 +552,67 @@
     </section>
 
 
+    <!-- Shop section -->
     <section class="related-product-area pb-70">
         <div class="container">
             <div class="section-title">
                 <h2>Related Products</h2>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-shop">
-                        <div class="shop-img">
-                            <img src="assets\img\shop\shop-img-1.jpg" alt="Image">
-                            <ul>
-                                <li>
-                                    <a href="#product-view-one" data-bs-toggle="modal">
-                                        <i class="bx bx-show-alt"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="cart.php">
-                                        <i class="bx bx-heart"></i>
-                                    </a>
-                                </li>
-                            </ul>
+                <?php
+                $query = "SELECT * FROM shop LIMIT 4";
+                $item_query = mysqli_query($connection, $query);
+                confirmQuery($item_query);
+
+                if (mysqli_num_rows($item_query) > 0) {
+                    while ($row = mysqli_fetch_assoc($item_query)) {
+                        $item_id = $row['item_id'];
+                        $item_image = $row['item_image'];
+                        $item_title = $row['item_title'];
+                        $item_price = $row['item_price'];
+                        $item_discount = $row['item_discount'];
+
+                        $dis_price = $item_price - ($item_price * ($item_discount / 100));
+                        $dis_price = floor($dis_price);
+                ?>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-shop">
+                                <div class="shop-img">
+                                    <img src="assets/img/shop/<?php echo $item_image; ?>" alt="Image">
+                                    <ul>
+                                        <li>
+                                            <a href="single-product.php?s_pro=<?php echo $item_id; ?>">
+                                                <i class="bx bx-show-alt"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="wishlist.php">
+                                                <i class="bx bx-heart"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3><?php echo $item_title; ?></h3>
+                                <span>
+                                    <?php if ($item_discount) { ?>
+                                        <del>$<?php echo $item_price; ?>.00</del>
+                                        $<?php echo $dis_price; ?>.00
+                                    <?php } else { ?>
+                                        $<?php echo $item_price; ?>.00
+                                    <?php } ?>
+                                </span>
+                                <a href="cart.php?p_id=<?php echo $item_id; ?>" class="default-btn">
+                                    Add to cart
+                                </a>
+                            </div>
                         </div>
-                        <h3>transform: scaleY(1);</h3>
-                        <span> <del>$49.00</del> $39.00</span>
-                        <a href="cart.php" class="default-btn">
-                            Add to cart
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
+                <?php
+                    }
+                } else {
+                    echo "<p>No item found.</p>";
+                }
+                ?>
+                <!-- <div class="col-lg-3 col-sm-6">
                     <div class="single-shop">
                         <div class="shop-img">
                             <img src="assets\img\shop\shop-img-2.jpg" alt="Image">
@@ -597,12 +683,13 @@
                             Add to cart
                         </a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
 
 
+    <!-- Modal section -->
     <div class="modal fade product-view-one" id="product-view-one">
         <div class="modal-dialog">
             <div class="modal-content">
