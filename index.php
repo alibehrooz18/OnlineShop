@@ -3,9 +3,40 @@
 
 <head>
 
-    <?php include "./assets/includes/header.php" ?>
+    <?php include "./includes/header.php"; ?>
 
-    <title>Eduon - Online Courses & Training HTML Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="public\css\bootstrap.rtl.min.css">
+
+    <link rel="stylesheet" href="public\css\owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="public\css\owl.carousel.min.css">
+
+    <link rel="stylesheet" href="public\css\magnific-popup.min.css">
+
+    <link rel="stylesheet" href="public\css\animate.min.css">
+
+    <link rel="stylesheet" href="public\css\boxicons.min.css">
+
+    <link rel="stylesheet" href="public\css\flaticon.css">
+
+    <link rel="stylesheet" href="public\css\meanmenu.min.css">
+
+    <link rel="stylesheet" href="public\css\nice-select.min.css">
+
+    <link rel="stylesheet" href="public\css\odometer.min.css">
+
+    <link rel="stylesheet" href="public\css\style.css">
+
+    <link rel="stylesheet" href="public\css\dark.css">
+
+    <link rel="stylesheet" href="public\css\responsive.css">
+
+    <link rel="icon" type="image/png" href="public\img\favicon.png">
+
+    <title>Eduon - Home</title>
 </head>
 
 <body>
@@ -22,6 +53,7 @@
     </div>
 
 
+    <!-- Subscribe modal -->
     <div class="modal-newsletter-area">
         <div class="modal fade" id="exampleModal" role="dialog">
             <div class="modal-dialog" role="document">
@@ -33,7 +65,7 @@
                         <div class="row">
                             <div class="col-lg-5 col-sm-5 p-0">
                                 <div class="newsletter-img">
-                                    <img src="assets\img\newsletter-img.jpg" alt="Image">
+                                    <img src="public\img\newsletter-img.jpg" alt="Image">
                                 </div>
                             </div>
                             <div class="col-lg-7 col-sm-7 pl-0">
@@ -68,8 +100,8 @@
 
         <div class="mobile-nav">
             <a href="index.php" class="logo">
-                <img src="assets\img\logo.png" class="main-logo" alt="Logo">
-                <img src="assets\img\logo-2.png" class="white-logo" alt="Logo">
+                <img src="public\img\logo.png" class="main-logo" alt="Logo">
+                <img src="public\img\logo-2.png" class="white-logo" alt="Logo">
             </a>
         </div>
 
@@ -77,110 +109,26 @@
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md">
                     <a class="navbar-brand" href="index.php">
-                        <img src="assets\img\logo.png" class="main-logo" alt="Logo">
-                        <img src="assets\img\logo-2.png" class="white-logo" alt="Logo">
+                        <img src="public\img\logo.png" class="main-logo" alt="Logo">
+                        <img src="public\img\logo-2.png" class="white-logo" alt="Logo">
                     </a>
                     <div class="collapse navbar-collapse mean-menu">
                         <ul class="navbar-nav m-auto">
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
+                                <a href="index.php" class="nav-link active">
                                     Home
-                                    <i class="bx bx-chevron-down"></i>
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="index.php" class="nav-link active">Home One</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="index-2.php" class="nav-link">Home Two</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="index-3.php" class="nav-link">Home Three</a>
-                                    </li>
-                                </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="app/view/courses.php" class="nav-link">
                                     Courses
-                                    <i class="bx bx-chevron-down"></i>
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="courses.php" class="nav-link">Courses</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="single-course.php" class="nav-link">Single Course</a>
-                                    </li>
-                                </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    Pages
-                                    <i class="bx bx-chevron-down"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="about.php" class="nav-link">About</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="feedback.php" class="nav-link">Feedback</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            Events
-                                            <i class="bx bx-chevron-right"></i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item">
-                                                <a href="events.php" class="nav-link">Events</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="single-event.php" class="nav-link">Single Event</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="instructors.php" class="nav-link">Instructors</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            User
-                                            <i class="bx bx-chevron-right"></i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item">
-                                                <a href="my-account.php" class="nav-link">My Account</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="log-in.php" class="nav-link">Log In</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="registration.php" class="nav-link">Registration</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="recover-password.php" class="nav-link">Recover Password</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="gallery.php" class="nav-link">Gallery</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="faq.php" class="nav-link">FAQ</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="privacy-policy.php" class="nav-link">Privacy Policy</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="terms-conditions.php" class="nav-link">Terms & Conditions</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="coming-soon.php" class="nav-link">Coming Soon</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="404.php" class="nav-link">404 Error Page</a>
-                                    </li>
-                                </ul>
+                                <a href="app/view/gallery.php" class="nav-link">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="app/view/events.php" class="nav-link">Events</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
@@ -189,48 +137,41 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="shop.php" class="nav-link">Shop</a>
+                                        <a href="app/view/shop.php" class="nav-link">Shop</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="cart.php" class="nav-link">Cart</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="checkout.php" class="nav-link">Checkout</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="single-product.php" class="nav-link">Single Product</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="wishlist.php" class="nav-link">Wishlist</a>
+                                        <a href="app/view/wishlist.php" class="nav-link">Wishlist</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
+                                <a href="app/view/contact.php" class="nav-link">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="app/view/about.php" class="nav-link">About</a>
+                            </li>
+                            <!-- User should move to login botton when user login -->
+                            <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Blog
-                                    <i class="bx bx-chevron-down"></i>
+                                    User
+                                    <i class="bx bx-chevron-right"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="blog-column-one.php" class="nav-link">Blog Column One</a>
+                                        <a href="app/view/my-account.php" class="nav-link">My Account</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="blog-column-two.php" class="nav-link">Blog Column Two</a>
+                                        <a href="app/view/log-in.php" class="nav-link">Log In</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="blog-column-three.php" class="nav-link">Blog Column Three</a>
+                                        <a href="app/view/registration.php" class="nav-link">Registration</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="blog-left-sidebar.php" class="nav-link">Blog Left Sidebar</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="single-blog.php" class="nav-link">Single Blog</a>
+                                        <a href="app/view/recover-password.php" class="nav-link">Recover Password</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
-                                <a href="contact.php" class="nav-link">Contact</a>
-                            </li>
+                            <!-- ********************************************************************************** -->
                         </ul>
 
                         <div class="others-option">
@@ -248,13 +189,13 @@
                                 </div>
                             </div>
                             <div class="cart-icon">
-                                <a href="cart.php">
+                                <a href="app/view/cart.php">
                                     <i class="flaticon-shopping-cart"></i>
                                     <span>0</span>
                                 </a>
                             </div>
                             <div class="register">
-                                <a href="my-account.php" class="default-btn">
+                                <a href="app/view/my-account.php" class="default-btn">
                                     Login / Register
                                 </a>
                             </div>
@@ -291,13 +232,13 @@
                                 </div>
                             </div>
                             <div class="cart-icon">
-                                <a href="cart.php">
+                                <a href="app/view/cart.php">
                                     <i class="flaticon-shopping-cart"></i>
                                     <span>0</span>
                                 </a>
                             </div>
                             <div class="register">
-                                <a href="my-account.php" class="default-btn">
+                                <a href="app/view/my-account.php" class="default-btn">
                                     Login / Register
                                 </a>
                             </div>
@@ -322,7 +263,7 @@
                         <p class="wow animate__animated animate__fadeInLeft" data-wow-delay="0.6s">Lorem ipsum dolor sit
                             amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                             magna aliqua.</p>
-                        <a href="courses.php" class="default-btn wow animate__animated animate__fadeInLeft"
+                        <a href="app/view/courses.php" class="default-btn wow animate__animated animate__fadeInLeft"
                             data-wow-delay="0.9s">
                             View Courses
                         </a>
@@ -330,7 +271,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="banner-img wow animate__animated animate__fadeInRight" data-wow-delay="0.3s">
-                        <img src="assets\img\banner-img\banner-img-1.jpg" alt="Image">
+                        <img src="public\img\banner-img\banner-img-1.jpg" alt="Image">
                     </div>
                 </div>
             </div>
@@ -371,28 +312,28 @@
         <div class="container">
             <div class="partner-wrap owl-theme owl-carousel">
                 <div class="partner-item">
-                    <a href="about.php">
-                        <img src="assets\img\partner-logo\partner-logo-1.png" alt="Image">
+                    <a href="app/view/about.php">
+                        <img src="public\img\partner-logo\partner-logo-1.png" alt="Image">
                     </a>
                 </div>
                 <div class="partner-item">
-                    <a href="about.php">
-                        <img src="assets\img\partner-logo\partner-logo-2.png" alt="Image">
+                    <a href="app/view/about.php">
+                        <img src="public\img\partner-logo\partner-logo-2.png" alt="Image">
                     </a>
                 </div>
                 <div class="partner-item">
-                    <a href="about.php">
-                        <img src="assets\img\partner-logo\partner-logo-3.png" alt="Image">
+                    <a href="app/view/about.php">
+                        <img src="public\img\partner-logo\partner-logo-3.png" alt="Image">
                     </a>
                 </div>
                 <div class="partner-item">
-                    <a href="about.php">
-                        <img src="assets\img\partner-logo\partner-logo-4.png" alt="Image">
+                    <a href="app/view/about.php">
+                        <img src="public\img\partner-logo\partner-logo-4.png" alt="Image">
                     </a>
                 </div>
                 <div class="partner-item">
-                    <a href="about.php">
-                        <img src="assets\img\partner-logo\partner-logo-5.png" alt="Image">
+                    <a href="app/view/about.php">
+                        <img src="public\img\partner-logo\partner-logo-5.png" alt="Image">
                     </a>
                 </div>
             </div>
@@ -412,7 +353,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-achieve">
                         <div class="achieve-shape shape-1">
-                            <img src="assets\img\achieve-shape\achieve-shape-1.png" alt="Image">
+                            <img src="public\img\achieve-shape\achieve-shape-1.png" alt="Image">
                             <i class="flaticon-skills"></i>
                         </div>
                         <h3>Learn the latest skills</h3>
@@ -423,7 +364,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-achieve">
                         <div class="achieve-shape shape-2">
-                            <img src="assets\img\achieve-shape\achieve-shape-2.png" alt="Image">
+                            <img src="public\img\achieve-shape\achieve-shape-2.png" alt="Image">
                             <i class="flaticon-career"></i>
                         </div>
                         <h3>Get ready for a career</h3>
@@ -434,7 +375,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-achieve">
                         <div class="achieve-shape shape-3">
-                            <img src="assets\img\achieve-shape\achieve-shape-3.png" alt="Image">
+                            <img src="public\img\achieve-shape\achieve-shape-3.png" alt="Image">
                             <i class="flaticon-certificate"></i>
                         </div>
                         <h3>Earn a certificate or degree</h3>
@@ -445,7 +386,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-achieve">
                         <div class="achieve-shape shape-4">
-                            <img src="assets\img\achieve-shape\achieve-shape-4.png" alt="Image">
+                            <img src="public\img\achieve-shape\achieve-shape-4.png" alt="Image">
                             <i class="flaticon-group"></i>
                         </div>
                         <h3>Upskill your organization</h3>
@@ -465,7 +406,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="education-img">
-                        <img src="assets\img\education-img.png" alt="Image">
+                        <img src="public\img\education-img.png" alt="Image">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -498,7 +439,7 @@
                                 Free migrations
                             </li>
                         </ul>
-                        <a href="courses.php" class="default-btn">
+                        <a href="app/view/courses.php" class="default-btn">
                             View Courses
                         </a>
                     </div>
@@ -508,7 +449,7 @@
     </section>
     <!-- Seconde banner end -->
 
-
+    <!-- *********************************************** fix to get data from database ****************************************** -->
     <!-- Best course start -->
     <section class="courses-area pt-100 pb-70">
         <div class="container">
@@ -520,7 +461,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-course">
                         <a href="single-course.php">
-                            <img src="assets\img\course-img\course-img-1.jpg" alt="Image">
+                            <img src="public\img\course-img\course-img-1.jpg" alt="Image">
                         </a>
                         <div class="course-content">
                             <span class="price">$39</span>
@@ -561,7 +502,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-course">
                         <a href="single-course.php">
-                            <img src="assets\img\course-img\course-img-2.jpg" alt="Image">
+                            <img src="public\img\course-img\course-img-2.jpg" alt="Image">
                         </a>
                         <div class="course-content">
                             <span class="price">$59</span>
@@ -602,7 +543,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-course">
                         <a href="single-course.php">
-                            <img src="assets\img\course-img\course-img-3.jpg" alt="Image">
+                            <img src="public\img\course-img\course-img-3.jpg" alt="Image">
                         </a>
                         <div class="course-content">
                             <span class="price">$29</span>
@@ -643,7 +584,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-course">
                         <a href="single-course.php">
-                            <img src="assets\img\course-img\course-img-4.jpg" alt="Image">
+                            <img src="public\img\course-img\course-img-4.jpg" alt="Image">
                         </a>
                         <div class="course-content">
                             <span class="price">$49</span>
@@ -684,7 +625,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-course">
                         <a href="single-course.php">
-                            <img src="assets\img\course-img\course-img-5.jpg" alt="Image">
+                            <img src="public\img\course-img\course-img-5.jpg" alt="Image">
                         </a>
                         <div class="course-content">
                             <span class="price">$39</span>
@@ -725,7 +666,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-course">
                         <a href="single-course.php">
-                            <img src="assets\img\course-img\course-img-6.jpg" alt="Image">
+                            <img src="public\img\course-img\course-img-6.jpg" alt="Image">
                         </a>
                         <div class="course-content">
                             <span class="price">$59</span>
@@ -772,7 +713,7 @@
     <!-- Counter start -->
     <?php
     // Functions
-    
+
 
 
     ?>
@@ -782,7 +723,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-counter">
                         <div class="counter-shape shape-1">
-                            <img src="assets\img\counter-shape\counter-shape-1.png" alt="Image">
+                            <img src="public\img\counter-shape\counter-shape-1.png" alt="Image">
                             <h2>
                                 <span class="odometer" data-count="100">00</span>
                                 <span class="target">%</span>
@@ -794,7 +735,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-counter">
                         <div class="counter-shape shape-2">
-                            <img src="assets\img\counter-shape\counter-shape-2.png" alt="Image">
+                            <img src="public\img\counter-shape\counter-shape-2.png" alt="Image">
                             <h2>
                                 <span class="odometer" data-count="5253">00</span>
                             </h2>
@@ -805,7 +746,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-counter">
                         <div class="counter-shape shape-3">
-                            <img src="assets\img\counter-shape\counter-shape-3.png" alt="Image">
+                            <img src="public\img\counter-shape\counter-shape-3.png" alt="Image">
                             <h2>
                                 <span class="odometer" data-count="325">00</span>
                             </h2>
@@ -816,7 +757,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-counter">
                         <div class="counter-shape shape-4">
-                            <img src="assets\img\counter-shape\counter-shape-4.png" alt="Image">
+                            <img src="public\img\counter-shape\counter-shape-4.png" alt="Image">
                             <h2>
                                 <span class="odometer" data-count="565">00</span>
                             </h2>
@@ -866,7 +807,7 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="enroll-img">
-                        <img src="assets\img\enroll-img.png" alt="Image">
+                        <img src="public\img\enroll-img.png" alt="Image">
                     </div>
                 </div>
             </div>
@@ -883,7 +824,7 @@
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-teachers">
-                        <img src="assets\img\teachers-img\teachers-img-1.jpg" alt="Image">
+                        <img src="public\img\teachers-img\teachers-img-1.jpg" alt="Image">
                         <div class="teachers-content">
                             <ul>
                                 <li>
@@ -906,7 +847,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-teachers">
-                        <img src="assets\img\teachers-img\teachers-img-2.jpg" alt="Image">
+                        <img src="public\img\teachers-img\teachers-img-2.jpg" alt="Image">
                         <div class="teachers-content">
                             <ul>
                                 <li>
@@ -929,7 +870,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-teachers">
-                        <img src="assets\img\teachers-img\teachers-img-3.jpg" alt="Image">
+                        <img src="public\img\teachers-img\teachers-img-3.jpg" alt="Image">
                         <div class="teachers-content">
                             <ul>
                                 <li>
@@ -952,7 +893,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-teachers">
-                        <img src="assets\img\teachers-img\teachers-img-4.jpg" alt="Image">
+                        <img src="public\img\teachers-img\teachers-img-4.jpg" alt="Image">
                         <div class="teachers-content">
                             <ul>
                                 <li>
@@ -977,7 +918,7 @@
         </div>
     </section>
 
-
+    <!-- ***************************************************** fix to get data from database ******************************************* -->
     <section class="event-area ptb-70">
         <div class="container">
             <div class="section-title">
@@ -988,7 +929,7 @@
                 <div class="col-lg-6 col-sm-6">
                     <div class="single-event">
                         <a href="single-event.php">
-                            <img src="assets\img\event-img\event-img-1.png" alt="Image">
+                            <img src="public\img\event-img\event-img-1.png" alt="Image">
                         </a>
                         <div class="event-content">
                             <ul>
@@ -1014,7 +955,7 @@
                 <div class="col-lg-6 col-sm-6">
                     <div class="single-event">
                         <a href="single-event.php">
-                            <img src="assets\img\event-img\event-img-2.png" alt="Image">
+                            <img src="public\img\event-img\event-img-2.png" alt="Image">
                         </a>
                         <div class="event-content">
                             <ul>
@@ -1040,7 +981,7 @@
                 <div class="col-lg-6 col-sm-6">
                     <div class="single-event">
                         <a href="single-event.php">
-                            <img src="assets\img\event-img\event-img-3.png" alt="Image">
+                            <img src="public\img\event-img\event-img-3.png" alt="Image">
                         </a>
                         <div class="event-content">
                             <ul>
@@ -1066,7 +1007,7 @@
                 <div class="col-lg-6 col-sm-6">
                     <div class="single-event">
                         <a href="single-event.php">
-                            <img src="assets\img\event-img\event-img-4.png" alt="Image">
+                            <img src="public\img\event-img\event-img-4.png" alt="Image">
                         </a>
                         <div class="event-content">
                             <ul>
@@ -1097,7 +1038,7 @@
     <div class="video-area f5f6fa-bg-color">
         <div class="container">
             <div class="video-wrap">
-                <img src="assets\img\video-img.jpg" alt="Image">
+                <img src="public\img\video-img.jpg" alt="Image">
                 <div class="video-content">
                     <a href="https://www.youtube.com/watch?v=iLS_YP1uEK8" class="video-btn popup-youtube">
                         <i class="flaticon-play-button"></i>
@@ -1122,7 +1063,7 @@
                         dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
                         sit amet.</p>
                     <div class="feedback-title">
-                        <img src="assets\img\feedback-img\feedback-img-1.jpg" alt="Image">
+                        <img src="public\img\feedback-img\feedback-img-1.jpg" alt="Image">
                         <h3>Jessica Molony</h3>
                         <span>Designer</span>
                     </div>
@@ -1134,7 +1075,7 @@
                         dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
                         sit amet.</p>
                     <div class="feedback-title">
-                        <img src="assets\img\feedback-img\feedback-img-2.jpg" alt="Image">
+                        <img src="public\img\feedback-img\feedback-img-2.jpg" alt="Image">
                         <h3>Juhon Dew</h3>
                         <span>Marketer </span>
                     </div>
@@ -1146,7 +1087,7 @@
                         dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
                         sit amet.</p>
                     <div class="feedback-title">
-                        <img src="assets\img\feedback-img\feedback-img-3.jpg" alt="Image">
+                        <img src="public\img\feedback-img\feedback-img-3.jpg" alt="Image">
                         <h3>Kilva Smith</h3>
                         <span>Designer</span>
                     </div>
@@ -1156,6 +1097,7 @@
     </section>
 
 
+    <!-- ********************************************************************************************** -->
     <section class="discover-area ebeef5-bg-color ptb-100">
         <div class="container">
             <div class="row align-items-center">
@@ -1190,7 +1132,7 @@
                     <div class="discover-slider owl-theme owl-carousel">
                         <div class="single-course">
                             <a href="single-course.php">
-                                <img src="assets\img\course-img\course-img-1.jpg" alt="Image">
+                                <img src="public\img\course-img\course-img-1.jpg" alt="Image">
                             </a>
                             <div class="course-content">
                                 <span class="price">$35</span>
@@ -1223,7 +1165,7 @@
                         </div>
                         <div class="single-course">
                             <a href="single-course.php">
-                                <img src="assets\img\course-img\course-img-2.jpg" alt="Image">
+                                <img src="public\img\course-img\course-img-2.jpg" alt="Image">
                             </a>
                             <div class="course-content">
                                 <span class="price">$39</span>
@@ -1256,7 +1198,7 @@
                         </div>
                         <div class="single-course">
                             <a href="single-course.php">
-                                <img src="assets\img\course-img\course-img-3.jpg" alt="Image">
+                                <img src="public\img\course-img\course-img-3.jpg" alt="Image">
                             </a>
                             <div class="course-content">
                                 <span class="price">$29</span>
@@ -1289,7 +1231,7 @@
                         </div>
                         <div class="single-course">
                             <a href="single-course.php">
-                                <img src="assets\img\course-img\course-img-4.jpg" alt="Image">
+                                <img src="public\img\course-img\course-img-4.jpg" alt="Image">
                             </a>
                             <div class="course-content">
                                 <span class="price">$49</span>
@@ -1322,7 +1264,7 @@
                         </div>
                         <div class="single-course">
                             <a href="single-course.php">
-                                <img src="assets\img\course-img\course-img-5.jpg" alt="Image">
+                                <img src="public\img\course-img\course-img-5.jpg" alt="Image">
                             </a>
                             <div class="course-content">
                                 <span class="price">$39</span>
@@ -1355,7 +1297,7 @@
                         </div>
                         <div class="single-course">
                             <a href="single-course.php">
-                                <img src="assets\img\course-img\course-img-6.jpg" alt="Image">
+                                <img src="public\img\course-img\course-img-6.jpg" alt="Image">
                             </a>
                             <div class="course-content">
                                 <span class="price">$59</span>
@@ -1391,11 +1333,12 @@
             </div>
         </div>
         <div class="discover-img">
-            <img src="assets\img\discover-img.png" alt="Image">
+            <img src="public\img\discover-img.png" alt="Image">
         </div>
     </section>
 
 
+    <!-- ************************************************************************************************ -->
     <section class="news-area f5f6fa-bg-color pt-100 pb-70">
         <div class="container">
             <div class="section-title">
@@ -1406,7 +1349,7 @@
                 <div class="col-lg-6">
                     <div class="single-news">
                         <a href="single-blog.php">
-                            <img src="assets\img\news-img\news-img-1.jpg" alt="Image">
+                            <img src="public\img\news-img\news-img-1.jpg" alt="Image">
                         </a>
                         <div class="news-content">
                             <span class="tag">Development</span>
@@ -1492,7 +1435,7 @@
                     <div id="validator-newsletter" class="form-result"></div>
                 </form>
                 <div class="subscribe-img">
-                    <img src="assets\img\subscribe-img.png" alt="Image">
+                    <img src="public\img\subscribe-img.png" alt="Image">
                 </div>
             </div>
         </div>
@@ -1500,7 +1443,37 @@
 
 
     <!-- Footer -->
-    <?php include "assets/includes/footer.php" ?>
+    <?php include "./includes/footer.php" ?>
+
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="public/js/jquery.min.js"></script>
+
+    <script src="public/js/bootstrap.bundle.min.js"></script>
+
+    <script src="public/js/meanmenu.min.js"></script>
+
+    <script src="public/js/owl.carousel.min.js"></script>
+
+    <script src="public/js/wow.min.js"></script>
+
+    <script src="public/js/nice-select.min.js"></script>
+
+    <script src="public/js/magnific-popup.min.js"></script>
+
+    <script src="public/js/jarallax.min.js"></script>
+
+    <script src="public/js/appear.min.js"></script>
+
+    <script src="public/js/odometer.min.js"></script>
+
+    <script src="public/js/form-validator.min.js"></script>
+
+    <script src="public/js/contact-form-script.js"></script>
+
+    <script src="public/js/ajaxchimp.min.js"></script>
+
+    <script src="public/js/custom.js"></script>
 </body>
 
 </html>
