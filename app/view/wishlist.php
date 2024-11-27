@@ -58,7 +58,161 @@ ob_start();
 
 
     <!-- Navbar area -->
-    
+    <!-- Navbar start -->
+    <div class="navbar-area">
+
+        <div class="mobile-nav">
+            <a href="../../index.php" class="logo">
+                <img src="../../public\img\logo.png" class="main-logo" alt="Logo">
+                <img src="../../public\img\logo-2.png" class="white-logo" alt="Logo">
+            </a>
+        </div>
+
+        <div class="main-nav">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md">
+                    <a class="navbar-brand" href="../../index.php">
+                        <img src="../../public\img\logo.png" class="main-logo" alt="Logo">
+                        <img src="../../public\img\logo-2.png" class="white-logo" alt="Logo">
+                    </a>
+                    <div class="collapse navbar-collapse mean-menu">
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item">
+                                <a href="../../index.php" class="nav-link">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="courses.php" class="nav-link">
+                                    Courses
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="gallery.php" class="nav-link">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="events.php" class="nav-link">Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active">
+                                    Shop
+                                    <i class="bx bx-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="shop.php" class="nav-link">Shop</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="wishlist.php" class="nav-link active">Wishlist</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="contact.php" class="nav-link">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="about.php" class="nav-link">About</a>
+                            </li>
+                            <!-- User should move to login botton when user login -->
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    User
+                                    <i class="bx bx-chevron-right"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="my-account.php" class="nav-link">My Account</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="log-in.php" class="nav-link">Log In</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="registration.php" class="nav-link">Registration</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="recover-password.php" class="nav-link">Recover Password</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- ********************************************************************************** -->
+                        </ul>
+
+                        <div class="others-option">
+                            <div class="option-item">
+                                <i class="search-btn bx bx-search"></i>
+                                <i class="close-btn bx bx-x"></i>
+                                <div class="search-overlay search-popup">
+                                    <div class="search-box">
+                                        <form class="search-form">
+                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <button class="search-button" type="submit"><i
+                                                    class="bx bx-search"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-icon">
+                                <a href="cart.php">
+                                    <i class="flaticon-shopping-cart"></i>
+                                    <span>0</span>
+                                </a>
+                            </div>
+                            <div class="register">
+                                <a href="my-account.php" class="default-btn">
+                                    Login / Register
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="others-option-for-responsive">
+            <div class="container">
+                <div class="dot-menu">
+                    <div class="inner">
+                        <div class="circle circle-one"></div>
+                        <div class="circle circle-two"></div>
+                        <div class="circle circle-three"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="option-inner">
+                        <div class="others-option justify-content-center d-flex align-items-center">
+                            <div class="option-item">
+                                <i class="search-btn bx bx-search"></i>
+                                <i class="close-btn bx bx-x"></i>
+                                <div class="search-overlay search-popup">
+                                    <div class="search-box">
+                                        <form class="search-form">
+                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <button class="search-button" type="submit"><i
+                                                    class="bx bx-search"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-icon">
+                                <a href="cart.php">
+                                    <i class="flaticon-shopping-cart"></i>
+                                    <span>0</span>
+                                </a>
+                            </div>
+                            <div class="register">
+                                <a href="my-account.php" class="default-btn">
+                                    Login / Register
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Navbar end -->
 
 
     <!-- Banner section -->
