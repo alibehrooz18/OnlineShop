@@ -34,7 +34,7 @@
 
     <link rel="icon" type="image/png" href="public\img\favicon.png">
 
-    <title>Eduon - Online Courses & Training HTML Template</title>
+    <title>404</title>
 </head>
 
 <body>
@@ -56,10 +56,10 @@
             <div class="d-table-cell">
                 <div class="error-content-wrap">
                     <h1><span class="a">4</span> <span class="red">0</span> <span class="b">4</span> </h1>
-                    <h3>Oops! Page Not Found</h3>
-                    <p>The page you were looking for could not be found.</p>
+                    <h3>متاسفانه صفحه یافت نشد</h3>
+                    <p>صفحه ای که به دنبال آن بودید یافت نشد.</p>
                     <a href="../../index.php" class="default-btn two">
-                        Return To Home Page
+                        بازگشت به صفحه اصلی
                     </a>
                 </div>
             </div>

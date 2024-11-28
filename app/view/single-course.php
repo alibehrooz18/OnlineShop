@@ -36,7 +36,7 @@
 
     <link rel="icon" type="image/png" href="public\img\favicon.png">
 
-    <title>Eduon - Online Course</title>
+    <title>Eduon - آموزش</title>
 </head>
 
 <body>
@@ -74,58 +74,58 @@
                         <ul class="navbar-nav m-auto">
                             <li class="nav-item">
                                 <a href="../../index.php" class="nav-link">
-                                    Home
+                                    خانه
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="courses.php" class="nav-link">
-                                    Courses
+                                    دروس
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="gallery.php" class="nav-link">Gallery</a>
+                                <a href="gallery.php" class="nav-link">نمایشگاه</a>
                             </li>
                             <li class="nav-item">
-                                <a href="events.php" class="nav-link">Events</a>
+                                <a href="events.php" class="nav-link">رویدادها</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Shop
+                                    فروشگاه
                                     <i class="bx bx-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="shop.php" class="nav-link">Shop</a>
+                                        <a href="shop.php" class="nav-link">فروشگاه</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="wishlist.php" class="nav-link">Wishlist</a>
+                                        <a href="wishlist.php" class="nav-link">علاقه‌مندی ها</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.php" class="nav-link">Contact</a>
+                                <a href="contact.php" class="nav-link">ارتباط با ما</a>
                             </li>
                             <li class="nav-item">
-                                <a href="about.php" class="nav-link">About</a>
+                                <a href="about.php" class="nav-link">درباره ما</a>
                             </li>
                             <!-- User should move to login botton when user login -->
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    User
+                                    کاربر
                                     <i class="bx bx-chevron-right"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="my-account.php" class="nav-link">My Account</a>
+                                        <a href="my-account.php" class="nav-link">داشبورد</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="log-in.php" class="nav-link">Log In</a>
+                                        <a href="log-in.php" class="nav-link">ورود</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="registration.php" class="nav-link">Registration</a>
+                                        <a href="registration.php" class="nav-link">ثبت نام</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="recover-password.php" class="nav-link">Recover Password</a>
+                                        <a href="recover-password.php" class="nav-link">بازیابی کلمه عبور</a>
                                     </li>
                                 </ul>
                             </li>
@@ -139,7 +139,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -154,7 +154,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -182,7 +182,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -197,7 +197,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -213,14 +213,14 @@
     <div class="page-title-area bg-25">
         <div class="container">
             <div class="page-title-content">
-                <h2>Single course</h2>
+                <h2>آموزش</h2>
                 <ul>
                     <li>
                         <a href="index.php">
-                            Home
+                            خانه
                         </a>
                     </li>
-                    <li class="active">Single course</li>
+                    <li class="active">آموزش</li>
                 </ul>
             </div>
         </div>
@@ -256,19 +256,19 @@
                             <div class="col-lg-4 col-sm-4">
                                 <div class="course-rating">
                                     <img src="../../public/img/single-course/<?php echo $author_image ?>" alt="Image">
-                                    <h4><a href="instructors.php">Instructor:</a></h4>
+                                    <h4><a href="instructors.php">مدرس:</a></h4>
                                     <span><?php echo $course_author ?></span>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-4">
                                 <div class="course-rating pl-0 text-center">
-                                    <h4>Categories:</h4>
+                                    <h4>دسته‌بندی:</h4>
                                     <span><?php echo $course_tags ?></span>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-4">
                                 <div class="course-rating star pl-0">
-                                    <h4>Reviews</h4>
+                                    <h4>ارزیابی</h4>
                                     <div class="product-review">
                                         <div class="rating">
                                             <i class="bx bxs-star"></i>
@@ -277,7 +277,7 @@
                                             <i class="bx bxs-star"></i>
                                             <i class="bx bxs-star-half"></i>
                                         </div>
-                                        <a href="single-course.php" class="rating-count">2 reviews</a>
+                                        <a href="single-course.php" class="rating-count">2 نظر</a>
                                     </div>
                                 </div>
                             </div>
@@ -288,152 +288,166 @@
                     <div class="tab single-course-tab">
                         <ul class="tabs">
                             <li>
-                                <a href="javascript:;">Overview</a>
+                                <a href="javascript:;">نمای کلی</a>
                             </li>
                             <li>
-                                <a href="javascript:;">Curriculum</a>
+                                <a href="javascript:;">برنامه درسی</a>
                             </li>
                             <li>
-                                <a href="javascript:;"> Instructor</a>
+                                <a href="javascript:;"> مدرس</a>
                             </li>
                             <li>
-                                <a href="javascript:;">Reviews</a>
+                                <a href="javascript:;">بررسی ها</a>
                             </li>
                         </ul>
                         <!-- Review and content -->
                         <div class="tab_content">
                             <div class="tabs_item">
-                                <h3>Course Description</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                    gravida. Risus commodo viverra maecenas When an unknown printer took a galley of
-                                    type and scrambled it to make a type specimen book. It has svived not only five
-                                    centuries, but also the leap into electronic typesetting, remaining essentially.</p>
-                                <h3>Certification Online</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                    gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis sit amet,
-                                    consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                                <h3>What you’ll learn?</h3>
+                                <h3>شرح دوره</h3>
+                                <p>
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                                    متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                    است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای
+                                    زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت
+                                    بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت
+                                    می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                                    شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                                </p>
+                                <h3>صدور گواهینامه آنلاین</h3>
+                                <p>
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                                    متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                    است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای
+                                    زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت
+                                    بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت
+                                    می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                                    شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                                </p>
+                                <h3>چه چیزی یاد خواهید گرفت؟</h3>
                                 <ul class="course-list">
                                     <li>
                                         <i class="bx bx-check"></i>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
                                     </li>
                                     <li>
                                         <i class="bx bx-check"></i>
-                                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
                                     </li>
                                     <li>
                                         <i class="bx bx-check"></i>
-                                        Quis ipsum suspendisse ultrices gravida.
+                                        لورم ایپسوم متن ساختگی با صنعت
                                     </li>
                                     <li>
                                         <i class="bx bx-check"></i>
-                                        Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
                                     </li>
                                 </ul>
                                 <h3>Who This Course is for</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                    gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis sit amet,
-                                    consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                <p>
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                                    متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                    است و برای شرایط فعلی تکنولوژی مورد نیاز می باشد کتابهای
+                                    زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت
+                                    بیشتری را برای طراحان رایانه ای علی در این صورت
+                                    می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                                    شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته
+                                </p>
                             </div>
                             <!-- Video section -->
                             <div class="tabs_item">
                                 <div class="curriculum-content">
-                                    <h3>Education introduction</h3>
+                                    <h3>مقدمه آموزش</h3>
                                     <div class="curriculum-list">
-                                        <h4>Section 1</h4>
+                                        <h4>بخش 1</h4>
                                         <ul>
                                             <li>
                                                 <a href="instructors.php" class="meet-title">
                                                     <i class="bx bx-right-arrow"></i>
-                                                    Introduction
+                                                    مقدمه
                                                 </a>
                                                 <a href="single-course.php" class="meet-time">
-                                                    <span class="min">01 hour</span>
-                                                    <span class="preview">Preview</span>
+                                                    <span class="min">01 ساعت</span>
+                                                    <span class="preview">پیش نمایش</span>
                                                 </a>
                                             </li>
                                             <li class="transparent">
                                                 <a href="instructors.php" class="meet-title">
                                                     <i class="bx bx-right-arrow"></i>
-                                                    Environment setup
+                                                    راه اندازی محیط
                                                 </a>
                                                 <a href="single-course.php" class="meet-time">
-                                                    <span class="min">02 hours</span>
-                                                    <span class="preview">Preview</span>
+                                                    <span class="min">02 ساعت</span>
+                                                    <span class="preview">پیش نمایش</span>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="instructors.php" class="meet-title">
                                                     <i class="bx bx-right-arrow"></i>
-                                                    Quiz one
+                                                    امتحان یک
                                                 </a>
                                                 <a href="single-course.php" class="meet-time">
-                                                    <span class="min">01 min</span>
-                                                    <span class="preview">4 question</span>
+                                                    <span class="min">01 دقیقه</span>
+                                                    <span class="preview">4 سوال</span>
                                                     <i class="bx bxs-lock-alt"></i>
                                                 </a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="curriculum-list">
-                                        <h4>Section 2</h4>
+                                        <h4>بخش 2</h4>
                                         <ul>
                                             <li>
                                                 <a href="instructors.php" class="meet-title">
                                                     <i class="bx bx-right-arrow"></i>
-                                                    Utility modules
+                                                    ماژول های کاربردی
                                                 </a>
                                                 <a href="single-course.php" class="meet-time">
-                                                    <span class="min">03 hours</span>
+                                                    <span class="min">03 ساعت</span>
                                                     <i class="bx bxs-lock-alt"></i>
                                                 </a>
                                             </li>
                                             <li class="transparent">
                                                 <a href="instructors.php" class="meet-title">
                                                     <i class="bx bx-right-arrow"></i>
-                                                    Express framework
+                                                    فریم ورک فشرده
                                                 </a>
                                                 <a href="single-course.php" class="meet-time">
-                                                    <span class="min">05 min</span>
+                                                    <span class="min">05 ذقیقه</span>
                                                     <i class="bx bxs-lock-alt"></i>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="instructors.php" class="meet-title">
                                                     <i class="bx bx-right-arrow"></i>
-                                                    Web module
+                                                    ماژول وب
                                                 </a>
                                                 <a href="single-course.php" class="meet-time">
-                                                    <span class="min">01 hour</span>
+                                                    <span class="min">01 ساعت</span>
                                                     <i class="bx bxs-lock-alt"></i>
                                                 </a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="curriculum-list">
-                                        <h4>Section 3</h4>
+                                        <h4>بخش 3</h4>
                                         <ul>
                                             <li>
                                                 <a href="instructors.php" class="meet-title">
                                                     <i class="bx bx-right-arrow"></i>
-                                                    Video introduction
+                                                    معرفی ویدیویی
                                                 </a>
                                                 <a href="single-course.php" class="meet-time">
-                                                    <span class="min">30 min</span>
+                                                    <span class="min">30 دقیقه</span>
                                                     <i class="bx bxs-lock-alt"></i>
                                                 </a>
                                             </li>
                                             <li class="transparent">
                                                 <a href="instructors.php" class="meet-title">
                                                     <i class="bx bx-right-arrow"></i>
-                                                    Web module
+                                                    ماژول وب
                                                 </a>
                                                 <a href="single-course.php" class="meet-time">
-                                                    <span class="min">05 hours</span>
+                                                    <span class="min">05 ساعت</span>
                                                     <i class="bx bxs-lock-alt"></i>
                                                 </a>
                                             </li>
@@ -454,9 +468,11 @@
                                                 <a href="single-course.php">
                                                     <h3>Anna Dew</h3>
                                                 </a>
-                                                <span>Agile Project Expert</span>
-                                                <p>Jone Smit is a celebrated photographer, author, and writer who brings
-                                                    passion to everything he does.</p>
+                                                <span>کارشناس پروژه زبردست</span>
+                                                <p>
+                                                    جون اسمیت یک عکاس، نویسنده و نویسنده مشهور است که می آورد
+                                                    اشتیاق به هر کاری که انجام می دهد
+                                                </p>
                                                 <ul>
                                                     <li>
                                                         <a href="https://www.facebook.com/" target="_blank">
@@ -487,7 +503,7 @@
                             <!-- Course rate -->
                             <div class="tabs_item" dir="rtl">
                                 <div class="review-content">
-                                    <h3>Course rating</h3>
+                                    <h3>رتبه بندی دوره</h3>
                                     <ul class="rating-star">
                                         <li>
                                             <i class="bx bxs-star"></i>
@@ -505,31 +521,31 @@
                                             <i class="bx bxs-star"></i>
                                         </li>
                                     </ul>
-                                    <span>5.00 average based on 1 rating</span>
+                                    <span>میانگین 5.00 بر اساس 1 رتبه</span>
                                     <div class="rating-bar-content">
                                         <div class="single-bar">
-                                            <p class="start">Star</p>
+                                            <p class="start">ستاره</p>
                                             <div class="rating-bar">
                                                 <div class="skills html"></div>
                                             </div>
                                             <p class="percent">90%</p>
                                         </div>
                                         <div class="single-bar">
-                                            <p class="start">Star</p>
+                                            <p class="start">ستاره</p>
                                             <div class="rating-bar">
                                                 <div class="skills css"></div>
                                             </div>
                                             <p class="percent">80%</p>
                                         </div>
                                         <div class="single-bar">
-                                            <p class="start">Star</p>
+                                            <p class="start">ستاره</p>
                                             <div class="rating-bar">
                                                 <div class="skills js"></div>
                                             </div>
                                             <p class="percent">65%</p>
                                         </div>
                                         <div class="single-bar">
-                                            <p class="start">Star</p>
+                                            <p class="start">ستاره</p>
                                             <div class="rating-bar">
                                                 <div class="skills php"></div>
                                             </div>
@@ -537,17 +553,21 @@
                                         </div>
                                     </div>
                                     <div class="course-reviews-content">
-                                        <h3>Reviews</h3>
+                                        <h3>ارزیابی</h3>
                                         <ul class="course-reviews">
                                             <li>
                                                 <img src="../../public\img\course-reviews-img.jpg" alt="Image">
                                                 <h3>Anna Dew</h3>
-                                                <span>Cover all my needs</span>
-                                                <p>The course identify things we want to change and then figure out the
-                                                    things that need to be done to create the desired outcome. The
-                                                    course helped me in clearly define problems and generate a wider
-                                                    variety of quality solutions. Support more structures analysis of
-                                                    options.</p>
+                                                <span>تمام نیازهای من را پوشش دهد</span>
+                                                <p>
+                                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                                                    متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                                    است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای
+                                                    زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت
+                                                    بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت
+                                                    می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                                                    شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                                                </p>
                                             </li>
                                         </ul>
                                     </div>
@@ -561,31 +581,31 @@
                     <div class="account-wrap">
                         <ul>
                             <li>
-                                Price <span class="bold">$<?php echo $course_price ?></span>
+                                قیمت <span class="bold">$<?php echo $course_price ?></span>
                             </li>
                             <li>
-                                Start <span>Sep 01, 2020</span>
+                                شروع <span>20 آذر، 1403</span>
                             </li>
                             <li>
-                                End <span>Sep 02, 2020</span>
+                                پایان <span>25 آذر، 1403</span>
                             </li>
                             <li>
-                                Event Category <span><?php echo $course_tags ?></span>
+                                دسته‌بندی رویداد <span><?php echo $course_tags ?></span>
                             </li>
                             <li>
-                                Total Slot: <span>100</span>
+                                کل مجموعه: <span>100</span>
                             </li>
                             <li>
-                                Booked Slot: <span>00</span>
+                                رزرو شده: <span>00</span>
                             </li>
                             <li>
-                                Website: <a href="javascript:;">www.eduon.com</a>
+                                وبسایت: <a href="javascript:;">www.eduon.com</a>
                             </li>
                         </ul>
-                        <a href="contact.php" class="default-btn">Book now</a>
+                        <a href="contact.php" class="default-btn">رزرو کنید</a>
                         <div class="social-content">
                             <p>
-                                Share this course
+                                این دوره را به اشتراک بگذارید
                                 <i class="bx bxs-share-alt"></i>
                             </p>
                             <ul>
@@ -627,7 +647,7 @@
     <section class="courses-area-style pb-70">
         <div class="container">
             <div class="section-title">
-                <h2>Related Courses</h2>
+                <h2>دوره های مرتبط</h2>
             </div>
             <div class="row">
                 <?php
@@ -665,12 +685,12 @@
                                         <li><i class="bx bxs-star"></i></li>
                                         <li><i class="bx bxs-star"></i></li>
                                         <li><i class="bx bxs-star"></i></li>
-                                        <li><span>0.5</span><a href="single-course.php">(1 rating)</a></li>
+                                        <li><span>0.5</span><a href="single-course.php">(1 نظر)</a></li>
                                     </ul>
                                     <p><?php echo $course_content ?></p>
                                     <ul class="lessons">
-                                        <li><?php echo $course_lesson ?> Lessons</li>
-                                        <li class="float"><?php echo $course_student ?> Students</li>
+                                        <li><?php echo $course_lesson ?> درس</li>
+                                        <li class="float"><?php echo $course_student ?> دانشجو</li>
                                     </ul>
                                 </div>
                             </div>

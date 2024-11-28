@@ -34,7 +34,7 @@
 
     <link rel="icon" type="image/png" href="public\img\favicon.png">
 
-    <title>Eduon - Online Courses & Training HTML Template</title>
+    <title>به زودی</title>
 </head>
 
 <body>
@@ -57,9 +57,11 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="coming-soon-content">
-                        <h1>Coming Soon</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Quis ipsum suspendisse ultrices.</p>
+                        <h1>به زودی</h1>
+                        <p>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                            از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                        </p>
                         <div id="timer">
                             <div id="days"></div>
                             <div id="hours"></div>
@@ -67,10 +69,10 @@
                             <div id="seconds"></div>
                         </div>
                         <form class="newsletter-form" data-toggle="validator">
-                            <input type="email" class="input-newsletter" placeholder="Enter email address" name="EMAIL"
+                            <input type="email" class="input-newsletter" placeholder="ایمیل خود را وارد کنید" name="EMAIL"
                                 required="" autocomplete="off">
                             <button type="submit" class="default-btn two">
-                                Notify Me
+                                باخبرم کن
                             </button>
                             <div id="validator-newsletter" class="form-result"></div>
                         </form>

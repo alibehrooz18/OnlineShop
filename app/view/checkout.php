@@ -36,7 +36,7 @@
 
     <link rel="icon" type="image/png" href="public\img\favicon.png">
 
-    <title>Eduon - Checkout</title>
+    <title>Eduon - پرداخت</title>
 </head>
 
 <body>
@@ -74,58 +74,58 @@
                         <ul class="navbar-nav m-auto">
                             <li class="nav-item">
                                 <a href="../../index.php" class="nav-link">
-                                    Home
+                                    خانه
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="courses.php" class="nav-link">
-                                    Courses
+                                    دروس
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="gallery.php" class="nav-link">Gallery</a>
+                                <a href="gallery.php" class="nav-link">نمایشگاه</a>
                             </li>
                             <li class="nav-item">
-                                <a href="events.php" class="nav-link">Events</a>
+                                <a href="events.php" class="nav-link">رویدادها</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Shop
+                                    فروشگاه
                                     <i class="bx bx-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="shop.php" class="nav-link">Shop</a>
+                                        <a href="shop.php" class="nav-link">فروشگاه</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="wishlist.php" class="nav-link">Wishlist</a>
+                                        <a href="wishlist.php" class="nav-link">علاقه‌مندی ها</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.php" class="nav-link">Contact</a>
+                                <a href="contact.php" class="nav-link">ارتباط با ما</a>
                             </li>
                             <li class="nav-item">
-                                <a href="about.php" class="nav-link">About</a>
+                                <a href="about.php" class="nav-link">درباره ما</a>
                             </li>
                             <!-- User should move to login botton when user login -->
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    User
+                                    کاربر
                                     <i class="bx bx-chevron-right"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="my-account.php" class="nav-link">My Account</a>
+                                        <a href="my-account.php" class="nav-link">داشبورد</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="log-in.php" class="nav-link">Log In</a>
+                                        <a href="log-in.php" class="nav-link">ورود</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="registration.php" class="nav-link">Registration</a>
+                                        <a href="registration.php" class="nav-link">ثبت نام</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="recover-password.php" class="nav-link">Recover Password</a>
+                                        <a href="recover-password.php" class="nav-link">بازیابی کلمه عبور</a>
                                     </li>
                                 </ul>
                             </li>
@@ -139,7 +139,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -154,7 +154,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -182,7 +182,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -197,7 +197,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -214,14 +214,14 @@
     <div class="page-title-area bg-21">
         <div class="container">
             <div class="page-title-content">
-                <h2>Checkout</h2>
+                <h2>پرداخت</h2>
                 <ul>
                     <li>
                         <a href="index.php">
-                            Home
+                            خانه
                         </a>
                     </li>
-                    <li class="active">Checkout</li>
+                    <li class="active">پرداخت</li>
                 </ul>
             </div>
         </div>
@@ -235,88 +235,89 @@
                 <div class="row" dir="ltr">
                     <div class="col-lg-8 col-md-12">
                         <div class="billing-details">
-                            <h3 class="title">Billing details</h3>
+                            <h3 class="title">جزئیات مشخصات</h3>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <label>First name <span class="required">*</span></label>
+                                        <label>نام (کامل) <span class="required">*</span></label>
                                         <input type="text" class="form-control" name="firstname">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <label>Last name <span class="required">*</span></label>
+                                        <label>نام خانوادگی <span class="required">*</span></label>
                                         <input type="text" class="form-control" name="lastname">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
-                                        <label>Company name (Optional)
+                                        <label>نام شرکت (دلخواه)
                                         </label>
                                         <input type="text" class="form-control" name="company">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
-                                        <label>Email <span class="required">*</span></label>
+                                        <label>ایمیل <span class="required">*</span></label>
                                         <input type="email" class="form-control" name="email">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
-                                        <label>Phone <span class="required">*</span></label>
+                                        <label>تلفن <span class="required">*</span></label>
                                         <input type="text" class="form-control" name="phone">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group" dir="rtl">
-                                        <label dir="ltr">Country <span class="required">*</span></label>
+                                        <label dir="ltr">کشور <span class="required">*</span></label>
                                         <div class="select-box">
                                             <select class="form-control" name="country">
-                                                <option value="5">United Kingdom</option>
-                                                <option value="1">China</option>
-                                                <option value="2">United Arab Emirates</option>
-                                                <option value="0">Germany</option>
-                                                <option value="3">France</option>
-                                                <option value="4">Japan</option>
+                                                <option value="5">ایران</option>
+                                                <option value="1">چین</option>
+                                                <option value="2">امارات</option>
+                                                <option value="0">آلمان</option>
+                                                <option value="3">فرانسه</option>
+                                                <option value="4">ژاپن</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-6">
                                     <div class="form-group">
-                                        <label>Street address <span class="required">*</span></label>
+                                        <label>آدرس <span class="required">*</span></label>
                                         <input type="text" class="form-control" name="street">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-6">
                                     <div class="form-group">
-                                        <label>Town / City <span class="required">*</span></label>
+                                        <label>محله / شهر <span class="required">*</span></label>
                                         <input type="text" class="form-control" name="town">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
-                                        <label>State<span class="required">*</span></label>
+                                        <label>استان<span class="required">*</span></label>
                                         <input type="text" class="form-control" name="state">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
-                                        <label>Zip <span class="required">*</span></label>
+                                        <label>فشرده <span class="required">*</span></label>
                                         <input type="text" class="form-control" name="zip">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="ship-different-address" name="shipToDiffAdr">
-                                        <label class="form-check-label" for="ship-different-address">Ship to a different
-                                            address?</label>
+                                        <label class="form-check-label" for="ship-different-address">
+                                            به نشانی دیگری ارسال شود؟
+                                        </label>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
-                                        <label>Order notes (Optional)</label>
+                                        <label>یادداشت (دلخواه)</label>
                                         <textarea name="notes" id="notes" cols="30" rows="8"
                                             class="form-control"></textarea>
                                     </div>
@@ -327,7 +328,7 @@
                     <div class="col-lg-4 col-md-12">
                         <div class="order-details">
                             <!-- Checkout -->
-                            <div class="cart-totals">
+                            <div class="cart-totals" dir="rtl">
                                 <?php
                                 if (isset($_GET['p_total'])) {
                                     $payable_total = $_GET['p_total'];
@@ -336,74 +337,76 @@
                                     $coupon = $_GET['coupon'];
                                 }
                                 ?>
-                                <h3>Checkout summary</h3>
+                                <h3>صورت حساب</h3>
                                 <ul>
-                                    <li>Subtotal <span>$<?php echo number_format($subtotal, 2); ?></span></li>
-                                    <li>Shipping <span>$<?php echo number_format($shiping, 2); ?></span></li>
-                                    <li>Coupon <span>$<?php echo number_format($coupon, 2); ?></span></li>
-                                    <li><b>Payable Total</b> <span><b>$<?php echo number_format($payable_total, 2); ?></b></span></li>
+                                    <li>جمع محصولات<span>$<?php echo number_format($subtotal, 2); ?></span></li>
+                                    <li>حمل و نقل<span>$<?php echo number_format($shiping, 2); ?></span></li>
+                                    <li>کد تخفیف<span>$<?php echo number_format($coupon, 2); ?></span></li>
+                                    <li><b>جمع قابل پرداخت</b> <span><b>$<?php echo number_format($payable_total, 2); ?></b></span></li>
                                 </ul>
                             </div>
                             <div class="faq-accordion">
-                                <h3>Payment method</h3>
+                                <h3>روش پرداخت</h3>
                                 <ul class="accordion">
                                     <li class="accordion-item active">
                                         <a class="accordion-title" href="javascript:void(0)">
-                                            Direct bank transfer
+                                            انتقال مستقیم بانکی
                                         </a>
                                         <p class="accordion-content show">
-                                            Make your payment directly into our bank account. Please use your Order ID
-                                            as the payment reference. Your order won’t be shipped until the funds have
-                                            our account.
+                                            پرداخت خود را مستقیماً به حساب بانکی ما انجام دهید. لطفا از شناسه سفارش خود استفاده کنید
+                                            به عنوان مرجع پرداخت سفارش شما تا زمانی که وجوه ارسال نشود ارسال نخواهد شد
+                                            حساب ما
                                         </p>
                                     </li>
                                     <li class="accordion-item">
                                         <a class="accordion-title" href="javascript:void(0)">
-                                            Cash on delivery
+                                            پرداخت در محل
                                         </a>
                                         <p class="accordion-content">
-                                            Please send your cheque to Store Name, Store Street, Store Town, Store State
-                                            / County, Store Postcode.
+                                            لطفا چک خود را به نام فروشگاه، خیابان فروشگاه، شهرک فروشگاه، ایالت فروشگاه ارسال کنید
+                                            / شهرستان، فروشگاه کدپستی.
                                         </p>
                                     </li>
                                     <li class="accordion-item">
                                         <a class="accordion-title" href="javascript:void(0)">
-                                            Check payments
+                                            چک بانکی
                                         </a>
                                         <p class="accordion-content">
-                                            Please send your cheque to Store Name, Store Street, Store Town, Store State
-                                            / County, Store Postcode.
+                                            لطفا چک خود را به نام فروشگاه، خیابان فروشگاه، شهرک فروشگاه، ایالت فروشگاه ارسال کنید
+                                            / شهرستان، فروشگاه کدپستی.
                                         </p>
                                     </li>
                                     <li class="accordion-item">
                                         <a class="accordion-title" href="javascript:void(0)">
-                                            PayPal
+                                            درگاه پرداخت
                                         </a>
                                         <p class="accordion-content">
-                                            Pay via PayPal; you can pay with your credit card if you don’t have a PayPal
-                                            account.
+                                            پرداخت از طریق پی پال؛ اگر پی پال ندارید می توانید با کارت اعتباری خود پرداخت کنید
+                                            حساب کاربری
                                         </p>
                                     </li>
                                     <li class="accordion-item">
                                         <a class="accordion-title" href="javascript:void(0)">
-                                            Credit card
+                                            کارت اعتباری
                                         </a>
                                         <p class="accordion-content">
-                                            Pay via PayPal; you can pay with your credit card if you don’t have a PayPal
-                                            account.
+                                            پرداخت از طریق پی پال؛ اگر پی پال ندارید می توانید با کارت اعتباری خود پرداخت کنید
+                                            حساب کاربری
                                         </p>
                                     </li>
                                     <li class="accordion-item">
                                         <div class="form-check">
                                             <input type="checkbox" class="form-check-input"
                                                 id="ship-differents-address">
-                                            <label class="form-check-label" for="ship-different-address">I’ve read and
-                                                accept the <a href="terms-conditions.php">terms &
-                                                    conditions</a>*</label>
+                                            <label class="form-check-label" for="ship-different-address">
+                                                تمامی شرایط و ضوابط با میپذیرم
+                                                <a href="terms-conditions.php">
+                                                    شرایط و ضوابط
+                                                </a>*</label>
                                         </div>
                                     </li>
                                     <li class="place-order">
-                                        <button type="submit" class="default-btn two" name="order">Place order</button>
+                                        <button type="submit" class="default-btn two" name="order">ثبت سفارش</button>
                                     </li>
                                 </ul>
                             </div>

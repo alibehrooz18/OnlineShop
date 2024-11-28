@@ -73,58 +73,58 @@
                         <ul class="navbar-nav m-auto">
                             <li class="nav-item">
                                 <a href="../../index.php" class="nav-link">
-                                    Home
+                                    خانه
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="courses.php" class="nav-link">
-                                    Courses
+                                    دروس
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="gallery.php" class="nav-link active">Gallery</a>
+                                <a href="gallery.php" class="nav-link active">نمایشگاه</a>
                             </li>
                             <li class="nav-item">
-                                <a href="events.php" class="nav-link">Events</a>
+                                <a href="events.php" class="nav-link">رویدادها</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Shop
+                                    فروشگاه
                                     <i class="bx bx-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="shop.php" class="nav-link">Shop</a>
+                                        <a href="shop.php" class="nav-link">فروشگاه</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="wishlist.php" class="nav-link">Wishlist</a>
+                                        <a href="wishlist.php" class="nav-link">علاقه‌مندی ها</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.php" class="nav-link">Contact</a>
+                                <a href="contact.php" class="nav-link">ارتباط با ما</a>
                             </li>
                             <li class="nav-item">
-                                <a href="about.php" class="nav-link">About</a>
+                                <a href="about.php" class="nav-link">درباره ما</a>
                             </li>
                             <!-- User should move to login botton when user login -->
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    User
+                                    کاربر
                                     <i class="bx bx-chevron-right"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="my-account.php" class="nav-link">My Account</a>
+                                        <a href="my-account.php" class="nav-link">داشبورد</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="log-in.php" class="nav-link">Log In</a>
+                                        <a href="log-in.php" class="nav-link">ورود</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="registration.php" class="nav-link">Registration</a>
+                                        <a href="registration.php" class="nav-link">ثبت نام</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="recover-password.php" class="nav-link">Recover Password</a>
+                                        <a href="recover-password.php" class="nav-link">بازیابی کلمه عبور</a>
                                     </li>
                                 </ul>
                             </li>
@@ -138,7 +138,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -153,7 +153,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -181,7 +181,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -196,7 +196,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -213,14 +213,14 @@
     <div class="page-title-area bg-6">
         <div class="container">
             <div class="page-title-content">
-                <h2>Gallery</h2>
+                <h2>نمایشگاه</h2>
                 <ul>
                     <li>
                         <a href="index.php">
-                            Home
+                            خانه
                         </a>
                     </li>
-                    <li class="active">Gallery</li>
+                    <li class="active">نمایشگاه</li>
                 </ul>
             </div>
         </div>
@@ -254,7 +254,7 @@
                 <?php
                     }
                 } else {
-                    echo "<p>No image found.</p>";
+                    echo "<p>هیچ تصویری پیدا نشد</p>";
                 }
                 ?>
                 <!-- LoadMore butten -->
@@ -267,7 +267,7 @@
                     $row = mysqli_fetch_assoc($gallery_query);
                     
                     ?>
-                    <button id="load-more-btn" class="default-btn" data-offset="9">Load More</button>
+                    <button id="load-more-btn" class="default-btn" data-offset="9">بیشتر</button>
                 </div>
             </div>
         </div>
@@ -291,10 +291,10 @@
             }
             ?>
             <div class="subscribe-wrap">
-                <h2>Subscribe</h2>
-                <p>Subscribe to our newsletter & stay updated</p>
+                <h2>عضویت</h2>
+                <p>در خبرنامه ما عضو شوید و به‌روز بمانید</p>
                 <form class="newsletter-form" method="POST">
-                    <input type="email" class="form-control" placeholder="Your email address" name="EMAIL" required="" autocomplete="off">
+                    <input type="email" class="form-control" placeholder="ایمیل خود را وارد کنید" name="EMAIL" required="" autocomplete="off">
                     <input type="submit" name="subscribe" class="default-btn" value="Subscribe Now">
                 </form>
                 <div class="subscribe-img">

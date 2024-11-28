@@ -36,7 +36,7 @@
 
     <link rel="icon" type="image/png" href="public\img\favicon.png">
 
-    <title>Eduon - Online Courses & Training HTML Template</title>
+    <title>Eduon - ورود</title>
 </head>
 
 <body>
@@ -74,58 +74,58 @@
                         <ul class="navbar-nav m-auto">
                             <li class="nav-item">
                                 <a href="../../index.php" class="nav-link">
-                                    Home
+                                    خانه
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="courses.php" class="nav-link">
-                                    Courses
+                                    دروس
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="gallery.php" class="nav-link">Gallery</a>
+                                <a href="gallery.php" class="nav-link">نمایشگاه</a>
                             </li>
                             <li class="nav-item">
-                                <a href="events.php" class="nav-link">Events</a>
+                                <a href="events.php" class="nav-link">رویدادها</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Shop
+                                    فروشگاه
                                     <i class="bx bx-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="shop.php" class="nav-link">Shop</a>
+                                        <a href="shop.php" class="nav-link">فروشگاه</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="wishlist.php" class="nav-link">Wishlist</a>
+                                        <a href="wishlist.php" class="nav-link">علاقه‌مندی ها</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.php" class="nav-link">Contact</a>
+                                <a href="contact.php" class="nav-link">ارتباط با ما</a>
                             </li>
                             <li class="nav-item">
-                                <a href="about.php" class="nav-link">About</a>
+                                <a href="about.php" class="nav-link">درباره ما</a>
                             </li>
                             <!-- User should move to login botton when user login -->
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    User
+                                    کاربر
                                     <i class="bx bx-chevron-right"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="my-account.php" class="nav-link">My Account</a>
+                                        <a href="my-account.php" class="nav-link">داشبورد</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="log-in.php" class="nav-link">Log In</a>
+                                        <a href="log-in.php" class="nav-link">ورود</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="registration.php" class="nav-link">Registration</a>
+                                        <a href="registration.php" class="nav-link">ثبت نام</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="recover-password.php" class="nav-link">Recover Password</a>
+                                        <a href="recover-password.php" class="nav-link">بازیابی کلمه عبور</a>
                                     </li>
                                 </ul>
                             </li>
@@ -139,7 +139,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -154,7 +154,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -182,7 +182,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -197,7 +197,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -213,14 +213,14 @@
     <div class="page-title-area bg-8">
         <div class="container">
             <div class="page-title-content">
-                <h2>Log in</h2>
+                <h2>ورود</h2>
                 <ul>
                     <li>
                         <a href="index.php">
-                            Home
+                            خانه
                         </a>
                     </li>
-                    <li class="active">Log in</li>
+                    <li class="active">ورود</li>
                 </ul>
             </div>
         </div>
@@ -232,20 +232,20 @@
         <div class="container">
             <div class="log-in-area">
                 <div class="section-title">
-                    <h2>Log In</h2>
+                    <h2>ورود</h2>
                 </div>
                 <div class="contact-form-action">
                     <form method="post">
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label>Email or Phone</label>
+                                    <label>ایمیل یا شماره تماس</label>
                                     <input class="form-control" type="text" name="username">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label>Password</label>
+                                    <label>کلمه عبور</label>
                                     <input class="form-control" type="password" name="password">
                                 </div>
                             </div>
@@ -253,20 +253,20 @@
                                 <div class="login-action">
                                     <span class="log-rem">
                                         <input id="remember" type="checkbox">
-                                        <label for="remember">Remember me!</label>
+                                        <label for="remember">مرا به یاد داشته باش!</label>
                                     </span>
                                     <span class="forgot-login">
-                                        <a href="recover-password.php">Forgot your password?</a>
+                                        <a href="recover-password.php">فراموشی کلمه عبور؟</a>
                                     </span>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <button class="default-btn" type="submit">
-                                    Log In Now
+                                    ورود
                                 </button>
                             </div>
                             <div class="col-12">
-                                <p>Have an account? <a href="registration.php">Registration Now</a></p>
+                                <p>حساب کاربری ندارید؟ <a href="registration.php">ثبت نام کنید</a></p>
                             </div>
                         </div>
                     </form>

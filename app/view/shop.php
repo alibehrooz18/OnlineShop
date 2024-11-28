@@ -36,7 +36,7 @@
 
     <link rel="icon" type="image/png" href="public\img\favicon.png">
 
-    <title>Eduon - Shop</title>
+    <title>Eduon - فروشگاه</title>
 </head>
 
 <body>
@@ -73,58 +73,58 @@
                         <ul class="navbar-nav m-auto">
                             <li class="nav-item">
                                 <a href="../../index.php" class="nav-link">
-                                    Home
+                                    خانه
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="courses.php" class="nav-link">
-                                    Courses
+                                    دروس
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="gallery.php" class="nav-link">Gallery</a>
+                                <a href="gallery.php" class="nav-link">نمایشگاه</a>
                             </li>
                             <li class="nav-item">
-                                <a href="events.php" class="nav-link">Events</a>
+                                <a href="events.php" class="nav-link">رویدادها</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link active">
-                                    Shop
+                                    فروشگاه
                                     <i class="bx bx-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="shop.php" class="nav-link active">Shop</a>
+                                        <a href="shop.php" class="nav-link active">فروشگاه</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="wishlist.php" class="nav-link">Wishlist</a>
+                                        <a href="wishlist.php" class="nav-link">علاقه‌مندی ها</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.php" class="nav-link">Contact</a>
+                                <a href="contact.php" class="nav-link">ارتباط با ما</a>
                             </li>
                             <li class="nav-item">
-                                <a href="about.php" class="nav-link">About</a>
+                                <a href="about.php" class="nav-link">درباره ما</a>
                             </li>
                             <!-- User should move to login botton when user login -->
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    User
+                                    کاربر
                                     <i class="bx bx-chevron-right"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="my-account.php" class="nav-link">My Account</a>
+                                        <a href="my-account.php" class="nav-link">داشبورد</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="log-in.php" class="nav-link">Log In</a>
+                                        <a href="log-in.php" class="nav-link">ورود</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="registration.php" class="nav-link">Registration</a>
+                                        <a href="registration.php" class="nav-link">ثبت نام</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="recover-password.php" class="nav-link">Recover Password</a>
+                                        <a href="recover-password.php" class="nav-link">بازیابی کلمه عبور</a>
                                     </li>
                                 </ul>
                             </li>
@@ -138,7 +138,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -153,7 +153,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -181,7 +181,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -196,7 +196,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -213,14 +213,14 @@
     <div class="page-title-area bg-19">
         <div class="container">
             <div class="page-title-content">
-                <h2>Shop</h2>
+                <h2>فروشگاه</h2>
                 <ul>
                     <li>
                         <a href="index.php">
-                            Home
+                            خانه
                         </a>
                     </li>
-                    <li class="active">Shop</li>
+                    <li class="active">فروشگاه</li>
                 </ul>
             </div>
         </div>
@@ -255,9 +255,9 @@
                                         $end_item = min($start_item + $items_per_page - 1, $total_items);
 
                                         if ($total_items > 0) {
-                                            echo "<p>Showing $start_item-$end_item of $total_items results</p>";
+                                            echo "<p>نمایش $start_item-$end_item از $total_items نتیجه</p>";
                                         } else {
-                                            echo "<p>No results found.</p>";
+                                            echo "<p>هیچ نتیجه ای یافت نشد</p>";
                                         }
                                         ?>
                                     </div>
@@ -267,7 +267,7 @@
                                     <div class="showing-top-bar-ordering">
                                         <form method="GET">
                                             <select name="category" onchange="this.form.submit()">
-                                                <option value="">Default sorting</option>
+                                                <option value="">تمامی محصولات</option>
                                                 <?php
                                                 $selected_category = isset($_GET['category']) ? $_GET['category'] : '';
                                                 $query = "SELECT * FROM categories";
@@ -351,7 +351,7 @@
                                                 <?php } ?>
                                             </span>
                                             <a href="cart.php?p_id=<?php echo $item_id; ?>" class="default-btn">
-                                                Add to cart
+                                                افزودن به سبد خرید
                                             </a>
                                         </div>
                                     </div>
@@ -398,7 +398,7 @@
                         <div class="sidebar-widget search">
                             <!-- Search form -->
                             <form class="search-form" action="shop.php" method="GET">
-                                <input class="form-control" name="search" placeholder="Search our courses" type="text">
+                                <input class="form-control" name="search" placeholder="محصول خود را پیدا کنید" type="text">
                                 <button class="search-button" type="submit">
                                     <i class="bx bx-search"></i>
                                 </button>
@@ -411,28 +411,28 @@
                                 <?php
                                 echo
                                 "<li>
-                                    <a href='shop.php?category=2'>Education</a>
+                                    <a href='shop.php?category=2'>آموزش و پرورش</a>
                                 </li>
                                 <li>
-                                    <a href='shop.php?category=3'>Health coaching</a>
+                                    <a href='shop.php?category=3'>مربیگری سلامت</a>
                                 </li>
                                 <li>
-                                    <a href='shop.php?category=4'>Learning</a>
+                                    <a href='shop.php?category=4'>یادگیری</a>
                                 </li>
                                 <li>
-                                    <a href='shop.php?category=5'>Online</a>
+                                    <a href='shop.php?category=5'>آنلاین</a>
                                 </li>
                                 <li>
-                                    <a href='shop.php?category=6'>Academics</a>
+                                    <a href='shop.php?category=6'>دانشگاهی</a>
                                 </li>
                                 <li>
-                                    <a href='shop.php?category=7'>Admission</a>
+                                    <a href='shop.php?category=7'>پذیرش</a>
                                 </li>
                                 <li>
-                                    <a href='shop.php?category=4'>Student</a>
+                                    <a href='shop.php?category=4'>دانشجو</a>
                                 </li>
                                 <li>
-                                    <a href='shop.php?category=6'>Graduation</a>
+                                    <a href='shop.php?category=6'>فارغ التحصیلی</a>
                                 </li>";
 
                                 $query = "SELECT cat_id, cat_title FROM categories";
@@ -450,7 +450,7 @@
                             </ul>
                         </div>
                         <div class="sidebar-widget popular-post">
-                            <h3 class="widget-title">Popular Posts</h3>
+                            <h3 class="widget-title">پست ها محبوب</h3>
                             <div class="post-wrap">
                                 <div class="item">
                                     <a href="single-blog.php" class="thumb">
@@ -458,7 +458,7 @@
                                     </a>
                                     <div class="info">
                                         <h4 class="title">
-                                            <a href="single-blog.php">We will begin to explore the next two levels</a>
+                                            <a href="single-blog.php">ما شروع به بررسی دو سطح بعدی خواهیم کرد</a>
                                             <span class="date">20-07-2020</span>
                                         </h4>
                                     </div>
@@ -469,8 +469,9 @@
                                     </a>
                                     <div class="info">
                                         <h4 class="title">
-                                            <a href="single-blog.php">Determining the true goal of a good education is
-                                                difficult.</a>
+                                            <a href="single-blog.php">
+                                            تعیین هدف واقعی یک آموزش خوب دشوار است.
+                                            </a>
                                             <span class="date">19-07-2020</span>
                                         </h4>
                                     </div>
@@ -481,7 +482,7 @@
                                     </a>
                                     <div class="info">
                                         <h4 class="title">
-                                            <a href="single-blog.php">Implementing peer assessment in online group</a>
+                                            <a href="single-blog.php">اجرای ارزیابی همتا در گروه آنلاین</a>
                                             <span class="date">18-07-2020</span>
                                         </h4>
                                     </div>
@@ -489,28 +490,28 @@
                             </div>
                         </div>
                         <div class="sidebar-widget tags">
-                            <h3>Tags</h3>
+                            <h3>تگ ها</h3>
                             <ul>
                                 <li>
-                                    <a href="courses.php">Education</a>
+                                    <a href="courses.php">آموزش و پرورش</a>
                                 </li>
                                 <li>
-                                    <a href="courses.php">College</a>
+                                    <a href="courses.php">دانشگاه</a>
                                 </li>
                                 <li>
-                                    <a href="courses.php">College</a>
+                                    <a href="courses.php">دانشگاه</a>
                                 </li>
                                 <li>
-                                    <a href="courses.php">Math</a>
+                                    <a href="courses.php">ریاضی</a>
                                 </li>
                                 <li>
-                                    <a href="courses.php">Design</a>
+                                    <a href="courses.php">طراحی</a>
                                 </li>
                                 <li>
-                                    <a href="courses.php">Learning</a>
+                                    <a href="courses.php">یادگیری</a>
                                 </li>
                                 <li>
-                                    <a href="courses.php">Learning</a>
+                                    <a href="courses.php">یادگیری</a>
                                 </li>
                             </ul>
                         </div>

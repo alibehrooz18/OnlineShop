@@ -36,7 +36,7 @@
 
     <link rel="icon" type="image/png" href="public\img\favicon.png">
 
-    <title>Eduon - Online Courses & Training HTML Template</title>
+    <title>Eduon - سیاست حفظ حریم خصوصی</title>
 </head>
 
 <body>
@@ -74,58 +74,58 @@
                         <ul class="navbar-nav m-auto">
                             <li class="nav-item">
                                 <a href="../../index.php" class="nav-link">
-                                    Home
+                                    خانه
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="courses.php" class="nav-link">
-                                    Courses
+                                    دروس
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="gallery.php" class="nav-link">Gallery</a>
+                                <a href="gallery.php" class="nav-link">نمایشگاه</a>
                             </li>
                             <li class="nav-item">
-                                <a href="events.php" class="nav-link">Events</a>
+                                <a href="events.php" class="nav-link">رویدادها</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Shop
+                                    فروشگاه
                                     <i class="bx bx-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="shop.php" class="nav-link">Shop</a>
+                                        <a href="shop.php" class="nav-link">فروشگاه</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="wishlist.php" class="nav-link">Wishlist</a>
+                                        <a href="wishlist.php" class="nav-link">علاقه‌مندی ها</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.php" class="nav-link">Contact</a>
+                                <a href="contact.php" class="nav-link">ارتباط با ما</a>
                             </li>
                             <li class="nav-item">
-                                <a href="about.php" class="nav-link">About</a>
+                                <a href="about.php" class="nav-link">درباره ما</a>
                             </li>
                             <!-- User should move to login botton when user login -->
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    User
+                                    کاربر
                                     <i class="bx bx-chevron-right"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="my-account.php" class="nav-link">My Account</a>
+                                        <a href="my-account.php" class="nav-link">داشبورد</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="log-in.php" class="nav-link">Log In</a>
+                                        <a href="log-in.php" class="nav-link">ورود</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="registration.php" class="nav-link">Registration</a>
+                                        <a href="registration.php" class="nav-link">ثبت نام</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="recover-password.php" class="nav-link">Recover Password</a>
+                                        <a href="recover-password.php" class="nav-link">بازیابی کلمه عبور</a>
                                     </li>
                                 </ul>
                             </li>
@@ -139,7 +139,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -154,7 +154,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -182,7 +182,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -197,7 +197,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -214,14 +214,14 @@
     <div class="page-title-area bg-11">
         <div class="container">
             <div class="page-title-content">
-                <h2>Privacy policy</h2>
+                <h2>سیاست حفظ حریم خصوصی</h2>
                 <ul>
                     <li>
                         <a href="index.php">
-                            Home
+                            خانه
                         </a>
                     </li>
-                    <li class="active">Privacy policy</li>
+                    <li class="active">سیاست حفظ حریم خصوصی</li>
                 </ul>
             </div>
         </div>
@@ -233,49 +233,71 @@
         <div class="container">
             <div class="privacy-policy-wrap">
                 <div class="title">
-                    <h2>Eduon privacy policy</h2>
-                    <p>This policy was last updated july 20, 2024.</p>
+                    <h2>خط مشی رازداری Eduon</h2>
+                    <p>این سیاست آخرین بار در 20 مرداد 1403 به روز شده است.</p>
                 </div>
                 <img src="../../public\img\privacy-policy-img.jpg" alt="">
-                <h3>Information collection</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                <h3>1 .Information you provide directly to us</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et
-                    dolore magna aliqua. Ut enim ad minim veniaam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Lorem ipsum
-                    dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                    ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                    fugiat nulla pariatur.</p>
+                <h3>مجموعه اطلاعات</h3>
+                <p>
+                    لورم ایپسوم متن ساختگی با از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                    متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                    است و برای شرایط فعلی تکنوکاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای
+                    زیادی در شصت و سه درصد گذشی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت
+                    می توان امید داشت واری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                    شامل حروفچینی دستاور جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                </p>
+                <h3>1. اطلاعاتی که مستقیماً به ما ارائه می دهید</h3>
+                <p>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                    متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                    است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای
+                    زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت
+                    بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت
+                    می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                    شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                </p>
                 <ul>
-                    <li>It has survived not only five centuries, but also the leap into electronic typesetting.</li>
-                    <li>Contrary to popular belief, Lorem Ipsum is not simply random text.</li>
-                    <li>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
-                    </li>
-                    <li> Various versions have evolved over the years, sometimes by accident sometimes on purpose.</li>
+                    <li>نه تنها از پنج قرن، بلکه از جهش به حروفچینی الکترونیکی نیز جان سالم به در برده است.</li>
+                    <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</li>
+                    <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</li>
+                    <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان</li>
                 </ul>
-                <h3>2. Information collected automatically</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                <h3>3. Enquirers and registered users</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-                <h3>4. Supplementary student privacy notices</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                <h3>5. Changes to this privacy policy</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea com modo consequat.</p>
+                <h3>2. اطلاعات به طور خودکار جمع آوری می شود</h3>
+                <p>
+                    لورم ایپسوم متن ساختگی با از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                    متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                    است و برای شرایط فعلی تکنوکاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای
+                    زیادی در شصت و سه درصد گذشی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت
+                    می توان امید داشت واری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                    شامل حروفچینی دستاور جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                </p>
+                <h3>3. درخواست کنندگان و کاربران ثبت نام شده</h3>
+                <p>
+                    لورم ایپسوم متن ساختگی با از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                    متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                    است و برای شرایط فعلی تکنوکاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای
+                    زیادی در شصت و سه درصد گذشی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت
+                    می توان امید داشت واری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                    شامل حروفچینی دستاور جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                </p>
+                <h3>4. اعلامیه های تکمیلی حریم خصوصی دانشجویان</h3>
+                <p>
+                    لورم ایپسوم متن ساختگی با از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                    متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                    است و برای شرایط فعلی تکنوکاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای
+                    زیادی در شصت و سه درصد گذشی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت
+                    می توان امید داشت واری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                    شامل حروفچینی دستاور جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                </p>
+                <h3>5. تغییرات در این سیاست حفظ حریم خصوصی</h3>
+                <p>
+                    لورم ایپسوم متن ساختگی با از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                    متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                    است و برای شرایط فعلی تکنوکاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای
+                    زیادی در شصت و سه درصد گذشی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت
+                    می توان امید داشت واری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                    شامل حروفچینی دستاور جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                </p>
             </div>
         </div>
     </section>

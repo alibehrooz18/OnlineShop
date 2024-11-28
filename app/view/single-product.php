@@ -36,12 +36,12 @@
 
     <link rel="icon" type="image/png" href="public\img\favicon.png">
 
-    <title>Eduon - Single Product</title>
+    <title>Eduon - نمایش محصول</title>
 </head>
 
 <body>
 
-    <!-- <div class="loader-wrapper">
+    <div class="loader-wrapper">
         <div class="loader">
             <div class="dot-wrap">
                 <span class="dot"></span>
@@ -50,7 +50,7 @@
                 <span class="dot"></span>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
     <!-- Navbar start -->
@@ -74,58 +74,58 @@
                         <ul class="navbar-nav m-auto">
                             <li class="nav-item">
                                 <a href="../../index.php" class="nav-link">
-                                    Home
+                                    خانه
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="courses.php" class="nav-link">
-                                    Courses
+                                    دروس
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="gallery.php" class="nav-link">Gallery</a>
+                                <a href="gallery.php" class="nav-link">نمایشگاه</a>
                             </li>
                             <li class="nav-item">
-                                <a href="events.php" class="nav-link">Events</a>
+                                <a href="events.php" class="nav-link">رویدادها</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Shop
+                                    فروشگاه
                                     <i class="bx bx-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="shop.php" class="nav-link">Shop</a>
+                                        <a href="shop.php" class="nav-link">فروشگاه</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="wishlist.php" class="nav-link">Wishlist</a>
+                                        <a href="wishlist.php" class="nav-link">علاقه‌مندی ها</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.php" class="nav-link">Contact</a>
+                                <a href="contact.php" class="nav-link">ارتباط با ما</a>
                             </li>
                             <li class="nav-item">
-                                <a href="about.php" class="nav-link">About</a>
+                                <a href="about.php" class="nav-link">درباره ما</a>
                             </li>
                             <!-- User should move to login botton when user login -->
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    User
+                                    کاربر
                                     <i class="bx bx-chevron-right"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="my-account.php" class="nav-link">My Account</a>
+                                        <a href="my-account.php" class="nav-link">داشبورد</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="log-in.php" class="nav-link">Log In</a>
+                                        <a href="log-in.php" class="nav-link">ورود</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="registration.php" class="nav-link">Registration</a>
+                                        <a href="registration.php" class="nav-link">ثبت نام</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="recover-password.php" class="nav-link">Recover Password</a>
+                                        <a href="recover-password.php" class="nav-link">بازیابی کلمه عبور</a>
                                     </li>
                                 </ul>
                             </li>
@@ -139,7 +139,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -154,7 +154,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -182,7 +182,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -197,7 +197,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -214,14 +214,14 @@
     <div class="page-title-area bg-23">
         <div class="container">
             <div class="page-title-content">
-                <h2>Single product</h2>
+                <h2>محصول</h2>
                 <ul>
                     <li>
                         <a href="index.php">
-                            Home
+                            خانه
                         </a>
                     </li>
-                    <li class="active">Single product</li>
+                    <li class="active">محصول</li>
                 </ul>
             </div>
         </div>
@@ -287,21 +287,26 @@
                                 <i class="bx bxs-star"></i>
                                 <i class="bx bxs-star-half"></i>
                             </div>
-                            <a href="single-product.php?s_pro=<?php echo $item_id; ?>" class="rating-count">(5 reviews)</a>
+                            <a href="single-product.php?s_pro=<?php echo $item_id; ?>" class="rating-count">(5 بررسی ها)</a>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                            et justo duo dolores et ea rebum. Stet clita kasd gubergren at vero eos et accusam amet,
-                            consetetur sadipscing elitr.</p>
+                        <p>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                            متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                            است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای
+                            زیادی در شصت و سه درصد گذشته حال افزارها شناخت
+                            بیشتری را برای در این صورت
+                            می توان امید داشت که تمام و دشواری موجود در و زمان مورد نیاز
+                            شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                        </p>
                         <ul class="product-summery">
-                            <li>SUK: <span>132</span></li>
-                            <li>Category: <span><?php echo $category; ?></span></li>
-                            <li>Tags: <span>Book</span></li>
-                            <li>10 in stock</li>
+                            <li>صفحات: <span>132</span></li>
+                            <li>دسته‌بندی: <span><?php echo $category; ?></span></li>
+                            <li>تگ ها: <span>Book</span></li>
+                            <li>10 در انبار</li>
                         </ul>
                         <ul class="social-wrap">
                             <li>
-                                <span>Share:</span>
+                                <span>به اشتراک بگذارید:</span>
                             </li>
                             <li>
                                 <a href="https://www.twitter.com/" target="_blank">
@@ -333,7 +338,7 @@
                         </div> -->
                         <br>
                         <a href="cart.php?p_id=<?php echo $item_id; ?>" class="default-btn">
-                            Add to cart
+                            افزودن به سبد خرید
                         </a>
                     </div>
                 </div>
@@ -344,38 +349,36 @@
                                 <ul class="tabs">
                                     <li>
                                         <a href="javascript:;">
-                                            Description
+                                            توضیحات
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">
-                                            Reviews
+                                            نظرات
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-12 col-md-12" dir="rtl">
                                 <div class="tab_content">
                                     <div class="tabs_item">
                                         <div class="products-details-tab-content">
-                                            <h3 class="mb-2">Description</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                                com modo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                                velit esse cillum dolore fugiat nulla pariatur. Excepteur sint occaecat
-                                                cupidatat non proident. Lorem ipsum dolor sit amet, consectetur
-                                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                                laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor
-                                                in reprehenderit in voluptate velit esse cillum dolore fugiat nulla
-                                                pariatur.</p>
+                                            <h3 class="mb-2">توضیحات</h3>
+                                            <p>
+                                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                                                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
+                                                است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای
+                                                زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت
+                                                بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت
+                                                می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                                                شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="tabs_item">
                                         <div class="products-details-tab-content">
                                             <div class="product-review-form">
-                                                <h3>Customer reviews</h3>
+                                                <h3>نظرات مشتریان</h3>
                                                 <div class="review-title">
                                                     <div class="rating">
                                                         <i class="bx bxs-star"></i>
@@ -384,7 +387,7 @@
                                                         <i class="bx bxs-star"></i>
                                                         <i class="bx bxs-star"></i>
                                                     </div>
-                                                    <p>Based on 2 reviews</p>
+                                                    <p>بر اساس 2 بررسی</p>
                                                 </div>
                                                 <div class="review-comments">
                                                     <div class="review-item">
@@ -395,15 +398,15 @@
                                                             <i class="bx bxs-star"></i>
                                                             <i class="bx bxs-star"></i>
                                                         </div>
-                                                        <h3>Good</h3>
-                                                        <span><strong>Admin</strong> on <strong>July 21,
-                                                                2020</strong></span>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                                            do eiusmod tempor incididunt ut labore et dolore magna
-                                                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                                                        <h3>خوب</h3>
+                                                        <span><strong>ادمین</strong> در <strong>آبان 21,
+                                                                1403</strong></span>
+                                                        <p>
+                                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                                                            طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
                                                         </p>
                                                         <a href="single-product.php"
-                                                            class="review-report-link">Reply</a>
+                                                            class="review-report-link">پاسخ</a>
                                                     </div>
                                                     <div class="review-item">
                                                         <div class="rating">
@@ -413,53 +416,54 @@
                                                             <i class="bx bxs-star"></i>
                                                             <i class="bx bxs-star"></i>
                                                         </div>
-                                                        <h3>Good</h3>
-                                                        <span><strong>Admin</strong> on <strong>July 21,
-                                                                2020</strong></span>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                                            do eiusmod tempor incididunt ut labore et dolore magna
-                                                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                                                        <h3>خوب</h3>
+                                                        <span><strong>ادمین</strong> در <strong>آبان 21,
+                                                                1403</strong></span>
+                                                        <p>
+                                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                                                            طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
                                                         </p>
                                                         <a href="single-product.php"
-                                                            class="review-report-link">Reply</a>
+                                                            class="review-report-link">پاسخ</a>
                                                     </div>
                                                 </div>
                                                 <div class="review-form">
-                                                    <h3>Write a Review</h3>
+                                                    <h3>یک نظر بنویسید</h3>
                                                     <form>
                                                         <div class="row">
                                                             <div class="col-lg-6 col-md-6">
                                                                 <div class="form-group">
-                                                                    <label>Name</label>
+                                                                    <label>نام</label>
                                                                     <input type="text" id="name" name="name"
                                                                         class="form-control">
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-6 col-md-6">
                                                                 <div class="form-group">
-                                                                    <label>Email</label>
+                                                                    <label>ایمیل</label>
                                                                     <input type="email" id="email" name="email"
                                                                         class="form-control">
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-12 col-md-12">
                                                                 <div class="form-group">
-                                                                    <label>Review title</label>
+                                                                    <label>عنوان بررسی</label>
                                                                     <input type="text" id="review-title"
                                                                         name="review-title" class="form-control">
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-12 col-md-12">
                                                                 <div class="form-group">
-                                                                    <label>Body of review (1500)</label>
+                                                                    <label>متن بررسی (1500)</label>
                                                                     <textarea name="review-body" id="review-body"
                                                                         cols="30" rows="8"
                                                                         class="form-control"></textarea>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-12 col-md-12">
-                                                                <button type="submit" class="btn default-btn two">Submit
-                                                                    Review</button>
+                                                                <button type="submit" class="btn default-btn two">
+                                                                    ارسال نظر
+                                                                </button>
                                                             </div>
                                                         </div>
                                                     </form>
@@ -481,7 +485,7 @@
     <section class="related-product-area pb-70">
         <div class="container">
             <div class="section-title">
-                <h2>Related Products</h2>
+                <h2>آخرین محصولات</h2>
             </div>
             <div class="row">
                 <?php
@@ -511,7 +515,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="wishlist.php">
+                                            <a href="wishlist.php?wishlist=<?php echo $item_id; ?>">
                                                 <i class="bx bx-heart"></i>
                                             </a>
                                         </li>
@@ -527,14 +531,14 @@
                                     <?php } ?>
                                 </span>
                                 <a href="cart.php?p_id=<?php echo $item_id; ?>" class="default-btn">
-                                    Add to cart
+                                    افزودن به سبد خرید
                                 </a>
                             </div>
                         </div>
                 <?php
                     }
                 } else {
-                    echo "<p>No item found.</p>";
+                    echo "<p>هیج ایتمی پیدا نشد</p>";
                 }
                 ?>
             </div>
@@ -657,7 +661,7 @@
                                     </span>
                                 </div>
                                 <button type="submit" class="default-btn">
-                                    Add to Cart
+                                    افزودن به سبد خرید
                                     <i class="flaticon-right"></i>
                                 </button>
                             </div>

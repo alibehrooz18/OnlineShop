@@ -36,12 +36,12 @@
 
     <link rel="icon" type="image/png" href="public\img\favicon.png">
 
-    <title>Eduon - Online Courses</title>
+    <title>Eduon - آموزش آنلاین</title>
 </head>
 
 <body>
 
-    <!-- <div class="loader-wrapper">
+    <div class="loader-wrapper">
         <div class="loader">
             <div class="dot-wrap">
                 <span class="dot"></span>
@@ -50,7 +50,7 @@
                 <span class="dot"></span>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
     <!-- Navbar start -->
@@ -74,58 +74,58 @@
                         <ul class="navbar-nav m-auto">
                             <li class="nav-item">
                                 <a href="../../index.php" class="nav-link">
-                                    Home
+                                    خانه
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="courses.php" class="nav-link active">
-                                    Courses
+                                    دروس
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="gallery.php" class="nav-link">Gallery</a>
+                                <a href="gallery.php" class="nav-link">نمایشگاه</a>
                             </li>
                             <li class="nav-item">
-                                <a href="events.php" class="nav-link">Events</a>
+                                <a href="events.php" class="nav-link">رویدادها</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Shop
+                                    فروشگاه
                                     <i class="bx bx-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="shop.php" class="nav-link">Shop</a>
+                                        <a href="shop.php" class="nav-link">فروشگاه</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="wishlist.php" class="nav-link">Wishlist</a>
+                                        <a href="wishlist.php" class="nav-link">علاقه‌مندی ها</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.php" class="nav-link">Contact</a>
+                                <a href="contact.php" class="nav-link">ارتباط با ما</a>
                             </li>
                             <li class="nav-item">
-                                <a href="about.php" class="nav-link">About</a>
+                                <a href="about.php" class="nav-link">درباره ما</a>
                             </li>
                             <!-- User should move to login botton when user login -->
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    User
+                                    کاربر
                                     <i class="bx bx-chevron-right"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="my-account.php" class="nav-link">My Account</a>
+                                        <a href="my-account.php" class="nav-link">داشبورد</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="log-in.php" class="nav-link">Log In</a>
+                                        <a href="log-in.php" class="nav-link">ورود</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="registration.php" class="nav-link">Registration</a>
+                                        <a href="registration.php" class="nav-link">ثبت نام</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="recover-password.php" class="nav-link">Recover Password</a>
+                                        <a href="recover-password.php" class="nav-link">بازیابی کلمه عبور</a>
                                     </li>
                                 </ul>
                             </li>
@@ -139,7 +139,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -154,7 +154,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -182,7 +182,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -197,7 +197,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -214,14 +214,14 @@
     <div class="page-title-area bg-4">
         <div class="container">
             <div class="page-title-content">
-                <h2>Courses</h2>
+                <h2>آموزش ها</h2>
                 <ul>
                     <li>
                         <a href="../../index.php">
-                            Home
+                            خانه
                         </a>
                     </li>
-                    <li class="active">courses</li>
+                    <li class="active">آموزش ها</li>
                 </ul>
             </div>
         </div>
@@ -254,9 +254,9 @@
                             $end_item = min($start_item + $courses_per_page - 1, $total_items);
 
                             if ($total_items > 0) {
-                                echo "<p>Showing $start_item-$end_item of $total_items results</p>";
+                                echo "<p>نمایش $start_item-$end_item از $total_items نتیجه</p>";
                             } else {
-                                echo "<p>No results found.</p>";
+                                echo "<p>هیچ نتیجه ای یافت نشد</p>";
                             }
                             ?>
                         </div>
@@ -266,7 +266,7 @@
                         <div class="showing-top-bar-ordering">
                             <form method="GET">
                                 <select name="category" onchange="this.form.submit()">
-                                    <option value="">Default sorting</option>
+                                    <option value="">همه آموزش ها</option>
                                     <?php
                                     $selected_category = isset($_GET['category']) ? $_GET['category'] : '';
                                     $query = "SELECT * FROM categories";
@@ -289,7 +289,7 @@
                         <!-- Search form -->
                         <div class="sidebar-widget search">
                             <form class="search-form" action="sourses.php" method="GET">
-                                <input class="form-control" name="search" placeholder="Search our courses" type="text">
+                                <input class="form-control" name="search" placeholder="آموزش خود را پیدا کنید" type="text">
                                 <button class="search-button" type="submit">
                                     <i class="bx bx-search"></i>
                                 </button>
@@ -355,12 +355,12 @@
                                         <li><i class="bx bxs-star"></i></li>
                                         <li><i class="bx bxs-star"></i></li>
                                         <li><i class="bx bxs-star"></i></li>
-                                        <li><span>0.5</span><a href="single-course.php">(1 rating)</a></li>
+                                        <li><span>0.5</span><a href="single-course.php">(1 نظر)</a></li>
                                     </ul>
                                     <p><?php echo $course_content ?></p>
                                     <ul class="lessons">
-                                        <li><?php echo $course_lesson ?> Lessons</li>
-                                        <li class="float"><?php echo $course_student ?> Students</li>
+                                        <li><?php echo $course_lesson ?> درس ها</li>
+                                        <li class="float"><?php echo $course_student ?> دانشجو</li>
                                     </ul>
                                 </div>
                             </div>

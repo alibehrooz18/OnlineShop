@@ -44,7 +44,7 @@ session_start();
 
     <link rel="icon" type="image/png" href="public\img\favicon.png">
 
-    <title>Eduon - Cart</title>
+    <title>Eduon - سبد خرید</title>
 </head>
 
 <body>
@@ -82,58 +82,58 @@ session_start();
                         <ul class="navbar-nav m-auto">
                             <li class="nav-item">
                                 <a href="../../index.php" class="nav-link">
-                                    Home
+                                    خانه
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="courses.php" class="nav-link">
-                                    Courses
+                                    دروس
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="gallery.php" class="nav-link">Gallery</a>
+                                <a href="gallery.php" class="nav-link">نمایشگاه</a>
                             </li>
                             <li class="nav-item">
-                                <a href="events.php" class="nav-link">Events</a>
+                                <a href="events.php" class="nav-link">رویدادها</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Shop
+                                    فروشگاه
                                     <i class="bx bx-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="shop.php" class="nav-link">Shop</a>
+                                        <a href="shop.php" class="nav-link">فروشگاه</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="wishlist.php" class="nav-link">Wishlist</a>
+                                        <a href="wishlist.php" class="nav-link">علاقه‌مندی ها</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.php" class="nav-link">Contact</a>
+                                <a href="contact.php" class="nav-link">ارتباط با ما</a>
                             </li>
                             <li class="nav-item">
-                                <a href="about.php" class="nav-link">About</a>
+                                <a href="about.php" class="nav-link">درباره ما</a>
                             </li>
                             <!-- User should move to login botton when user login -->
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    User
+                                    کاربر
                                     <i class="bx bx-chevron-right"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="my-account.php" class="nav-link">My Account</a>
+                                        <a href="my-account.php" class="nav-link">داشبورد</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="log-in.php" class="nav-link">Log In</a>
+                                        <a href="log-in.php" class="nav-link">ورود</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="registration.php" class="nav-link">Registration</a>
+                                        <a href="registration.php" class="nav-link">ثبت نام</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="recover-password.php" class="nav-link">Recover Password</a>
+                                        <a href="recover-password.php" class="nav-link">بازیابی کلمه عبور</a>
                                     </li>
                                 </ul>
                             </li>
@@ -147,7 +147,7 @@ session_start();
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -162,7 +162,7 @@ session_start();
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -190,7 +190,7 @@ session_start();
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -205,7 +205,7 @@ session_start();
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -223,14 +223,14 @@ session_start();
     <div class="page-title-area bg-20">
         <div class="container">
             <div class="page-title-content">
-                <h2>Cart</h2>
+                <h2>سبد خرید</h2>
                 <ul>
                     <li>
                         <a href="index.php">
-                            Home
+                            خانه
                         </a>
                     </li>
-                    <li class="active">Cart</li>
+                    <li class="active">سبد خرید</li>
                 </ul>
             </div>
         </div>
@@ -248,11 +248,11 @@ session_start();
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Image</th>
-                                            <th scope="col">Product name</th>
-                                            <th scope="col">Price</th>
-                                            <th scope="col">Quantity</th>
-                                            <th scope="col">Total</th>
+                                            <th scope="col">تصویر محصول</th>
+                                            <th scope="col">نام محصول</th>
+                                            <th scope="col">قیمت</th>
+                                            <th scope="col">تعداد</th>
+                                            <th scope="col">کل</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -272,7 +272,7 @@ session_start();
                                                 $result = mysqli_query($connection, $query);
                                                 confirmQuery($result);
                                             } else {
-                                                echo "<h3 class='mb-5' style='color: red;'>your selected item exist in cart list</h3>";
+                                                echo "<h3 class='mb-5' style='color: red;'>محصول انتخابی در لیست موجود است</h3>";
                                             }
                                         }
                                         $query = "SELECT * FROM cart";
@@ -354,7 +354,7 @@ session_start();
                                                                 header("Location: cart.php");
                                                                 exit();
                                                             } else {
-                                                                echo "Error: Could not remove the item. Please try again.";
+                                                                echo "خطا: مورد حذف نشد. لطفا دوباره امتحان کنید.";
                                                             }
                                                         }
                                                         ?>
@@ -371,12 +371,12 @@ session_start();
                                 <div class="row">
                                     <div class="col-lg-8 col-sm-7">
                                         <div class="form-group mb-0">
-                                            <input type="text" class="form-control" placeholder="Coupon code">
-                                            <a href="cart.php" class="default-btn">Apply coupon</a>
+                                            <input type="text" class="form-control" placeholder="کد تخفیف">
+                                            <a href="cart.php" class="default-btn">اعمال کد تخفیف</a>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-sm-5 text-right">
-                                        <button class="default-btn update" name="update">Update cart</button>
+                                        <button class="default-btn update" name="update">بروزرسانی سبد خرید</button>
                                     </div>
                                 </div>
                             </div>
@@ -384,7 +384,7 @@ session_start();
                     </form>
                 </div>
                 <div class="col-lg-4">
-                    <h3 class="cart-checkout-title">Checkout summary</h3>
+                    <h3 class="cart-checkout-title">صورت حساب</h3>
                     <div class="cart-totals">
                         <?php
                         $shiping = 50;
@@ -392,14 +392,14 @@ session_start();
                         $payable_total = $subtotal + $shiping - $coupon;
                         ?>
                         <ul>
-                            <li>Subtotal <span>$<?php echo number_format($subtotal, 2); ?></span></li>
-                            <li>Shipping <span>$<?php echo number_format($shiping, 2); ?></span></li>
-                            <li>Coupon <span>$<?php echo number_format($coupon, 2); ?></span></li>
-                            <li><b>Payable Total</b> <span><b>$<?php echo number_format($payable_total, 2); ?></b></span></li>
+                            <li>جمع محصولات<span>$<?php echo number_format($subtotal, 2); ?></span></li>
+                            <li>حمل و نقل<span>$<?php echo number_format($shiping, 2); ?></span></li>
+                            <li>کد تخفیف<span>$<?php echo number_format($coupon, 2); ?></span></li>
+                            <li><b>جمع قابل پرداخت</b> <span><b>$<?php echo number_format($payable_total, 2); ?></b></span></li>
                         </ul>
                         <a href="checkout.php?p_total=<?php echo $payable_total; ?>&subtotal=<?php echo $subtotal; ?>&shiping=<?php echo $shiping; ?>&coupon=<?php echo $coupon; ?>"
                             class="default-btn two">
-                            Buy now
+                            پرداخت
                         </a>
                     </div>
                 </div>
@@ -410,7 +410,7 @@ session_start();
 
 
     <!-- Footer -->
-    <?php include "../../includes/footer.php" 
+    <?php include "../../includes/footer.php"
     ?>
 
     <script src="../../public/js/jquery.min.js"></script>

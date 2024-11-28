@@ -40,7 +40,7 @@ ob_start();
 
     <link rel="icon" type="image/png" href="public\img\favicon.png">
 
-    <title>Eduon - Wishlist</title>
+    <title>Eduon - علاقه‌مندی ها</title>
 </head>
 
 <body>
@@ -57,7 +57,6 @@ ob_start();
     </div>
 
 
-    <!-- Navbar area -->
     <!-- Navbar start -->
     <div class="navbar-area">
 
@@ -79,58 +78,58 @@ ob_start();
                         <ul class="navbar-nav m-auto">
                             <li class="nav-item">
                                 <a href="../../index.php" class="nav-link">
-                                    Home
+                                    خانه
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="courses.php" class="nav-link">
-                                    Courses
+                                    دروس
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="gallery.php" class="nav-link">Gallery</a>
+                                <a href="gallery.php" class="nav-link">نمایشگاه</a>
                             </li>
                             <li class="nav-item">
-                                <a href="events.php" class="nav-link">Events</a>
+                                <a href="events.php" class="nav-link">رویدادها</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link active">
-                                    Shop
+                                    فروشگاه
                                     <i class="bx bx-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="shop.php" class="nav-link">Shop</a>
+                                        <a href="shop.php" class="nav-link">فروشگاه</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="wishlist.php" class="nav-link active">Wishlist</a>
+                                        <a href="wishlist.php" class="nav-link active">علاقه‌مندی ها</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.php" class="nav-link">Contact</a>
+                                <a href="contact.php" class="nav-link">ارتباط با ما</a>
                             </li>
                             <li class="nav-item">
-                                <a href="about.php" class="nav-link">About</a>
+                                <a href="about.php" class="nav-link">درباره ما</a>
                             </li>
                             <!-- User should move to login botton when user login -->
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    User
+                                    کاربر
                                     <i class="bx bx-chevron-right"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="my-account.php" class="nav-link">My Account</a>
+                                        <a href="my-account.php" class="nav-link">داشبورد</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="log-in.php" class="nav-link">Log In</a>
+                                        <a href="log-in.php" class="nav-link">ورود</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="registration.php" class="nav-link">Registration</a>
+                                        <a href="registration.php" class="nav-link">ثبت نام</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="recover-password.php" class="nav-link">Recover Password</a>
+                                        <a href="recover-password.php" class="nav-link">بازیابی کلمه عبور</a>
                                     </li>
                                 </ul>
                             </li>
@@ -144,7 +143,7 @@ ob_start();
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -159,7 +158,7 @@ ob_start();
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -187,7 +186,7 @@ ob_start();
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -202,7 +201,7 @@ ob_start();
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -219,14 +218,14 @@ ob_start();
     <div class="page-title-area bg-22">
         <div class="container">
             <div class="page-title-content">
-                <h2>Wishlist</h2>
+                <h2>علاقه‌مندی ها</h2>
                 <ul>
                     <li>
                         <a href="index.php">
-                            Home
+                            خانه
                         </a>
                     </li>
-                    <li class="active">Wishlist</li>
+                    <li class="active">علاقه‌مندی ها</li>
                 </ul>
             </div>
         </div>
@@ -242,12 +241,12 @@ ob_start();
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th scope="col">Image</th>
-                                    <th scope="col">Product name</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Quantity</th>
-                                    <th scope="col">Total</th>
-                                    <th scope="col">Add to cart</th>
+                                    <th scope="col">تصویر محصول</th>
+                                    <th scope="col">نام محصول</th>
+                                    <th scope="col">قیمت</th>
+                                    <th scope="col">تعداد</th>
+                                    <th scope="col">کل</th>
+                                    <!-- <th scope="col">افزودن به سبد خرید</th> -->
                                 </tr>
                             </thead>
                             <tbody>
@@ -267,7 +266,7 @@ ob_start();
                                         $result = mysqli_query($connection, $query);
                                         confirmQuery($result);
                                     } else {
-                                        echo "<h3 class='mb-5' style='color: red;'>your selected item exist in wishlist</h3>";
+                                        echo "<h3 class='mb-5' style='color: red;'>محصول انتخابی در لیست موجود است</h3>";
                                     }
                                 }
                                 $query = "SELECT * FROM wishlists";
@@ -345,7 +344,7 @@ ob_start();
                                             </td>
                                             <td class="product-subtotal">
                                                 <a href="cart.php?p_id=<?php echo $shop_id; ?>&quantity=<?php echo $quantity; ?>" class="default-btn">
-                                                    Add to cart
+                                                    افزودن به سبد خرید
                                                 </a>
                                             </td>
                                     <?php

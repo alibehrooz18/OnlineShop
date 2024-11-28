@@ -36,7 +36,7 @@
 
     <link rel="icon" type="image/png" href="public\img\favicon.png">
 
-    <title>Eduon - Online Courses & Training HTML Template</title>
+    <title>Eduon - ارتباط با ما</title>
 </head>
 
 <body>
@@ -74,58 +74,58 @@
                         <ul class="navbar-nav m-auto">
                             <li class="nav-item">
                                 <a href="../../index.php" class="nav-link">
-                                    Home
+                                    خانه
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="courses.php" class="nav-link">
-                                    Courses
+                                    دروس
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="gallery.php" class="nav-link">Gallery</a>
+                                <a href="gallery.php" class="nav-link">نمایشگاه</a>
                             </li>
                             <li class="nav-item">
-                                <a href="events.php" class="nav-link">Events</a>
+                                <a href="events.php" class="nav-link">رویدادها</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Shop
+                                    فروشگاه
                                     <i class="bx bx-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="shop.php" class="nav-link">Shop</a>
+                                        <a href="shop.php" class="nav-link">فروشگاه</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="wishlist.php" class="nav-link">Wishlist</a>
+                                        <a href="wishlist.php" class="nav-link">علاقه‌مندی ها</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.php" class="nav-link active">Contact</a>
+                                <a href="contact.php" class="nav-link active">ارتباط با ما</a>
                             </li>
                             <li class="nav-item">
-                                <a href="about.php" class="nav-link">About</a>
+                                <a href="about.php" class="nav-link">درباره ما</a>
                             </li>
                             <!-- User should move to login botton when user login -->
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    User
+                                    کاربر
                                     <i class="bx bx-chevron-right"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="my-account.php" class="nav-link">My Account</a>
+                                        <a href="my-account.php" class="nav-link">داشبورد</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="log-in.php" class="nav-link">Log In</a>
+                                        <a href="log-in.php" class="nav-link">ورود</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="registration.php" class="nav-link">Registration</a>
+                                        <a href="registration.php" class="nav-link">ثبت نام</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="recover-password.php" class="nav-link">Recover Password</a>
+                                        <a href="recover-password.php" class="nav-link">بازیابی کلمه عبور</a>
                                     </li>
                                 </ul>
                             </li>
@@ -139,7 +139,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -154,7 +154,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -182,7 +182,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -197,7 +197,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -214,14 +214,14 @@
     <div class="page-title-area bg-5">
         <div class="container">
             <div class="page-title-content">
-                <h2>Contact</h2>
+                <h2>ارتباط با ما</h2>
                 <ul>
                     <li>
                         <a href="index.php">
-                            Home
+                            خانه
                         </a>
                     </li>
-                    <li class="active">Contact</li>
+                    <li class="active">ارتباط با ما</li>
                 </ul>
             </div>
         </div>
@@ -233,30 +233,30 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-sm-6">
-                    <div class="single-contact-info">
+                    <div class="single-contact-info" dir="ltr">
                         <i class="flaticon-call"></i>
-                        <h3>Call us</h3>
-                        <a href="tel:+1(514)312-5678">Phone :+1 (514) 312-5678</a>
-                        <a href="tel:+1(514)312-6688">Tel :+1 (514) 312-6688</a>
+                        <h3>با ما تماس بگیرید</h3>
+                        <a href="tel:+1(514)312-5678">+98 912 345 6789</a>
+                        <a href="tel:+1(514)312-6688">+98 313 132 6688</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="single-contact-info">
                         <i class="flaticon-pin"></i>
-                        <h3>Our location</h3>
-                        <a href="contact.php">6890 Blvd, The Bronx, NY 1058 New York, USA</a>
+                        <h3>مکان ما</h3>
+                        <a href="contact.php">ایران، اصفهان، خیابان خاقانی، نبش کوچه 123</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0">
                     <div class="single-contact-info">
                         <i class="flaticon-email"></i>
-                        <h3>Email</h3>
-                        <a href="/cdn-cgi/l/email-protection#abc3cec7c7c4ebcecfdec4c585c8c4c6"><span
+                        <h3>ایمیل</h3>
+                        <a href="/cdn-cgi/l/email-protection#91f9f4fdfdfed1f4f5e4feffbff2fefc"><span
                                 class="__cf_email__"
-                                data-cfemail="fe969b929291be9b9a8b9190d09d9193">[email&#160;protected]</span></a>
-                        <a href="/cdn-cgi/l/email-protection#334346515f5a50735657465c5d1d505c5e"><span
+                                data-cfemail="8ee6ebe2e2e1ceebeafbe1e0a0ede1e3">[ایمیل&#160;محافظت شده]</span></a>
+                        <a href="/cdn-cgi/l/email-protection#91e1e4f3fdf8f2d1f4f5e4feffbff2fefc"><span
                                 class="__cf_email__"
-                                data-cfemail="275752454b4e446742435248490944484a">[email&#160;protected]</span></a>
+                                data-cfemail="08787d6a64616b486d6c7d6766266b6765">[ایمیل&#160;محافظت شده]</span></a>
                     </div>
                 </div>
             </div>
@@ -273,46 +273,46 @@
                     <div class="contact-wrap contact-pages mb-0">
                         <div class="contact-form">
                             <div class="section-title">
-                                <h2>Drop us a message for any query</h2>
-                                <p>For more information about our courses, get in touch <br> with eduon contacts</p>
+                                <h2>برای هر سوالی به ما پیام دهید</h2>
+                                <p>برای اطلاعات بیشتر در مورد دوره های ما با ما تماس بگیرید <br> با مخاطبین eduon</p>
                             </div>
                             <form id="contactForm">
                                 <div class="row">
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
-                                            <label>Name</label>
+                                            <label>نام</label>
                                             <input type="text" name="name" id="name" class="form-control" required=""
-                                                data-error="Please enter your name">
+                                                data-error="لطفا نام خود را وارد کنید">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
-                                            <label>Email Address</label>
+                                            <label>نشانی ایمیل</label>
                                             <input type="email" name="email" id="email" class="form-control" required=""
-                                                data-error="Please enter your email">
+                                                data-error="لطفا ایمیل خود را وارد کنید">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <label>Subject</label>
+                                            <label>موضوع</label>
                                             <input type="text" name="msg_subject" id="msg_subject" class="form-control"
-                                                required="" data-error="Please enter your subject">
+                                                required="" data-error="لطفا موضوع را مشخص کنید">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <label>Message</label>
+                                            <label>پیغام</label>
                                             <textarea name="message" class="form-control" id="message" cols="30"
-                                                rows="10" required="" data-error="Write your message"></textarea>
+                                                rows="10" required="" data-error="پیغام رو را بنویسید"></textarea>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-md-12">
                                         <button type="submit" class="default-btn btn-two">
-                                            Send Message
+                                            ارسال پیغام
                                         </button>
                                         <div id="msgSubmit" class="h3 text-center hidden"></div>
                                         <div class="clearfix"></div>

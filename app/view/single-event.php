@@ -36,7 +36,7 @@
 
     <link rel="icon" type="image/png" href="public\img\favicon.png">
 
-    <title>Eduon - Online Courses & Training HTML Template</title>
+    <title>Eduon - رویداد</title>
 </head>
 
 <body>
@@ -74,58 +74,58 @@
                         <ul class="navbar-nav m-auto">
                             <li class="nav-item">
                                 <a href="../../index.php" class="nav-link">
-                                    Home
+                                    خانه
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="courses.php" class="nav-link">
-                                    Courses
+                                    دروس
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="gallery.php" class="nav-link">Gallery</a>
+                                <a href="gallery.php" class="nav-link">نمایشگاه</a>
                             </li>
                             <li class="nav-item">
-                                <a href="events.php" class="nav-link">Events</a>
+                                <a href="events.php" class="nav-link">رویدادها</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Shop
+                                    فروشگاه
                                     <i class="bx bx-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="shop.php" class="nav-link">Shop</a>
+                                        <a href="shop.php" class="nav-link">فروشگاه</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="wishlist.php" class="nav-link">Wishlist</a>
+                                        <a href="wishlist.php" class="nav-link">علاقه‌مندی ها</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.php" class="nav-link">Contact</a>
+                                <a href="contact.php" class="nav-link">ارتباط با ما</a>
                             </li>
                             <li class="nav-item">
-                                <a href="about.php" class="nav-link">About</a>
+                                <a href="about.php" class="nav-link">درباره ما</a>
                             </li>
                             <!-- User should move to login botton when user login -->
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    User
+                                    کاربر
                                     <i class="bx bx-chevron-right"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="my-account.php" class="nav-link">My Account</a>
+                                        <a href="my-account.php" class="nav-link">داشبورد</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="log-in.php" class="nav-link">Log In</a>
+                                        <a href="log-in.php" class="nav-link">ورود</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="registration.php" class="nav-link">Registration</a>
+                                        <a href="registration.php" class="nav-link">ثبت نام</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="recover-password.php" class="nav-link">Recover Password</a>
+                                        <a href="recover-password.php" class="nav-link">بازیابی کلمه عبور</a>
                                     </li>
                                 </ul>
                             </li>
@@ -139,7 +139,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -154,7 +154,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -182,7 +182,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -197,7 +197,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -213,14 +213,14 @@
     <div class="page-title-area bg-25">
         <div class="container">
             <div class="page-title-content">
-                <h2>Single event</h2>
+                <h2>رویداد</h2>
                 <ul>
                     <li>
                         <a href="index.php">
-                            Home
+                            خانه
                         </a>
                     </li>
-                    <li class="active">Single event</li>
+                    <li class="active">رویداد</li>
                 </ul>
             </div>
         </div>
@@ -233,70 +233,78 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="single-event-content">
-                        <h3 class="title">The great global project challenge conference</h3>
+                        <h3 class="title">کنفرانس بزرگ چالش پروژه جهانی</h3>
                         <ul class="post-details">
                             <li>
                                 <i class="bx bx-user"></i>
-                                By <a href="single-event.php">Admin</a>
+                                توسط <a href="single-event.php">ادمین</a>
                             </li>
                             <li>
                                 <i class="bx bx-calendar"></i>
-                                Posted on 13/07/2020
+                                پست شده در 14 مهر، 1403
                             </li>
                             <li>
                                 <i class="bx bx-comment"></i>
-                                <a href="events.php">2 Comments</a>
+                                <a href="events.php">2 نظرات</a>
                             </li>
                         </ul>
                         <img src="../../public\img\single-event\single-event.jpg" alt="Image">
-                        <h3 class="mb-2">Even description</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                            maecenas accumsan lacus vel facilisis ipsum dolor sit amet, consectetur adipiscing elit, sed
-                            do eiusmod tempor incididunt.</p>
-                        <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna
-                            eros eu Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis
-                            luctus, metus.</p>
+                        <h3 class="mb-2">توضیحات رویداد</h3>
+                        <p>
+                            لورم ایپسوم متن ساختگی
+                            با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه
+                            و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
+                            هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان
+                            جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی
+                        </p>
+                        <p>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                            متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
+                        </p>
                     </div>
                     <div class="map-area">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1595487039539!5m2!1sen!2sbd"></iframe>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                        maecenas accumsan lacus vel facilisis ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt.</p>
-                    <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros
-                        eu Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus,
-                        metus.</p>
+                    <p>
+                        لورم ایپسوم متن ساختگی
+                        با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه
+                        و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
+                        هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان
+                        جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی
+                    </p>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                        متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
+                    </p>
                 </div>
                 <div class="col-lg-4">
                     <div class="account-wrap">
                         <ul>
                             <li>
-                                Price: <span class="bold">$29.00</span>
+                                قیمت: <span class="bold">$29.00</span>
                             </li>
                             <li>
-                                Start: <span>Sep 01, 2020</span>
+                                شروع: <span>20 آذر، 1403</span>
                             </li>
                             <li>
-                                End: <span>Sep 02, 2020</span>
+                                پایان: <span>25 آذر، 1403</span>
                             </li>
                             <li>
-                                Event category: <span>Education</span>
+                                موضوع رویداد: <span>آموزش و پرورش</span>
                             </li>
                             <li>
-                                Total slot: <span>100</span>
+                                کل مجموعه: <span>100</span>
                             </li>
                             <li>
-                                Booked slot: <span>00</span>
+                                قسمت رزرو شده: <span>00</span>
                             </li>
                             <li>
-                                Website: <a href="javascript:;">www.eduon.com</a>
+                                وبسایت: <a href="javascript:;">www.eduon.com</a>
                             </li>
                         </ul>
-                        <a href="contact.php" class="default-btn">Book now</a>
-                        <p>You must <a href="log-in.php">login</a> before register event.</p>
+                        <a href="contact.php" class="default-btn">رزرو کنید</a>
+                        <p>شما باید <a href="log-in.php">وارد شوید</a> قبل از رزرو رویداد</p>
                     </div>
                 </div>
             </div>

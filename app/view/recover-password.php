@@ -36,7 +36,7 @@
 
     <link rel="icon" type="image/png" href="public\img\favicon.png">
 
-    <title>Eduon - Online Courses & Training HTML Template</title>
+    <title>Eduon - بازیابی کلمه عبور</title>
 </head>
 
 <body>
@@ -74,58 +74,58 @@
                         <ul class="navbar-nav m-auto">
                             <li class="nav-item">
                                 <a href="../../index.php" class="nav-link">
-                                    Home
+                                    خانه
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="courses.php" class="nav-link">
-                                    Courses
+                                    دروس
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="gallery.php" class="nav-link">Gallery</a>
+                                <a href="gallery.php" class="nav-link">نمایشگاه</a>
                             </li>
                             <li class="nav-item">
-                                <a href="events.php" class="nav-link">Events</a>
+                                <a href="events.php" class="nav-link">رویدادها</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Shop
+                                    فروشگاه
                                     <i class="bx bx-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="shop.php" class="nav-link">Shop</a>
+                                        <a href="shop.php" class="nav-link">فروشگاه</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="wishlist.php" class="nav-link">Wishlist</a>
+                                        <a href="wishlist.php" class="nav-link">علاقه‌مندی ها</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.php" class="nav-link">Contact</a>
+                                <a href="contact.php" class="nav-link">ارتباط با ما</a>
                             </li>
                             <li class="nav-item">
-                                <a href="about.php" class="nav-link">About</a>
+                                <a href="about.php" class="nav-link">درباره ما</a>
                             </li>
                             <!-- User should move to login botton when user login -->
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    User
+                                    کاربر
                                     <i class="bx bx-chevron-right"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="my-account.php" class="nav-link">My Account</a>
+                                        <a href="my-account.php" class="nav-link">داشبورد</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="log-in.php" class="nav-link">Log In</a>
+                                        <a href="log-in.php" class="nav-link">ورود</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="registration.php" class="nav-link">Registration</a>
+                                        <a href="registration.php" class="nav-link">ثبت نام</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="recover-password.php" class="nav-link">Recover Password</a>
+                                        <a href="recover-password.php" class="nav-link">بازیابی کلمه عبور</a>
                                     </li>
                                 </ul>
                             </li>
@@ -139,7 +139,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -154,7 +154,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -182,7 +182,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -197,7 +197,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -214,14 +214,14 @@
     <div class="page-title-area bg-9">
         <div class="container">
             <div class="page-title-content">
-                <h2>Recover password</h2>
+                <h2>بازیابی کلمه عبور</h2>
                 <ul>
                     <li>
                         <a href="index.php">
-                            Home
+                            خانه
                         </a>
                     </li>
-                    <li class="active">Recover password</li>
+                    <li class="active">بازیابی کلمه عبور</li>
                 </ul>
             </div>
         </div>
@@ -233,30 +233,32 @@
         <div class="container">
             <div class="contact-form-action recover">
                 <div class="form-heading text-center">
-                    <h3 class="form-title">Reset Password!</h3>
-                    <p class="reset-desc">Enter the email of your account to reset the password. Then you will receive a
-                        link to email to reset the password. If you have any issue about reset password <a
-                            href="contact.php">contact us.</a></p>
+                    <h3 class="form-title">بازیابی کلمه عبور!</h3>
+                    <p class="reset-desc">
+                        ایمیل حساب کاربری خود را برای بازنشانی رمز عبور وارد کنید. سپس شما یک را دریافت خواهید کرد
+                        پیوند به ایمیل برای بازنشانی رمز عبور. اگر مشکلی در مورد بازنشانی رمز عبور دارید
+                        <a href="contact.php">با ما تماس بگیرید</a>
+                    </p>
                 </div>
                 <form method="post">
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group">
-                                <input class="form-control" type="text" name="name" placeholder="Enter Email Address">
+                                <input class="form-control" type="text" name="name" placeholder="ایمیل خود را وارد کنید">
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                            <a class="now-log-in font-q" href="log-in.php">Log In in your account</a>
+                            <a class="now-log-in font-q" href="log-in.php">وارد حساب کاربری خود شوید</a>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <p class="now-register">
-                                Not a member?
-                                <a class="font-q" href="registration.php">Registration</a>
+                                عضو نیستید؟
+                                <a class="font-q" href="registration.php">ثبت نام کنید</a>
                             </p>
                         </div>
                         <div class="col-12">
                             <button class="default-btn btn-two" type="submit">
-                                Reset Password
+                                بازیابی کلمه عبور
                             </button>
                         </div>
                     </div>

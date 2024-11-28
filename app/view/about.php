@@ -36,7 +36,7 @@
 
     <link rel="icon" type="image/png" href="public\img\favicon.png">
 
-    <title>Eduon - Online Courses & Training HTML Template</title>
+    <title>Eduon - درباره ما</title>
 </head>
 
 <body>
@@ -74,58 +74,58 @@
                         <ul class="navbar-nav m-auto">
                             <li class="nav-item">
                                 <a href="../../index.php" class="nav-link">
-                                    Home
+                                    خانه
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="courses.php" class="nav-link">
-                                    Courses
+                                    دروس
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="gallery.php" class="nav-link">Gallery</a>
+                                <a href="gallery.php" class="nav-link">نمایشگاه</a>
                             </li>
                             <li class="nav-item">
-                                <a href="events.php" class="nav-link">Events</a>
+                                <a href="events.php" class="nav-link">رویدادها</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Shop
+                                    فروشگاه
                                     <i class="bx bx-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="shop.php" class="nav-link">Shop</a>
+                                        <a href="shop.php" class="nav-link">فروشگاه</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="wishlist.php" class="nav-link">Wishlist</a>
+                                        <a href="wishlist.php" class="nav-link">علاقه‌مندی ها</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.php" class="nav-link">Contact</a>
+                                <a href="contact.php" class="nav-link">ارتباط با ما</a>
                             </li>
                             <li class="nav-item">
-                                <a href="about.php" class="nav-link active">About</a>
+                                <a href="about.php" class="nav-link active">درباره ما</a>
                             </li>
                             <!-- User should move to login botton when user login -->
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    User
+                                    کاربر
                                     <i class="bx bx-chevron-right"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="my-account.php" class="nav-link">My Account</a>
+                                        <a href="my-account.php" class="nav-link">داشبورد</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="log-in.php" class="nav-link">Log In</a>
+                                        <a href="log-in.php" class="nav-link">ورود</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="registration.php" class="nav-link">Registration</a>
+                                        <a href="registration.php" class="nav-link">ثبت نام</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="recover-password.php" class="nav-link">Recover Password</a>
+                                        <a href="recover-password.php" class="nav-link">بازیابی کلمه عبور</a>
                                     </li>
                                 </ul>
                             </li>
@@ -139,7 +139,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -154,7 +154,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -182,7 +182,7 @@
                                 <div class="search-overlay search-popup">
                                     <div class="search-box">
                                         <form class="search-form">
-                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <input class="search-input" name="search" placeholder="جست‌وجو" type="text">
                                             <button class="search-button" type="submit"><i
                                                     class="bx bx-search"></i></button>
                                         </form>
@@ -197,7 +197,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    Login / Register
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -214,14 +214,14 @@
     <div class="page-title-area bg-1">
         <div class="container">
             <div class="page-title-content">
-                <h2>About</h2>
+                <h2>درباره ما</h2>
                 <ul>
                     <li>
                         <a href="../../index.php">
-                            Home
+                            خانه
                         </a>
                     </li>
-                    <li class="active">About</li>
+                    <li class="active">درباره ما</li>
                 </ul>
             </div>
         </div>
@@ -234,23 +234,26 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="education-content">
-                        <span class="top-title">Education For All</span>
-                        <h2>Why create an online course with <span>EDUON</span>?</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida dolor sit amet,
-                            consectetur adipiscing elit consectetur.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            dolor sit amet, consectetur adipiscing elit.</p>
+                        <span class="top-title">آموزش برای همه</span>
+                        <h2>چرا یک دوره آنلاین با <span>EDUON</span>بسازیم ؟</h2>
+                        <p>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم استفاده از طراحان گرافیک است چاپگرها و
+                            متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
+                        </p>
+                        <p>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم استفاده از طراحان گرافیک است چاپگرها و
+                            متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
+                        </p>
                         <div class="row">
                             <div class="col-lg-6">
                                 <ul>
                                     <li>
                                         <i class="bx bx-check"></i>
-                                        Unlimited everything
+                                        همه چیز نامحدود
                                     </li>
                                     <li>
                                         <i class="bx bx-check"></i>
-                                        No transaction fees
+                                        بدون کارمزد معامله
                                     </li>
                                 </ul>
                             </div>
@@ -258,17 +261,17 @@
                                 <ul>
                                     <li>
                                         <i class="bx bx-check"></i>
-                                        No technical headaches
+                                        بدون سردرد فنی
                                     </li>
                                     <li>
                                         <i class="bx bx-check"></i>
-                                        Free migrations
+                                        مهاجرت های رایگان
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <a href="courses.php" class="default-btn">
-                            View All Courses
+                            نمایش همه آموزش ها
                         </a>
                     </div>
                 </div>
@@ -301,32 +304,32 @@
     <section class="affordable-area f5f6fa-bg-color pt-100 pb-70">
         <div class="container">
             <div class="section-title">
-                <span>Our Affordable</span>
-                <h2>Your benefit with Eduon</h2>
+                <span>در دسترس ما</span>
+                <h2>سود شما با Eduon</h2>
             </div>
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-affordable one">
                         <i class="flaticon-investment"></i>
-                        <h3>Save time & money</h3>
+                        <h3>صرفه جویی در زمان و پول</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-affordable two">
                         <i class="flaticon-balance"></i>
-                        <h3>Balance learning with life</h3>
+                        <h3>یادگیری را با زندگی متعادل کنید</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-affordable three">
                         <i class="flaticon-online-education"></i>
-                        <h3>Gain valuable knowledge</h3>
+                        <h3>دانش ارزشمندی کسب کنید</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-affordable four">
                         <i class="flaticon-route"></i>
-                        <h3>Finish what you started</h3>
+                        <h3>کاری را که شروع کردی تمام کن</h3>
                     </div>
                 </div>
             </div>
@@ -357,36 +360,36 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="section-title">
-                        <span>Learning Experience</span>
-                        <h2>how can I help you?</h2>
+                        <span>تجربه یادگیری</span>
+                        <h2>چگونه می توانم به شما کمک کنم؟</h2>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-sm-6">
                             <div class="single-tutor one">
                                 <i class="flaticon-instructor-1"></i>
-                                <h3>Face to face learning</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                                <h3>یادگیری رو در رو</h3>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم استفاده از طراحان گرافیک است</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-6">
                             <div class="single-tutor two">
                                 <i class="flaticon-instructor"></i>
-                                <h3>Experienced instructor</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                                <h3>مربی با تجربه</h3>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم استفاده از طراحان گرافیک است</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-6">
                             <div class="single-tutor three">
                                 <i class="flaticon-certificate-1"></i>
-                                <h3>International certificate</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                                <h3>گواهینامه بین المللی</h3>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم استفاده از طراحان گرافیک است</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-6">
                             <div class="single-tutor four">
                                 <i class="flaticon-consulting"></i>
-                                <h3>Online support 24/7</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                                <h3>پشتیبانی آنلاین 24/7</h3>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم استفاده از طراحان گرافیک است</p>
                             </div>
                         </div>
                     </div>
@@ -401,44 +404,50 @@
     <section class="feedback-area feedback-area-three feedback-area-style ptb-100">
         <div class="container">
             <div class="section-title">
-                <span>Feedback</span>
-                <h2>What student say</h2>
+                <span>بازخورد</span>
+                <h2>آنچه دانشجویان می گویند</h2>
             </div>
             <div class="feedback-slider owl-theme owl-carousel">
                 <div class="feedback-item">
                     <i class="flaticon-quotation"></i>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                        sit amet.</p>
+                    <p>
+                        لورم ایپسوم متن
+                        ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه
+                        روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+                        متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده
+                    </p>
                     <div class="feedback-title">
                         <img src="../../public\img\feedback-img\feedback-img-1.jpg" alt="Image">
                         <h3>Jessica Molony</h3>
-                        <span>Designer</span>
+                        <span>طراح</span>
                     </div>
                 </div>
                 <div class="feedback-item">
                     <i class="flaticon-quotation"></i>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                        sit amet.</p>
+                    <p>
+                        لورم ایپسوم متن
+                        ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه
+                        روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+                        متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده
+                    </p>
                     <div class="feedback-title">
                         <img src="../../public\img\feedback-img\feedback-img-2.jpg" alt="Image">
                         <h3>Juhon Dew</h3>
-                        <span>Marketer </span>
+                        <span>بازاریاب</span>
                     </div>
                 </div>
                 <div class="feedback-item">
                     <i class="flaticon-quotation"></i>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                        sit amet.</p>
+                    <p>
+                        لورم ایپسوم متن
+                        ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه
+                        روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+                        متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده
+                    </p>
                     <div class="feedback-title">
                         <img src="../../public\img\feedback-img\feedback-img-3.jpg" alt="Image">
                         <h3>Kilva Smith</h3>
-                        <span>Designer</span>
+                        <span>طراح</span>
                     </div>
                 </div>
             </div>
@@ -451,8 +460,8 @@
     <section class="teachers-area-three pt-100 pb-70">
         <div class="container">
             <div class="section-title">
-                <span>Our Teachers</span>
-                <h2>Our international teachers</h2>
+                <span>معلمان ما</span>
+                <h2>معلمان بین المللی ما</h2>
             </div>
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
