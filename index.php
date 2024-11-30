@@ -151,7 +151,7 @@
                                 <a href="app/view/about.php" class="nav-link">درباره ما</a>
                             </li>
                             <!-- User should move to login botton when user login -->
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a href="#" class="nav-link">
                                     کاربر
                                     <i class="bx bx-chevron-right"></i>
@@ -170,7 +170,7 @@
                                         <a href="app/view/recover-password.php" class="nav-link">بازیابی کلمه عبور</a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> -->
                             <!-- ********************************************************************************** -->
                         </ul>
 
