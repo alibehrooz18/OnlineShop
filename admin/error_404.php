@@ -30,7 +30,7 @@
                         <img src="images\auth-bg\404.jpg" class="max-w-200" alt="">
                         <h1>صفحه پیدا نشد !</h1>
                         <h3>یا حذف شده یا اصلا وجود نداشته </h3>
-                        <div class="my-30"><a href="index.html" class="btn btn-danger">بازگشت به داشبورد</a></div>
+                        <div class="my-30"><a href="index.php" class="btn btn-danger">بازگشت به داشبورد</a></div>
 
                         <form class="search-form mx-auto mt-30 w-p75">
                             <div class="input-group rounded5 overflow-h">

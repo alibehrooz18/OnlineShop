@@ -34,7 +34,7 @@
                                 <p class="mb-0 mm">عضوی از ما شو</p>
                             </div>
                             <div class="p-40">
-                                <form action="index.html" method="post">
+                                <form action="index.php" method="post">
                                     <div class="form-group">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text bg-transparent"><i class="ti-user"></i></span>
@@ -74,7 +74,7 @@
                                     </div>
                                 </form>
                                 <div class="text-center">
-                                    <p class="mt-15 mb-0">حساب کاربری دارید؟<a href="auth_login.html" class="text-danger ms-5">ورود</a></p>
+                                    <p class="mt-15 mb-0">حساب کاربری دارید؟<a href="auth_login.php" class="text-danger ms-5">ورود</a></p>
                                 </div>
                             </div>
                         </div>

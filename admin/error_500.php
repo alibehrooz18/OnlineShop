@@ -30,7 +30,7 @@
                         <img src="images\auth-bg\500.jpg" class="max-w-200" alt="">
                         <h1>Uh-Ah</h1>
                         <h3>خطای داخلی سرور !</h3>
-                        <div class="my-30"><a href="index.html" class="btn btn-info">بازگشت به داشبورد</a></div>
+                        <div class="my-30"><a href="index.php" class="btn btn-info">بازگشت به داشبورد</a></div>
                         <h5 class="mb-15">-- یا --</h5>
                         <h4>لطفا دوباره تلاش کنید</h4>
                     </div>

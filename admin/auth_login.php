@@ -34,7 +34,7 @@
                                 <p class="mb-0" style="direction:rtl;">برای ادامه به CRMi وارد شوید.</p>
                             </div>
                             <div class="p-40">
-                                <form action="index.html" method="post">
+                                <form action="index.php" method="post">
                                     <div class="form-group">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text bg-transparent"><i class="ti-user"></i></span>
@@ -68,7 +68,7 @@
                                     </div>
                                 </form>
                                 <div class="text-center">
-                                    <p class="mt-15 mb-0">حساب کاربری نداری؟<a href="auth_register.html" class="text-warning ms-5">ثبت نام</a></p>
+                                    <p class="mt-15 mb-0">حساب کاربری نداری؟<a href="auth_register.php" class="text-warning ms-5">ثبت نام</a></p>
                                 </div>
                             </div>
                         </div>

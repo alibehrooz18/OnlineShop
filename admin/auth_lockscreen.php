@@ -34,7 +34,7 @@
                                 <h3 class="mb-0">خانم ازادی</h3>
                             </div>
                             <div class="p-40">
-                                <form action="index.html" method="post">
+                                <form action="index.php" method="post">
                                     <div class="form-group">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text bg-transparent"><i class="ti-lock"></i></span>
@@ -55,7 +55,7 @@
                                 </div>
 
                                 <div class="text-center">
-                                    <p class="mt-15 mb-0">یا<a href="auth_login.html" class="text-warning"><b>لاگین شوید</b></a> به عنوان یک کاربر متفاوت</p>
+                                    <p class="mt-15 mb-0">یا<a href="auth_login.php" class="text-warning"><b>لاگین شوید</b></a> به عنوان یک کاربر متفاوت</p>
                                 </div>
                             </div>
                         </div>
