@@ -249,7 +249,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="jobs-details.php">
+                                <a href="course-details.php">
                                     <i class="icon-Alarm-clock"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
                                     <span>جزئیات مشاغل</span>
                                 </a>
@@ -596,7 +596,7 @@
                 <div class="content-header">
                     <div class="d-md-flex align-items-center justify-content-between">
                         <div>
-                            <a href="jobs-details.php" class="waves-effect waves-light btn active btn-outline btn-primary">شغل</a>
+                            <a href="course-details.php" class="waves-effect waves-light btn active btn-outline btn-primary">شغل</a>
                             <a href="people.php" class="waves-effect waves-light btn btn-outline btn-primary mx-lg-10">نامزدها</a>
                             <a href="mailbox.php" class="waves-effect waves-light btn btn-outline btn-primary">پیام ها</a>
                         </div>

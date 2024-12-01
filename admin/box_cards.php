@@ -250,7 +250,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="jobs-details.php">
+                                <a href="course-details.php">
                                     <i class="icon-Alarm-clock"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
                                     <span>جزئیات مشاغل</span>
                                 </a>
