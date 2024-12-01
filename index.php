@@ -41,7 +41,7 @@
 
 <body>
 
-    <div class="loader-wrapper">
+    <!-- <div class="loader-wrapper">
         <div class="loader">
             <div class="dot-wrap">
                 <span class="dot"></span>
@@ -50,7 +50,7 @@
                 <span class="dot"></span>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- Subscribe modal -->
@@ -150,28 +150,6 @@
                             <li class="nav-item">
                                 <a href="app/view/about.php" class="nav-link">درباره ما</a>
                             </li>
-                            <!-- User should move to login botton when user login -->
-                            <!-- <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    کاربر
-                                    <i class="bx bx-chevron-right"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="app/view/my-account.php" class="nav-link">داشبورد</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="app/view/log-in.php" class="nav-link">ورود</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="app/view/registration.php" class="nav-link">ثبت نام</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="app/view/recover-password.php" class="nav-link">بازیابی کلمه عبور</a>
-                                    </li>
-                                </ul>
-                            </li> -->
-                            <!-- ********************************************************************************** -->
                         </ul>
 
                         <div class="others-option">
@@ -189,15 +167,55 @@
                                 </div>
                             </div>
                             <div class="cart-icon">
+                                <?php
+                                if (isset($_SESSION['username'])) {
+
+
+                                    $query = "SELECT COUNT(*) AS item_count FROM cart";
+                                    $get_cart_data = mysqli_query($connection, $query);
+
+                                    confirmQuery($get_cart_data);
+
+                                    // Fetch the count from the result
+                                    $row = mysqli_fetch_assoc($get_cart_data);
+                                    $item_cart = isset($row['item_count']) ? intval($row['item_count']) : 0;
+                                } else {
+                                    $item_cart = 0;
+                                }
+                                ?>
                                 <a href="app/view/cart.php">
                                     <i class="flaticon-shopping-cart"></i>
-                                    <span>0</span>
+                                    <span><?php echo $item_cart; ?></span>
                                 </a>
                             </div>
+
                             <div class="register">
-                                <a href="app/view/my-account.php" class="default-btn">
-                                    ورود / ثبت نام
-                                </a>
+                                <?php if (isset($_SESSION['username'])): ?>
+                                    <ul class="navbar-nav m-auto">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <span><?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                                                <i class="bx bx-chevron-down"></i>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li class="dropdown-item">
+                                                    <a href="./admin" class="nav-link">داشبورد</a>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <a href="./admin/offers.php" class="nav-link">آموزش‌ها</a>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <a href="/app/view/cart.php" class="nav-link">سفارش‌ها</a>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <a href="logout.php" class="nav-link">خروج</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                <?php else: ?>
+                                    <a href="/eduon/my-account.php" class="default-btn">ورود / ثبت نام</a>
+                                <?php endif; ?>
                             </div>
                         </div>
 

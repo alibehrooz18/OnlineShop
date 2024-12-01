@@ -3,36 +3,36 @@
 
 <head>
 
-    <?php include "../../includes/header.php"; ?>
+    <?php include "includes/header.php"; ?>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="../../public\css\bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="public\css\bootstrap.rtl.min.css">
 
-    <link rel="stylesheet" href="../../public\css\owl.theme.default.min.css">
+    <link rel="stylesheet" href="public\css\owl.theme.default.min.css">
 
-    <link rel="stylesheet" href="../../public\css\owl.carousel.min.css">
+    <link rel="stylesheet" href="public\css\owl.carousel.min.css">
 
-    <link rel="stylesheet" href="../../public\css\magnific-popup.min.css">
+    <link rel="stylesheet" href="public\css\magnific-popup.min.css">
 
-    <link rel="stylesheet" href="../../public\css\animate.min.css">
+    <link rel="stylesheet" href="public\css\animate.min.css">
 
-    <link rel="stylesheet" href="../../public\css\boxicons.min.css">
+    <link rel="stylesheet" href="public\css\boxicons.min.css">
 
-    <link rel="stylesheet" href="../../public\css\flaticon.css">
+    <link rel="stylesheet" href="public\css\flaticon.css">
 
-    <link rel="stylesheet" href="../../public\css\meanmenu.min.css">
+    <link rel="stylesheet" href="public\css\meanmenu.min.css">
 
-    <link rel="stylesheet" href="../../public\css\nice-select.min.css">
+    <link rel="stylesheet" href="public\css\nice-select.min.css">
 
-    <link rel="stylesheet" href="../../public\css\odometer.min.css">
+    <link rel="stylesheet" href="public\css\odometer.min.css">
 
-    <link rel="stylesheet" href="../../public\css\style.css">
+    <link rel="stylesheet" href="public\css\style.css">
 
-    <link rel="stylesheet" href="../../public\css\dark.css">
+    <link rel="stylesheet" href="public\css\dark.css">
 
-    <link rel="stylesheet" href="../../public\css\responsive.css">
+    <link rel="stylesheet" href="public\css\responsive.css">
 
     <link rel="icon" type="image/png" href="public\img\favicon.png">
 
@@ -56,36 +56,36 @@
     <div class="navbar-area">
 
         <div class="mobile-nav">
-            <a href="../../index.php" class="logo">
-                <img src="../../public\img\logo.png" class="main-logo" alt="Logo">
-                <img src="../../public\img\logo-2.png" class="white-logo" alt="Logo">
+            <a href="index.php" class="logo">
+                <img src="public\img\logo.png" class="main-logo" alt="Logo">
+                <img src="public\img\logo-2.png" class="white-logo" alt="Logo">
             </a>
         </div>
 
         <div class="main-nav">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md">
-                    <a class="navbar-brand" href="../../index.php">
-                        <img src="../../public\img\logo.png" class="main-logo" alt="Logo">
-                        <img src="../../public\img\logo-2.png" class="white-logo" alt="Logo">
+                    <a class="navbar-brand" href="index.php">
+                        <img src="public\img\logo.png" class="main-logo" alt="Logo">
+                        <img src="public\img\logo-2.png" class="white-logo" alt="Logo">
                     </a>
                     <div class="collapse navbar-collapse mean-menu">
                         <ul class="navbar-nav m-auto">
                             <li class="nav-item">
-                                <a href="../../index.php" class="nav-link">
+                                <a href="index.php" class="nav-link">
                                     خانه
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="courses.php" class="nav-link">
+                                <a href="/eduon/app/view/courses.php" class="nav-link">
                                     دروس
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="gallery.php" class="nav-link">نمایشگاه</a>
+                                <a href="/eduon/app/view/gallery.php" class="nav-link">نمایشگاه</a>
                             </li>
                             <li class="nav-item">
-                                <a href="events.php" class="nav-link">رویدادها</a>
+                                <a href="/eduon/app/view/events.php" class="nav-link">رویدادها</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
@@ -94,41 +94,19 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="shop.php" class="nav-link">فروشگاه</a>
+                                        <a href="/eduon/app/view/shop.php" class="nav-link">فروشگاه</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="wishlist.php" class="nav-link">علاقه‌مندی ها</a>
+                                        <a href="/eduon/app/view/wishlist.php" class="nav-link">علاقه‌مندی ها</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="contact.php" class="nav-link">ارتباط با ما</a>
+                                <a href="/eduon/app/view/contact.php" class="nav-link">ارتباط با ما</a>
                             </li>
                             <li class="nav-item">
-                                <a href="about.php" class="nav-link">درباره ما</a>
+                                <a href="/eduon/app/view/about.php" class="nav-link">درباره ما</a>
                             </li>
-                            <!-- User should move to login botton when user login -->
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    کاربر
-                                    <i class="bx bx-chevron-right"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="my-account.php" class="nav-link">داشبورد</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="log-in.php" class="nav-link">ورود</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="registration.php" class="nav-link">ثبت نام</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="recover-password.php" class="nav-link">بازیابی کلمه عبور</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- ********************************************************************************** -->
                         </ul>
 
                         <div class="others-option">
@@ -146,15 +124,54 @@
                                 </div>
                             </div>
                             <div class="cart-icon">
-                                <a href="cart.php">
+                                <?php
+                                if (isset($_SESSION['username'])) {
+
+
+                                    $query = "SELECT COUNT(*) AS item_count FROM cart";
+                                    $get_cart_data = mysqli_query($connection, $query);
+
+                                    confirmQuery($get_cart_data);
+
+                                    // Fetch the count from the result
+                                    $row = mysqli_fetch_assoc($get_cart_data);
+                                    $item_cart = isset($row['item_count']) ? intval($row['item_count']) : 0;
+                                } else {
+                                    $item_cart = 0;
+                                }
+                                ?>
+                                <a href="app/view/cart.php">
                                     <i class="flaticon-shopping-cart"></i>
-                                    <span>0</span>
+                                    <span><?php echo $item_cart; ?></span>
                                 </a>
                             </div>
                             <div class="register">
-                                <a href="my-account.php" class="default-btn">
-                                    ورود / ثبت نام
-                                </a>
+                                <?php if (isset($_SESSION['username'])): ?>
+                                    <ul class="navbar-nav m-auto">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <span><?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                                                <i class="bx bx-chevron-down"></i>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li class="dropdown-item">
+                                                    <a href="./admin" class="nav-link">داشبورد</a>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <a href="./admin/offers.php" class="nav-link">آموزش‌ها</a>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <a href="/app/view/cart.php" class="nav-link">سفارش‌ها</a>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <a href="logout.php" class="nav-link">خروج</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                <?php else: ?>
+                                    <a href="/eduon/my-account.php" class="default-btn">ورود / ثبت نام</a>
+                                <?php endif; ?>
                             </div>
                         </div>
 
@@ -227,6 +244,7 @@
 
     <!-- Register start -->
     <?php
+    // Register section
     if (isset($_POST['register'])) {
         $fullname = mysqli_escape_string($connection, $_POST['fullname']);
         $email = mysqli_escape_string($connection, $_POST['email']);
@@ -236,7 +254,7 @@
         if (email_exists($email)) {
             echo $message = "ایمیل موجود است!";
         } elseif (mobile_exists($number)) {
-            echo $message = "شماره تماس موجود است!";
+            echo $message = "تلفن موجود است!";
         } elseif (!empty($fullname) && !empty($email) && !empty($number) && !empty($password)) {
             $hash_password = password_hash($password, PASSWORD_DEFAULT);
 
@@ -247,9 +265,11 @@
             if (!$register_query) {
                 die("QUERY FAILED" . mysqli_error($connection));
             }
-            echo $message = "ثبت نام شما با موفقیت انجام شد";
+            echo $message = "ثبت نام شما با موفقیت انجام شد!";
+            // Redirect to sub panel
+            header("Location: ./admin");
         } else {
-            echo $message = "فیلد ها نباید خالی باشد";
+            echo $message = "فیلدها نباید خالی باشند!";
         }
     } else {
         echo $message = "";
@@ -314,36 +334,36 @@
 
 
     <!-- Footer -->
-    <?php include "../../includes/footer.php"; ?>
+    <?php include "includes/footer.php"; ?>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="../../public/js/jquery.min.js"></script>
+    <script src="public/js/jquery.min.js"></script>
 
-    <script src="../../public/js/bootstrap.bundle.min.js"></script>
+    <script src="public/js/bootstrap.bundle.min.js"></script>
 
-    <script src="../../public/js/meanmenu.min.js"></script>
+    <script src="public/js/meanmenu.min.js"></script>
 
-    <script src="../../public/js/owl.carousel.min.js"></script>
+    <script src="public/js/owl.carousel.min.js"></script>
 
-    <script src="../../public/js/wow.min.js"></script>
+    <script src="public/js/wow.min.js"></script>
 
-    <script src="../../public/js/nice-select.min.js"></script>
+    <script src="public/js/nice-select.min.js"></script>
 
-    <script src="../../public/js/magnific-popup.min.js"></script>
+    <script src="public/js/magnific-popup.min.js"></script>
 
-    <script src="../../public/js/jarallax.min.js"></script>
+    <script src="public/js/jarallax.min.js"></script>
 
-    <script src="../../public/js/appear.min.js"></script>
+    <script src="public/js/appear.min.js"></script>
 
-    <script src="../../public/js/odometer.min.js"></script>
+    <script src="public/js/odometer.min.js"></script>
 
-    <script src="../../public/js/form-validator.min.js"></script>
+    <script src="public/js/form-validator.min.js"></script>
 
-    <script src="../../public/js/contact-form-script.js"></script>
+    <script src="public/js/contact-form-script.js"></script>
 
-    <script src="../../public/js/ajaxchimp.min.js"></script>
+    <script src="public/js/ajaxchimp.min.js"></script>
 
-    <script src="../../public/js/custom.js"></script>
+    <script src="public/js/custom.js"></script>
 </body>
 
 </html>

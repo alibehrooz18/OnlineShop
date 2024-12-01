@@ -108,28 +108,6 @@
                             <li class="nav-item">
                                 <a href="about.php" class="nav-link">درباره ما</a>
                             </li>
-                            <!-- User should move to login botton when user login -->
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    کاربر
-                                    <i class="bx bx-chevron-right"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="my-account.php" class="nav-link">داشبورد</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="log-in.php" class="nav-link">ورود</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="registration.php" class="nav-link">ثبت نام</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="recover-password.php" class="nav-link">بازیابی کلمه عبور</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- ********************************************************************************** -->
                         </ul>
 
                         <div class="others-option">
@@ -147,15 +125,54 @@
                                 </div>
                             </div>
                             <div class="cart-icon">
+                                <?php
+                                if (isset($_SESSION['username'])) {
+
+
+                                    $query = "SELECT COUNT(*) AS item_count FROM cart";
+                                    $get_cart_data = mysqli_query($connection, $query);
+
+                                    confirmQuery($get_cart_data);
+
+                                    // Fetch the count from the result
+                                    $row = mysqli_fetch_assoc($get_cart_data);
+                                    $item_cart = isset($row['item_count']) ? intval($row['item_count']) : 0;
+                                } else {
+                                    $item_cart = 0;
+                                }
+                                ?>
                                 <a href="cart.php">
                                     <i class="flaticon-shopping-cart"></i>
-                                    <span>0</span>
+                                    <span><?php echo $item_cart; ?></span>
                                 </a>
                             </div>
                             <div class="register">
-                                <a href="my-account.php" class="default-btn">
-                                    ورود / ثبت نام
-                                </a>
+                                <?php if (isset($_SESSION['username'])): ?>
+                                    <ul class="navbar-nav m-auto">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <span><?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                                                <i class="bx bx-chevron-down"></i>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li class="dropdown-item">
+                                                    <a href="../../admin" class="nav-link">داشبورد</a>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <a href="../../admin/offers.php" class="nav-link">آموزش‌ها</a>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <a href="cart.php" class="nav-link">سفارش‌ها</a>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <a href="../../logout.php" class="nav-link">خروج</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                <?php else: ?>
+                                    <a href="/eduon/my-account.php" class="default-btn">ورود / ثبت نام</a>
+                                <?php endif; ?>
                             </div>
                         </div>
 
@@ -197,7 +214,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                ورود / ثبت نام
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -236,7 +253,7 @@
                 <h2>رویدادهای پیش رو</h2>
             </div>
             <div class="row">
-            <div class="col-lg-6 col-sm-6">
+                <div class="col-lg-6 col-sm-6">
                     <div class="single-event">
                         <a href="single-event.php">
                             <img src="../../public\img\event-img\event-img-1.png" alt="Image">
@@ -373,15 +390,15 @@
                         <img src="../../public\img\event-img\event-img-6.jpg" alt="Image">
                         <h3 class="description-title">توضیحات رویداد</h3>
                         <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
-                         چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
-                         کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                            چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                            کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد
                         </p>
                         <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی
-                        نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه
-                         روزنامه و برای شرایط فعلی تکنولوژی 
-                        مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد
+                            لورم ایپسوم متن ساختگی با تولید سادگی
+                            نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه
+                            روزنامه و برای شرایط فعلی تکنولوژی
+                            مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد
                         </p>
                     </div>
                 </div>
