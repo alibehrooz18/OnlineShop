@@ -249,7 +249,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="offers.php">
+                                <a href="my_courses.php">
                                     <i class="icon-Chart-pie"><span class="path1"></span><span class="path2"></span></i>
                                     <span>آفر</span>
                                 </a>
