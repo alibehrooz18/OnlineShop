@@ -41,7 +41,7 @@
 
 <body>
 
-    <!-- <div class="loader-wrapper">
+    <div class="loader-wrapper">
         <div class="loader">
             <div class="dot-wrap">
                 <span class="dot"></span>
@@ -50,7 +50,7 @@
                 <span class="dot"></span>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- Navbar start -->
     <div class="navbar-area">
