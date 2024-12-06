@@ -131,12 +131,13 @@ $(function() {
             enabled: false
         },
         colors: ['#7047ee'],
+        // Value of course in dashboard
         series: [{
-            name: 'فرآیند',
-            data: [80, 95, 150, 210, 140, 230, 300, 280, 130]
+            name: 'تعداد',
+            data: [8, 9, 15, 21, 34, 43, 50, 68, 76, 85, 99, 100]
         }],
         xaxis: {
-            categories: ['فروردین', 'اردیبهشت', 'خرداد', 'تیر ', 'مرداد', 'شهریور', 'مهر', 'آبان', 'آذر'],
+            categories: ['فروردین', 'اردیبهشت', 'خرداد', 'تیر ', 'مرداد', 'شهریور', 'مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند'],
             axisBorder: {
                 show: false
             },
@@ -151,7 +152,7 @@ $(function() {
         },
         yaxis: {
             min: 0,
-            max: 300,
+            max: 100,
             tickAmount: 3,
             labels: {
                 style: {
@@ -165,7 +166,7 @@ $(function() {
         tooltip: {
             y: {
                 formatter: function(val) {
-                    return "000 " + val + " تومان"
+                    return val + " عدد"
                 }
             }
         }
