@@ -2,45 +2,46 @@
 <html lang="en">
 
 <head>
-    <?php include "./includes/header.php"; ?>
-    <?php include "./controllers/user_controller.php"; ?>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="images\favicon.ico">
+    <link rel="icon" href="../images\favicon.ico">
+
+    <?php include "../includes/header.php"; ?>
+    <?php include "../controllers/courses_controller.php"; ?>
+    <?php include "../controllers/user_controller.php"; ?>
 
     <title>داشبورد</title>
 
     <!-- Vendors Style-->
-    <link rel="stylesheet" href="src\css\vendors_css.css">
+    <link rel="stylesheet" href="../src\css\vendors_css.css">
 
     <!-- Style-->
-    <link rel="stylesheet" href="src\css\style.css">
-    <link rel="stylesheet" href="src\css\skin_color.css">
+    <link rel="stylesheet" href="../src\css\style.css">
+    <link rel="stylesheet" href="../src\css\skin_color.css">
 
 </head>
 
 <body class="hold-transition light-skin sidebar-mini theme-primary fixed rtl">
 
     <div class="wrapper">
-        <div id="loader"></div>
+        <!-- <div id="loader"></div> -->
 
         <!-- Main header -->
         <header class="main-header">
             <div class="d-flex align-items-center logo-box justify-content-start d-md-none d-block">
                 <!-- Logo -->
-                <a href="index.php" class="logo">
+                <a href="../index.php" class="logo">
                     <!-- logo-->
                     <div class="logo-mini w-30">
-                        <span class="light-logo"><img src="images\logo-letter.png" alt="logo"></span>
-                        <span class="dark-logo"><img src="images\logo-letter-white.png" alt="logo"></span>
+                        <span class="light-logo"><img src="../images\logo-letter.png" alt="logo"></span>
+                        <span class="dark-logo"><img src="../images\logo-letter-white.png" alt="logo"></span>
                     </div>
                     <div class="logo-lg">
-                        <span class="light-logo"><img src="images\logo-dark-text.png" alt="logo"></span>
-                        <span class="dark-logo"><img src="images\logo-light-text.png" alt="logo"></span>
+                        <span class="light-logo"><img src="../images\logo-dark-text.png" alt="logo"></span>
+                        <span class="dark-logo"><img src="../images\logo-light-text.png" alt="logo"></span>
                     </div>
                 </a>
             </div>
@@ -76,7 +77,7 @@
                 <div class="navbar-custom-menu r-side">
                     <ul class="nav navbar-nav">
                         <li class="dropdown notifications-menu btn-group nav-item">
-                            <a href="../index.php" class="waves-effect waves-light nav-link btn-primary-light"
+                            <a href="../../index.php" class="waves-effect waves-light nav-link btn-primary-light"
                                 style="border-radius: 10px; padding: 5px;padding-top: 12px ; color: #7047ee;">
                                 بازگشت به سایت
                             </a>
@@ -157,7 +158,7 @@
                             </a>
                         </li>
                         <li class="btn-group nav-item d-xl-inline-flex d-none">
-                            <a href="../app/view/cart.php" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon" title=""
+                            <a href="../../app/view/cart.php" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon" title=""
                                 data-bs-toggle="modal" data-bs-target="">
                                 <i class="icon-Cart1"><span class="path1"></span><span class="path2"></span></i>
                             </a>
@@ -173,18 +174,18 @@
                             <a href="#"
                                 class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon dropdown-toggle"
                                 data-bs-toggle="dropdown">
-                                <img class="rounded" src="images\svg-icon\ger.svg" alt="">
+                                <img class="rounded" src="../images\svg-icon\ger.svg" alt="">
                             </a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10"
-                                        src="images\svg-icon\ger.svg" alt=""> آلمانی</a>
+                                        src="../images\svg-icon\ger.svg" alt=""> آلمانی</a>
                                 <a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10"
-                                        src="images\svg-icon\spain.svg" alt=""> اسپانیایی</a>
+                                        src="../images\svg-icon\spain.svg" alt=""> اسپانیایی</a>
 
                                 <a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10"
-                                        src="images\svg-icon\jap.svg" alt=""> ژاپنی</a>
+                                        src="../images\svg-icon\jap.svg" alt=""> ژاپنی</a>
                                 <a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10"
-                                        src="images\svg-icon\fra.svg" alt=""> فرانسوی</a>
+                                        src="../images\svg-icon\fra.svg" alt=""> فرانسوی</a>
                             </div>
                         </li>
 
@@ -207,7 +208,7 @@
                                         <p class="pt-5 fs-14 mb-0 fw-700 text-primary"><?php echo $user_name; ?></p>
                                         <small class="fs-10 mb-0 text-uppercase text-mute"><?php echo $user_role; ?></small>
                                     </div> -->
-                                    <img src="images\avatar\avatar-1.png"
+                                    <img src="../images\avatar\avatar-1.png"
                                         class="avatar rounded-10 bg-primary-light h-40 w-40" alt="">
                                 </div>
                             </a>
@@ -224,10 +225,10 @@
             <section class="sidebar position-relative">
                 <div class="d-flex align-items-center logo-box justify-content-start d-md-block d-none">
                     <!-- Logo -->
-                    <a href="index.php" class="logo">
+                    <a href="../index.php" class="logo">
                         <!-- logo-->
                         <div class="logo-mini">
-                            <span class="light-logo"><img src="images\logo-letter.png" alt="logo"></span>
+                            <span class="light-logo"><img src="../images\logo-letter.png" alt="logo"></span>
                         </div>
                         <div class="logo-lg">
                             <span class="light-logo fs-36 fw-700">CRM<span class="text-primary">i</span></span>
@@ -237,7 +238,7 @@
                 <div class="user-profile my-15 px-20 py-10 b-1 rounded10 mx-15">
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="image d-flex align-items-center">
-                            <img src="images\avatar\avatar-13.png" class="rounded-0 me-10" alt="User Image">
+                            <img src="../images\avatar\avatar-13.png" class="rounded-0 me-10" alt="User Image">
                             <div>
                                 <h4 class="mb-0 fw-600"><?php echo $user_name; ?></h4>
                                 <p class="mb-0"><?php echo $user_role; ?></p>
@@ -246,11 +247,11 @@
                         <div class="info">
                             <a class="dropdown-toggle p-15 d-grid" data-bs-toggle="dropdown" href="#"></a>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href="./view/extra_profile.php"><i class="ti-user"></i> پروفایل</a>
-                                <a class="dropdown-item" href="./view/mailbox.php"><i class="ti-email"></i> دریافت پیام</a>
-                                <a class="dropdown-item" href="./view/contact_app_chat.php"><i class="ti-link"></i> گفتگو</a>
+                                <a class="dropdown-item" href="../view/extra_profile.php"><i class="ti-user"></i> پروفایل</a>
+                                <a class="dropdown-item" href="../view/mailbox.php"><i class="ti-email"></i> دریافت پیام</a>
+                                <a class="dropdown-item" href="../view/contact_app_chat.php"><i class="ti-link"></i> گفتگو</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="../logout.php"><i class="ti-lock"></i> خروج</a>
+                                <a class="dropdown-item" href="../../logout.php"><i class="ti-lock"></i> خروج</a>
                             </div>
                         </div>
                     </div>
@@ -261,47 +262,47 @@
                         <ul class="sidebar-menu" data-widget="tree">
                             <li class="header">منوی اصلی</li>
                             <li>
-                                <a href="index.php">
+                                <a href="../index.php">
                                     <i class="icon-Layout-4-blocks"><span class="path1"></span><span
                                             class="path2"></span></i>
                                     <span>داشبورد</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="./view/my_courses.php">
+                            <li class="active">
+                                <a href="../view/my_courses.php">
                                     <i class="icon-Chart-pie"><span class="path1"></span><span class="path2"></span></i>
                                     <span>آموزش های من</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="./view/people.php">
+                                <a href="../view/people.php">
                                     <i class="icon-Flag"><span class="path1"></span><span class="path2"></span></i>
                                     <span>مدیریت آموزش ها</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="./view/course-details.php">
+                                <a href="../view/course-details.php">
                                     <i class="icon-Alarm-clock"><span class="path1"></span><span
                                             class="path2"></span><span class="path3"></span></i>
                                     <span>جزئیات آموزش ها</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="./view/forms_create_course.php">
+                                <a href="../view/forms_create_course.php">
                                     <i class="icon-Write fs-24"><span class="path1"></span><span
                                             class="path2"></span><span class="path3"></span></i>
                                     <span>ایجاد آموزش</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="./view/my_cart.php">
+                                <a href="../view/my_cart.php">
                                     <i class="icon-Cart1"><span class="path1"></span><span
                                             class="path2"></span><span class="path3"></span></i>
                                     <span>خریدهای من</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="./view/contact_app_chat.php">
+                                <a href="../view/contact_app_chat.php">
                                     <i class="icon-Chat2"></i>
                                     <span>چت </span>
                                 </a>
@@ -322,195 +323,88 @@
             </section>
         </aside>
 
-        <!-- Content Wrapper. Contains page content -->
+
+        <!-- Main content -->
         <div class="content-wrapper">
             <div class="container-full">
+                <!-- Content Header (Page header) -->
+                <div class="content-header">
+                    <div class="d-flex align-items-center">
+                        <div class="me-auto">
+                            <h4 class="page-title">آموزش های من</h4>
+                            <div class="d-inline-block align-items-center">
+                                <nav>
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">آموزش های من</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
                 <!-- Main content -->
                 <section class="content">
                     <div class="row">
-                        <div class="col-xl-3 col-md-6 col-12">
-                            <div class="box">
-                                <!-- Get data for show users to admin -->
-                                <div class="box-body">
-                                    <h4 class="fw-500 mt-0">کل کاربران</h4>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <h2 class="fw-600 my-0"><?php echo $all_user; ?></h2>
-                                        <!-- <h4 class="fw-500 my-0 text-success">
-                                            <i class="me-10 mdi mdi-arrow-top-right"></i>
-                                            +15%
-                                        </h4> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6 col-12">
-                            <div class="box">
-                                <div class="box-body">
-                                    <h4 class="fw-500 mt-0">مشترکین</h4>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <h2 class="fw-600 my-0"><?php echo $sub_user; ?></h2>
-                                        <!-- <h4 class="fw-500 my-0 text-danger">
-                                            <i class="me-10 mdi mdi-arrow-bottom-right"></i> 
-                                            -10%
-                                        </h4> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6 col-12">
-                            <div class="box">
-                                <div class="box-body">
-                                    <h4 class="fw-500 mt-0">کل آموزش ها</h4>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <h2 class="fw-600 my-0"><?php echo $all_courses; ?></h2>
-                                        <!-- <h4 class="fw-500 my-0 text-success">
-                                            <i class="me-10 mdi mdi-arrow-top-right"></i> 
-                                            +12%
-                                        </h4> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6 col-12">
-                            <div class="box">
-                                <div class="box-body">
-                                    <h4 class="fw-500 mt-0">میزان رضایت از آموزش ها</h4>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <h2 class="fw-600 my-0">82%</h2>
-                                        <!-- <h4 class="fw-500 my-0 text-danger">
-                                            <i class="me-10 mdi mdi-arrow-bottom-right"></i> 
-                                            -11%
-                                        </h4> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-12">
-                            <div class="box">
-                                <div class="box-header with-border">
-                                    <h4 class="box-title">نمودار آموزش</h4>
-                                </div>
-                                <div class="box-body">
-                                    <div id="donut-chart" style="height: 240px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-12">
-                            <div class="box">
-                                <div class="box-header">
-                                    <h4 class="box-title">وضعیت آموزش ها</h4>
-                                </div>
-                                <div class="box-body">
-                                    <div class="d-flex py-10 w-p100 rounded100 overflow-hidden">
-                                        <div class="bg-danger h-10" style="width: 8%;"></div>
-                                        <div class="bg-warning h-10" style="width: 12%;"></div>
-                                        <div class="bg-info h-10" style="width: 22%;"></div>
-                                        <div class="bg-success h-10" style="width: 58%;"></div>
-                                    </div>
-                                </div>
-                                <div class="box-body p-0">
-                                    <div class="media-list media-list-hover media-list-divided">
-                                        <a class="media media-single rounded-0" href="#">
-                                            <span class="badge badge-xl badge-dot badge-success"></span>
-                                            <span class="title">تمام شده</span>
-                                            <span class="badge badge-pill badge-success-light">58%</span>
-                                        </a>
+                        <?php
+                        $max_title_length = 60;
 
-                                        <a class="media media-single rounded-0" href="#">
-                                            <span class="badge badge-xl badge-dot badge-info"></span>
-                                            <span class="title">درحال اتمام</span>
-                                            <span class="badge badge-pill badge-info-light">22%</span>
-                                        </a>
+                        if (isset($user_id) && isset($user_showname)) {
+                            $safe_showname = mysqli_real_escape_string($connection, $user_showname);
 
-                                        <a class="media media-single rounded-0" href="#">
-                                            <span class="badge badge-xl badge-dot badge-warning"></span>
-                                            <span class="title">شروع شده</span>
-                                            <span class="badge badge-pill badge-warning-light">12%</span>
-                                        </a>
+                            $query = "SELECT * FROM courses WHERE course_author = '$safe_showname'";
+                            $user_course = mysqli_query($connection, $query);
+                            confirmQuery($user_course);
 
-                                        <a class="media media-single rounded-0" href="#">
-                                            <span class="badge badge-xl badge-dot badge-danger"></span>
-                                            <span class="title">شروع در آینده</span>
-                                            <span class="badge badge-pill badge-danger-light">08%</span>
-                                        </a>
+                            while ($row = mysqli_fetch_assoc($user_course)) {
+                                $course_id = $row['course_id'];
+                                $course_title = $row['course_title'];
+                                $course_image = $row['course_image'];
+
+                                if (strlen($course_title) > $max_title_length) {
+                                    $course_title = substr($course_title, 0, $max_title_length) . '...';
+                                }
+
+                        ?>
+                                <div class="col-lg-4 col-12">
+                                    <div class="box">
+                                        <div class="box-body">
+                                            <div class="d-flex flex-wrap align-items-center">
+
+                                                <img src="../../public/img/course-img/<?php echo $course_image; ?>" class="align-self-center" alt="">
+
+                                                <div class="d-flex flex-column flex-grow-1 my-lg-0 my-10 pe-15">
+                                                    <br>
+                                                    <p class="text-dark fw-600 fs-18">
+                                                        <?php echo $course_title; ?>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="mt-20">
+                                                <p>این یک واقعیت ثابت شده است که خواننده هنگام تماشای طرح بندی آن، با محتوای قابل خواندن یک صفحه حواسش پرت می شود. </p>
+
+                                                <div class="mt-10 d-flex justify-content-between align-items-center">
+                                                    <a href="../../app/view/single-course.php?c_id=<?php echo $course_id; ?>" class="waves-effect waves-light btn btn-primary mb-5">مشاهده آموزش</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-12">
-                            <div class="box">
-                                <div class="box-header">
-                                    <h4 class="box-title">مدرسان برتر</h4>
-                                </div>
-                                <div class="box-body px-0">
-                                    <div class="table-responsive">
-                                        <table class="table table-borderless mb-0">
-                                            <?php
-                                            // Get 3 top coach for panel
-
-                                            ?>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="col">نام کامل</th>
-                                                    <th scope="col">بخش</th>
-                                                </tr>
-                                            </tbody>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="fw-500 my-0 min-w-130"><img
-                                                                src="images\avatar\avatar-1.png"
-                                                                class="avatar me-10 bg-primary-light" alt=""> مختار
-                                                            مینائی</h5>
-                                                    </td>
-                                                    <td>
-                                                        <h5 class="fw-500 my-0">Dev</h5>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="fw-500 my-0 min-w-130"><img
-                                                                src="images\avatar\avatar-1.png"
-                                                                class="avatar me-10 bg-danger-light" alt=""> حامد احمدی
-                                                        </h5>
-                                                    </td>
-                                                    <td>
-                                                        <h5 class="fw-500 my-0">UX/UI</h5>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="fw-500 my-0 min-w-130"><img
-                                                                src="images\avatar\avatar-1.png"
-                                                                class="avatar me-10 bg-warning-light" alt=""> یوسف امیدی
-                                                        </h5>
-                                                    </td>
-                                                    <td>
-                                                        <h5 class="fw-500 my-0">.Net</h5>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-12 col-12">
-                            <div class="box">
-                                <div class="box-header">
-                                    <h4 class="box-title">آموزش های منتشر شده ماه های مختلف سال</h4>
-                                </div>
-                                <div class="box-body">
-                                    <div id="staff_turnover"></div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                            }
+                        }
+                        ?>
                     </div>
                 </section>
                 <!-- /.content -->
+
             </div>
         </div>
         <!-- /.content-wrapper -->
+
+
 
         <footer class="main-footer">
             &copy;
@@ -535,7 +429,7 @@
                         <div class="row">
                             <div class="col-6">
                                 <a class="waves-effect waves-light btn btn-app btn btn-primary-light btn-flat mx-0 mb-20 no-shadow py-35 h-auto d-block"
-                                    href="accounting.php">
+                                    href="../accounting.php">
                                     <i class="icon-Euro fs-36"><span class="path1"></span><span
                                             class="path2"></span></i>
                                     <span class="fs-16">حسابداری</span>
@@ -543,7 +437,7 @@
                             </div>
                             <div class="col-6">
                                 <a class="waves-effect waves-light btn btn-app btn btn-primary-light btn-flat mx-0 mb-20 no-shadow py-35 h-auto d-block"
-                                    href="./view/contact_userlist_grid.php">
+                                    href="../view/contact_userlist_grid.php">
                                     <i class="icon-Mail-attachment fs-36"><span class="path1"></span><span
                                             class="path2"></span></i>
                                     <span class="fs-16">اساتید</span>
@@ -551,7 +445,7 @@
                             </div>
                             <div class="col-6">
                                 <a class="waves-effect waves-light btn btn-app btn btn-primary-light btn-flat mx-0 mb-20 no-shadow py-35 h-auto d-block"
-                                    href="./view/my_courses.php">
+                                    href="../view/my_courses.php">
                                     <i class="icon-Box2 fs-36"><span class="path1"></span><span
                                             class="path2"></span></i>
                                     <span class="fs-16">آموزش ها</span>
@@ -559,7 +453,7 @@
                             </div>
                             <div class="col-6">
                                 <a class="waves-effect waves-light btn btn-app btn btn-primary-light btn-flat mx-0 mb-20 no-shadow py-35 h-auto d-block"
-                                    href="contact_userlist.php">
+                                    href="../contact_userlist.php">
                                     <i class="icon-Group fs-36"><span class="path1"></span><span
                                             class="path2"></span></i>
                                     <span class="fs-16">دانشجویان</span>
@@ -567,7 +461,7 @@
                             </div>
                             <div class="col-6">
                                 <a class="waves-effect waves-light btn btn-app btn btn-primary-light btn-flat mx-0 mb-20 no-shadow py-35 h-auto d-block"
-                                    href="./view/mailbox.php">
+                                    href="../view/mailbox.php">
                                     <i class="icon-Chart-bar fs-36"><span class="path1"></span><span
                                             class="path2"></span><span class="path3"></span><span
                                             class="path4"></span></i>
@@ -576,7 +470,7 @@
                             </div>
                             <div class="col-6">
                                 <a class="waves-effect waves-light btn btn-app btn btn-primary-light btn-flat mx-0 mb-20 no-shadow py-35 h-auto d-block"
-                                    href="setting.php">
+                                    href="../setting.php">
                                     <i class="icon-Color-profile fs-36"><span class="path1"></span><span
                                             class="path2"></span></i>
                                     <span class="fs-16">تنظیمات</span>
@@ -601,16 +495,14 @@
                                     <a class="nav-link active" data-bs-toggle="tab" href="#quick_panel_logs">لاگ ها</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-bs-toggle="tab"
-                                        href="#quick_panel_notifications">اعلانات</a>
+                                    <a class="nav-link" data-bs-toggle="tab" href="#quick_panel_notifications">اعلانات</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" data-bs-toggle="tab" href="#quick_panel_settings">تنظیمات</a>
                                 </li>
                             </ul>
                             <div class="offcanvas-close">
-                                <a href="#" class="btn btn-icon btn-danger-light btn-sm no-shadow"
-                                    data-bs-dismiss="modal">
+                                <a href="#" class="btn btn-icon btn-danger-light btn-sm no-shadow" data-bs-dismiss="modal">
                                     <span class="fa fa-close"></span>
                                 </a>
                             </div>
@@ -622,70 +514,60 @@
                                         <h5 class="fw-500 mb-15">پیام های سیستمی</h5>
                                         <div class="d-flex align-items-center mb-30">
                                             <div class="me-15 bg-lightest h-50 w-50 l-h-50 rounded text-center">
-                                                <img src="images\svg-icon\color-svg\001-glass.svg" class="h-30" alt="">
+                                                <img src="../images\svg-icon\color-svg\001-glass.svg" class="h-30" alt="">
                                             </div>
                                             <div class="d-flex flex-column flex-grow-1 me-2 fw-500">
-                                                <a href="#" class="text-dark hover-primary mb-1 fs-16">هزینه های
-                                                    جانبی</a>
+                                                <a href="#" class="text-dark hover-primary mb-1 fs-16">هزینه های جانبی</a>
                                                 <span class="text-fade">رضا امینی</span>
                                             </div>
-                                            <span class="badge badge-xl badge-light"><span
-                                                    class="fw-600">+125</span></span>
+                                            <span class="badge badge-xl badge-light"><span class="fw-600">+125</span></span>
                                         </div>
                                         <div class="d-flex align-items-center mb-30">
                                             <div class="me-15 bg-lightest h-50 w-50 l-h-50 rounded text-center">
-                                                <img src="images\svg-icon\color-svg\002-google.svg" class="h-30" alt="">
+                                                <img src="../images\svg-icon\color-svg\002-google.svg" class="h-30" alt="">
                                             </div>
                                             <div class="d-flex flex-column flex-grow-1 me-2 fw-500">
                                                 <a href="#" class="text-dark hover-danger mb-1 fs-16">هزینه تنظیمات</a>
                                                 <span class="text-fade">رضا امینی</span>
                                             </div>
-                                            <span class="badge badge-xl badge-light"><span
-                                                    class="fw-600">+125</span></span>
+                                            <span class="badge badge-xl badge-light"><span class="fw-600">+125</span></span>
                                         </div>
                                         <div class="d-flex align-items-center mb-30">
                                             <div class="me-15 bg-lightest h-50 w-50 l-h-50 rounded text-center">
-                                                <img src="images\svg-icon\color-svg\003-settings.svg" class="h-30"
-                                                    alt="">
+                                                <img src="../images\svg-icon\color-svg\003-settings.svg" class="h-30" alt="">
                                             </div>
                                             <div class="d-flex flex-column flex-grow-1 me-2 fw-500">
-                                                <a href="#" class="text-dark hover-success mb-1 fs-16">هزینه
-                                                    لابراتور</a>
+                                                <a href="#" class="text-dark hover-success mb-1 fs-16">هزینه لابراتور</a>
                                                 <span class="text-fade">رضا امینی</span>
                                             </div>
-                                            <span class="badge badge-xl badge-light"><span
-                                                    class="fw-600">+125</span></span>
+                                            <span class="badge badge-xl badge-light"><span class="fw-600">+125</span></span>
                                         </div>
                                         <div class="d-flex align-items-center mb-30">
                                             <div class="me-15 bg-lightest h-50 w-50 l-h-50 rounded text-center">
-                                                <img src="images\svg-icon\color-svg\004-dad.svg" class="h-30" alt="">
+                                                <img src="../images\svg-icon\color-svg\004-dad.svg" class="h-30" alt="">
                                             </div>
                                             <div class="d-flex flex-column flex-grow-1 me-2 fw-500">
                                                 <a href="#" class="text-dark hover-info mb-1 fs-16">حقوق کاربران</a>
                                                 <span class="text-fade">رضا امینی</span>
                                             </div>
-                                            <span class="badge badge-xl badge-light"><span
-                                                    class="fw-600">+125</span></span>
+                                            <span class="badge badge-xl badge-light"><span class="fw-600">+125</span></span>
                                         </div>
                                         <div class="d-flex align-items-center">
                                             <div class="me-15 bg-lightest h-50 w-50 l-h-50 rounded text-center">
-                                                <img src="images\svg-icon\color-svg\005-paint-palette.svg" class="h-30"
-                                                    alt="">
+                                                <img src="../images\svg-icon\color-svg\005-paint-palette.svg" class="h-30" alt="">
                                             </div>
                                             <div class="d-flex flex-column flex-grow-1 me-2 fw-500">
                                                 <a href="#" class="text-dark hover-warning mb-1 fs-16">طراحی گارگاه</a>
                                                 <span class="text-fade">رضا امینی</span>
                                             </div>
-                                            <span class="badge badge-xl badge-light"><span
-                                                    class="fw-600">+125</span></span>
+                                            <span class="badge badge-xl badge-light"><span class="fw-600">+125</span></span>
                                         </div>
                                     </div>
                                     <div class="mb-30">
                                         <h5 class="fw-500 mb-15">گزارشات عملکرد</h5>
                                         <div class="d-flex align-items-center mb-30">
                                             <div class="me-15 bg-primary-light h-50 w-50 l-h-60 rounded text-center">
-                                                <span class="icon-Library fs-24"><span class="path1"></span><span
-                                                        class="path2"></span></span>
+                                                <span class="icon-Library fs-24"><span class="path1"></span><span class="path2"></span></span>
                                             </div>
                                             <div class="d-flex flex-column fw-500">
                                                 <a href="#" class="text-dark hover-primary mb-1 fs-16">سود پروژه ها</a>
@@ -694,8 +576,7 @@
                                         </div>
                                         <div class="d-flex align-items-center mb-30">
                                             <div class="me-15 bg-danger-light h-50 w-50 l-h-60 rounded text-center">
-                                                <span class="icon-Write fs-24"><span class="path1"></span><span
-                                                        class="path2"></span></span>
+                                                <span class="icon-Write fs-24"><span class="path1"></span><span class="path2"></span></span>
                                             </div>
                                             <div class="d-flex flex-column fw-500">
                                                 <a href="#" class="text-dark hover-danger mb-1 fs-16">طراح </a>
@@ -704,8 +585,7 @@
                                         </div>
                                         <div class="d-flex align-items-center mb-30">
                                             <div class="me-15 bg-success-light h-50 w-50 l-h-60 rounded text-center">
-                                                <span class="icon-Group-chat fs-24"><span class="path1"></span><span
-                                                        class="path2"></span></span>
+                                                <span class="icon-Group-chat fs-24"><span class="path1"></span><span class="path2"></span></span>
                                             </div>
                                             <div class="d-flex flex-column fw-500">
                                                 <a href="#" class="text-dark hover-success mb-1 fs-16">توابع</a>
@@ -714,9 +594,7 @@
                                         </div>
                                         <div class="d-flex align-items-center mb-30">
                                             <div class="me-15 bg-info-light h-50 w-50 l-h-60 rounded text-center">
-                                                <span class="icon-Attachment1 fs-24"><span class="path1"></span><span
-                                                        class="path2"></span><span class="path3"></span><span
-                                                        class="path4"></span></span>
+                                                <span class="icon-Attachment1 fs-24"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
                                             </div>
                                             <div class="d-flex flex-column fw-500">
                                                 <a href="#" class="text-dark hover-info mb-1 fs-16">دولوپر</a>
@@ -827,9 +705,7 @@
                                                 <div class="form-group mb-0 row align-items-center">
                                                     <label class="col-8 col-form-label">اعلانان:</label>
                                                     <div class="col-4 d-flex justify-content-end">
-                                                        <button type="button"
-                                                            class="btn btn-sm btn-toggle btn-primary active"
-                                                            data-bs-toggle="button">
+                                                        <button type="button" class="btn btn-sm btn-toggle btn-primary active" data-bs-toggle="button">
                                                             <span class="handle"></span>
                                                         </button>
                                                     </div>
@@ -837,8 +713,7 @@
                                                 <div class="form-group mb-0 row align-items-center">
                                                     <label class="col-8 col-form-label">بررسی وضعیت:</label>
                                                     <div class="col-4 d-flex justify-content-end">
-                                                        <button type="button" class="btn btn-sm btn-toggle btn-primary"
-                                                            data-bs-toggle="button">
+                                                        <button type="button" class="btn btn-sm btn-toggle btn-primary" data-bs-toggle="button">
                                                             <span class="handle"></span>
                                                         </button>
                                                     </div>
@@ -846,9 +721,7 @@
                                                 <div class="form-group mb-0 row align-items-center">
                                                     <label class="col-8 col-form-label">پشتیبانی:</label>
                                                     <div class="col-4 d-flex justify-content-end">
-                                                        <button type="button"
-                                                            class="btn btn-sm btn-toggle btn-primary active"
-                                                            data-bs-toggle="button">
+                                                        <button type="button" class="btn btn-sm btn-toggle btn-primary active" data-bs-toggle="button">
                                                             <span class="handle"></span>
                                                         </button>
                                                     </div>
@@ -862,9 +735,7 @@
                                                 <div class="form-group mb-0 row align-items-center">
                                                     <label class="col-8 col-form-label">دریافت گزارشات:</label>
                                                     <div class="col-4 d-flex justify-content-end">
-                                                        <button type="button"
-                                                            class="btn btn-sm btn-toggle btn-danger active"
-                                                            data-bs-toggle="button">
+                                                        <button type="button" class="btn btn-sm btn-toggle btn-danger active" data-bs-toggle="button">
                                                             <span class="handle"></span>
                                                         </button>
                                                     </div>
@@ -872,9 +743,7 @@
                                                 <div class="form-group mb-0 row align-items-center">
                                                     <label class="col-8 col-form-label">غیرفعال کردن:</label>
                                                     <div class="col-4 d-flex justify-content-end">
-                                                        <button type="button"
-                                                            class="btn btn-sm btn-toggle btn-danger active"
-                                                            data-bs-toggle="button">
+                                                        <button type="button" class="btn btn-sm btn-toggle btn-danger active" data-bs-toggle="button">
                                                             <span class="handle"></span>
                                                         </button>
                                                     </div>
@@ -882,9 +751,7 @@
                                                 <div class="form-group mb-0 row align-items-center">
                                                     <label class="col-8 col-form-label">مجوز داده:</label>
                                                     <div class="col-4 d-flex justify-content-end">
-                                                        <button type="button"
-                                                            class="btn btn-sm btn-toggle btn-danger active"
-                                                            data-bs-toggle="button">
+                                                        <button type="button" class="btn btn-sm btn-toggle btn-danger active" data-bs-toggle="button">
                                                             <span class="handle"></span>
                                                         </button>
                                                     </div>
@@ -898,9 +765,7 @@
                                                 <div class="form-group mb-0 row align-items-center">
                                                     <label class="col-8 col-form-label">مجوز ثبت نام:</label>
                                                     <div class="col-4 d-flex justify-content-end">
-                                                        <button type="button"
-                                                            class="btn btn-sm btn-toggle btn-warning active"
-                                                            data-bs-toggle="button">
+                                                        <button type="button" class="btn btn-sm btn-toggle btn-warning active" data-bs-toggle="button">
                                                             <span class="handle"></span>
                                                         </button>
                                                     </div>
@@ -908,9 +773,7 @@
                                                 <div class="form-group mb-0 row align-items-center">
                                                     <label class="col-8 col-form-label">مجوز نظرات:</label>
                                                     <div class="col-4 d-flex justify-content-end">
-                                                        <button type="button"
-                                                            class="btn btn-sm btn-toggle btn-warning active"
-                                                            data-bs-toggle="button">
+                                                        <button type="button" class="btn btn-sm btn-toggle btn-warning active" data-bs-toggle="button">
                                                             <span class="handle"></span>
                                                         </button>
                                                     </div>
@@ -918,9 +781,7 @@
                                                 <div class="form-group mb-0 row align-items-center">
                                                     <label class="col-8 col-form-label">پرتابل مشتریان:</label>
                                                     <div class="col-4 d-flex justify-content-end">
-                                                        <button type="button"
-                                                            class="btn btn-sm btn-toggle btn-warning active"
-                                                            data-bs-toggle="button">
+                                                        <button type="button" class="btn btn-sm btn-toggle btn-warning active" data-bs-toggle="button">
                                                             <span class="handle"></span>
                                                         </button>
                                                     </div>
@@ -952,7 +813,7 @@
                         </div>
                         <div>
                             <div class="d-flex flex-row">
-                                <div class=""><img src="images\avatar\avatar-2.png" alt="user"
+                                <div class=""><img src="../images\avatar\avatar-2.png" alt="user"
                                         class="rounded bg-danger-light w-150" width="100"></div>
                                 <div class="ps-20">
                                     <h5 class="mb-0"><?php echo $user_name; ?></h5>
@@ -975,7 +836,7 @@
                                             class="path2"></span></span>
                                 </div>
                                 <div class="d-flex flex-column fw-500">
-                                    <a href="./view/forms_information.php?p_id=<?php echo $user_id; ?>" class="text-dark hover-primary mb-1 fs-16">پروفایل من</a>
+                                    <a href="../view/forms_information.php?p_id=<?php echo $user_id; ?>" class="text-dark hover-primary mb-1 fs-16">پروفایل من</a>
                                     <span class="text-fade">تنظیمات حساب</span>
                                 </div>
                             </div>
@@ -985,7 +846,7 @@
                                             class="path2"></span></span>
                                 </div>
                                 <div class="d-flex flex-column fw-500">
-                                    <a href="./view/mailbox.php" class="text-dark hover-danger mb-1 fs-16">پیام های من</a>
+                                    <a href="../view/mailbox.php" class="text-dark hover-danger mb-1 fs-16">پیام های من</a>
                                     <span class="text-fade">صندوق دریافت</span>
                                 </div>
                             </div>
@@ -1048,7 +909,6 @@
     </div>
     <!-- ./wrapper -->
 
-
     <!-- Sidebar -->
 
     <div id="chat-box-body">
@@ -1060,9 +920,7 @@
         <div class="chat-box">
             <div class="chat-box-header p-15 d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <button
-                        class="waves-effect waves-circle btn btn-circle btn-primary-light h-40 w-40 rounded-circle l-h-45"
-                        type="button" data-bs-toggle="dropdown">
+                    <button class="waves-effect waves-circle btn btn-circle btn-primary-light h-40 w-40 rounded-circle l-h-45" type="button" data-bs-toggle="dropdown">
                         <span class="icon-Add-user fs-22"><span class="path1"></span><span class="path2"></span></span>
                     </button>
                     <div class="dropdown-menu min-w-200">
@@ -1070,28 +928,23 @@
                             <span class="icon-Color me-15"></span>
                             گروه جدید</a>
                         <a class="dropdown-item fs-16" href="#">
-                            <span class="icon-Clipboard me-15"><span class="path1"></span><span
-                                    class="path2"></span><span class="path3"></span><span class="path4"></span></span>
+                            <span class="icon-Clipboard me-15"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
                             مخاطبین</a>
                         <a class="dropdown-item fs-16" href="#">
                             <span class="icon-Group me-15"><span class="path1"></span><span class="path2"></span></span>
                             گروه ها</a>
                         <a class="dropdown-item fs-16" href="#">
-                            <span class="icon-Active-call me-15"><span class="path1"></span><span
-                                    class="path2"></span></span>
+                            <span class="icon-Active-call me-15"><span class="path1"></span><span class="path2"></span></span>
                             تماس ها</a>
                         <a class="dropdown-item fs-16" href="#">
-                            <span class="icon-Settings1 me-15"><span class="path1"></span><span
-                                    class="path2"></span></span>
+                            <span class="icon-Settings1 me-15"><span class="path1"></span><span class="path2"></span></span>
                             تنظیمات</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item fs-16" href="#">
-                            <span class="icon-Question-circle me-15"><span class="path1"></span><span
-                                    class="path2"></span></span>
+                            <span class="icon-Question-circle me-15"><span class="path1"></span><span class="path2"></span></span>
                             پشتیبانی</a>
                         <a class="dropdown-item fs-16" href="#">
-                            <span class="icon-Notifications me-15"><span class="path1"></span><span
-                                    class="path2"></span></span>
+                            <span class="icon-Notifications me-15"><span class="path1"></span><span class="path2"></span></span>
                             حریم خصوصی</a>
                     </div>
                 </div>
@@ -1103,9 +956,7 @@
                     </div>
                 </div>
                 <div class="chat-box-toggle">
-                    <button id="chat-box-toggle"
-                        class="waves-effect waves-circle btn btn-circle btn-danger-light h-40 w-40 rounded-circle l-h-45"
-                        type="button">
+                    <button id="chat-box-toggle" class="waves-effect waves-circle btn btn-circle btn-danger-light h-40 w-40 rounded-circle l-h-45" type="button">
                         <span class="icon-Close fs-22"><span class="path1"></span><span class="path2"></span></span>
                     </button>
                 </div>
@@ -1117,7 +968,7 @@
                     <div class="chat-msg user">
                         <div class="d-flex align-items-center">
                             <span class="msg-avatar">
-                                <img src="images\avatar\2.jpg" class="avatar avatar-lg" alt="">
+                                <img src="../images\avatar\2.jpg" class="avatar avatar-lg" alt="">
                             </span>
                             <div class="mx-10">
                                 <a href="#" class="text-dark hover-primary fw-bold">سیما </a>
@@ -1135,7 +986,7 @@
                                 <p class="text-muted fs-12 mb-0">3 دقیقه پیش</p>
                             </div>
                             <span class="msg-avatar">
-                                <img src="images\avatar\3.jpg" class="avatar avatar-lg" alt="">
+                                <img src="../images\avatar\3.jpg" class="avatar avatar-lg" alt="">
                             </span>
                         </div>
                         <div class="cm-msg-text">
@@ -1145,7 +996,7 @@
                     <div class="chat-msg user">
                         <div class="d-flex align-items-center">
                             <span class="msg-avatar">
-                                <img src="images\avatar\2.jpg" class="avatar avatar-lg" alt="">
+                                <img src="../images\avatar\2.jpg" class="avatar avatar-lg" alt="">
                             </span>
                             <div class="mx-10">
                                 <a href="#" class="text-dark hover-primary fw-bold">سیما</a>
@@ -1172,8 +1023,17 @@
 
     <!-- Page Content overlay -->
 
-    <?php include "./includes/footer.php"; ?>
 
+    <!-- Vendor JS -->
+    <script src="../src\js\vendors.min.js"></script>
+    <script src="../src\js\pages\chat-popup.js"></script>
+    <script src="../assets\icons\feather-icons\feather.min.js"></script>
+
+    <script src="../assets\vendor_components\apexcharts-bundle\dist\apexcharts.js"></script>
+
+    <!-- CRMi App -->
+    <script src="../src\js\template.js"></script>
+    <script src="../src\js\pages\dashboard.js"></script>
 
 </body>
 
