@@ -6,3 +6,11 @@
     <script src="style/js/dashboard-light.js"></script>
     <script src="src\js\template.js"></script>
     <script src="src\js\pages\dashboard.js"></script>
+
+
+    <script src="assets\vendor_components\Flot\jquery.flot.js"></script>
+    <script src="assets\vendor_components\Flot\jquery.flot.resize.js"></script>
+    <script src="assets\vendor_components\Flot\jquery.flot.pie.js"></script>
+    <script src="assets\vendor_components\Flot\jquery.flot.categories.js"></script>
+    <script src="src\js\pages\widget-flot-charts.js"></script>
+
