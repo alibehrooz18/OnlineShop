@@ -366,9 +366,9 @@
                                             <li class="nav-item b-1">
                                                 <a class="nav-link text-center" href="#">0 <br>استخدام شده</a>
                                             </li>
-                                            <!-- <li class="nav-item">
+                                            <li class="nav-item">
                                                 <a class="nav-link disabled text-center" href="#" tabindex="-1" aria-disabled="true">0 <br>تائید نشده</a>
-                                            </li> -->
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -421,8 +421,8 @@
                                                             <td><?php echo $users_id;?></td>
                                                             <td>
                                                                 <div class="btn-group">
-                                                                    <a href="people.php?ad_role=<?php echo $change_id ?>" class="waves-effect waves-light btn btn-outline btn-success"><i class="fa fa-check"></i></a>
-                                                                    <a href="people.php?sub_role=<?php echo $change_id ?>" class="waves-effect waves-light btn btn-outline btn-danger"><i class="fa fa-close"></i></a>
+                                                                    <a href="people.php?ad_role=<?php echo $change_id ?>" class="waves-effect waves-light btn btn-outline btn-success">admin</a>
+                                                                    <a href="people.php?sub_role=<?php echo $change_id ?>" class="waves-effect waves-light btn btn-outline btn-danger">subsc</a>
                                                                 </div>
                                                             </td>
                                                             <td>
