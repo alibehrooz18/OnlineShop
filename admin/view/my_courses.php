@@ -27,7 +27,7 @@
 <body class="hold-transition light-skin sidebar-mini theme-primary fixed rtl">
 
     <div class="wrapper">
-        <!-- <div id="loader"></div> -->
+        <div id="loader"></div>
 
         <!-- Main header -->
         <header class="main-header">
