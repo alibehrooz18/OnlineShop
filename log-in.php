@@ -291,7 +291,7 @@
                     header("Location: ./admin");
                 } else {
                     // Redirect to user dashboard
-                    //header("Location: dashboard.php");
+                    header("Location: index.php");
                 }
                 exit();
             } else {
@@ -310,12 +310,12 @@
                 <div class="section-title">
                     <h2>ورود</h2>
                 </div>
-                <div class="contact-form-action">
+                <div class="contact-form-action mb-50">
                     <form method="post">
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label>ایمیل یا شماره تماس</label>
+                                    <label>ایمیل یا تلفن</label>
                                     <input class="form-control" type="text" name="username">
                                 </div>
                             </div>
@@ -327,22 +327,22 @@
                             </div>
                             <div class="col-12">
                                 <div class="login-action">
-                                    <span class="log-rem">
-                                        <input id="remember" type="checkbox">
+                                    <span class="log-rem mx-3">
+                                        <input id="remember" type="checkbox" name="remember" value="1">
                                         <label for="remember">مرا به یاد داشته باش!</label>
                                     </span>
                                     <span class="forgot-login">
-                                        <a href="recover-password.php">فراموشی کلمه عبور؟</a>
+                                        <a href="recover-password.php">کلمه عبور خود را فراموش کرده‌اید؟</a>
                                     </span>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="default-btn" type="submit">
+                                <button class="default-btn" type="submit" name="login">
                                     ورود
                                 </button>
                             </div>
                             <div class="col-12">
-                                <p>حساب کاربری ندارید؟ <a href="registration.php">ثبت نام کنید</a></p>
+                                <p>حساب کاربری ندارید؟ <a href="registration.php">ثبت نام کنید!</a></p>
                             </div>
                         </div>
                     </form>

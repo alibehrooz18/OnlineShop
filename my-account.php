@@ -374,8 +374,9 @@
                             die("QUERY FAILED" . mysqli_error($connection));
                         }
                         echo $message = "ثبت نام شما با موفقیت انجام شد!";
-                        // Redirect to sub panel
-                        header("Location: ./admin");
+                        // Redirect to the panel or dashboard page
+                        header("Location: log-in.php");
+                        
                     } else {
                         echo $message = "فیلدها نباید خالی باشند!";
                     }
