@@ -277,7 +277,7 @@
                             <li>
                                 <a href="../view/people.php">
                                     <i class="icon-Flag"><span class="path1"></span><span class="path2"></span></i>
-                                    <span>مدیریت آموزش ها</span>
+                                    <span>مدیریت کاربران</span>
                                 </a>
                             </li>
                             <li>
