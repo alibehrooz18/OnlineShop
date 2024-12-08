@@ -281,10 +281,10 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="../view/course-details.php">
+                                <a href="#">
                                     <i class="icon-Alarm-clock"><span class="path1"></span><span
                                             class="path2"></span><span class="path3"></span></i>
-                                    <span>جزئیات آموزش ها</span>
+                                    <span></span>
                                 </a>
                             </li>
                             <li>
@@ -386,7 +386,7 @@
                                                 <p>این یک واقعیت ثابت شده است که خواننده هنگام تماشای طرح بندی آن، با محتوای قابل خواندن یک صفحه حواسش پرت می شود. </p>
 
                                                 <div class="mt-10 d-flex justify-content-between align-items-center">
-                                                    <a href="../../app/view/single-course.php?c_id=<?php echo $course_id; ?>" class="waves-effect waves-light btn btn-primary mb-5">مشاهده آموزش</a>
+                                                    <a href="./course-details.php?c_id=<?php echo $course_id; ?>" class="waves-effect waves-light btn btn-primary mb-5">مشاهده جزئیات</a>
                                                 </div>
                                             </div>
                                         </div>
