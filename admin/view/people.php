@@ -280,10 +280,10 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="../view/course-details.php">
+                                <a href="">
                                     <i class="icon-Alarm-clock"><span class="path1"></span><span
                                             class="path2"></span><span class="path3"></span></i>
-                                    <span>جزئیات آموزش ها</span>
+                                    <span></span>
                                 </a>
                             </li>
                             <li>
