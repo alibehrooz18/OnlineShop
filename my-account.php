@@ -157,7 +157,7 @@
                                                 <li class="dropdown-item">
                                                     <a href="./admin" class="nav-link">داشبورد</a>
                                                 </li>
-                                                <li class="dropdown-item">/eduon/app/view/
+                                                <li class="dropdown-item">
                                                     <a href="./admin/offers.php" class="nav-link">آموزش‌ها</a>
                                                 </li>
                                                 <li class="dropdown-item">
