@@ -281,13 +281,6 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
-                                    <i class="icon-Alarm-clock"><span class="path1"></span><span
-                                            class="path2"></span><span class="path3"></span></i>
-                                    <span></span>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="../view/forms_create_course.php">
                                     <i class="icon-Write fs-24"><span class="path1"></span><span
                                             class="path2"></span><span class="path3"></span></i>
