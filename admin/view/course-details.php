@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../images\favicon.ico">
+    <link rel="icon" href="../images/favicon.ico">
 
     <?php include "../includes/header.php"; ?>
     <?php include "../controllers/details_controller.php"; ?>
@@ -15,11 +15,11 @@
     <title>داشبورد</title>
 
     <!-- Vendors Style-->
-    <link rel="stylesheet" href="../src\css\vendors_css.css">
+    <link rel="stylesheet" href="../src/css/vendors_css.css">
 
     <!-- Style-->
-    <link rel="stylesheet" href="../src\css\style.css">
-    <link rel="stylesheet" href="../src\css\skin_color.css">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/skin_color.css">
 
 </head>
 
@@ -35,12 +35,12 @@
                 <a href="../index.php" class="logo">
                     <!-- logo-->
                     <div class="logo-mini w-30">
-                        <span class="light-logo"><img src="../images\logo-letter.png" alt="logo"></span>
-                        <span class="dark-logo"><img src="../images\logo-letter-white.png" alt="logo"></span>
+                        <span class="light-logo"><img src="../images/logo-letter.png" alt="logo"></span>
+                        <span class="dark-logo"><img src="../images/logo-letter-white.png" alt="logo"></span>
                     </div>
                     <div class="logo-lg">
-                        <span class="light-logo"><img src="../images\logo-dark-text.png" alt="logo"></span>
-                        <span class="dark-logo"><img src="../images\logo-light-text.png" alt="logo"></span>
+                        <span class="light-logo"><img src="../images/logo-dark-text.png" alt="logo"></span>
+                        <span class="dark-logo"><img src="../images/logo-light-text.png" alt="logo"></span>
                     </div>
                 </a>
             </div>
@@ -173,18 +173,18 @@
                             <a href="#"
                                 class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon dropdown-toggle"
                                 data-bs-toggle="dropdown">
-                                <img class="rounded" src="../images\svg-icon\ger.svg" alt="">
+                                <img class="rounded" src="../images/svg-icon/ger.svg" alt="">
                             </a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10"
-                                        src="../images\svg-icon\ger.svg" alt=""> آلمانی</a>
+                                        src="../images/svg-icon/ger.svg" alt=""> آلمانی</a>
                                 <a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10"
-                                        src="../images\svg-icon\spain.svg" alt=""> اسپانیایی</a>
+                                        src="../images/svg-icon/spain.svg" alt=""> اسپانیایی</a>
 
                                 <a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10"
-                                        src="../images\svg-icon\jap.svg" alt=""> ژاپنی</a>
+                                        src="../images/svg-icon/jap.svg" alt=""> ژاپنی</a>
                                 <a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10"
-                                        src="../images\svg-icon\fra.svg" alt=""> فرانسوی</a>
+                                        src="../images/svg-icon/fra.svg" alt=""> فرانسوی</a>
                             </div>
                         </li>
 
@@ -207,7 +207,7 @@
                                         <p class="pt-5 fs-14 mb-0 fw-700 text-primary"><?php echo $user_name; ?></p>
                                         <small class="fs-10 mb-0 text-uppercase text-mute"><?php echo $user_role; ?></small>
                                     </div> -->
-                                    <img src="../images\avatar\avatar-1.png"
+                                    <img src="../images/avatar/avatar-1.png"
                                         class="avatar rounded-10 bg-primary-light h-40 w-40" alt="">
                                 </div>
                             </a>
@@ -227,7 +227,7 @@
                     <a href="../index.php" class="logo">
                         <!-- logo-->
                         <div class="logo-mini">
-                            <span class="light-logo"><img src="../images\logo-letter.png" alt="logo"></span>
+                            <span class="light-logo"><img src="../images/logo-letter.png" alt="logo"></span>
                         </div>
                         <div class="logo-lg">
                             <span class="light-logo fs-36 fw-700">CRM<span class="text-primary">i</span></span>
@@ -237,7 +237,7 @@
                 <div class="user-profile my-15 px-20 py-10 b-1 rounded10 mx-15">
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="image d-flex align-items-center">
-                            <img src="../images\avatar\avatar-13.png" class="rounded-0 me-10" alt="User Image">
+                            <img src="../images/avatar/avatar-13.png" class="rounded-0 me-10" alt="User Image">
                             <div>
                                 <h4 class="mb-0 fw-600"><?php echo $user_name; ?></h4>
                                 <p class="mb-0"><?php echo $user_role; ?></p>
@@ -600,7 +600,7 @@
                                         <h5 class="fw-500 mb-15">پیام های سیستمی</h5>
                                         <div class="d-flex align-items-center mb-30">
                                             <div class="me-15 bg-lightest h-50 w-50 l-h-50 rounded text-center">
-                                                <img src="images\svg-icon\color-svg\001-glass.svg" class="h-30" alt="">
+                                                <img src="images/svg-icon/color-svg/001-glass.svg" class="h-30" alt="">
                                             </div>
                                             <div class="d-flex flex-column flex-grow-1 me-2 fw-500">
                                                 <a href="#" class="text-dark hover-primary mb-1 fs-16">هزینه های جانبی</a>
@@ -610,7 +610,7 @@
                                         </div>
                                         <div class="d-flex align-items-center mb-30">
                                             <div class="me-15 bg-lightest h-50 w-50 l-h-50 rounded text-center">
-                                                <img src="images\svg-icon\color-svg\002-google.svg" class="h-30" alt="">
+                                                <img src="images/svg-icon/color-svg/002-google.svg" class="h-30" alt="">
                                             </div>
                                             <div class="d-flex flex-column flex-grow-1 me-2 fw-500">
                                                 <a href="#" class="text-dark hover-danger mb-1 fs-16">هزینه تنظیمات</a>
@@ -620,7 +620,7 @@
                                         </div>
                                         <div class="d-flex align-items-center mb-30">
                                             <div class="me-15 bg-lightest h-50 w-50 l-h-50 rounded text-center">
-                                                <img src="images\svg-icon\color-svg\003-settings.svg" class="h-30" alt="">
+                                                <img src="images/svg-icon/color-svg/003-settings.svg" class="h-30" alt="">
                                             </div>
                                             <div class="d-flex flex-column flex-grow-1 me-2 fw-500">
                                                 <a href="#" class="text-dark hover-success mb-1 fs-16">هزینه لابراتور</a>
@@ -630,7 +630,7 @@
                                         </div>
                                         <div class="d-flex align-items-center mb-30">
                                             <div class="me-15 bg-lightest h-50 w-50 l-h-50 rounded text-center">
-                                                <img src="images\svg-icon\color-svg\004-dad.svg" class="h-30" alt="">
+                                                <img src="images/svg-icon/color-svg/004-dad.svg" class="h-30" alt="">
                                             </div>
                                             <div class="d-flex flex-column flex-grow-1 me-2 fw-500">
                                                 <a href="#" class="text-dark hover-info mb-1 fs-16">حقوق کاربران</a>
@@ -640,7 +640,7 @@
                                         </div>
                                         <div class="d-flex align-items-center">
                                             <div class="me-15 bg-lightest h-50 w-50 l-h-50 rounded text-center">
-                                                <img src="images\svg-icon\color-svg\005-paint-palette.svg" class="h-30" alt="">
+                                                <img src="images/svg-icon/color-svg/005-paint-palette.svg" class="h-30" alt="">
                                             </div>
                                             <div class="d-flex flex-column flex-grow-1 me-2 fw-500">
                                                 <a href="#" class="text-dark hover-warning mb-1 fs-16">طراحی گارگاه</a>
@@ -899,7 +899,7 @@
                         </div>
                         <div>
                             <div class="d-flex flex-row">
-                                <div class=""><img src="../images\avatar\avatar-2.png" alt="user"
+                                <div class=""><img src="../images/avatar/avatar-2.png" alt="user"
                                         class="rounded bg-danger-light w-150" width="100"></div>
                                 <div class="ps-20">
                                     <h5 class="mb-0"><?php echo $user_name; ?></h5>
@@ -1054,7 +1054,7 @@
                     <div class="chat-msg user">
                         <div class="d-flex align-items-center">
                             <span class="msg-avatar">
-                                <img src="images\avatar\2.jpg" class="avatar avatar-lg" alt="">
+                                <img src="images/avatar/2.jpg" class="avatar avatar-lg" alt="">
                             </span>
                             <div class="mx-10">
                                 <a href="#" class="text-dark hover-primary fw-bold">سیما </a>
@@ -1072,7 +1072,7 @@
                                 <p class="text-muted fs-12 mb-0">3 دقیقه پیش</p>
                             </div>
                             <span class="msg-avatar">
-                                <img src="images\avatar\3.jpg" class="avatar avatar-lg" alt="">
+                                <img src="images/avatar/3.jpg" class="avatar avatar-lg" alt="">
                             </span>
                         </div>
                         <div class="cm-msg-text">
@@ -1082,7 +1082,7 @@
                     <div class="chat-msg user">
                         <div class="d-flex align-items-center">
                             <span class="msg-avatar">
-                                <img src="images\avatar\2.jpg" class="avatar avatar-lg" alt="">
+                                <img src="images/avatar/2.jpg" class="avatar avatar-lg" alt="">
                             </span>
                             <div class="mx-10">
                                 <a href="#" class="text-dark hover-primary fw-bold">سیما</a>
@@ -1111,15 +1111,15 @@
 
 
     <!-- Vendor JS -->
-    <script src="../src\js\vendors.min.js"></script>
-    <script src="../src\js\pages\chat-popup.js"></script>
-    <script src="../assets\icons\feather-icons\feather.min.js"></script>
+    <script src="../src/js/vendors.min.js"></script>
+    <script src="../src/js/pages/chat-popup.js"></script>
+    <script src="../assets/icons/feather-icons/feather.min.js"></script>
 
-    <script src="../assets\vendor_components\apexcharts-bundle\dist\apexcharts.js"></script>
-    <script src="../src\js\pages\jobsdetails.js"></script>
+    <script src="../assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
+    <script src="../src/js/pages/jobsdetails.js"></script>
     <!-- CRMi App -->
-    <script src="../src\js\template.js"></script>
-    <script src="../src\js\pages\dashboard.js"></script>
+    <script src="../src/js/template.js"></script>
+    <script src="../src/js/pages/dashboard.js"></script>
 
 </body>
 
