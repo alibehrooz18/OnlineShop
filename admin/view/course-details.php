@@ -325,7 +325,7 @@
                             <a href="course-details.php" class="waves-effect waves-light btn active btn-outline btn-primary">شغل</a>
                             <a href="mailbox.php" class="waves-effect waves-light btn btn-outline btn-primary">پیام ها</a>
                         </div>
-                        <a href="./course-details.php?c_id=<?php echo $course_id;?>&status=published" class="waves-effect waves-light btn btn-danger mt-10 mt-md-0">انتشار شغل</a>
+                        <a href="./course-details.php?c_id=<?php echo $course_id;?>&status=published" class="waves-effect waves-light btn btn-success mt-10 mt-md-0">انتشار شغل</a>
                     </div>
                 </div>
 
