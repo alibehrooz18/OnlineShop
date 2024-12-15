@@ -26,7 +26,7 @@
 <body class="hold-transition light-skin sidebar-mini theme-primary fixed rtl">
 
     <div class="wrapper">
-        <div id="loader"></div>
+        <!-- <div id="loader"></div> -->
 
         <!-- Main header -->
         <header class="main-header">
@@ -339,6 +339,11 @@
                 <!-- Main content -->
                 <section class="content">
                     <div class="row">
+                        <?php
+                        $userController = new UserController();
+                        $userController->manageUsers();  // Handle requests for updating/removing users
+                        $all_user_data = $userController->getAllUserData();
+                        ?>
                         <div class="col-12">
                             <div class="box">
                                 <div class="box-body">
@@ -386,21 +391,16 @@
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                $query = "SELECT * FROM users";
-                                                $all_user_data = mysqli_query($connection, $query);
-                                                confirmQuery($all_user_data);
-
                                                 while ($row = mysqli_fetch_assoc($all_user_data)) {
-                                                    if ($row > 0) {
-                                                        $users_id = $row['user_id'];
-                                                        $users_fullname = $row['user_fullname'];
-                                                        $users_role = $row['user_role'];
-                                                        $users_email = $row['user_email'];
-
-                                                        $change_id = $users_id;
-                                                        if ($change_id === $user_id) {
-                                                            $change_id = 0;
-                                                        }
+                                                    $users_id = $row['user_id'];
+                                                    $users_fullname = $row['user_fullname'];
+                                                    $users_role = $row['user_role'];
+                                                    $users_email = $row['user_email'];
+                
+                                                    $change_id = $users_id;
+                                                    if ($change_id === $user_id) {
+                                                        $change_id = 0;
+                                                    }
                                                 ?>
 
                                                         <tr>
@@ -409,9 +409,9 @@
                                                                 <label for="ch_bx_2" class="mb-0"></label>
                                                             </td>
                                                             <td><?php echo $users_fullname; ?></td>
-                                                            <td><?php echo $users_role;?></td>
-                                                            <td><?php echo $users_email;?></td>
-                                                            <td><?php echo $users_id;?></td>
+                                                            <td><?php echo $users_role; ?></td>
+                                                            <td><?php echo $users_email; ?></td>
+                                                            <td><?php echo $users_id; ?></td>
                                                             <td>
                                                                 <div class="btn-group">
                                                                     <a href="people.php?ad_role=<?php echo $change_id ?>" class="waves-effect waves-light btn btn-outline btn-success">admin</a>
@@ -422,7 +422,7 @@
                                                                 <div class="dropdown">
                                                                     <a class="px-10 pt-5" href="#" data-bs-toggle="dropdown"><i class="ti-more-alt"></i></a>
                                                                     <div class="dropdown-menu">
-                                                                        <a class="dropdown-item" href="mailto:<?php echo $users_email;?>">ارسال ایمیل</a>
+                                                                        <a class="dropdown-item" href="mailto:<?php echo $users_email; ?>">ارسال ایمیل</a>
                                                                         <a class="dropdown-item" href="#">ذخیره</a>
                                                                         <a class="dropdown-item" href="people.php?remove_user=<?php echo $change_id ?>">حذف</a>
                                                                     </div>
@@ -431,7 +431,7 @@
                                                         </tr>
                                                 <?php
                                                     }
-                                                }
+                                                
                                                 ?>
                                             </tbody>
                                         </table>
