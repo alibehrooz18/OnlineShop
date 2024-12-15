@@ -11,7 +11,7 @@
 
     <?php include "../includes/header.php"; ?>
     <?php include "../controllers/courses_controller.php"; ?>
-    <?php include "../controllers/user_controller.php"; ?>
+   
 
     <title>داشبورد</title>
 
@@ -27,7 +27,7 @@
 <body class="hold-transition light-skin sidebar-mini theme-primary fixed rtl">
 
     <div class="wrapper">
-        <div id="loader"></div>
+        <!-- <div id="loader"></div> -->
 
         <!-- Main header -->
         <header class="main-header">
@@ -343,19 +343,18 @@
                     <div class="row">
                         <?php
                         $max_title_length = 60;
+                        
+                        $courseController = new CourseController;
+                        $user_courses = $courseController->getCoursesForUser($user_showname);
 
-                        if (isset($user_id) && isset($user_showname)) {
-                            $safe_showname = mysqli_real_escape_string($connection, $user_showname);
 
-                            $query = "SELECT * FROM courses WHERE course_author = '$safe_showname'";
-                            $user_course = mysqli_query($connection, $query);
-                            confirmQuery($user_course);
-
-                            while ($row = mysqli_fetch_assoc($user_course)) {
+                        if (!empty($user_courses)) {
+                            while ($row = mysqli_fetch_assoc($user_courses)) {
                                 $course_id = $row['course_id'];
                                 $course_title = $row['course_title'];
                                 $course_image = $row['course_image'];
-
+                    
+                                // Shorten the title if it exceeds the max length
                                 if (strlen($course_title) > $max_title_length) {
                                     $course_title = substr($course_title, 0, $max_title_length) . '...';
                                 }
@@ -387,6 +386,8 @@
                                 </div>
                         <?php
                             }
+                        } else {
+                            echo "<p>No courses found for this user.</p>";
                         }
                         ?>
                     </div>
