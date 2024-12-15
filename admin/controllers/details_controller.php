@@ -1,4 +1,4 @@
-<?php include "../controllers/user_controller.php"; ?>
+<?php include "../controllers/courses_controller.php"; ?>
 <?php
 require_once '../models/details_model.php';
 

@@ -1,4 +1,4 @@
-<?php include "../controllers/user_controller.php"; ?>
+<?php include "../controllers/courses_controller.php"; ?>
 <?php
 $admin_user = $all_user - $sub_user;
 
