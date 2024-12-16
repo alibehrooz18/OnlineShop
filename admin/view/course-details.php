@@ -457,7 +457,7 @@
                         <div class="col-lg-4 col-12">
                             <div class="box">
                                 <div class="box-body">
-                                    <a href="#" class="waves-effect waves-light btn btn-block w-p100 btn-primary mb-15">ویرایش </a>
+                                    <a href="./forms_create_course.php?c_id=<?php echo $course_id;?>" class="waves-effect waves-light btn btn-block w-p100 btn-primary mb-15">ویرایش </a>
                                     <div class="media-list media-list-hover media-list-divided">
                                         <a class="media media-single rounded-0" href="./course-details.php?c_id=<?php echo $course_id;?>&status=drafted">
                                             <span class="title mx-0">توقف آموزش</span>
