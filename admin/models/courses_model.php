@@ -1,7 +1,8 @@
 <?php
 function getCoursesByAuthor($user_showname)
 {
-    global $connection;
+    $db = Database::getInstance();
+    $connection = $db->getConnection();
 
     // Escape the input to prevent SQL injection
     $safe_author_name = mysqli_real_escape_string($connection, $user_showname);
