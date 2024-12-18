@@ -7,8 +7,3 @@ $gallery_query = getGalleryData($image_per_page);
 
 
 // Newsletter section
-if (isset($_POST['subscribe'])) {
-    $news_email = $_POST['EMAIL'];
-    
-    $sub_query = getEmailForNews($news_email);
-}

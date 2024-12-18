@@ -263,10 +263,14 @@
     <section class="subscribe-area ebeef5-bg-color ptb-100">
         <div class="container">
             <?php
-            if ($sub_query) {
-                echo "<p>Thank you for subscribing!</p>";
-            } else {
-                echo "<p>Subscription failed: " . mysqli_error($connection) . "</p>";
+            if (isset($_POST['subscribe'])) {
+                $news_email = $_POST['EMAIL'];
+                if ($sub_query) {
+                    echo "<p>Thank you for subscribing!</p>";
+                } else {
+                    echo "<p>Subscription failed: " . mysqli_error($connection) . "</p>";
+                }
+                $sub_query = getEmailForNews($news_email);
             }
             ?>
             <div class="subscribe-wrap">
