@@ -3,38 +3,39 @@
 
 <head>
 
-<?php include "../../includes/header.php";?>
+    <?php include "../../includes/header.php"; ?>
+    <?php include "../controllers/gallery_ctrl.php"; ?>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="stylesheet" href="../../public\css\bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../../public\css\bootstrap.rtl.min.css">
 
-<link rel="stylesheet" href="../../public\css\owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../public\css\owl.theme.default.min.css">
 
-<link rel="stylesheet" href="../../public\css\owl.carousel.min.css">
+    <link rel="stylesheet" href="../../public\css\owl.carousel.min.css">
 
-<link rel="stylesheet" href="../../public\css\magnific-popup.min.css">
+    <link rel="stylesheet" href="../../public\css\magnific-popup.min.css">
 
-<link rel="stylesheet" href="../../public\css\animate.min.css">
+    <link rel="stylesheet" href="../../public\css\animate.min.css">
 
-<link rel="stylesheet" href="../../public\css\boxicons.min.css">
+    <link rel="stylesheet" href="../../public\css\boxicons.min.css">
 
-<link rel="stylesheet" href="../../public\css\flaticon.css">
+    <link rel="stylesheet" href="../../public\css\flaticon.css">
 
-<link rel="stylesheet" href="../../public\css\meanmenu.min.css">
+    <link rel="stylesheet" href="../../public\css\meanmenu.min.css">
 
-<link rel="stylesheet" href="../../public\css\nice-select.min.css">
+    <link rel="stylesheet" href="../../public\css\nice-select.min.css">
 
-<link rel="stylesheet" href="../../public\css\odometer.min.css">
+    <link rel="stylesheet" href="../../public\css\odometer.min.css">
 
-<link rel="stylesheet" href="../../public\css\style.css">
+    <link rel="stylesheet" href="../../public\css\style.css">
 
-<link rel="stylesheet" href="../../public\css\dark.css">
+    <link rel="stylesheet" href="../../public\css\dark.css">
 
-<link rel="stylesheet" href="../../public\css\responsive.css">
+    <link rel="stylesheet" href="../../public\css\responsive.css">
 
-<link rel="icon" type="image/png" href="public\img\favicon.png">
+    <link rel="icon" type="image/png" href="public\img\favicon.png">
 
     <title>Eduon - Online Courses & Training HTML Template</title>
 </head>
@@ -124,41 +125,22 @@
                                 </div>
                             </div>
                             <div class="cart-icon">
-                                <?php
-                                if (isset($_SESSION['username'])) {
-
-
-                                    $query = "SELECT COUNT(*) AS item_count FROM cart";
-                                    $get_cart_data = mysqli_query($connection, $query);
-
-                                    confirmQuery($get_cart_data);
-
-                                    // Fetch the count from the result
-                                    $row = mysqli_fetch_assoc($get_cart_data);
-                                    $item_cart = isset($row['item_count']) ? intval($row['item_count']) : 0;
-                                } else {
-                                    $item_cart = 0;
-                                }
-                                ?>
                                 <a href="cart.php">
                                     <i class="flaticon-shopping-cart"></i>
                                     <span><?php echo $item_cart; ?></span>
                                 </a>
                             </div>
                             <div class="register">
-                                <?php if (isset($_SESSION['username'])): ?>
+                                <?php if (isset($user_name)): ?>
                                     <ul class="navbar-nav m-auto">
                                         <li class="nav-item">
                                             <a href="#" class="nav-link">
-                                                <span><?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                                                <span><?php echo htmlspecialchars($user_name); ?></span>
                                                 <i class="bx bx-chevron-down"></i>
                                             </a>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu" style="width: 200px;">
                                                 <li class="dropdown-item">
                                                     <a href="../../admin" class="nav-link">داشبورد</a>
-                                                </li>
-                                                <li class="dropdown-item">
-                                                    <a href="../../admin/offers.php" class="nav-link">آموزش‌ها</a>
                                                 </li>
                                                 <li class="dropdown-item">
                                                     <a href="cart.php" class="nav-link">سفارش‌ها</a>
@@ -213,7 +195,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                ورود / ثبت نام
+                                    ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -249,13 +231,6 @@
         <div class="container">
             <div class="row" id="gallery-container">
                 <?php
-                // Pagination logic 
-                $image_per_page = 9;
-
-                $query = "SELECT * FROM gallery LIMIT $image_per_page";
-                $gallery_query = mysqli_query($connection, $query);
-                confirmQuery($gallery_query);
-
                 if (mysqli_num_rows($gallery_query) > 0) {
                     while ($row = mysqli_fetch_assoc($gallery_query)) {
                         $image = $row['image'];
@@ -276,14 +251,6 @@
                 ?>
                 <!-- LoadMore butten -->
                 <div class="col-12 text-center mt-3">
-                    <?php
-
-                    $query = "SELECT COUNT(*) AS total_images FROM gallery";
-                    $gallery_query = mysqli_query($connection, $query);
-                    confirmQuery($gallery_query);
-                    $row = mysqli_fetch_assoc($gallery_query);
-                    
-                    ?>
                     <button id="load-more-btn" class="default-btn" data-offset="9">بیشتر</button>
                 </div>
             </div>
@@ -296,15 +263,10 @@
     <section class="subscribe-area ebeef5-bg-color ptb-100">
         <div class="container">
             <?php
-            if (isset($_POST['subscribe'])) {
-                $news_email = mysqli_real_escape_string($connection, $_POST['EMAIL']);
-                $query = "INSERT INTO newsletter (news_email) VALUES ('$news_email')";
-                $sub_query = mysqli_query($connection, $query);
-                if ($sub_query) {
-                    echo "<p>Thank you for subscribing!</p>";
-                } else {
-                    echo "<p>Subscription failed: " . mysqli_error($connection) . "</p>";
-                }
+            if ($sub_query) {
+                echo "<p>Thank you for subscribing!</p>";
+            } else {
+                echo "<p>Subscription failed: " . mysqli_error($connection) . "</p>";
             }
             ?>
             <div class="subscribe-wrap">
@@ -326,33 +288,33 @@
     <?php include "../../includes/footer.php"; ?>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-<script src="../../public/js/jquery.min.js"></script>
+    <script src="../../public/js/jquery.min.js"></script>
 
-<script src="../../public/js/bootstrap.bundle.min.js"></script>
+    <script src="../../public/js/bootstrap.bundle.min.js"></script>
 
-<script src="../../public/js/meanmenu.min.js"></script>
+    <script src="../../public/js/meanmenu.min.js"></script>
 
-<script src="../../public/js/owl.carousel.min.js"></script>
+    <script src="../../public/js/owl.carousel.min.js"></script>
 
-<script src="../../public/js/wow.min.js"></script>
+    <script src="../../public/js/wow.min.js"></script>
 
-<script src="../../public/js/nice-select.min.js"></script>
+    <script src="../../public/js/nice-select.min.js"></script>
 
-<script src="../../public/js/magnific-popup.min.js"></script>
+    <script src="../../public/js/magnific-popup.min.js"></script>
 
-<script src="../../public/js/jarallax.min.js"></script>
+    <script src="../../public/js/jarallax.min.js"></script>
 
-<script src="../../public/js/appear.min.js"></script>
+    <script src="../../public/js/appear.min.js"></script>
 
-<script src="../../public/js/odometer.min.js"></script>
+    <script src="../../public/js/odometer.min.js"></script>
 
-<script src="../../public/js/form-validator.min.js"></script>
+    <script src="../../public/js/form-validator.min.js"></script>
 
-<script src="../../public/js/contact-form-script.js"></script>
+    <script src="../../public/js/contact-form-script.js"></script>
 
-<script src="../../public/js/ajaxchimp.min.js"></script>
+    <script src="../../public/js/ajaxchimp.min.js"></script>
 
-<script src="../../public/js/custom.js"></script>
+    <script src="../../public/js/custom.js"></script>
 </body>
 
 </html>
