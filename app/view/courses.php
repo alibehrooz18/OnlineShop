@@ -4,6 +4,7 @@
 <head>
 
     <?php include "../../includes/header.php"; ?>
+    <?php include "../controllers/courses_ctrl.php"; ?>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -125,41 +126,22 @@
                                 </div>
                             </div>
                             <div class="cart-icon">
-                                <?php
-                                if (isset($_SESSION['username'])) {
-
-
-                                    $query = "SELECT COUNT(*) AS item_count FROM cart";
-                                    $get_cart_data = mysqli_query($connection, $query);
-
-                                    confirmQuery($get_cart_data);
-
-                                    // Fetch the count from the result
-                                    $row = mysqli_fetch_assoc($get_cart_data);
-                                    $item_cart = isset($row['item_count']) ? intval($row['item_count']) : 0;
-                                } else {
-                                    $item_cart = 0;
-                                }
-                                ?>
                                 <a href="cart.php">
                                     <i class="flaticon-shopping-cart"></i>
                                     <span><?php echo $item_cart; ?></span>
                                 </a>
                             </div>
                             <div class="register">
-                                <?php if (isset($_SESSION['username'])): ?>
+                                <?php if (isset($user_name)): ?>
                                     <ul class="navbar-nav m-auto">
                                         <li class="nav-item">
                                             <a href="#" class="nav-link">
-                                                <span><?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                                                <span><?php echo htmlspecialchars($user_name); ?></span>
                                                 <i class="bx bx-chevron-down"></i>
                                             </a>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu" style="width: 200px;">
                                                 <li class="dropdown-item">
                                                     <a href="../../admin" class="nav-link">داشبورد</a>
-                                                </li>
-                                                <li class="dropdown-item">
-                                                    <a href="../../admin/offers.php" class="nav-link">آموزش‌ها</a>
                                                 </li>
                                                 <li class="dropdown-item">
                                                     <a href="cart.php" class="nav-link">سفارش‌ها</a>
@@ -254,22 +236,7 @@
                     <div class="col-lg-6 col-md-4">
                         <div class="showing-result-count">
                             <?php
-                            $courses_per_page = 6;
-
-                            $query = "SELECT COUNT(*) AS total_items FROM courses";
-                            $item_query = mysqli_query($connection, $query);
-                            confirmQuery($item_query);
-
-                            $row = mysqli_fetch_assoc($item_query);
-                            $total_items = $row['total_items'];
-
-                            $current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-                            $current_page = max(1, $current_page);
-
-                            // Calculate start and end range
-                            $start_item = ($current_page - 1) * $courses_per_page + 1;
-                            $end_item = min($start_item + $courses_per_page - 1, $total_items);
-
+                            // Show total item in course list
                             if ($total_items > 0) {
                                 echo "<p>نمایش $start_item-$end_item از $total_items نتیجه</p>";
                             } else {
@@ -286,13 +253,10 @@
                                     <option value="">همه آموزش ها</option>
                                     <?php
                                     $selected_category = isset($_GET['category']) ? $_GET['category'] : '';
-                                    $query = "SELECT * FROM categories";
-                                    $select_cat_query = mysqli_query($connection, $query);
-                                    confirmQuery($select_cat_query);
-
-                                    while ($row = mysqli_fetch_assoc($select_cat_query)) {
-                                        $cat_id = $row['cat_id'];
-                                        $cat_title = $row['cat_title'];
+                                    
+                                    while ($cat_row = mysqli_fetch_assoc($result)) {
+                                        $cat_id = $cat_row['cat_id'];
+                                        $cat_title = $cat_row['cat_title'];
                                         $selected_attr = ($cat_id == $selected_category) ? 'selected' : '';
                                         echo "<option value='{$cat_id}' {$selected_attr}>{$cat_title}</option>";
                                     }
@@ -305,7 +269,7 @@
                     <div class="col-lg-3 col-md-4">
                         <!-- Search form -->
                         <div class="sidebar-widget search">
-                            <form class="search-form" action="sourses.php" method="GET">
+                            <form class="search-form" action="courses.php" method="GET">
                                 <input class="form-control" name="search" placeholder="آموزش خود را پیدا کنید" type="text">
                                 <button class="search-button" type="submit">
                                     <i class="bx bx-search"></i>
@@ -319,30 +283,6 @@
             <!-- Display filtered courses -->
             <div class="row">
                 <?php
-                // Pagination logic 
-                $query = "SELECT COUNT(*) AS total_courses FROM courses";
-                $course_query = mysqli_query($connection, $query);
-                confirmQuery($course_query);
-                $row = mysqli_fetch_assoc($course_query);
-                $total_courses = $row['total_courses'];
-                $total_pages = ceil($total_courses / $courses_per_page);
-                $current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-                $current_page = max(1, min($current_page, $total_pages));
-                $offset = ($current_page - 1) * $courses_per_page;
-
-                // Search 
-                $search_query = '';
-                if (isset($_GET['search']) && $_GET['search'] !== '') {
-                    $search_query = " WHERE course_tags LIKE '%" . mysqli_real_escape_string($connection, $_GET['search']) . "%'";
-                } elseif (isset($_GET['category']) && $_GET['category'] !== '') {
-                    $category_id = mysqli_real_escape_string($connection, $_GET['category']);
-                    $search_query = " WHERE course_category_id = '{$category_id}'";
-                }
-
-                $query = "SELECT * FROM courses" . $search_query . " LIMIT $courses_per_page OFFSET $offset";
-                $course_query = mysqli_query($connection, $query);
-                confirmQuery($course_query);
-
                 if (mysqli_num_rows($course_query) > 0) {
                     while ($row = mysqli_fetch_assoc($course_query)) {
                         $course_id = $row['course_id'];
