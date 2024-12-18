@@ -4,6 +4,7 @@
 <head>
 
     <?php include "./includes/header.php"; ?>
+    <?php include "./app/controllers/main_ctrl.php"; ?>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -41,7 +42,7 @@
 
 <body>
 
-    <!-- <div class="loader-wrapper">
+    <div class="loader-wrapper">
         <div class="loader">
             <div class="dot-wrap">
                 <span class="dot"></span>
@@ -50,8 +51,7 @@
                 <span class="dot"></span>
             </div>
         </div>
-    </div> -->
-
+    </div>
 
     <!-- Subscribe modal -->
     <div class="modal-newsletter-area">
@@ -167,22 +167,6 @@
                                 </div>
                             </div>
                             <div class="cart-icon">
-                                <?php
-                                if (isset($_SESSION['username'])) {
-
-
-                                    $query = "SELECT COUNT(*) AS item_count FROM cart";
-                                    $get_cart_data = mysqli_query($connection, $query);
-
-                                    confirmQuery($get_cart_data);
-
-                                    // Fetch the count from the result
-                                    $row = mysqli_fetch_assoc($get_cart_data);
-                                    $item_cart = isset($row['item_count']) ? intval($row['item_count']) : 0;
-                                } else {
-                                    $item_cart = 0;
-                                }
-                                ?>
                                 <a href="app/view/cart.php">
                                     <i class="flaticon-shopping-cart"></i>
                                     <span><?php echo $item_cart; ?></span>
@@ -190,19 +174,16 @@
                             </div>
 
                             <div class="register">
-                                <?php if (isset($_SESSION['username'])): ?>
+                                <?php if (isset($user_name)): ?>
                                     <ul class="navbar-nav m-auto">
                                         <li class="nav-item">
                                             <a href="#" class="nav-link">
-                                                <span><?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                                                <span><?php echo htmlspecialchars($user_name); ?></span>
                                                 <i class="bx bx-chevron-down"></i>
                                             </a>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu" style="width: 200px;">
                                                 <li class="dropdown-item">
                                                     <a href="./admin" class="nav-link">داشبورد</a>
-                                                </li>
-                                                <li class="dropdown-item">
-                                                    <a href="./admin/offers.php" class="nav-link">آموزش‌ها</a>
                                                 </li>
                                                 <li class="dropdown-item">
                                                     <a href="/app/view/cart.php" class="nav-link">سفارش‌ها</a>
@@ -483,12 +464,9 @@
             </div>
             <div class="row">
                 <?php
-                $query = "SELECT * FROM courses";
-                $course_query = mysqli_query($connection, $query);
-                confirmQuery($course_query);
 
-                if (mysqli_num_rows($course_query) > 0) {
-                    while ($row = mysqli_fetch_assoc($course_query)) {
+                if (mysqli_num_rows($course_data) > 0) {
+                    while ($row = mysqli_fetch_assoc($course_data)) {
                         $course_id = $row['course_id'];
                         $course_image = $row['course_image'];
                         $course_price = $row['course_price'];
@@ -529,7 +507,7 @@
                 <?php
                     }
                 } else {
-                    echo "<p>No courses found.</p>";
+                    return "<p>No courses found.</p>";
                 }
                 ?>
             </div>
