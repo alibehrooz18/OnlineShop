@@ -54,6 +54,4 @@ if (isset($_GET['item_id'])) {
     } else {
         echo json_encode(['error' => 'Item not found.']);
     }
-} else {
-    echo json_encode(['error' => 'Invalid request.']);
 }
