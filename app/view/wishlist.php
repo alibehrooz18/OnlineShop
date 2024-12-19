@@ -4,6 +4,7 @@
 <head>
 
     <?php include "../../includes/header.php"; ?>
+    <?php include "../controllers/wish_ctrl.php"; ?>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,7 +35,7 @@
 
     <link rel="stylesheet" href="../../public\css\responsive.css">
 
-    <link rel="icon" type="image/png" href="public\img\favicon.png">
+    <link rel="icon" type="image/png" href="../../public\img\favicon.png">
 
     <title>Eduon - علاقه‌مندی ها</title>
 </head>
@@ -125,41 +126,22 @@
                                 </div>
                             </div>
                             <div class="cart-icon">
-                                <?php
-                                if (isset($_SESSION['username'])) {
-
-
-                                    $query = "SELECT COUNT(*) AS item_count FROM cart";
-                                    $get_cart_data = mysqli_query($connection, $query);
-
-                                    confirmQuery($get_cart_data);
-
-                                    // Fetch the count from the result
-                                    $row = mysqli_fetch_assoc($get_cart_data);
-                                    $item_cart = isset($row['item_count']) ? intval($row['item_count']) : 0;
-                                } else {
-                                    $item_cart = 0;
-                                }
-                                ?>
                                 <a href="cart.php">
                                     <i class="flaticon-shopping-cart"></i>
                                     <span><?php echo $item_cart; ?></span>
                                 </a>
                             </div>
                             <div class="register">
-                                <?php if (isset($_SESSION['username'])): ?>
+                                <?php if (isset($user_name)): ?>
                                     <ul class="navbar-nav m-auto">
                                         <li class="nav-item">
                                             <a href="#" class="nav-link">
-                                                <span><?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                                                <span><?php echo htmlspecialchars($user_name); ?></span>
                                                 <i class="bx bx-chevron-down"></i>
                                             </a>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu" style="width: 200px;">
                                                 <li class="dropdown-item">
                                                     <a href="../../admin" class="nav-link">داشبورد</a>
-                                                </li>
-                                                <li class="dropdown-item">
-                                                    <a href="../../admin/offers.php" class="nav-link">آموزش‌ها</a>
                                                 </li>
                                                 <li class="dropdown-item">
                                                     <a href="cart.php" class="nav-link">سفارش‌ها</a>
@@ -259,42 +241,32 @@
                                     <th scope="col">قیمت</th>
                                     <th scope="col">تعداد</th>
                                     <th scope="col">کل</th>
-                                    <!-- <th scope="col">افزودن به سبد خرید</th> -->
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
                                 $subtotal = 0;
                                 // Get product id and send to wishlist
-                                if (isset($_GET['wishlist'])) {
-                                    $shop_id = mysqli_real_escape_string($connection, $_GET['wishlist']);
-                                    $query = "SELECT * FROM wishlists WHERE wish_shop_id = $shop_id";
-                                    $check_exist = mysqli_query($connection, $query);
-                                    confirmQuery($check_exist);
-
+                                if (isset($_GET['wishlist']) && isset($_GET['user'])) {
                                     // Check if not find create on wishlist
                                     if (mysqli_num_rows($check_exist) === 0) {
 
-                                        $query = "INSERT INTO wishlists (wish_shop_id) VALUES ('$shop_id')";
-                                        $result = mysqli_query($connection, $query);
-                                        confirmQuery($result);
+                                        $post_wish = postProductWish($shop_id, $user_id);
+                                        header("Location: wishlist.php");
                                     } else {
                                         echo "<h3 class='mb-5' style='color: red;'>محصول انتخابی در لیست موجود است</h3>";
                                     }
                                 }
-                                $query = "SELECT * FROM wishlists";
-                                $result = mysqli_query($connection, $query);
-                                confirmQuery($result);
+                                
+                                $wish_item = getWishItem();
 
-                                while ($wish_row = mysqli_fetch_assoc($result)) {
+                                while ($wish_row = mysqli_fetch_assoc($wish_item)) {
                                     $wish_id = $wish_row['wish_id'];
-                                    $shop_id = $wish_row['wish_shop_id'];
+                                    $wish_shop_id = $wish_row['wish_shop_id'];
                                     $quantity = $wish_row['wish_quantity'];
 
                                     // Get information from shop for wishlist
-                                    $query = "SELECT * FROM shop WHERE item_id = $shop_id";
-                                    $get_wish = mysqli_query($connection, $query);
-                                    confirmQuery($get_wish);
+                                    $get_wish = getItemById($wish_shop_id);
 
                                     if ($row = mysqli_fetch_assoc($get_wish)) {
                                         $wish_image = $row['item_image'];
@@ -356,7 +328,7 @@
                                                 <span class="subtotal-amount" id="subtotal">$<?php echo number_format($total_price, 2); ?></span>
                                             </td>
                                             <td class="product-subtotal">
-                                                <a href="cart.php?p_id=<?php echo $shop_id; ?>&quantity=<?php echo $quantity; ?>" class="default-btn">
+                                                <a href="cart.php?p_id=<?php echo $wish_shop_id;?>&user=<?php echo $user_id;?>&quantity=<?php echo $quantity;?>" class="default-btn">
                                                     افزودن به سبد خرید
                                                 </a>
                                             </td>
