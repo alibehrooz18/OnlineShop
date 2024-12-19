@@ -376,7 +376,7 @@
                             <li>کد تخفیف<span>$<?php echo number_format($coupon, 2); ?></span></li>
                             <li><b>جمع قابل پرداخت</b> <span><b>$<?php echo number_format($payable_total, 2); ?></b></span></li>
                         </ul>
-                        <a href="checkout.php?p_total=<?php echo $payable_total; ?>&subtotal=<?php echo $subtotal; ?>&shiping=<?php echo $shiping; ?>&coupon=<?php echo $coupon; ?>"
+                        <a href="checkout.php?p_total=<?php echo $payable_total;?>&user=<?php echo $user_id;?>&subtotal=<?php echo $subtotal;?>&shiping=<?php echo $shiping;?>&coupon=<?php echo $coupon;?>"
                             class="default-btn two">
                             پرداخت
                         </a>
