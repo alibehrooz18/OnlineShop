@@ -24,8 +24,11 @@ function getCategoryItem()
 }
 
 
-// courseModel.php
-function getFilteredCourses($connection, $filters, $limit, $offset) {
+// Filter course
+function getFilteredCourses($filters, $limit, $offset) {
+    $db = Database::getInstance();
+    $connection = $db->getConnection();
+
     $search_query = '';
 
     if (!empty($filters['search'])) {

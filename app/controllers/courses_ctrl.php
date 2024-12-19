@@ -58,13 +58,12 @@ $current_page = max(1, min($current_page, $total_pages));
 $offset = ($current_page - 1) * $courses_per_page;
 
 
-// courseController.php
+// Filter course
 $filters = [
     'search' => isset($_GET['search']) ? $_GET['search'] : '',
     'category' => isset($_GET['category']) ? $_GET['category'] : '',
 ];
 
-$courses_per_page = 10; // Example: Set this based on your pagination logic
 $offset = isset($_GET['offset']) ? intval($_GET['offset']) : 0;
 
-$course_query = getFilteredCourses($connection, $filters, $courses_per_page, $offset);
+$course_query = getFilteredCourses($filters, $courses_per_page, $offset);
