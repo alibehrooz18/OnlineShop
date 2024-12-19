@@ -4,6 +4,7 @@
 <head>
 
     <?php include "../../includes/header.php"; ?>
+    <?php include "../controllers/cart_ctrl.php"; ?>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -41,7 +42,7 @@
 
 <body>
 
-    <div class="loader-wrapper">
+    <!-- <div class="loader-wrapper">
         <div class="loader">
             <div class="dot-wrap">
                 <span class="dot"></span>
@@ -50,7 +51,7 @@
                 <span class="dot"></span>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- Navbar start -->
@@ -125,41 +126,22 @@
                                 </div>
                             </div>
                             <div class="cart-icon">
-                                <?php
-                                if (isset($_SESSION['username'])) {
-
-
-                                    $query = "SELECT COUNT(*) AS item_count FROM cart";
-                                    $get_cart_data = mysqli_query($connection, $query);
-
-                                    confirmQuery($get_cart_data);
-
-                                    // Fetch the count from the result
-                                    $row = mysqli_fetch_assoc($get_cart_data);
-                                    $item_cart = isset($row['item_count']) ? intval($row['item_count']) : 0;
-                                } else {
-                                    $item_cart = 0;
-                                }
-                                ?>
                                 <a href="cart.php">
                                     <i class="flaticon-shopping-cart"></i>
                                     <span><?php echo $item_cart; ?></span>
                                 </a>
                             </div>
                             <div class="register">
-                                <?php if (isset($_SESSION['username'])): ?>
+                                <?php if (isset($user_name)): ?>
                                     <ul class="navbar-nav m-auto">
                                         <li class="nav-item">
                                             <a href="#" class="nav-link">
-                                                <span><?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                                                <span><?php echo htmlspecialchars($user_name); ?></span>
                                                 <i class="bx bx-chevron-down"></i>
                                             </a>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu" style="width: 200px;">
                                                 <li class="dropdown-item">
                                                     <a href="../../admin" class="nav-link">داشبورد</a>
-                                                </li>
-                                                <li class="dropdown-item">
-                                                    <a href="../../admin/offers.php" class="nav-link">آموزش‌ها</a>
                                                 </li>
                                                 <li class="dropdown-item">
                                                     <a href="cart.php" class="nav-link">سفارش‌ها</a>
@@ -266,37 +248,25 @@
                                     </thead>
                                     <tbody>
                                         <?php
-                                        $subtotal = 0;
-                                        // Get product id and send to cart
-                                        if (isset($_GET['p_id'])) {
-                                            $shop_id = $_GET['p_id'];
-                                            $query = "SELECT * FROM cart WHERE cart_shop_id = $shop_id";
-                                            $check_exist = mysqli_query($connection, $query);
-                                            confirmQuery($check_exist);
 
-                                            if (mysqli_num_rows($check_exist) === 0 && isset($_GET['quantity'])) {
-                                                $quantity = $_GET['quantity'];
+                                        if (isset($_GET['p_id']) && isset($_GET['user'])) {
+                                            if (mysqli_num_rows($check_exist) === 0) {
+                                                $quantity = 1;
 
-                                                $query = "INSERT INTO cart (cart_shop_id, cart_quantity) VALUES ('$shop_id', '$quantity')";
-                                                $result = mysqli_query($connection, $query);
-                                                confirmQuery($result);
+                                                $post_item = postProductCart($shop_id, $quantity, $user_id);
+                                                header("Location: cart.php");
                                             } else {
                                                 echo "<h3 class='mb-5' style='color: red;'>محصول انتخابی در لیست موجود است</h3>";
                                             }
                                         }
-                                        $query = "SELECT * FROM cart";
-                                        $result = mysqli_query($connection, $query);
-                                        confirmQuery($result);
 
-                                        while ($cart_row = mysqli_fetch_assoc($result)) {
+                                        while ($cart_row = mysqli_fetch_assoc($cart_item)) {
                                             $cart_id = $cart_row['cart_id'];
-                                            $shop_id = $cart_row['cart_shop_id'];
+                                            $cart_shop_id = $cart_row['cart_shop_id'];
                                             $cart_quantity = $cart_row['cart_quantity'];
 
                                             // Get information from shop for cart
-                                            $query = "SELECT * FROM shop WHERE item_id = $shop_id";
-                                            $get_cart = mysqli_query($connection, $query);
-                                            confirmQuery($get_cart);
+                                            $get_cart = getItemById($cart_shop_id);
 
                                             if ($row = mysqli_fetch_assoc($get_cart)) {
                                                 $cart_image = $row['item_image'];
