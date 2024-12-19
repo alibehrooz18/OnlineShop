@@ -4,6 +4,7 @@
 <head>
 
     <?php include "../../includes/header.php"; ?>
+    <?php include "../controllers/shop_ctrl.php"; ?>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -41,7 +42,7 @@
 
 <body>
 
-    <div class="loader-wrapper">
+    <!-- <div class="loader-wrapper">
         <div class="loader">
             <div class="dot-wrap">
                 <span class="dot"></span>
@@ -50,7 +51,7 @@
                 <span class="dot"></span>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Navbar start -->
     <div class="navbar-area">
@@ -124,36 +125,20 @@
                                 </div>
                             </div>
                             <div class="cart-icon">
-                                <?php
-                                if (isset($_SESSION['username'])) {
-
-
-                                    $query = "SELECT COUNT(*) AS item_count FROM cart";
-                                    $get_cart_data = mysqli_query($connection, $query);
-
-                                    confirmQuery($get_cart_data);
-
-                                    // Fetch the count from the result
-                                    $row = mysqli_fetch_assoc($get_cart_data);
-                                    $item_cart = isset($row['item_count']) ? intval($row['item_count']) : 0;
-                                } else {
-                                    $item_cart = 0;
-                                }
-                                ?>
                                 <a href="cart.php">
                                     <i class="flaticon-shopping-cart"></i>
                                     <span><?php echo $item_cart; ?></span>
                                 </a>
                             </div>
                             <div class="register">
-                                <?php if (isset($_SESSION['username'])): ?>
+                                <?php if (isset($user_name)): ?>
                                     <ul class="navbar-nav m-auto">
                                         <li class="nav-item">
                                             <a href="#" class="nav-link">
-                                                <span><?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                                                <span><?php echo htmlspecialchars($user_name); ?></span>
                                                 <i class="bx bx-chevron-down"></i>
                                             </a>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu" style="width: 200px;">
                                                 <li class="dropdown-item">
                                                     <a href="../../admin" class="nav-link">داشبورد</a>
                                                 </li>
@@ -255,22 +240,6 @@
                                 <div class="col-lg-6 col-sm-6">
                                     <div class="showing-result-count">
                                         <?php
-                                        $items_per_page = 9;
-
-                                        $query = "SELECT COUNT(*) AS total_items FROM shop";
-                                        $item_query = mysqli_query($connection, $query);
-                                        confirmQuery($item_query);
-
-                                        $row = mysqli_fetch_assoc($item_query);
-                                        $total_items = $row['total_items'];
-
-                                        $current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-                                        $current_page = max(1, $current_page);
-
-                                        // Calculate start and end range
-                                        $start_item = ($current_page - 1) * $items_per_page + 1;
-                                        $end_item = min($start_item + $items_per_page - 1, $total_items);
-
                                         if ($total_items > 0) {
                                             echo "<p>نمایش $start_item-$end_item از $total_items نتیجه</p>";
                                         } else {
@@ -287,13 +256,10 @@
                                                 <option value="">تمامی محصولات</option>
                                                 <?php
                                                 $selected_category = isset($_GET['category']) ? $_GET['category'] : '';
-                                                $query = "SELECT * FROM categories";
-                                                $select_cat_query = mysqli_query($connection, $query);
-                                                confirmQuery($select_cat_query);
-
-                                                while ($row = mysqli_fetch_assoc($select_cat_query)) {
-                                                    $cat_id = $row['cat_id'];
-                                                    $cat_title = $row['cat_title'];
+                                                
+                                                while ($cat_row = mysqli_fetch_assoc($result)) {
+                                                    $cat_id = $cat_row['cat_id'];
+                                                    $cat_title = $cat_row['cat_title'];
                                                     $selected_attr = ($cat_id == $selected_category) ? 'selected' : '';
                                                     echo "<option value='{$cat_id}' {$selected_attr}>{$cat_title}</option>";
                                                 }
@@ -306,29 +272,6 @@
                         </div>
                         <div class="row">
                             <?php
-                            // Pagination logic 
-                            $query = "SELECT COUNT(*) AS total_item FROM shop";
-                            $item_query = mysqli_query($connection, $query);
-                            confirmQuery($item_query);
-                            $row = mysqli_fetch_assoc($item_query);
-                            $total_items = $row['total_item'];
-                            $total_pages = ceil($total_items / $items_per_page);
-                            $current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-                            $current_page = max(1, min($current_page, $total_pages));
-                            $offset = ($current_page - 1) * $items_per_page;
-
-                            // Search 
-                            $search_query = '';
-                            if (isset($_GET['search']) && $_GET['search'] !== '') {
-                                $search_query = " WHERE item_title LIKE '%" . mysqli_real_escape_string($connection, $_GET['search']) . "%'";
-                            } elseif (isset($_GET['category']) && $_GET['category'] !== '') {
-                                $category_id = mysqli_real_escape_string($connection, $_GET['category']);
-                                $search_query = " WHERE item_category_id = '{$category_id}'";
-                            }
-
-                            $query = "SELECT * FROM shop" . $search_query . " LIMIT $items_per_page OFFSET $offset";
-                            $item_query = mysqli_query($connection, $query);
-                            confirmQuery($item_query);
 
                             if (mysqli_num_rows($item_query) > 0) {
                                 while ($row = mysqli_fetch_assoc($item_query)) {
@@ -352,7 +295,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="wishlist.php?wishlist=<?php echo $item_id; ?>">
+                                                        <a href="wishlist.php?wishlist=<?php echo $item_id; ?>&user=<?php echo $user_id?>">
                                                             <i class="bx bx-heart"></i>
                                                         </a>
                                                     </li>
@@ -367,7 +310,7 @@
                                                     $<?php echo $item_price; ?>.00
                                                 <?php } ?>
                                             </span>
-                                            <a href="cart.php?p_id=<?php echo $item_id; ?>" class="default-btn">
+                                            <a href="cart.php?p_id=<?php echo $item_id; ?>&user=<?php echo $user_id?>" class="default-btn">
                                                 افزودن به سبد خرید
                                             </a>
                                         </div>
@@ -452,16 +395,16 @@
                                     <a href='shop.php?category=6'>فارغ التحصیلی</a>
                                 </li>";
 
-                                $query = "SELECT cat_id, cat_title FROM categories";
-                                $result = mysqli_query($connection, $query);
-                                confirmQuery($result);
+                                // $query = "SELECT cat_id, cat_title FROM categories";
+                                // $result = mysqli_query($connection, $query);
+                                // confirmQuery($result);
 
-                                $category_filter = '';
+                                // $category_filter = '';
 
-                                if (isset($_GET['category']) && $_GET['category'] !== '') {
-                                    $cat_id = mysqli_escape_string($connection, $_GET['category']);
-                                    $category_filter = " WHERE item_category_id = $cat_id";
-                                }
+                                // if (isset($_GET['category']) && $_GET['category'] !== '') {
+                                //     $cat_id = mysqli_escape_string($connection, $_GET['category']);
+                                //     $category_filter = " WHERE item_category_id = $cat_id";
+                                // }
 
                                 ?>
                             </ul>
@@ -595,39 +538,6 @@
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="product-content" dir="ltr">
-                            <?php
-
-                            if (isset($_GET['item_id'])) {
-                                $item_id = mysqli_real_escape_string($connection, $_GET['item_id']);
-                                $query = "SELECT * FROM shop WHERE item_id = $item_id";
-                                $result = mysqli_query($connection, $query);
-                                confirmQuery($result);
-
-                                if ($result) {
-                                    $row = mysqli_fetch_assoc($result);
-                                    $item_id = $row['item_id'];
-                                    $item_image = $row['item_image'];
-                                    $item_title = $row['item_title'];
-                                    $item_price = $row['item_price'];
-                                    $item_discount = $row['item_discount'];
-
-                                    $dis_price = $item_price - ($item_price * ($item_discount / 100));
-                                    $dis_price = floor($dis_price);
-
-                                    echo json_encode([
-                                        'item_title' => $row['item_title'],
-                                        'item_price' => $item_price,
-                                        'item_discount' => $item_discount,
-                                        'discounted_price' => $discounted_price,
-                                        'item_image' => $row['item_image']
-                                    ]);
-                                } else {
-                                    echo json_encode(['error' => 'Item not found.']);
-                                }
-                            } else {
-                                echo json_encode(['error' => 'Invalid request.']);
-                            }
-                            ?>
                             <h3>
                                 <a href="single-product.php"><?php echo $item_title; ?></a>
                             </h3>
