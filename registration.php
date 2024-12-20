@@ -4,6 +4,7 @@
 <head>
 
     <?php include "includes/header.php"; ?>
+    <?php include "./app/controllers/account_ctrl.php"; ?>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -77,15 +78,15 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/eduon/app/view/courses.php" class="nav-link">
+                                <a href="app/view/courses.php" class="nav-link">
                                     دروس
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/eduon/app/view/gallery.php" class="nav-link">نمایشگاه</a>
+                                <a href="app/view/gallery.php" class="nav-link">نمایشگاه</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/eduon/app/view/events.php" class="nav-link">رویدادها</a>
+                                <a href="app/view/events.php" class="nav-link">رویدادها</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
@@ -94,18 +95,18 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="/eduon/app/view/shop.php" class="nav-link">فروشگاه</a>
+                                        <a href="app/view/shop.php" class="nav-link">فروشگاه</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="/eduon/app/view/wishlist.php" class="nav-link">علاقه‌مندی ها</a>
+                                        <a href="app/view/wishlist.php" class="nav-link">علاقه‌مندی ها</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="/eduon/app/view/contact.php" class="nav-link">ارتباط با ما</a>
+                                <a href="app/view/contact.php" class="nav-link">ارتباط با ما</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/eduon/app/view/about.php" class="nav-link">درباره ما</a>
+                                <a href="app/view/about.php" class="nav-link">درباره ما</a>
                             </li>
                         </ul>
 
@@ -124,41 +125,23 @@
                                 </div>
                             </div>
                             <div class="cart-icon">
-                                <?php
-                                if (isset($_SESSION['username'])) {
-
-
-                                    $query = "SELECT COUNT(*) AS item_count FROM cart";
-                                    $get_cart_data = mysqli_query($connection, $query);
-
-                                    confirmQuery($get_cart_data);
-
-                                    // Fetch the count from the result
-                                    $row = mysqli_fetch_assoc($get_cart_data);
-                                    $item_cart = isset($row['item_count']) ? intval($row['item_count']) : 0;
-                                } else {
-                                    $item_cart = 0;
-                                }
-                                ?>
                                 <a href="app/view/cart.php">
                                     <i class="flaticon-shopping-cart"></i>
                                     <span><?php echo $item_cart; ?></span>
                                 </a>
                             </div>
+
                             <div class="register">
-                                <?php if (isset($_SESSION['username'])): ?>
+                                <?php if (isset($user_name)): ?>
                                     <ul class="navbar-nav m-auto">
                                         <li class="nav-item">
                                             <a href="#" class="nav-link">
-                                                <span><?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                                                <span><?php echo htmlspecialchars($user_name); ?></span>
                                                 <i class="bx bx-chevron-down"></i>
                                             </a>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu" style="width: 200px;">
                                                 <li class="dropdown-item">
                                                     <a href="./admin" class="nav-link">داشبورد</a>
-                                                </li>
-                                                <li class="dropdown-item">
-                                                    <a href="./admin/offers.php" class="nav-link">آموزش‌ها</a>
                                                 </li>
                                                 <li class="dropdown-item">
                                                     <a href="/app/view/cart.php" class="nav-link">سفارش‌ها</a>
@@ -206,13 +189,13 @@
                                 </div>
                             </div>
                             <div class="cart-icon">
-                                <a href="cart.php">
+                                <a href="app/view/cart.php">
                                     <i class="flaticon-shopping-cart"></i>
                                     <span>0</span>
                                 </a>
                             </div>
                             <div class="register">
-                                <a href="my-account.php" class="default-btn">
+                                <a href="app/view/my-account.php" class="default-btn">
                                     ورود / ثبت نام
                                 </a>
                             </div>
@@ -243,38 +226,6 @@
     </div>
 
     <!-- Register start -->
-    <?php
-    // Register section
-    if (isset($_POST['register'])) {
-        $fullname = mysqli_escape_string($connection, $_POST['fullname']);
-        $email = mysqli_escape_string($connection, $_POST['email']);
-        $number = mysqli_escape_string($connection, $_POST['number']);
-        $password = mysqli_escape_string($connection, $_POST['password']);
-
-        if (email_exists($email)) {
-            echo $message = "ایمیل موجود است!";
-        } elseif (mobile_exists($number)) {
-            echo $message = "تلفن موجود است!";
-        } elseif (!empty($fullname) && !empty($email) && !empty($number) && !empty($password)) {
-            $hash_password = password_hash($password, PASSWORD_DEFAULT);
-
-            $query = "INSERT INTO users (user_fullname, user_email, user_num, password, user_role) ";
-            $query .= "VALUES ('{$fullname}', '{$email}', '{$number}', '{$hash_password}', 'subscriber')";
-            $register_query = mysqli_query($connection, $query);
-
-            if (!$register_query) {
-                die("QUERY FAILED" . mysqli_error($connection));
-            }
-            echo $message = "ثبت نام شما با موفقیت انجام شد!";
-            // Redirect to sub panel
-            header("Location: ./admin");
-        } else {
-            echo $message = "فیلدها نباید خالی باشند!";
-        }
-    } else {
-        echo $message = "";
-    }
-    ?>
     <section class="user-area-style ptb-100" dir="ltr">
         <div class="container">
             <div class="registration-area">
