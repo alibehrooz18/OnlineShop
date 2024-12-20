@@ -4,6 +4,7 @@
 <head>
 
     <?php include "../../includes/header.php"; ?>
+    <?php include "../controllers/checkout_ctrl.php"; ?>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,7 +35,7 @@
 
     <link rel="stylesheet" href="../../public\css\responsive.css">
 
-    <link rel="icon" type="image/png" href="public\img\favicon.png">
+    <link rel="icon" type="image/png" href="../../public\img\favicon.png">
 
     <title>Eduon - پرداخت</title>
 </head>
@@ -125,41 +126,22 @@
                                 </div>
                             </div>
                             <div class="cart-icon">
-                                <?php
-                                if (isset($_SESSION['username'])) {
-
-
-                                    $query = "SELECT COUNT(*) AS item_count FROM cart";
-                                    $get_cart_data = mysqli_query($connection, $query);
-
-                                    confirmQuery($get_cart_data);
-
-                                    // Fetch the count from the result
-                                    $row = mysqli_fetch_assoc($get_cart_data);
-                                    $item_cart = isset($row['item_count']) ? intval($row['item_count']) : 0;
-                                } else {
-                                    $item_cart = 0;
-                                }
-                                ?>
                                 <a href="cart.php">
                                     <i class="flaticon-shopping-cart"></i>
                                     <span><?php echo $item_cart; ?></span>
                                 </a>
                             </div>
                             <div class="register">
-                                <?php if (isset($_SESSION['username'])): ?>
+                                <?php if (isset($user_name)): ?>
                                     <ul class="navbar-nav m-auto">
                                         <li class="nav-item">
                                             <a href="#" class="nav-link">
-                                                <span><?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                                                <span><?php echo htmlspecialchars($user_name); ?></span>
                                                 <i class="bx bx-chevron-down"></i>
                                             </a>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu" style="width: 200px;">
                                                 <li class="dropdown-item">
                                                     <a href="../../admin" class="nav-link">داشبورد</a>
-                                                </li>
-                                                <li class="dropdown-item">
-                                                    <a href="../../admin/offers.php" class="nav-link">آموزش‌ها</a>
                                                 </li>
                                                 <li class="dropdown-item">
                                                     <a href="cart.php" class="nav-link">سفارش‌ها</a>
@@ -346,14 +328,6 @@
                         <div class="order-details">
                             <!-- Checkout -->
                             <div class="cart-totals" dir="rtl">
-                                <?php
-                                if (isset($_GET['p_total'])) {
-                                    $payable_total = $_GET['p_total'];
-                                    $subtotal = $_GET['subtotal'];
-                                    $shiping = $_GET['shiping'];
-                                    $coupon = $_GET['coupon'];
-                                }
-                                ?>
                                 <h3>صورت حساب</h3>
                                 <ul>
                                     <li>جمع محصولات<span>$<?php echo number_format($subtotal, 2); ?></span></li>
@@ -435,64 +409,6 @@
     </section>
     <!-- Main form end -->
 
-    <!-- Submit information to database -->
-    <?php
-    if (isset($_POST['order'])) {
-        $info_firstname = $_POST['firstname'];
-        $info_lastname = $_POST['lastname'];
-        $info_company = $_POST['company'];
-        $info_email = $_POST['email'];
-        $info_phone = $_POST['phone'];
-        $info_country = $_POST['country'];
-        $info_street = $_POST['street'];
-        $info_town = $_POST['town'];
-        $info_state = $_POST['state'];
-        $info_zip = $_POST['zip'];
-        $info_notes = $_POST['notes'];
-
-        $errors = [];
-
-        // Define fields
-        $fields = [
-            'firstname' => true,
-            'lastname' => true,
-            'company' => false,
-            'email' => true,
-            'phone' => true,
-            'country' => true,
-            'street' => true,
-            'town' => true,
-            'state' => true,
-            'zip' => true,
-            'notes' => false,
-        ];
-        $data = [];
-
-
-        foreach ($fields as $field => $isRequired) {
-            if (!empty($_POST[$field])) {
-                $data[$field] = $_POST[$field];
-            } elseif ($isRequired) {
-                $errors[] = ucfirst(str_replace('_', ' ', $field)) . " is required.";
-            } else {
-                $data[$field] = null;
-            }
-        }
-
-        if (!empty($errors)) {
-            foreach ($errors as $error) {
-                echo $error . "<br>";
-            }
-            exit;
-        }
-
-        $query = "INSERT INTO information (info_firstname, info_lastname, info_company, info_email, info_phone, info_country, info_street, info_town, info_state, info_zip, info_note)";
-        $query .= " VALUES('$info_firstname', '$info_lastname', '$info_company', '$info_email', '$info_phone', '$info_country', '$info_street', '$info_town', '$info_state', '$info_zip', '$info_notes')";
-
-        $result = mysqli_query($connection, $query);
-        confirmQuery($result);
-    }
-    ?>
 
     <!-- Footer -->
     <?php include "../../includes/footer.php"; ?>
