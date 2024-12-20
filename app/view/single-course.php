@@ -4,7 +4,7 @@
 <head>
 
     <?php include "../../includes/header.php"; ?>
-    <?php include "../controllers/single_course_ctrl.php"; ?>
+    <?php include "../controllers/single_ctrl.php"; ?>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

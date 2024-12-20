@@ -1,4 +1,4 @@
-<?php include "../models/single_course_model.php";?>
+<?php include "../models/single_model.php";?>
 <?php include "../controllers/courses_ctrl.php";?>
 
 <?php
