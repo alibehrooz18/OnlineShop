@@ -4,6 +4,7 @@
 <head>
 
     <?php include "../../includes/header.php"; ?>
+    <?php include "../controllers/single_ctrl.php"; ?>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -125,41 +126,22 @@
                                 </div>
                             </div>
                             <div class="cart-icon">
-                                <?php
-                                if (isset($_SESSION['username'])) {
-
-
-                                    $query = "SELECT COUNT(*) AS item_count FROM cart";
-                                    $get_cart_data = mysqli_query($connection, $query);
-
-                                    confirmQuery($get_cart_data);
-
-                                    // Fetch the count from the result
-                                    $row = mysqli_fetch_assoc($get_cart_data);
-                                    $item_cart = isset($row['item_count']) ? intval($row['item_count']) : 0;
-                                } else {
-                                    $item_cart = 0;
-                                }
-                                ?>
                                 <a href="cart.php">
                                     <i class="flaticon-shopping-cart"></i>
                                     <span><?php echo $item_cart; ?></span>
                                 </a>
                             </div>
                             <div class="register">
-                                <?php if (isset($_SESSION['username'])): ?>
+                                <?php if (isset($user_name)): ?>
                                     <ul class="navbar-nav m-auto">
                                         <li class="nav-item">
                                             <a href="#" class="nav-link">
-                                                <span><?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                                                <span><?php echo htmlspecialchars($user_name); ?></span>
                                                 <i class="bx bx-chevron-down"></i>
                                             </a>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu" style="width: 200px;">
                                                 <li class="dropdown-item">
                                                     <a href="../../admin" class="nav-link">داشبورد</a>
-                                                </li>
-                                                <li class="dropdown-item">
-                                                    <a href="../../admin/offers.php" class="nav-link">آموزش‌ها</a>
                                                 </li>
                                                 <li class="dropdown-item">
                                                     <a href="cart.php" class="nav-link">سفارش‌ها</a>
@@ -214,7 +196,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    ورود / ثبت نام
+                                ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
@@ -249,35 +231,6 @@
     <section class="product-details-area ptb-100" dir="ltr">
         <div class="container">
             <div class="row align-items-center">
-                <?php
-                if (isset($_GET['s_pro'])) {
-                    $item_id = $_GET['s_pro'];
-                }
-                $query = "SELECT * FROM shop WHERE item_id = $item_id";
-                $get_data = mysqli_query($connection, $query);
-                confirmQuery($get_data);
-
-                $row = mysqli_fetch_assoc($get_data);
-                $item_image = $row['item_image'];
-                $item_title = $row['item_title'];
-                $item_price = $row['item_price'];
-                $item_category = $row['item_category_id'];
-                $item_discount = $row['item_discount'];
-
-                $dis_price = $item_price - ($item_price * ($item_discount / 100));
-                $dis_price = floor($dis_price);
-
-
-                $query = "SELECT * FROM categories WHERE cat_id = $item_category";
-                $get_category = mysqli_query($connection, $query);
-                confirmQuery($get_category);
-
-                $cat_row = mysqli_fetch_assoc($get_category);
-                $cat_id = $cat_row['cat_id'];
-                $category = $cat_row['cat_title'];
-
-
-                ?>
                 <div class="col-lg-6 col-md-12">
                     <div class="product-details-image">
                         <img src="../../public/img/shop/<?php echo $item_image; ?>" alt="Image" style="height: 800px;">
@@ -341,18 +294,6 @@
                                 </a>
                             </li>
                         </ul>
-                        <!-- <div class="product-add-to-cart">
-                            <h3>Quantities:</h3>
-                            <div class="input-counter">
-                                <span class="minus-btn">
-                                    <i class="bx bx-minus"></i>
-                                </span>
-                                <input type="text" value="1" min="1" class="quantity-input" name="quantity">
-                                <span class="plus-btn">
-                                    <i class="bx bx-plus"></i>
-                                </span>
-                            </div>
-                        </div> -->
                         <br>
                         <a href="cart.php?p_id=<?php echo $item_id; ?>" class="default-btn">
                             افزودن به سبد خرید
@@ -506,9 +447,7 @@
             </div>
             <div class="row">
                 <?php
-                $query = "SELECT * FROM shop LIMIT 4";
-                $item_query = mysqli_query($connection, $query);
-                confirmQuery($item_query);
+                $item_query = getShopLimit4();
 
                 if (mysqli_num_rows($item_query) > 0) {
                     while ($row = mysqli_fetch_assoc($item_query)) {
