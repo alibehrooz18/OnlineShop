@@ -4,6 +4,7 @@
 <head>
 
     <?php include "../../includes/header.php"; ?>
+    <?php include "../controllers/courses_ctrl.php"; ?>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -125,41 +126,22 @@
                                 </div>
                             </div>
                             <div class="cart-icon">
-                                <?php
-                                if (isset($_SESSION['username'])) {
-
-
-                                    $query = "SELECT COUNT(*) AS item_count FROM cart";
-                                    $get_cart_data = mysqli_query($connection, $query);
-
-                                    confirmQuery($get_cart_data);
-
-                                    // Fetch the count from the result
-                                    $row = mysqli_fetch_assoc($get_cart_data);
-                                    $item_cart = isset($row['item_count']) ? intval($row['item_count']) : 0;
-                                } else {
-                                    $item_cart = 0;
-                                }
-                                ?>
                                 <a href="cart.php">
                                     <i class="flaticon-shopping-cart"></i>
                                     <span><?php echo $item_cart; ?></span>
                                 </a>
                             </div>
                             <div class="register">
-                                <?php if (isset($_SESSION['username'])): ?>
+                                <?php if (isset($user_name)): ?>
                                     <ul class="navbar-nav m-auto">
                                         <li class="nav-item">
                                             <a href="#" class="nav-link">
-                                                <span><?php echo htmlspecialchars($_SESSION['username']); ?></span>
+                                                <span><?php echo htmlspecialchars($user_name); ?></span>
                                                 <i class="bx bx-chevron-down"></i>
                                             </a>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu" style="width: 200px;">
                                                 <li class="dropdown-item">
                                                     <a href="../../admin" class="nav-link">داشبورد</a>
-                                                </li>
-                                                <li class="dropdown-item">
-                                                    <a href="../../admin/offers.php" class="nav-link">آموزش‌ها</a>
                                                 </li>
                                                 <li class="dropdown-item">
                                                     <a href="cart.php" class="nav-link">سفارش‌ها</a>
@@ -214,7 +196,7 @@
                             </div>
                             <div class="register">
                                 <a href="my-account.php" class="default-btn">
-                                    ورود / ثبت نام
+                                ورود / ثبت نام
                                 </a>
                             </div>
                         </div>
