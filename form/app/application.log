@@ -488,3 +488,11 @@ C:\xampp\htdocs\eduon\form\source\framework\framework.php on line 127 | 2024/12/
 Request Uri => /eduon/form/index.php
 User ip => 127.0.0.1
 ------------------------------------------------------------
+C:\xampp\htdocs\eduon\form\source\framework\framework.php on line 127 | 2024/12/25 - 09:22:07 | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated
+Request Uri => /eduon/form/
+User ip => ::1
+------------------------------------------------------------
+C:\xampp\htdocs\eduon\form\source\framework\framework.php on line 127 | 2024/12/25 - 09:23:18 | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated
+Request Uri => /eduon/form/
+User ip => ::1
+------------------------------------------------------------
