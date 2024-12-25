@@ -9,6 +9,8 @@ if (isset($_GET['p_id']) && isset($_GET['user'])) {
 
     $check_exist = getProductCart($shop_id, $user_id);
 
+} else {
+    header("Location: ../../index.php");
 }
 
 
