@@ -884,17 +884,10 @@
 
 
         <footer class="main-footer">
-            <div class="pull-right d-none d-sm-inline-block">
-                <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">خرید</a>
-                    </li>
-                </ul>
-            </div>
             &copy;
             <script>
                 document.write(new Date().getFullYear())
-            </script> <a href="https://www.fudatco.com/"> crmi قالب مدیریت</a>. بازطراحی و فارسی سازی توسط هلدینگ فنی مهندسی فوداتکو.
+            </script> توسعه یافته با ❤️ و ☕ توسط <a href="https://www.alibi2002.com/"> تیم فنی</a>
         </footer>
         <!-- Side panel -->
         <!-- quick_actions_toggle -->
@@ -904,7 +897,7 @@
                     <div class="modal-body bg-white p-30">
                         <div class="d-flex align-items-center justify-content-between pb-30">
                             <h4 class="m-0">فعالیت ها<br>
-                                <small class="badge fs-12 badge-primary mt-10">23 اقدام در حال بررسی</small>
+                                <small class="badge fs-12 badge-primary mt-10">23 پروژه در حال بررسی</small>
                             </h4>
                             <a href="#" class="btn btn-icon btn-danger-light btn-sm no-shadow" data-bs-dismiss="modal">
                                 <span class="fa fa-close"></span>
@@ -912,54 +905,61 @@
                         </div>
                         <div class="row">
                             <div class="col-6">
-                                <a class="waves-effect waves-light btn btn-app btn btn-primary-light btn-flat mx-0 mb-20 no-shadow py-35 h-auto d-block" href="accounting.php">
-                                    <i class="icon-Euro fs-36"><span class="path1"></span><span class="path2"></span></i>
+                                <a class="waves-effect waves-light btn btn-app btn btn-primary-light btn-flat mx-0 mb-20 no-shadow py-35 h-auto d-block"
+                                    href="../accounting.php">
+                                    <i class="icon-Euro fs-36"><span class="path1"></span><span
+                                            class="path2"></span></i>
                                     <span class="fs-16">حسابداری</span>
                                 </a>
                             </div>
                             <div class="col-6">
-                                <a class="waves-effect waves-light btn btn-app btn btn-primary-light btn-flat mx-0 mb-20 no-shadow py-35 h-auto d-block" href="contact_userlist_grid.php">
-                                    <i class="icon-Mail-attachment fs-36"><span class="path1"></span><span class="path2"></span></i>
-                                    <span class="fs-16">اعضا</span>
+                                <a class="waves-effect waves-light btn btn-app btn btn-primary-light btn-flat mx-0 mb-20 no-shadow py-35 h-auto d-block"
+                                    href="../view/contact_userlist_grid.php">
+                                    <i class="icon-Mail-attachment fs-36"><span class="path1"></span><span
+                                            class="path2"></span></i>
+                                    <span class="fs-16">اساتید</span>
                                 </a>
                             </div>
                             <div class="col-6">
-                                <a class="waves-effect waves-light btn btn-app btn btn-primary-light btn-flat mx-0 mb-20 no-shadow py-35 h-auto d-block" href="projects.php">
-                                    <i class="icon-Box2 fs-36"><span class="path1"></span><span class="path2"></span></i>
-                                    <span class="fs-16">پروژه ها</span>
+                                <a class="waves-effect waves-light btn btn-app btn btn-primary-light btn-flat mx-0 mb-20 no-shadow py-35 h-auto d-block"
+                                    href="../view/my_courses.php">
+                                    <i class="icon-Box2 fs-36"><span class="path1"></span><span
+                                            class="path2"></span></i>
+                                    <span class="fs-16">آموزش ها</span>
                                 </a>
                             </div>
                             <div class="col-6">
-                                <a class="waves-effect waves-light btn btn-app btn btn-primary-light btn-flat mx-0 mb-20 no-shadow py-35 h-auto d-block" href="contact_userlist.php">
-                                    <i class="icon-Group fs-36"><span class="path1"></span><span class="path2"></span></i>
-                                    <span class="fs-16">مشتریان</span>
+                                <a class="waves-effect waves-light btn btn-app btn btn-primary-light btn-flat mx-0 mb-20 no-shadow py-35 h-auto d-block"
+                                    href="../contact_userlist.php">
+                                    <i class="icon-Group fs-36"><span class="path1"></span><span
+                                            class="path2"></span></i>
+                                    <span class="fs-16">دانشجویان</span>
                                 </a>
                             </div>
                             <div class="col-6">
-                                <a class="waves-effect waves-light btn btn-app btn btn-primary-light btn-flat mx-0 mb-20 no-shadow py-35 h-auto d-block" href="mailbox.php">
-                                    <i class="icon-Chart-bar fs-36"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                                <a class="waves-effect waves-light btn btn-app btn btn-primary-light btn-flat mx-0 mb-20 no-shadow py-35 h-auto d-block"
+                                    href="../view/mailbox.php">
+                                    <i class="icon-Chart-bar fs-36"><span class="path1"></span><span
+                                            class="path2"></span><span class="path3"></span><span
+                                            class="path4"></span></i>
                                     <span class="fs-16">ایمیل</span>
                                 </a>
                             </div>
                             <div class="col-6">
-                                <a class="waves-effect waves-light btn btn-app btn btn-primary-light btn-flat mx-0 mb-20 no-shadow py-35 h-auto d-block" href="setting.php">
-                                    <i class="icon-Color-profile fs-36"><span class="path1"></span><span class="path2"></span></i>
+                                <a class="waves-effect waves-light btn btn-app btn btn-primary-light btn-flat mx-0 mb-20 no-shadow py-35 h-auto d-block"
+                                    href="../setting.php">
+                                    <i class="icon-Color-profile fs-36"><span class="path1"></span><span
+                                            class="path2"></span></i>
                                     <span class="fs-16">تنظیمات</span>
                                 </a>
                             </div>
-                            <div class="col-6">
-                                <a class="waves-effect waves-light btn btn-app btn btn-primary-light btn-flat mx-0 mb-20 no-shadow py-35 h-auto d-block" href="ecommerce_orders.php">
-                                    <i class="icon-Euro fs-36"><span class="path1"></span><span class="path2"></span></i>
-                                    <span class="fs-18">سفارشات</span>
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- /quick_actions_toggle -->
-
         <!-- quick_panel_toggle -->
         <div class="modal modal-left fade" id="quick_panel_toggle" tabindex="-1">
             <div class="modal-dialog">
@@ -990,7 +990,7 @@
                                         <h5 class="fw-500 mb-15">پیام های سیستمی</h5>
                                         <div class="d-flex align-items-center mb-30">
                                             <div class="me-15 bg-lightest h-50 w-50 l-h-50 rounded text-center">
-                                                <img src="../images/svg-icon/color-svg/001-glass.svg" class="h-30" alt="">
+                                                <img src="../images\svg-icon\color-svg\001-glass.svg" class="h-30" alt="">
                                             </div>
                                             <div class="d-flex flex-column flex-grow-1 me-2 fw-500">
                                                 <a href="#" class="text-dark hover-primary mb-1 fs-16">هزینه های جانبی</a>
@@ -1000,7 +1000,7 @@
                                         </div>
                                         <div class="d-flex align-items-center mb-30">
                                             <div class="me-15 bg-lightest h-50 w-50 l-h-50 rounded text-center">
-                                                <img src="../images/svg-icon/color-svg/002-google.svg" class="h-30" alt="">
+                                                <img src="../images\svg-icon\color-svg\002-google.svg" class="h-30" alt="">
                                             </div>
                                             <div class="d-flex flex-column flex-grow-1 me-2 fw-500">
                                                 <a href="#" class="text-dark hover-danger mb-1 fs-16">هزینه تنظیمات</a>
@@ -1010,7 +1010,7 @@
                                         </div>
                                         <div class="d-flex align-items-center mb-30">
                                             <div class="me-15 bg-lightest h-50 w-50 l-h-50 rounded text-center">
-                                                <img src="../images/svg-icon/color-svg/003-settings.svg" class="h-30" alt="">
+                                                <img src="../images\svg-icon\color-svg\003-settings.svg" class="h-30" alt="">
                                             </div>
                                             <div class="d-flex flex-column flex-grow-1 me-2 fw-500">
                                                 <a href="#" class="text-dark hover-success mb-1 fs-16">هزینه لابراتور</a>
@@ -1020,7 +1020,7 @@
                                         </div>
                                         <div class="d-flex align-items-center mb-30">
                                             <div class="me-15 bg-lightest h-50 w-50 l-h-50 rounded text-center">
-                                                <img src="../images/svg-icon/color-svg/004-dad.svg" class="h-30" alt="">
+                                                <img src="../images\svg-icon\color-svg\004-dad.svg" class="h-30" alt="">
                                             </div>
                                             <div class="d-flex flex-column flex-grow-1 me-2 fw-500">
                                                 <a href="#" class="text-dark hover-info mb-1 fs-16">حقوق کاربران</a>
@@ -1030,7 +1030,7 @@
                                         </div>
                                         <div class="d-flex align-items-center">
                                             <div class="me-15 bg-lightest h-50 w-50 l-h-50 rounded text-center">
-                                                <img src="../images/svg-icon/color-svg/005-paint-palette.svg" class="h-30" alt="">
+                                                <img src="../images\svg-icon\color-svg\005-paint-palette.svg" class="h-30" alt="">
                                             </div>
                                             <div class="d-flex flex-column flex-grow-1 me-2 fw-500">
                                                 <a href="#" class="text-dark hover-warning mb-1 fs-16">طراحی گارگاه</a>
@@ -1289,12 +1289,18 @@
                         </div>
                         <div>
                             <div class="d-flex flex-row">
-                                <div class=""><img src="../images/avatar/avatar-2.png" alt="user" class="rounded bg-danger-light w-150" width="100"></div>
+                                <div class=""><img src="../images\avatar\avatar-2.png" alt="user"
+                                        class="rounded bg-danger-light w-150" width="100"></div>
                                 <div class="ps-20">
-                                    <h5 class="mb-0">هانیه مهدوی</h5>
-                                    <p class="my-5 text-fade">طراح وب</p>
-                                    <a href="mailto:dummy@gmail.com"><span class="icon-Mail-notification me-5 text-success"><span class="path1"></span><span class="path2"></span></span> dummy@gmail.com</a>
-                                    <button class="btn btn-success-light btn-sm mt-5"><i class="ti-plus"></i> فالو</button>
+                                    <h5 class="mb-0"><?php echo $user_name; ?></h5>
+                                    <p class="my-5 text-fade"><?php echo $user_role; ?></p>
+                                    <a href="mailto:<?php echo $user_email; ?>"><span
+                                            class="icon-Mail-notification me-5 text-success">
+                                            <span class="path1"></span><span class="path2"></span></span>
+                                        <?php echo $user_email; ?>
+                                    </a>
+                                    <!-- <button class="btn btn-success-light btn-sm mt-5"><i class="ti-plus"></i>
+                                        فالو</button> -->
                                 </div>
                             </div>
                         </div>
@@ -1302,25 +1308,28 @@
                         <div>
                             <div class="d-flex align-items-center mb-30">
                                 <div class="me-15 bg-primary-light h-50 w-50 l-h-60 rounded text-center">
-                                    <span class="icon-Library fs-24"><span class="path1"></span><span class="path2"></span></span>
+                                    <span class="icon-Library fs-24"><span class="path1"></span><span
+                                            class="path2"></span></span>
                                 </div>
                                 <div class="d-flex flex-column fw-500">
-                                    <a href="#" class="text-dark hover-primary mb-1 fs-16">پروفایل من</a>
+                                    <a href="../view/forms_information.php?p_id=<?php echo $user_id; ?>" class="text-dark hover-primary mb-1 fs-16">پروفایل من</a>
                                     <span class="text-fade">تنظیمات حساب</span>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center mb-30">
                                 <div class="me-15 bg-danger-light h-50 w-50 l-h-60 rounded text-center">
-                                    <span class="icon-Write fs-24"><span class="path1"></span><span class="path2"></span></span>
+                                    <span class="icon-Write fs-24"><span class="path1"></span><span
+                                            class="path2"></span></span>
                                 </div>
                                 <div class="d-flex flex-column fw-500">
-                                    <a href="#" class="text-dark hover-danger mb-1 fs-16">پیام های من</a>
+                                    <a href="../view/mailbox.php" class="text-dark hover-danger mb-1 fs-16">پیام های من</a>
                                     <span class="text-fade">صندوق دریافت</span>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center mb-30">
                                 <div class="me-15 bg-success-light h-50 w-50 l-h-60 rounded text-center">
-                                    <span class="icon-Group-chat fs-24"><span class="path1"></span><span class="path2"></span></span>
+                                    <span class="icon-Group-chat fs-24"><span class="path1"></span><span
+                                            class="path2"></span></span>
                                 </div>
                                 <div class="d-flex flex-column fw-500">
                                     <a href="#" class="text-dark hover-success mb-1 fs-16">فعالیت ها</a>
@@ -1329,7 +1338,9 @@
                             </div>
                             <div class="d-flex align-items-center mb-30">
                                 <div class="me-15 bg-info-light h-50 w-50 l-h-60 rounded text-center">
-                                    <span class="icon-Attachment1 fs-24"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
+                                    <span class="icon-Attachment1 fs-24"><span class="path1"></span><span
+                                            class="path2"></span><span class="path3"></span><span
+                                            class="path4"></span></span>
                                 </div>
                                 <div class="d-flex flex-column fw-500">
                                     <a href="#" class="text-dark hover-info mb-1 fs-16">وظایف</a>
@@ -1363,61 +1374,6 @@
                                         <span class="text-fade">توسط یوسف</span>
                                     </div>
                                 </a>
-
-                                <a class="media media-single px-0" href="#">
-                                    <h4 class="w-50 text-gray fw-500">01:15</h4>
-                                    <div class="media-body ps-15 bs-5 rounded border-danger">
-                                        <p>متن و توضیحات تست این بخش.</p>
-                                        <span class="text-fade">توسط رامین</span>
-                                    </div>
-                                </a>
-
-                                <a class="media media-single px-0" href="#">
-                                    <h4 class="w-50 text-gray fw-500">23:12</h4>
-                                    <div class="media-body ps-15 bs-5 rounded border-warning">
-                                        <p>متن و توضیحات تست این بخش.</p>
-                                        <span class="text-fade">توسط حامد</span>
-                                    </div>
-                                </a>
-                                <a class="media media-single px-0" href="#">
-                                    <h4 class="w-50 text-gray fw-500">10:10</h4>
-                                    <div class="media-body ps-15 bs-5 rounded border-primary">
-                                        <p>متن و توضیحات تست این بخش.</p>
-                                        <span class="text-fade">توسط مختار</span>
-                                    </div>
-                                </a>
-
-                                <a class="media media-single px-0" href="#">
-                                    <h4 class="w-50 text-gray fw-500">08:40</h4>
-                                    <div class="media-body ps-15 bs-5 rounded border-success">
-                                        <p>پیام ها و هشدار ها.</p>
-                                        <span class="text-fade">توسط حدیث</span>
-                                    </div>
-                                </a>
-
-                                <a class="media media-single px-0" href="#">
-                                    <h4 class="w-50 text-gray fw-500">07:10</h4>
-                                    <div class="media-body ps-15 bs-5 rounded border-info">
-                                        <p>سایر پیام ها.</p>
-                                        <span class="text-fade">توسط یوسف</span>
-                                    </div>
-                                </a>
-
-                                <a class="media media-single px-0" href="#">
-                                    <h4 class="w-50 text-gray fw-500">01:15</h4>
-                                    <div class="media-body ps-15 bs-5 rounded border-danger">
-                                        <p>متن و توضیحات تست این بخش.</p>
-                                        <span class="text-fade">توسط رامین</span>
-                                    </div>
-                                </a>
-
-                                <a class="media media-single px-0" href="#">
-                                    <h4 class="w-50 text-gray fw-500">23:12</h4>
-                                    <div class="media-body ps-15 bs-5 rounded border-warning">
-                                        <p>متن و توضیحات تست این بخش.</p>
-                                        <span class="text-fade">توسط حامد</span>
-                                    </div>
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -1425,162 +1381,6 @@
             </div>
         </div>
         <!-- /quick_user_toggle -->
-        <!-- quick_shop_toggle -->
-        <div class="modal modal-left fade" id="quick_shop_toggle" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="px-15 d-flex w-p100 align-items-center justify-content-between">
-                            <h4 class="m-0">کارت خرید</h4>
-                            <a href="#" class="btn btn-icon btn-danger-light btn-sm no-shadow" data-bs-dismiss="modal">
-                                <span class="fa fa-close"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="modal-body px-30 pb-30 bg-white slim-scroll4">
-                        <div class="d-flex align-items-center justify-content-between pb-15">
-                            <div class="d-flex flex-column me-2">
-                                <a href="#" class="fw-600 fs-18 text-hover-primary">عنوان محصول</a>
-                                <span class="text-muted">توضیحات محصول</span>
-                                <div class="d-flex align-items-center mt-2">
-                                    <span class="fw-600 me-5 fs-18"> 125</span>
-                                    <span class="text-muted me-5">برای</span>
-                                    <span class="fw-600 me-2 fs-18">4</span>
-                                    <a href="#" class="btn btn-sm btn-success-light btn-icon me-2">
-                                        <i class="fa fa-minus"></i>
-                                    </a>
-                                    <a href="#" class="btn btn-sm btn-success-light btn-icon">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="#" class="flex-shrink-0">
-                                <img src="../images/product/product-1.png" class="avatar h-100 w-100" alt="">
-                            </a>
-                        </div>
-                        <div class="dropdown-divider"></div>
-                        <div class="d-flex align-items-center justify-content-between py-15">
-                            <div class="d-flex flex-column me-2">
-                                <a href="#" class="fw-600 fs-18 text-hover-primary">عنوان محصول</a>
-                                <span class="text-muted">توضیحات محصول</span>
-                                <div class="d-flex align-items-center mt-2">
-                                    <span class="fw-600 me-5 fs-18"> 125</span>
-                                    <span class="text-muted me-5">برای</span>
-                                    <span class="fw-600 me-2 fs-18">4</span>
-                                    <a href="#" class="btn btn-sm btn-success-light btn-icon me-2">
-                                        <i class="fa fa-minus"></i>
-                                    </a>
-                                    <a href="#" class="btn btn-sm btn-success-light btn-icon">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="#" class="flex-shrink-0">
-                                <img src="../images/product/product-2.png" class="avatar h-100 w-100" alt="">
-                            </a>
-                        </div>
-                        <div class="dropdown-divider"></div>
-                        <div class="d-flex align-items-center justify-content-between py-15">
-                            <div class="d-flex flex-column me-2">
-                                <a href="#" class="fw-600 fs-18 text-hover-primary">عنوان محصول</a>
-                                <span class="text-muted">توضیحات محصول</span>
-                                <div class="d-flex align-items-center mt-2">
-                                    <span class="fw-600 me-5 fs-18"> 125</span>
-                                    <span class="text-muted me-5">برای</span>
-                                    <span class="fw-600 me-2 fs-18">4</span>
-                                    <a href="#" class="btn btn-sm btn-success-light btn-icon me-2">
-                                        <i class="fa fa-minus"></i>
-                                    </a>
-                                    <a href="#" class="btn btn-sm btn-success-light btn-icon">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="#" class="flex-shrink-0">
-                                <img src="../images/product/product-3.png" class="avatar h-100 w-100" alt="">
-                            </a>
-                        </div>
-                        <div class="dropdown-divider"></div>
-                        <div class="d-flex align-items-center justify-content-between py-15">
-                            <div class="d-flex flex-column me-2">
-                                <a href="#" class="fw-600 fs-18 text-hover-primary">عنوان محصول</a>
-                                <span class="text-muted">توضیحات محصول</span>
-                                <div class="d-flex align-items-center mt-2">
-                                    <span class="fw-600 me-5 fs-18"> 125</span>
-                                    <span class="text-muted me-5">برای</span>
-                                    <span class="fw-600 me-2 fs-18">4</span>
-                                    <a href="#" class="btn btn-sm btn-success-light btn-icon me-2">
-                                        <i class="fa fa-minus"></i>
-                                    </a>
-                                    <a href="#" class="btn btn-sm btn-success-light btn-icon">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="#" class="flex-shrink-0">
-                                <img src="../images/product/product-4.png" class="avatar h-100 w-100" alt="">
-                            </a>
-                        </div>
-                        <div class="dropdown-divider"></div>
-                        <div class="d-flex align-items-center justify-content-between py-15">
-                            <div class="d-flex flex-column me-2">
-                                <a href="#" class="fw-600 fs-18 text-hover-primary">عنوان محصول</a>
-                                <span class="text-muted">توضیحات محصول</span>
-                                <div class="d-flex align-items-center mt-2">
-                                    <span class="fw-600 me-5 fs-18"> 125</span>
-                                    <span class="text-muted me-5">برای</span>
-                                    <span class="fw-600 me-2 fs-18">4</span>
-                                    <a href="#" class="btn btn-sm btn-success-light btn-icon me-2">
-                                        <i class="fa fa-minus"></i>
-                                    </a>
-                                    <a href="#" class="btn btn-sm btn-success-light btn-icon">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="#" class="flex-shrink-0">
-                                <img src="../images/product/product-5.png" class="avatar h-100 w-100" alt="">
-                            </a>
-                        </div>
-                        <div class="dropdown-divider"></div>
-                        <div class="d-flex align-items-center justify-content-between py-15">
-                            <div class="d-flex flex-column me-2">
-                                <a href="#" class="fw-600 fs-18 text-hover-primary">عنوان محصول</a>
-                                <span class="text-muted">توضیحات محصول</span>
-                                <div class="d-flex align-items-center mt-2">
-                                    <span class="fw-600 me-5 fs-18"> 125</span>
-                                    <span class="text-muted me-5">برای</span>
-                                    <span class="fw-600 me-2 fs-18">4</span>
-                                    <a href="#" class="btn btn-sm btn-success-light btn-icon me-2">
-                                        <i class="fa fa-minus"></i>
-                                    </a>
-                                    <a href="#" class="btn btn-sm btn-success-light btn-icon">
-                                        <i class="fa fa-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="#" class="flex-shrink-0">
-                                <img src="../images/product/product-6.png" class="avatar h-100 w-100" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="modal-footer modal-footer-uniform">
-                        <div class="d-flex align-items-center justify-content-between mb-10">
-                            <span class="fw-600 text-muted fs-16 me-2">کل</span>
-                            <span class="fw-600 text-end">1248.000</span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-15">
-                            <span class="fw-600 text-muted fs-16 me-2">جمع کل</span>
-                            <span class="fw-600 text-primary text-end">4125.000</span>
-                        </div>
-                        <div class="text-end">
-                            <button type="button" class="btn btn-primary">ثبت سفارش</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /quick_shop_toggle -->
 
     </div>
     <!-- ./wrapper -->
