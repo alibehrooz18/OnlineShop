@@ -9,8 +9,8 @@
     <meta name="author" content="">
     <link rel="icon" href="../images\favicon.ico">
 
-    <?php include "../includes/header.php"; ?>
-    <?php include "../controllers/courses_controller.php"; ?>
+    <?php include "../includes/header.php";?>
+    <?php include "../controllers/courses_controller.php";?>
    
 
     <title>داشبورد</title>
@@ -27,7 +27,7 @@
 <body class="hold-transition light-skin sidebar-mini theme-primary fixed rtl">
 
     <div class="wrapper">
-        <!-- <div id="loader"></div> -->
+        <div id="loader"></div>
 
         <!-- Main header -->
         <header class="main-header">
