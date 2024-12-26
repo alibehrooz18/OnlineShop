@@ -4,7 +4,7 @@
 <head>
 
     <?php include "../../includes/header.php"; ?>
-    <?php include "../controllers/checkout_ctrl.php"; ?>
+    <?php include "../controllers/CheckoutCtrl.php"; ?>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
