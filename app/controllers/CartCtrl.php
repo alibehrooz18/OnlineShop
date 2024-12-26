@@ -1,5 +1,5 @@
-<?php include "../models/cart_model.php"; ?>
-<?php include "../controllers/shop_ctrl.php"; ?>
+<?php include "../models/CartModel.php"; ?>
+<?php include "../controllers/ShopCtrl.php"; ?>
 <?php
 // Get product id and send to cart 
 $subtotal = 0;

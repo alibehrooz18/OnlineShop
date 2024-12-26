@@ -1,5 +1,5 @@
-<?php include "../models/wish_model.php";?>
-<?php include "../controllers/cart_ctrl.php";?>
+<?php include "../models/WishModel.php";?>
+<?php include "../controllers/CartCtrl.php";?>
 <?php
 // Get product id and send to wishlist
 if (isset($_GET['wishlist']) && isset($_GET['user'])) {

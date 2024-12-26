@@ -1,5 +1,5 @@
-<?php include "../models/courses_model.php"; ?>
-<?php require_once "../models/main_model.php"; ?>
+<?php include "../models/CoursesModel.php"; ?>
+<?php require_once "../models/MainModel.php"; ?>
 
 <?php
 // Check for entered user and get them data

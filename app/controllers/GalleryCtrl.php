@@ -1,5 +1,5 @@
-<?php include "../models/gallery_model.php";?>
-<?php include "../controllers/courses_ctrl.php";?>
+<?php include "../models/GalleryModel.php";?>
+<?php include "../controllers/CoursesCtrl.php";?>
 <?php
 // Pagination logic 
 $image_per_page = 9;

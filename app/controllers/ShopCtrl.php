@@ -1,5 +1,5 @@
-<?php include "../models/shop_model.php"; ?>
-<?php include "../controllers/courses_ctrl.php"; ?>
+<?php include "../models/ShopModel.php"; ?>
+<?php include "../controllers/CoursesCtrl.php"; ?>
 <?php
 
 // Get shop data for show total item

@@ -1,5 +1,5 @@
-<?php include "./app/models/account_model.php"; ?>
-<?php include "./app/controllers/main_ctrl.php"; ?>
+<?php include "./app/models/AccountModel.php"; ?>
+<?php include "./app/controllers/MainCtrl.php"; ?>
 
 <?php
 // Login section

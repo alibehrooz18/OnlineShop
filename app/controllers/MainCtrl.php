@@ -1,4 +1,4 @@
-<?php require_once "./app/models/main_model.php";?>
+<?php require_once "./app/models/MainModel.php";?>
 
 <?php
 // Check for entered user and get them data

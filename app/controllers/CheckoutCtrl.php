@@ -1,5 +1,5 @@
-<?php include "../models/checkout_model.php";?>
-<?php include "../controllers/cart_ctrl.php";?>
+<?php include "../models/CheckoutModel.php";?>
+<?php include "../controllers/CartCtrl.php";?>
 <?php
 // Get data from cart
 if (isset($_GET['p_total'])) {
