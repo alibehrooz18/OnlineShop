@@ -10,7 +10,7 @@
     <link rel="icon" href="../../images/favicon.ico">
 
     <?php include "../includes/header.php";?>
-    <?php include "../controllers/courses_controller.php";?>
+    <?php include "../controllers/CoursesController.php";?>
    
 
     <title>داشبورد</title>

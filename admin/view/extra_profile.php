@@ -3,7 +3,7 @@
 
 <head>
     <?php include "./includes/header.php"; ?>
-    <?php include "./controllers/user_controller.php"; ?>
+    <?php include "./controllers/UserController.php"; ?>
 
     <title>داشبورد</title>
 

@@ -3,7 +3,7 @@
 
 <head>
     <?php include "./includes/header.php"; ?>
-    <?php include "./controllers/user_controller.php"; ?>
+    <?php include "./controllers/UserController.php"; ?>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
