@@ -1,5 +1,5 @@
-<?php require_once('../models/user_model.php'); ?>
-<?php require_once('../models/courses_model.php'); ?>
+<?php require_once('../models/UserModel.php'); ?>
+<?php require_once('../models/CoursesModel.php'); ?>
 <?php
 if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];

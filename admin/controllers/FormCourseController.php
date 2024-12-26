@@ -1,6 +1,6 @@
-<?php include_once "../models/form_model.php";?>
-<?php include_once "../controllers/details_controller.php";?>
-<?php include_once "../models/details_model.php";?>
+<?php include_once "../models/FormModel.php";?>
+<?php include_once "../controllers/DetailsController.php";?>
+<?php include_once "../models/DetailsModel.php";?>
 <?php
 if (isset($_POST['checked']) && isset($_POST['submit'])) {
     $data = [

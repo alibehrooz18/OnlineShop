@@ -1,6 +1,6 @@
-<?php include "../controllers/courses_controller.php"; ?>
+<?php include "../controllers/CoursesController.php"; ?>
 <?php
-require_once '../models/details_model.php';
+require_once '../models/DetailsModel.php';
 
 if (isset($_GET['c_id'])) {
     $course_id = $_GET['c_id'];

@@ -1,5 +1,5 @@
-<?php include "../controllers/courses_controller.php"; ?>
-<?php require_once('../models/people_model.php'); ?>
+<?php include "../controllers/CoursesController.php"; ?>
+<?php require_once('../models/PeopleModel.php'); ?>
 <?php
 $admin_user = $all_user - $sub_user;
 

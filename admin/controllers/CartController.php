@@ -1,5 +1,5 @@
-<?php include "../controllers/courses_controller.php"; ?>
-<?php include_once "../models/cart_model.php"; ?>
+<?php include "../controllers/CoursesController.php"; ?>
+<?php include_once "../models/CartModel.php"; ?>
 
 <?php
 
